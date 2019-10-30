@@ -11,6 +11,13 @@ a {
     text-decoration: none;
 }
 
+/*-------CLASES GLOBALES ----------*/
+.padding__top {
+    padding-top: 20px;
+}
+
+/*-------CLASES GLOBALES ----------*/
+
 /*-------GRID ----------*/
 
 .container{
@@ -86,33 +93,6 @@ a {
 /*-------GRID ----------*/
 
 
-/*---------- BOTONES ---------------*/
-
-.btn__secondary {
-    color: #ffffff;
-    font-size: 16px;
-    font-family: Roboto;
-    padding: 16px 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 30px;
-    text-align: center;
-    background-color: #454ade;
-}
-
-.btn__primary {
-
-    background-color: #f1f1f1;
-    color: black;
-    font-size: 16px;
-    padding: 16px 30px;
-    border: none;
-    cursor: pointer;
-    border-radius: 30px;
-    text-align: center;
-}
-
-/*---------- BOTONES ---------------*/
 
 /*---------- NAVBAR ---------------*/
 .navbar {
@@ -141,21 +121,10 @@ a {
     color: #ffffff
 }
 
-.register__btn{
-    color: #454ade !important ;
-    position: relative;
-    right: 4px;
-
-}
-
 .navbar__list {
     justify-content: flex-end;
     display: flex;
 
-}
-
-.padding__top{
-    padding-top: 16px;
 }
 
 .navbar__menu {
@@ -176,6 +145,35 @@ a {
 
 /*---------- NAVBAR ---------------*/
 
+/*---------- BOTONES ---------------*/
+
+.btn__secondary {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Roboto;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    text-align: center;
+    background-color: #454ade;
+}
+
+.btn__primary {
+
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    text-align: center;
+}
+
+/*---------- BOTONES ---------------*/
+
+
 /*---------- PRINCIPAL ---------------*/
 .principal {
     width: 99vw;
@@ -183,7 +181,7 @@ a {
     background-image: url(../static/images/shen.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 5%;
+    background-position: 50% 50%;
     
     
 }
@@ -214,11 +212,11 @@ a {
 }
 
 .margin {
-    margin: 50px 30.5px 0px 100px;
-
+    margin-left: 100px;
 }
 
 .paragraph__principal {
+    width: 513px;
     height: 52px;
     font-family: Roboto;
     font-size: 20px;
@@ -231,16 +229,20 @@ a {
     margin-left: 100px;
 }
 
-.icons{
+.icons {
+    
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: 100%;
+
     height: 74%;
     justify-content: flex-end;
     width: 577%;
+    /*
+     */
 
 }
+
 .icon{
     margin-bottom: 10px;
 }
@@ -309,6 +311,7 @@ a {
 
 /*---------- SERVICES ---------------*/
 
+
 /*---------- ELO BOOTING PACKS ---------------*/
 
 .elo__booting__packs {
@@ -340,20 +343,16 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 60px;
 }
 
 .packs__elo__booting__packs {
     display: flex;
-    padding-left: 113px;
 }
 
 .pack__elo__booting__packs {
     border-radius: 16px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
-    margin-right: 29px;
-    height: 491px;
 }
 
 .pack__elo__booting__packs h4 {
@@ -373,9 +372,6 @@ a {
     height: 30px;
     border-radius: 4px;
     background-color: #e01ac7;
-    position: relative;
-    left: -20px;
-    top: -27px;
 }
 
 .paragraph__pack__elo__booting__packs {
@@ -390,32 +386,18 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-    position: relative;
-    top: 8px;
-    right: -12px;
-}
-
-.elos__elo__booting__packs{
-    position: relative;
-    top: -35px;
 }
 
 .elo1__elo__booting__packs {
     width: 100px;
     height: 115px;
     object-fit: contain;
-    position: relative;
-    bottom: 58px;
-    right: -15px;
 }
 
 .elo2__elo__booting__packs {
     width: 130px;
     height: 149px;
     object-fit: contain;
-    position: relative;
-    bottom: 40px;
-    right: 20px;
 }
 
 .before__elo__booting__packs {
@@ -429,8 +411,6 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #8c8c8c;
-    position: relative;
-    top: -80px;
 }
 
 .price__elo__booting__packs {
@@ -443,8 +423,6 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #454ade;
-    position: relative;
-    top: -173px;
 }
 
 .arg__elo__booting__packs {
@@ -458,23 +436,16 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #cd9e00;
-    position: relative;
-    top: -262px;
 }
 
 .reloj__elo__booting__packs {
     width: 19.6px;
     height: 19.6px;
     object-fit: contain;
-    position: relative;
-    top: -4px;
-    right: -4px;
 }
 
 .time__elo__booting__packs {
     display: flex;
-    position: relative;
-    top: -280px;
 }
 
 .completion__completion__elo__booting__packs {
@@ -489,21 +460,16 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #1b1f3b;
-    position: relative;
-    left: -35px;
 }
 
-.position_btn_packs__elo__booting__packs{
-    position: relative;
-    top: -276px;
-}
 
 /*---------- ELO BOOTING PACKS ---------------*/
 
 /*---------- REVIEW ---------------*/
+
 .reviews {
     width: auto;
-    height: 460px;
+    height: 425px;
     background-color: #ffffff;
     display: flex;
 }
@@ -534,8 +500,6 @@ a {
     line-height: 0.83;
     letter-spacing: normal;
     color: #454ade;
-    position: relative;
-    bottom: 25px;
 }
 
 .users__review {
@@ -547,27 +511,15 @@ a {
     line-height: 1.25;
     letter-spacing: normal;
     color: #cd9e00;
-    position: relative;
-    bottom: 48px;
 }
 
-.arrow{
-    position: relative;
-    top: 100px;
-    width: 40px;
-}
-
-.box__review{
-    margin-top: 90px;
+.user__review {
     display: flex;
-    position: relative;
-    left: 185px;
 }
-
 
 .review {
-    width: 263px;
-    height: 265px;
+    /* width: 263px;
+    height: 265px; */
     border-radius: 15px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
     border: solid 2px #454ade;
@@ -591,13 +543,6 @@ a {
     justify-items: normal;
 }
 
-.star{
-    margin-left: -75px;
-    position: relative;
-    left: 127px;
-    bottom: 43px;
-}
-
 .title__review {
     font-family: Roboto;
     font-size: 18px;
@@ -608,8 +553,6 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #454ade;
-    position: relative;
-    bottom: 70px;
 }
 
 .paragraph__review {
@@ -622,16 +565,11 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #1b1f3b;
-    position: relative;
-    bottom: 82px;
 }
 
 .data__review {
     display: flex;
-    position: relative;
-    bottom: 111px;
-    left: -27px;
-
+    flex-wrap: inherit;
 }
 
 .name__review {
@@ -645,8 +583,6 @@ a {
     line-height: 1;
     letter-spacing: normal;
     color: #454ade;
-    position: relative;
-    right: 25px;
 }
 
 .subdata__review {
@@ -662,12 +598,11 @@ a {
     line-height: 1;
     letter-spacing: normal;
     color: #1b1f3b;
-    position: relative;
-    right: 25px;
-    bottom: 20px;
 }
 
 /*---------- REVIEW ---------------*/
+
+
 
 /*---------- HOW-TO-BUY ---------------*/
 
@@ -685,6 +620,7 @@ a {
 
 .title__how-to-buy {
     font-family: Roboto;
+    margin: 144px 126px 0px 113px;
     font-size: 40px;
     font-weight: normal;
     font-stretch: normal;
@@ -692,19 +628,6 @@ a {
     line-height: 1.25;
     letter-spacing: 8.89px;
     color: #ffffff;
-    position: relative;
-    left:113px;
-    top: 273px;
-}
-
-.informations__how-to-buy{
-    position: relative;
-    right: 240px;
-    top: 50px;
-}
-
-.paragraph__how-to-buy{
-    text-align: right;
 }
 
 .information__how-to-buy {
@@ -723,14 +646,7 @@ a {
     color: #ffffff;
 }
 
-.example__how-to-buy{
-    position: relative;
-    right: -20px;
-
-}
-
 /*---------- HOW-TO-BUY ---------------*/
-
 
 /*---------- OUR METHODOLOGY ---------------*/
 
@@ -745,15 +661,6 @@ a {
     justify-content: space-between;
 }
 
-.informations__our-methodology {
-    position: relative;
-    left: -38px;
-    position: relative;
-    top: 50px;
-    left: -160px;
-
-}
-
 .title__out-methodology {
     font-family: Roboto;
     margin: 144px 126px 0px 113px;
@@ -764,14 +671,11 @@ a {
     line-height: 1.25;
     letter-spacing: 8.89px;
     color: #1b1f3b;
-    position: relative;
-    top: 150px;
 }
 
 .information__our-methodology {
     display: flex;
     flex-wrap: inherit;
-    margin-bottom: -36px;
 }
 
 .paragraph__our-methodology {
@@ -785,8 +689,6 @@ a {
     line-height: 1.25;
     letter-spacing: normal;
     color: #6d6b6b;
-    position: relative;
-    top: -14px;
 }
 
 .info-title__our-methodoly {
@@ -799,14 +701,6 @@ a {
     line-height: 1.2;
     letter-spacing: normal;
     color: #1b1f3b;
-    position: relative;
-    
-}
-
-.icon__our-methodology{
-    position: relative;
-    top: 12px;
-    right: -22px;
 }
 
 /*---------- OUR METHODOLOGY ---------------*/
@@ -843,6 +737,7 @@ a {
 .container__footer {
     display: flex;
     justify-content: space-between;
+
 }
 
 .footer__title {
@@ -856,7 +751,7 @@ a {
     color: #ffffff;
 }
 
-.parragraph__footer {
+.footer__parragraph {
     opacity: 0.5;
     font-family: Roboto;
     font-size: 16px;
@@ -866,40 +761,28 @@ a {
     line-height: 1.25;
     letter-spacing: normal;
     color: #ffffff;
-    margin-bottom: 30px;
 }
 .footer__social-network{
     margin-left: 113px;
 }
 .footer__information{
-    padding-right: 113px;
-    position: relative;
-    bottom: 26px;
+    margin-left: 500px;
 }
 
-.list__footer{
-    padding-left: 0;
-}
-
+/* .list__footer{
+    margin-right: 40px ;
+} */
 
 .menu__footer a{
-    color: #ffffff;
-}
-.menu__footer{
-
-font-family: Roboto;
+    margin-right: 119px;
+    font-family: Roboto;
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.25;
   letter-spacing: normal;
-  margin-bottom: 30px;
-}
-
-.payment__footer{
-    position: relative;
-    top: 15px;
+  color: #ffffff;
 }
 
 .icons__footer{
@@ -909,15 +792,7 @@ font-family: Roboto;
 }
 
 .icon__footer{
-    color: #454ade;
     margin-right: 10px;
-}
-
-.line__footer{
-    border-top:5px solid #1b1f3b;
-    border-radius: 5px;
-    margin-right: 113px;
-    margin-left: 113px;
 }
 
 .copyright__footer{
