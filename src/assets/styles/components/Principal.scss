@@ -1,0 +1,74 @@
+.principal {
+    width: 99vw;
+    height: 100vh;
+    background-image: url(../../static/images/shen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 5%;
+    
+    
+}
+.overlay__principal{
+    background-image: linear-gradient(168deg, #1b1f3b -100%, rgba(133, 94, 210, 0.1%));
+    width: 99vw;
+    height: 100vh;
+}
+
+.container__principal {
+    padding-top: 10px;
+    display: flex;
+}
+
+.title__principal {
+    width: 513px;
+    height: 135px;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: 10px;
+    color: #ffffff;
+    margin-left: 100px;
+    padding-top: 170px;
+}
+
+.margin {
+    margin: 50px 30.5px 0px 100px;
+
+}
+
+.paragraph__principal {
+    height: 52px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-left: 100px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 74%;
+    justify-content: flex-end;
+    width: 577%;
+
+}
+.icon{
+    margin-bottom: 10px;
+}
+
+.scroll__principal{
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  height: 40%;
+}

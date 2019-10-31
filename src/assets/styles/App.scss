@@ -1,0 +1,18 @@
+@import "./Vars.scss";
+@import "./Media.scss";
+@import "./Button.scss";
+@import "./Grid.scss";
+
+body {
+  margin: 0;
+  font-family: $theme-font;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+a{
+  text-decoration: none;
+}

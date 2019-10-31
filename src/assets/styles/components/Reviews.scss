@@ -1,0 +1,165 @@
+.reviews {
+    width: auto;
+    height: 460px;
+    background-color: #ffffff;
+    display: flex;
+}
+
+.information__review {
+    margin: 144px 0px 0px 113px;
+}
+
+.title__reviews {
+    width: 318px;
+    height: 50px;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 8.89px;
+    color: #1b1f3b;
+}
+
+.rating__reviews {
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.83;
+    letter-spacing: normal;
+    color: #454ade;
+    position: relative;
+    bottom: 25px;
+}
+
+.users__review {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #cd9e00;
+    position: relative;
+    bottom: 48px;
+}
+
+.arrow{
+    position: relative;
+    top: 100px;
+    width: 40px;
+}
+
+.box__review{
+    margin-top: 90px;
+    display: flex;
+    position: relative;
+    left: 185px;
+}
+
+
+.review {
+    width: 263px;
+    height: 265px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    border: solid 2px #454ade;
+    background-color: #ffffff;
+}
+
+.rating__review {
+    font-family: Roboto;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -2.69px;
+    text-align: center;
+    color: #454ade;
+}
+
+.stars {
+    display: flex;
+    justify-items: normal;
+}
+
+.star{
+    margin-left: -75px;
+    position: relative;
+    left: 127px;
+    bottom: 43px;
+}
+
+.title__review {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.39;
+    letter-spacing: normal;
+    text-align: center;
+    color: #454ade;
+    position: relative;
+    bottom: 70px;
+}
+
+.paragraph__review {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1b1f3b;
+    position: relative;
+    bottom: 82px;
+}
+
+.data__review {
+    display: flex;
+    position: relative;
+    bottom: 111px;
+    left: -27px;
+
+}
+
+.name__review {
+    width: 159px;
+    height: 16px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #454ade;
+    position: relative;
+    right: 25px;
+}
+
+.subdata__review {
+    flex-direction: column;
+}
+
+.date__review {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #1b1f3b;
+    position: relative;
+    right: 25px;
+    bottom: 20px;
+}

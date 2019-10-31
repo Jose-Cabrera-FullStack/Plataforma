@@ -1,0 +1,57 @@
+.how-to-buy {
+    width: auto;
+    height: 768px;
+    background-color: #454ade;
+}
+
+.container__how-to-buy {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.title__how-to-buy {
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 8.89px;
+    color: #ffffff;
+    position: relative;
+    left:113px;
+    top: 273px;
+}
+
+.informations__how-to-buy{
+    position: relative;
+    right: 240px;
+    top: 50px;
+}
+
+.paragraph__how-to-buy{
+    text-align: right;
+}
+
+.information__how-to-buy {
+    display: flex;
+}
+
+.information__how-to-buy {
+    flex-wrap: inherit;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.example__how-to-buy{
+    position: relative;
+    right: -20px;
+
+}
