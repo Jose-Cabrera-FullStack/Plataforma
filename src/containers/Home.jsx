@@ -10,21 +10,20 @@ import Footer from '../components/Footer';
 
 import '../assets/styles/App.scss';
 
-const App = () => {
+const Home = () => {
   return(
     <div className="App">
+
       <Principal/>
       <Services/>
       <EloBoostingPack/>
       <Reviews/>
       <HowToBuy/>
-      <OurMethodology/>
-      <Footer/>
-      
+      <OurMethodology/>      
 
     </div>
 
   );
 }
 
-export default App;
+export default Home;
