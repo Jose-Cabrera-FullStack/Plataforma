@@ -1,5 +1,9 @@
 import React from 'react';
 import '../assets/styles/components/Reviews.scss';
+import Arrow_left from '../assets/static/images/arrow-left.svg';
+import Arrow_right from '../assets/static/images/arrow-right.svg';
+import Star from '../assets/static/images/star-rating.svg';
+import Avatar from '../assets/static/images/avatar-review.png';
 
 const Reviews = () =>(
     <section id="reviews" class="reviews">
@@ -12,7 +16,7 @@ const Reviews = () =>(
     <div class="box__review">
 
         <figure>
-            <img class="arrow" src="./static/images/arrow-left.svg" alt=""/>
+            <img class="arrow" src={Arrow_left} alt=""/>
         </figure>
 
         <div class="user__review">
@@ -21,27 +25,27 @@ const Reviews = () =>(
                 <div class="stars">
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
 
@@ -52,7 +56,7 @@ const Reviews = () =>(
                         Fast & Clean!</p>
                     <div class="data__review">
                         <figure>
-                            <img src="./static/images/avatar-review.png" alt=""/>
+                            <img src={Avatar} alt=""/>
                         </figure>
                         <div class="subdata__review">
                             <h5 class="name__review">
@@ -71,27 +75,27 @@ const Reviews = () =>(
                 <div class="stars">
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
 
@@ -103,7 +107,7 @@ const Reviews = () =>(
                         Fast & Clean!</p>
                     <div class="data__review">
                         <figure>
-                            <img src="./static/images/avatar-review.png" alt=""/>
+                            <img src={Avatar} alt=""/>
                         </figure>
                         <div class="subdata__review">
                             <h5 class="name__review">
@@ -124,27 +128,27 @@ const Reviews = () =>(
                 <div class="stars">
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
                     <div class="star">
                         <figure>
-                            <img src="./static/images/star-rating.svg" alt=""/>
+                            <img src={Star} alt=""/>
                         </figure>
                     </div>
 
@@ -156,7 +160,7 @@ const Reviews = () =>(
                         Fast & Clean!</p>
                     <div class="data__review">
                         <figure>
-                            <img src="./static/images/avatar-review.png" alt=""/>
+                            <img src={Avatar} alt=""/>
                         </figure>
                         <div class="subdata__review">
                             <h5 class="name__review">
@@ -173,7 +177,7 @@ const Reviews = () =>(
         </div>
 
         <figure>
-            <img class="arrow" src="./static/images/arrow-right.svg" alt=""/>
+            <img class="arrow" src={Arrow_right} alt=""/>
         </figure>
 
 

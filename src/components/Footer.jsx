@@ -1,5 +1,11 @@
 import React from 'react';
 import '../assets/styles/components/Footer.scss';
+import Payment from '../assets/static/images/payment-icons-footer.png';
+import Facebook from '../assets/static/images/social-network/facebook-color.svg';
+import Google from '../assets/static/images/social-network/google-color.svg';
+import Twitter from '../assets/static/images/social-network/linkedin-color.svg';
+import Linkedin from '../assets/static/images/social-network/twitter-color.svg';
+
 
 const Footer = () => (
   <footer id="footer" class="footer">
@@ -27,7 +33,7 @@ const Footer = () => (
 
             </div>
             <figure>
-                <img class="payment__footer" src="./static/images/payment-icons-footer.png" alt=""/>
+                <img class="payment__footer" src={Payment} alt=""/>
             </figure>
 
             <div class="footer__information">
@@ -43,16 +49,16 @@ const Footer = () => (
                 <div>
                     <ol class="icons__footer">
                         <li class="icon__footer">
-                            <a href=""><img src="./static/images/social-network/facebook-color.svg" alt=""/> </a>
+                            <a href=""><img src={Facebook} alt=""/> </a>
                         </li>
                         <li class="icon__footer">
-                            <a href=""><img src="./static/images/social-network/google-color.svg" alt=""/> </a>
+                            <a href=""><img src={Google} alt=""/> </a>
                         </li>
                         <li class="icon__footer">
-                            <a href=""><img src="./static/images/social-network/linkedin-color.svg" alt=""/> </a>
+                            <a href=""><img src={Linkedin} alt=""/> </a>
                         </li>
                         <li class="icon__footer">
-                            <a href=""><img src="./static/images/social-network/twitter-color.svg" alt=""/> </a>
+                            <a href=""><img src={Twitter} alt=""/> </a>
                         </li>
                     </ol>
                 </div>

@@ -1,5 +1,11 @@
 import React from 'react';
 import '../assets/styles/components/HowToBuy.scss';
+import Hand from '../assets/static/images/hands/hand.svg';
+import Hand1 from '../assets/static/images/hands/hand-1.svg';
+import Hand2 from '../assets/static/images/hands/hand-2.svg';
+import Hand3 from '../assets/static/images/hands/hand-2.svg';
+import Example from '../assets/static/images/example-image.png';
+
 
 const HowToBuy = () =>(
     <section id="how-to-buy" class="how-to-buy">
@@ -15,7 +21,7 @@ const HowToBuy = () =>(
                 <div class="information__how-to-buy">
                     
                     <figure>
-                        <img src="./static/images/hands/hand.svg" alt=""/>
+                        <img src={Hand} alt=""/>
                     </figure>
                     
                     <p class="paragraph__how-to-buy">
@@ -26,7 +32,7 @@ const HowToBuy = () =>(
                     </p>
                     
                     <figure>
-                        <img class="example__how-to-buy" src="./static/images/example-image.png" alt=""/>
+                        <img class="example__how-to-buy" src={Example} alt=""/>
                     </figure>
                     
                 </div>
@@ -34,8 +40,9 @@ const HowToBuy = () =>(
                 <div class="information__how-to-buy">
                     
                     <figure>
-                        <img src="./static/images/hands/hand-1.svg" alt=""/>
+                        <img src={Hand1} alt=""/>
                     </figure>
+                    
                     
                     <p class="paragraph__how-to-buy">
                         After clicking the 'Buy Boost' button, you <br/>
@@ -44,7 +51,7 @@ const HowToBuy = () =>(
                         </p>
                         
                     <figure>
-                        <img class="example__how-to-buy" src="./static/images/example-image.png" alt=""/>
+                        <img class="example__how-to-buy" src={Example} alt=""/>
                     </figure>
                     
                 </div>
@@ -52,7 +59,7 @@ const HowToBuy = () =>(
                 <div class="information__how-to-buy">
                     
                     <figure>
-                        <img src="./static/images/hands/hand-2.svg" alt=""/>
+                        <img src={Hand2} alt=""/>
                     </figure>
                     
                     <p class="paragraph__how-to-buy">
@@ -64,7 +71,7 @@ const HowToBuy = () =>(
                     </p>
                     
                     <figure>
-                        <img class="example__how-to-buy" src="./static/images/example-image.png" alt=""/>
+                        <img class="example__how-to-buy" src={Example} alt=""/>
                     </figure>
                     
                 </div>
@@ -72,7 +79,7 @@ const HowToBuy = () =>(
                 <div class="information__how-to-buy">
 
                     <figure>
-                        <img src="./static/images/hands/hand.svg" alt=""/>
+                        <img src={Hand3} alt=""/>
                     </figure>
 
                     <p class="paragraph__how-to-buy">
@@ -82,7 +89,7 @@ const HowToBuy = () =>(
                     </p>
                     
                     <figure>
-                        <img class="example__how-to-buy" src="./static/images/example-image.png" alt=""/>
+                        <img class="example__how-to-buy" src={Example} alt=""/>
                     </figure>
                     
                 </div>

@@ -1,5 +1,10 @@
 import React from 'react';
 import '../assets/styles/components/OurMethodology.scss';
+import Security from '../assets/static/images/our-methodology/security.svg';
+import Time from '../assets/static/images/our-methodology/time.svg';
+import Privacy from '../assets/static/images/our-methodology/privacy.svg';
+import Tracking from '../assets/static/images/our-methodology/tracking.svg';
+
 
 const OurMethodology = () =>(
     <section id="our-methodology" class="our-methodology">
@@ -16,7 +21,7 @@ const OurMethodology = () =>(
                 <div class="information__our-methodology">
                     
                     <figure>
-                        <img class="icon__our-methodology" src="./static/images/our-methodology/security.svg" alt=""/>
+                        <img class="icon__our-methodology" src={Security} alt=""/>
                     </figure>
                     <div>
                         
@@ -34,7 +39,7 @@ const OurMethodology = () =>(
                 <div class="information__our-methodology">
                     
                     <figure>
-                        <img class="icon__our-methodology" src="./static/images/our-methodology/time.svg" alt=""/>
+                        <img class="icon__our-methodology" src={Time} alt=""/>
                     </figure>
                     <div>
                         
@@ -54,7 +59,7 @@ const OurMethodology = () =>(
                 <div class="information__our-methodology">
                     
                     <figure>
-                        <img class="icon__our-methodology" src="./static/images/our-methodology/privacy.svg" alt=""/>
+                        <img class="icon__our-methodology" src={Privacy} alt=""/>
                     </figure>
                     <div>
                         
@@ -72,7 +77,7 @@ const OurMethodology = () =>(
                 <div class="information__our-methodology">
                     
                     <figure>
-                        <img class="icon__our-methodology" src="./static/images/our-methodology/tracking.svg" alt=""/>
+                        <img class="icon__our-methodology" src={Tracking} alt=""/>
                     </figure>
                     <div>
 
