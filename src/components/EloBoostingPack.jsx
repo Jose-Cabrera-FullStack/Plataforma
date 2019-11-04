@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import '../assets/styles/components/EloBoostingPack.scss';
 import Gold from '../assets/static/images/elo/Emblem_Gold.png';
 import Diamond from '../assets/static/images/elo/Emblem_Diamond.png';
@@ -44,7 +45,9 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__elo__booting__packs">Completion Time: 9-14 days</p>
                     </div>
-                    <a href="#" className="btn__secondary margin position_btn_packs__elo__booting__packs">BOOST ME</a>
+                    <Link to="/login">
+                    <a className="btn__secondary margin position_btn_packs__elo__booting__packs">BOOST ME</a>
+                    </Link>
 
                 </div>
                 <div className="pack__elo__booting__packs">
@@ -65,7 +68,9 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__elo__booting__packs">Completion Time: 9-14 days</p>
                     </div>
-                    <a href="#" className="btn__secondary margin position_btn_packs__elo__booting__packs">BOOST ME</a>
+                    <Link to="/login">
+                    <a className="btn__secondary margin position_btn_packs__elo__booting__packs">BOOST ME</a>
+                    </Link>
 
                 </div>
                 <div className="pack__elo__booting__packs">
@@ -86,7 +91,9 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__elo__booting__packs">Completion Time: 9-14 days</p>
                     </div>
-                    <a href="#" className="btn__secondary margin position_btn_packs__elo__booting__packs">BOOST ME</a>
+                    <Link to="/login">
+                    <a className="btn__secondary margin position_btn_packs__elo__booting__packs">BOOST ME</a>
+                    </Link>
 
                 </div>
                 <div className="pack__elo__booting__packs">
@@ -107,7 +114,9 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__elo__booting__packs">Completion Time: 9-14 days</p>
                     </div>
-                    <a href="#" className="btn__secondary margin position_btn_packs__elo__booting__packs">BOOST ME</a>
+                    <Link to="/login">
+                    <a className="btn__secondary margin position_btn_packs__elo__booting__packs">BOOST ME</a>
+                    </Link>
 
                 </div>
 

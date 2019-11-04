@@ -1,24 +1,23 @@
-.principal {
-    width: 99vw;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 5%;
-    
-    
-}
 .shen{
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     position: relative;
     left: 0px;
     bottom: 80px;
     z-index: -1;
 }
+// .eveline{
+//     width: 100vw;
+//     height: 100vh;
+//     position: relative;
+//     left: 0px;
+//     bottom: 80px;
+//     z-index: -1;
+// }
 
 .overlay__principal{
     background-image: linear-gradient(168deg, #1b1f3b -100%, rgba(133, 94, 210, 0.1%));
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
 }
 

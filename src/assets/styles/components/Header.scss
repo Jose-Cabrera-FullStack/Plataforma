@@ -1,5 +1,5 @@
 .navbar {
-  width: 100%;
+  width: auto;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -8,6 +8,9 @@
 
 .navbar a {
   color: #ffffff
+}
+.navbar__logo{
+  cursor: pointer;
 }
 
 .navbar__title {

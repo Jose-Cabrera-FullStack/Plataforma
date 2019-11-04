@@ -1,37 +1,87 @@
 import React, { useState } from 'react';
-// import { connect } from 'react-redux';
-// import { loginUser } from '../actions';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { loginRequest } from '../actions';
 import Header from '../components/Header';
 import '../assets/styles/components/Login.scss';
+import googleIcon from '../assets/static/images/social-network/google-white.svg';
+import twitterIcon from '../assets/static/images/social-network/twitter-white.svg';
 
+const Login = (props) => {
+  const [form, setValues] = useState({
+    email: '',
+  });
 
-const Login = () => {
+  const handleInput = (event) => {
+    setValues({
+      ...form,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.loginRequest(form);
+    props.history.push('/')
+  };
+
   return (
     <>
       <Header isLogin />
-      <section class="login">
-    <section class="login__container">
-      <h2>Inicia sesión</h2>
-      <form class="login__container--form">
-        <input class="input" type="text" placeholder="Correo"/>
-        <input class="input" type="password" placeholder="Contraseña"/>
-        <button class="button">Iniciar sesión</button>
-        <div class="login__container--remember-me">
-          <label>
-            <input type="checkbox" id="cbox1" value="first_checkbox"/>Recuérdame
-          </label>
-          <a href="/">Olvidé mi contraseña</a>
-        </div>
-      </form>
-      <section class="login__container--social-media">
-        <div><img src="../assets/google-icon.png"/> Inicia sesión con Google</div>
-        <div><img src="../assets/twitter-icon.png"/> Inicia sesión con Twitter</div>
+      <section className="login">
+        <section className="login__container">
+          <h2>Inicia sesión</h2>
+          <form className="login__container--form" onSubmit={handleSubmit}>
+            <input
+              name="email"
+              className="input"
+              type="text"
+              placeholder="Correo"
+              onChange={handleInput}
+              required
+            />
+            <input
+              name="password"
+              className="input"
+              type="password"
+              placeholder="Contraseña"
+              onChange={handleInput}
+              required
+            />
+            <button className="button" type="submit">Iniciar sesión</button>
+            <div className="login__container--remember-me">
+              <label htmlFor="cbox1">
+                <input type="checkbox" id="cbox1" value="first_checkbox" />
+                Recuérdame
+              </label>
+              <a href="/">Olvidé mi contraseña</a>
+            </div>
+          </form>
+          <section className="login__container--social-media">
+            <div>
+              <img src={googleIcon} alt="googleicon" />
+                Inicia sesión con Google
+            </div>
+            <div>
+              <img src={twitterIcon} alt="twitterIcon" />
+              Inicia sesión con Twitter
+            </div>
+          </section>
+          <p className="login__container--register">
+            No tienes ninguna cuenta
+            {' '}
+            <Link to="/register">
+              Regístrate
+            </Link>
+          </p>
+        </section>
       </section>
-      <p class="login__container--register">No tienes ninguna cuenta <a href="">Regístrate</a></p>
-    </section>
-  </section>
     </>
   );
 };
 
-export default Login;
+const mapDispatchToProps = {
+  loginRequest,
+};
+
+export default connect(null, mapDispatchToProps)(Login);
