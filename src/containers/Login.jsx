@@ -49,6 +49,7 @@ const Login = (props) => {
               required
             />
             <button className="button" type="submit">Iniciar sesión</button>
+
             <div className="login__container--remember-me">
               <label htmlFor="cbox1">
                 <input type="checkbox" id="cbox1" value="first_checkbox" />
@@ -57,6 +58,7 @@ const Login = (props) => {
               <a href="/">Olvidé mi contraseña</a>
             </div>
           </form>
+          
           <section className="login__container--social-media">
             <div>
               <img src={googleIcon} alt="googleicon" />
