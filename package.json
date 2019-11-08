@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --port 9000 --open --mode development",
+    "start": "webpack-dev-server --port 9001 --open --mode development",
     "start:dev": "nodemon src/server/index.js --exact babel-node"
   },
   "keywords": [],
@@ -28,6 +28,7 @@
     "eslint-plugin-react": "7.14.2",
     "express": "4.17.1",
     "history": "4.9.0",
+    "ignore-styles": "^5.0.1",
     "nodemon": "1.19.1",
     "postcss-loader": "3.0.0",
     "prop-types": "15.7.2",
@@ -36,6 +37,7 @@
     "react-hot-loader": "4.12.7",
     "react-redux": "7.1.0",
     "react-router": "5.0.1",
+    "react-router-config": "^5.1.1",
     "react-router-dom": "5.0.1",
     "redux": "4.0.4",
     "webpack-dev-middleware": "3.7.0",
