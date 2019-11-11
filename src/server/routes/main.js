@@ -5,7 +5,7 @@ import {createStore} from 'redux';
 import {StaticRouter} from 'react-router';
 import {renderRoutes} from 'react-router-config';
 import Routes from '../../frontend/routes/serverRoutes';
-import Footer from '../../frontend/components/Footer';
+// import Footer from '../../frontend/components/Footer';
 import reducer from '../../frontend/reducers';
 import initialState from '../../frontend/initialState';
 import render from '../render';
@@ -20,7 +20,8 @@ const main = (req,res, next) => {
                 </StaticRouter>
             </Provider>
         )
-        res.send(render(html))
+        const preloadedState = store.getState();
+        res.send(render(html,preloadedState))
     }catch(err){
         next(err)
     }

@@ -1,21 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {hydrate} from 'react-dom';
 import { Router } from 'react-router';
 import { createBrowserHistory } from 'history';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import initialState from './initialState';
+import { createStore, compose } from 'redux';
 import reducer from './reducers';
-
-
 import App from './routes/App';
 
 
-const store = createStore(reducer,initialState,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-const history = createBrowserHistory();
-
-ReactDOM.render(
-       
+if (typeof window !== 'undefined'){
+  
+  const preloadedState = window.__PRELOADED_STATE__;
+  const store = createStore(reducer,preloadedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()); // Cambiar al subir a production
+  const history = createBrowserHistory();
+  
+  hydrate(
+    
     <Provider store={store}>
       <Router history={history}>
         <App />
@@ -23,4 +23,5 @@ ReactDOM.render(
     </Provider>,
     
     document.getElementById('app')
-);
+    );
+  }
