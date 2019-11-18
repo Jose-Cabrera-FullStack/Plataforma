@@ -62,7 +62,7 @@ const Header = props => {
             </Link>
           }
           {hasUser ?
-            <Link to="/login"> 
+            <Link to="/"> 
               <li className="navbar__menu btn__secondary">
                   <a>{user.email}</a>
               </li>

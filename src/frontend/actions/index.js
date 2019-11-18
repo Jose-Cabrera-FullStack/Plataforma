@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const setFavorite = payload => ({
   type: 'SET_FAVORITE',
   payload,
@@ -18,7 +20,20 @@ export const logoutRequest = payload => ({
   payload,
 });
 
+export const setError = payload => ({
+  type: 'SET_ERROR',
+  payload
+})
+
 export const registerRequest = payload => ({
   type: 'REGISTER_REQUEST',
   payload,
 });
+
+export const registerUser = (payload) => {
+  return(dispatch) =>{
+    axios.post('/auth/sign-up', payload)
+    .then(({data}) => dispatch(registerRequest(data)))
+    .catch(error => dispatch(setError(error)))
+  }
+}
