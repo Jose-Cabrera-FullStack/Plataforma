@@ -1,4 +1,4 @@
-{
+export default{
   "initalState": {
     "mylist": [],
     "trends": [
@@ -162,4 +162,4 @@
       }
     ]
   }
-}
+};
