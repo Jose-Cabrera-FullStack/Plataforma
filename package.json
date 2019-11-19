@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.7.0",
     "@babel/register": "7.4.4",
     "@hapi/boom": "^8.0.1",
     "asset-require-hook": "^1.2.0",

@@ -22,7 +22,7 @@ export const logoutRequest = payload => ({
 
 export const setError = payload => ({
   type: 'SET_ERROR',
-  payload
+  payload,
 })
 
 export const registerRequest = payload => ({
@@ -30,10 +30,13 @@ export const registerRequest = payload => ({
   payload,
 });
 
-export const registerUser = (payload) => {
-  return(dispatch) =>{
+export const registerUser = (payload, redirectUrl) => {
+  return(dispatch) => {
     axios.post('/auth/sign-up', payload)
     .then(({data}) => dispatch(registerRequest(data)))
+    .then(() => { 
+      window.location.href = redirectUrl
+    })
     .catch(error => dispatch(setError(error)))
   }
 }
