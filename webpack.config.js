@@ -6,18 +6,17 @@ const dotenv = require('dotenv');
 const CompressionPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
-
 dotenv.config();
 
 const isProd = (process.env.NODE_ENV == 'production')
 
 module.exports = {
-
   devtool: isProd ? 'hidden-source-map' : 'cheap-source-map',
   entry: './src/frontend/index.js',
   mode:process.env.NODE_ENV,
   output: {
-    path: isProd ? path.join(process.cwd(), './src/server/public') : '/',
+    path: isProd ? 
+      path.join(process.cwd(), './src/server/public') : '/',
     filename: isProd ? 'assets/app-[hash].js' : 'assets/app.js',
     publicPath: '/'
   },
@@ -25,7 +24,9 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   optimization: {
-    minimizer: isProd ? [ new TerserPlugin() ,] : [],
+    minimizer: isProd ? [ 
+      new TerserPlugin() ,
+    ] : [],
     splitChunks: {
       chunks: 'async',
       name: true,
@@ -103,7 +104,7 @@ module.exports = {
     isProd ? new CompressionPlugin({
       test: /\.js$|\.css$/,
       filename: '[path].gz',  
-    }) : false,
-    isProd ? new ManifestPlugin() : false,
+    }) : () => {},
+    isProd ? new ManifestPlugin() : () => {},
   ],
 };
