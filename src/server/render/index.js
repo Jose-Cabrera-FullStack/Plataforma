@@ -8,7 +8,7 @@ const render = (html, preloadedState) => {
   <!DOCTYPE html>
     <html>
       <head>
-        <title>Platzi Video</title>
+        <title>Summoner's Cave</title>
         <link rel="stylesheet" href="${files ? files['main.css'] : 'assets/app.css'}" type="text/css"></link>
       </head>
       <body>

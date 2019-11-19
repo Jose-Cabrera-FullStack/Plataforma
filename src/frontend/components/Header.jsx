@@ -42,7 +42,7 @@ const Header = props => {
                   FAQ
               </li>
             </Link>
-            <Link to="/">
+            <Link to="/login">
               <li className="navbar__menu padding__top">
                   Contact
               </li>
