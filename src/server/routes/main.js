@@ -7,11 +7,30 @@ import {renderRoutes} from 'react-router-config';
 import Routes from '../../frontend/routes/serverRoutes';
 // import Footer from '../../frontend/components/Footer';
 import reducer from '../../frontend/reducers';
-import initialState from '../../frontend/initialState';
 import render from '../render';
 
 const main = (req,res, next) => {
     try{
+        let initialState;
+        try{
+            const {email,name,id} = req.cookies;
+            let user = {};
+
+            if (email || name || id) {
+                user = {
+                    id,
+                    email,
+                    name
+                };
+            }
+
+            initialState = {
+                user,
+                feature: {}
+            }
+        }catch(error){
+            console.log(error)
+        }
         const store = createStore(reducer,initialState);
         const html = renderToString(
             <Provider store={store}>

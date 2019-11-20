@@ -23,7 +23,7 @@ export const logoutRequest = payload => ({
 export const setError = payload => ({
   type: 'SET_ERROR',
   payload,
-})
+});
 
 export const registerRequest = payload => ({
   type: 'REGISTER_REQUEST',
@@ -38,5 +38,27 @@ export const registerUser = (payload, redirectUrl) => {
       window.location.href = redirectUrl
     })
     .catch(error => dispatch(setError(error)))
-  }
-}
+  };
+};
+export const loginUser = ({email, password}, redirectUrl) => {
+  return(dispatch) => {
+    axios({
+      url:'/auth/sign-in', 
+      method: 'post',
+      auth: {
+        username: email,
+        password,
+      },
+    })
+    .then(({data}) => {
+      document.cookie = `email=${data.email}`;
+      document.cookie = `name=${data.name}`;
+      document.cookie = `id=${data.id}`;
+      dispatch(loginRequest(data));
+    })
+    .then(() => { 
+      window.location.href = redirectUrl
+    })
+    .catch(error => dispatch(setError(error)))
+  };
+};
