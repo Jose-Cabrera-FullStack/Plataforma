@@ -176,6 +176,8 @@ a {
 
 /*---------- NAVBAR ---------------*/
 
+/*---------- HOME VIEW ---------------*/
+
 /*---------- PRINCIPAL ---------------*/
 .principal {
     width: 99vw;
@@ -810,6 +812,31 @@ a {
 }
 
 /*---------- OUR METHODOLOGY ---------------*/
+
+/*---------- HOME VIEW ---------------*/
+
+/*---------- BOOSTING VIEW ---------------*/
+
+/*---------- PRINCIPAL-BOOSING ---------------*/
+
+.boosting {
+    width: 99vw;
+    height: 50vh;
+    background-image: url(../static/images/Xayah.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 5%;
+}
+.overlay__boosting{
+    background-image: linear-gradient(168deg, #1b1f3b -100%, rgba(133, 94, 210, 0.1%));
+    width: 99vw;
+    height: 100vh;
+}
+
+/*---------- PRINCIPAL-BOOSING ---------------*/
+
+/*---------- BOOSTING VIEW ---------------*/
+
 
 /*---------- FOOTER ---------------*/
 
