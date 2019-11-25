@@ -83,6 +83,12 @@ body {
     top: 120px;
     left: 12px;
 }
+.contentTitle {
+    animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.2);
+}
+.contentText {
+    animation-delay: calc(var(--delay-anim) + var(--time-anim) * 0.25);
+}
 @media screen and (max-width: 55em) {
     .contentFixed {
         grid-template-columns: 1fr;
