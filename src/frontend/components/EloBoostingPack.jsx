@@ -9,7 +9,7 @@ import Reloj from '../assets/static/images/reloj-shape.png';
 const EloBoostingPack = () =>(
 
     <section id="elo__booting__packs" className="elo__booting__packs">
-        <div className="container__elo__booting__packs col-12">
+        <div className="container__elo__booting__packs">
             <div className="header__elo__booting__packs">
                 <h2 className="title__container__elo__booting__packs">
                     ELO BOOSTING PACKS_

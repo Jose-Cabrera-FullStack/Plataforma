@@ -26,7 +26,7 @@ const Header = props => {
     <header id="navbar" className="navbar">
     <Link to="/">
       <div className="navbar__logo">
-          <h3 className="navbar__title col-1">Summoner's Cave</h3>
+          <h3 className="navbar__title">Summoner's Cave</h3>
       </div>
     </Link>
     <div className="navbar__container">
