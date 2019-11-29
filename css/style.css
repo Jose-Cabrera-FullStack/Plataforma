@@ -13,9 +13,9 @@ a {
 
 /*-------GRID ----------*/
 
-.container{
+.container {
     max-width: 1200px;
-    margin:0
+    margin: 0
 }
 
 .row {
@@ -69,15 +69,39 @@ a {
 .col-12 {
     width: 100%;
 }
-.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
     padding: 10px;
 }
 
-@media (max-width:900px){
-    .row{
-        display:inherit;
+@media (max-width:900px) {
+    .row {
+        display: inherit;
     }
-    .col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12 {
         width: 100%;
     }
 }
@@ -122,6 +146,7 @@ a {
     justify-content: space-between;
     background: transparent;
     z-index: 10000;
+    background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
 }
 
 .navbar a {
@@ -144,8 +169,8 @@ a {
     top: 12px;
 }
 
-.register__btn{
-    color: #454ade !important ;
+.register__btn {
+    color: #454ade !important;
     position: relative;
     right: 4px;
 
@@ -157,7 +182,7 @@ a {
 
 }
 
-.padding__top{
+.padding__top {
     padding-top: 16px;
 }
 
@@ -189,10 +214,11 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 5%; */
-    
-    
+
+
 }
-.overlay__principal{
+
+.overlay__principal {
     background-image: linear-gradient(168deg, #1b1f3b -100%, rgba(133, 94, 210, 0.1%));
     width: 99vw;
     height: 100vh;
@@ -239,7 +265,7 @@ a {
     margin-left: 100px;
 }
 
-.icons{
+.icons {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -249,15 +275,16 @@ a {
     width: 577%;
 
 }
-.icon{
+
+.icon {
     margin-bottom: 10px;
 }
 
-.scroll__principal{
+.scroll__principal {
     display: flex;
     align-items: center;
-  justify-content: center;
-  height: 50%;
+    justify-content: center;
+    height: 50%;
 }
 
 /*---------- PRINCIPAL ---------------*/
@@ -322,6 +349,9 @@ a {
 .elo__booting__packs {
     width: auto;
     height: 905px;
+    
+}
+.background__color{
     background-color: #1b1f3b;
 }
 
@@ -403,7 +433,7 @@ a {
     right: -12px;
 }
 
-.elos__elo__booting__packs{
+.elos__elo__booting__packs {
     position: relative;
     top: -35px;
 }
@@ -501,7 +531,7 @@ a {
     left: -35px;
 }
 
-.position_btn_packs__elo__booting__packs{
+.position_btn_packs__elo__booting__packs {
     position: relative;
     top: -276px;
 }
@@ -559,13 +589,13 @@ a {
     bottom: 48px;
 }
 
-.arrow{
+.arrow {
     position: relative;
     top: 100px;
     width: 40px;
 }
 
-.box__review{
+.box__review {
     margin-top: 90px;
     display: flex;
     position: relative;
@@ -599,7 +629,7 @@ a {
     justify-items: normal;
 }
 
-.star{
+.star {
     margin-left: -75px;
     position: relative;
     left: 127px;
@@ -701,17 +731,17 @@ a {
     letter-spacing: 8.89px;
     color: #ffffff;
     position: relative;
-    left:113px;
+    left: 113px;
     top: 273px;
 }
 
-.informations__how-to-buy{
+.informations__how-to-buy {
     position: relative;
     right: 240px;
     top: 50px;
 }
 
-.paragraph__how-to-buy{
+.paragraph__how-to-buy {
     text-align: right;
 }
 
@@ -731,7 +761,7 @@ a {
     color: #ffffff;
 }
 
-.example__how-to-buy{
+.example__how-to-buy {
     position: relative;
     right: -20px;
 
@@ -808,10 +838,10 @@ a {
     letter-spacing: normal;
     color: #1b1f3b;
     position: relative;
-    
+
 }
 
-.icon__our-methodology{
+.icon__our-methodology {
     position: relative;
     top: 12px;
     right: -22px;
@@ -819,15 +849,126 @@ a {
 
 /*---------- OUR METHODOLOGY ---------------*/
 
-/*---------- HOME VIEW ---------------*/
 
-/*---------- BOOSTING VIEW ---------------*/
 
 /*---------- PRINCIPAL-BOOSING ---------------*/
 
+.shadown {
+    position: absolute;
+    background-image: linear-gradient(to top, rgba(25, 31, 59, 0.999) 48%, rgba(27, 31, 59, 0));
+}
+.toggle__options{
+    position: absolute;
+    top: 50vh;
+    right: 15vw;
+}
+
+.toggle__rectangle {
+    display: flex;
+    border-radius: 10px;
+    border: solid 3px #ffffff;
+    width: 1000px;
+    height: 46px;
+    padding-left: 0px;
+}
+
+.toggle__rectangle--active {
+    width: 474px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.8;
+    letter-spacing: normal;
+    color: #1b1f3b;
+    background: #ffffff;
+}
+
+.toggle__rectangle--desactive {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.8;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.toggle__rectangle__text {
+    position: relative;
+    left: 9vw;
+    bottom: -1.5vh;
+}
+
+.toggle__boosting {
+    display: flex;
+
+}
+.toggle__img__text{
+    display: grid;
+    padding-right: 6vw;
+    margin-top: 80px;
+} 
+
+.toggle__img{
+    position: relative;
+    left: 2.27vw;
+    padding-bottom: 25px;
+}
+
+.toggle__text {
+    width: 165px;
+    height: 60px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px ;
+}
+
+.toggle__selected{
+    color:#56fffb
+}
+
+.toggle__line{
+    border-bottom: #56fffb 3px solid;
+    width: 165px;
+
+}
 /*---------- PRINCIPAL-BOOSING ---------------*/
 
-/*---------- BOOSTING VIEW ---------------*/
+
+/*---------- LEAGUE-BOOSTING ---------------*/
+
+.league__boosting{
+
+height: 1150px;
+background: #060606 0% 0% no-repeat padding-box;
+opacity: 0.79;
+}
+
+.league__boosting--rectangle{
+
+    position: absolute;
+    top: 111vh;
+    left: 20vw;
+    width: 1056px;
+    height: 931px;
+    background: #E5E5E5 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 19px #FFFFFF;
+    border-radius: 18px;
+    opacity: 0.72;
+}
+
+
+/*---------- LEAGUE-BOOSTING ---------------*/
 
 
 /*---------- FOOTER ---------------*/
@@ -854,7 +995,7 @@ a {
     margin: 60px 30px 60px 366px;
 }
 
-.input::placeholder{
+.input::placeholder {
     text-indent: 20px;
 
 }
@@ -887,59 +1028,62 @@ a {
     color: #ffffff;
     margin-bottom: 30px;
 }
-.footer__social-network{
+
+.footer__social-network {
     margin-left: 113px;
 }
-.footer__information{
+
+.footer__information {
     padding-right: 113px;
     position: relative;
     bottom: 26px;
 }
 
-.list__footer{
+.list__footer {
     padding-left: 0;
 }
 
 
-.menu__footer a{
+.menu__footer a {
     color: #ffffff;
 }
-.menu__footer{
 
-font-family: Roboto;
-  font-size: 16px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.25;
-  letter-spacing: normal;
-  margin-bottom: 30px;
+.menu__footer {
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    margin-bottom: 30px;
 }
 
-.payment__footer{
+.payment__footer {
     position: relative;
     top: 15px;
 }
 
-.icons__footer{
+.icons__footer {
     display: flex;
     padding: 0;
 
 }
 
-.icon__footer{
+.icon__footer {
     color: #454ade;
     margin-right: 10px;
 }
 
-.line__footer{
-    border-top:5px solid #1b1f3b;
+.line__footer {
+    border-top: 5px solid #1b1f3b;
     border-radius: 5px;
     margin-right: 113px;
     margin-left: 113px;
 }
 
-.copyright__footer{
+.copyright__footer {
 
     opacity: 0.5;
     font-family: Roboto;
@@ -952,7 +1096,8 @@ font-family: Roboto;
     text-align: center;
     color: #ffffff;
 }
-.copyright__footer a{
+
+.copyright__footer a {
     color: #56fffb;
 }
 

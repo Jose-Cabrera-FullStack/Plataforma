@@ -71,8 +71,8 @@ body {
     margin-top: -10px;
     vertical-align: middle;
 }
-.imgloaded .contentTitle,
-.imgloaded .contentText {
+.contentTitle,
+.contentText {
     animation-name: glitch-text;
     animation-duration: var(--time-anim);
     animation-timing-function: linear;
@@ -112,7 +112,7 @@ body {
 .glitch {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -17px;
     width: var(--glitch-width);
     height: var(--glitch-height);
     overflow: hidden;
@@ -124,37 +124,48 @@ body {
     left: calc(-1 * var(--gap-horizontal));
     width: calc(100% + var(--gap-horizontal) * 2);
     height: calc(100% + var(--gap-vertical) * 2);
+    
+}
+.img__glitch--principal{
     background: url(../img/shen.jpg) no-repeat 50% 0;
     background-color: var(--blend-color-1);
     background-size: cover;
     transform: translate3d(0, 0, 0);
     background-blend-mode: var(--blend-mode-1);
 }
+.img__glitch--boosting{
+    background: url(../img/Xayah-and-otro.jpg) no-repeat 50% 0;
+    background-color: var(--blend-color-1);
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    background-blend-mode: var(--blend-mode-1);
+}
+
 .glitchit:nth-child(n+2) {
     opacity: 0;
 }
-.imgloaded .glitchit:nth-child(n+2) {
+.glitchit:nth-child(n+2) {
     animation-duration: var(--time-anim);
     animation-delay: var(--delay-anim);
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-.imgloaded .glitchit:nth-child(2) {
+.glitchit:nth-child(2) {
     background-color: var(--blend-color-2);
     background-blend-mode: var(--blend-mode-2);
     animation-name: glitch-1;
 }
-.imgloaded .glitchit:nth-child(3) {
+.glitchit:nth-child(3) {
     background-color: var(--blend-color-3);
     background-blend-mode: var(--blend-mode-3);
     animation-name: glitch-2;
 }
-.imgloaded .glitchit:nth-child(4) {
+.glitchit:nth-child(4) {
     background-color: var(--blend-color-4);
     background-blend-mode: var(--blend-mode-4);
     animation-name: glitch-3;
 }
-.imgloaded .glitchit:nth-child(5) {
+.glitchit:nth-child(5) {
     background-color: var(--blend-color-5);
     background-blend-mode: var(--blend-mode-5);
     animation-name: glitch-flash;
