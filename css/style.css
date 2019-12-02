@@ -967,6 +967,46 @@ opacity: 0.79;
     opacity: 0.72;
 }
 
+.form__rectangle{
+    top: 970px;
+    left: 461px;
+    width: 445px;
+    height: 284px;
+    background: #8c8afc 0% 0% no-repeat padding-box;
+    opacity: 0.72;
+}
+
+.form__title{
+    top: 1017px;
+    left: 485px;
+    width: 46px;
+    height: 11px;
+    text-align: center;
+    font: Light 9px/27px Roboto;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}
+select{
+    background: transparent;
+    border: none;
+     border-bottom:  0.5px solid #FFFFFF;
+     font-size: 14px;
+     height: 30px;
+     padding: 5px;
+     width: 250px;
+}
+option{
+    top: 1104px;
+    left: 485px;
+    width: 56px;
+    height: 17px;
+    text-align: center;
+    font: Regular 14px/28px Roboto;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}
 
 /*---------- LEAGUE-BOOSTING ---------------*/
 
