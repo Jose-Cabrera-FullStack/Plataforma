@@ -119,92 +119,127 @@
     <section id="league__boosting" class="league__boosting">
         <div class="league__boosting--rectangle">
 
-            <form action="/signup" method="post">
+            <div class="form__rectangle">
+                <form action="/sendit" method="post">
 
-                <div class="form__rectangle">
-                <p >
-                    <label class="form__title">Current Division</label><br>
-                    <select class="form__select">
-                        <option>Iron</option>
-                        <option>Bronce</option>
-                        <option>Silver</option>
-                        <option>Gold</option>
-                        <option>Platinum</option>
-                        <option>Diamond</option>
-                        <option>Master</option>
-                        <option>Grand Master</option>
-                        <option>Challenger</option>
-                    </select>
-                </p>
+                    <div class="form__flex">
+                        <div class="form__column">
+                            <div class="form__select">
+                                <label class="form__title">Current Division</label><br>
+                                <select>
+                                    <option>Iron</option>
+                                    <option>Bronce</option>
+                                    <option>Silver</option>
+                                    <option>Gold</option>
+                                    <option>Platinum</option>
+                                    <option>Diamond</option>
+                                    <option>Master</option>
+                                    <option>Grand Master</option>
+                                    <option>Challenger</option>
+                                </select>
+                            </div>
+
+                            <div class="form__select">
+                                <label class="form__title">Current Division</label><br>
+                                <select>
+                                    <option>Iron</option>
+                                    <option>Bronce</option>
+                                    <option>Silver</option>
+                                    <option>Gold</option>
+                                    <option>Platinum</option>
+                                    <option>Diamond</option>
+                                    <option>Master</option>
+                                    <option>Grand Master</option>
+                                    <option>Challenger</option>
+                                </select>
+                            </div>
+
+                            <div class="form__select">
+                                <label class="form__title">Current Division</label><br>
+                                <select>
+                                    <option>Iron</option>
+                                    <option>Bronce</option>
+                                    <option>Silver</option>
+                                    <option>Gold</option>
+                                    <option>Platinum</option>
+                                    <option>Diamond</option>
+                                    <option>Master</option>
+                                    <option>Grand Master</option>
+                                    <option>Challenger</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="form__column">
+
+                            <div class="form__select">
+                                <label class="form__title">Current Division</label><br>
+                                <select>
+                                    <option>Iron</option>
+                                    <option>Bronce</option>
+                                    <option>Silver</option>
+                                    <option>Gold</option>
+                                    <option>Platinum</option>
+                                    <option>Diamond</option>
+                                    <option>Master</option>
+                                    <option>Grand Master</option>
+                                    <option>Challenger</option>
+                                </select>
 
 
-                <label>Current Division</label><br>
-                <select>
-                    <option>Division 1</option>
-                    <option>Division 2</option>
-                    <option>Division 3</option>
-                    <option>Division 4</option>
-                </select>
-                </p>
+                            </div>
+                            <div class="form__select">
+                                <label class="form__title">Current Division</label><br>
+                                <select>
+                                    <option>Iron</option>
+                                    <option>Bronce</option>
+                                    <option>Silver</option>
+                                    <option>Gold</option>
+                                    <option>Platinum</option>
+                                    <option>Diamond</option>
+                                    <option>Master</option>
+                                    <option>Grand Master</option>
+                                    <option>Challenger</option>
+                                </select>
 
 
-                <p>
-                    <label>Select your server</label><br>
-                    <select>
-                        <option>LAN</option>
-                        <option>LAS</option>
-                        <option>BRAZIL</option>
-                        <option>NA</option>
-                    </select>
-                </p>
-
-                <p>
-                    <label>LP Gain</label><br>
-                    <select>
-                        <option>18-24+LP</option>
-                        <option>15-17+LP</option>
-                        <option>10-14+LP</option>
-                        <option>5-9+LP</option>
-                        <option>1-4+LP</option>
-                    </select>
-                </p>
+                            </div>
 
 
-                <p>
-                    <label>
-                        <input type="checkbox" value="terms">
-                        I agree to the <a href="/terms">terms and conditions</a>
-                    </label>
-                </p>
-                <p>
-                    <label>Title</label><br>
-                    <label>
-                        <input type="radio" name="title" value="mr">
-                        Solo/Duo
-                    </label>
-                    <label>
-                        <input type="radio" name="title" value="mrs">
-                        Flex 5v5
-                    </label>
-                    <label>
-                        <input type="radio" name="title" value="miss">
-                        Flex 3v3
-                    </label>
-                </p>
+                            <p class="form__point">
+                                <label>
+                                    <input type="radio" name="title" value="mr">
+                                    Solo/Duo
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="radio" name="title" value="mrs">
+                                    Flex 5v5
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="radio" name="title" value="miss">
+                                    Flex 3v3
+                                </label>
+                            </p>
 
-                <input type="range" min="1" max="10" value="1" id="myRange" class="slider">
-                <input type="submit" value="submit">
-            </form>
-        </div>
+                        </div>
 
-            <div>
-                <h3>$233</h3>
-                <h4>AR$ 13.980</h4>
-                <p>COMPLETION TIME:9-13 DAYS</p>
+                    </div>
+
+                        <input type="range" min="1" max="10" value="1" id="myRange" class="slider"><span class="range__title">Select Your Current League</span>
+
+                    <div class="payload">
+                        <h3 class="payload__price">$233</h3>
+                        <h4 class="payload__price__ar">(AR$ 13.980)</h4>
+                        <p class="payload__time">COMPLETION TIME:9-13 DAYS</p>
+                    </div>
+                    <input class="bottom__form" type="submit" value="BOOST ME !">
+                </form>
             </div>
-
-
         </div>
+
     </section>
 
 
@@ -246,11 +281,10 @@
             <div class="footer__information">
                 <h2 class="footer__title">SUMMONER’S CAVE</h2>
                 <p class="parragraph__footer">
-                    Summoner’s Cave isn’t endorsed by Riot Games and doesn’t reflect the views <br>
-                    or opinions of Riot Games or anyone officially involved in producing or <br>
-                    managing League of Legends. League of Legends and Riot Games are <br>
-                    trademarks or registered trademarks of Riot Games, Inc. League of Legends © <br>
-                    Riot Games, Inc.
+                    Summoner’s Cave isn’t endorsed by Riot Games and doesn’t reflect the views <br> or opinions of Riot
+                    Games or anyone officially involved in producing or <br> managing League of Legends. League of
+                    Legends and Riot Games are <br> trademarks
+                    or registered trademarks of Riot Games, Inc. League of Legends © <br> Riot Games, Inc.
                 </p>
 
                 <div>

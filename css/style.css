@@ -2,7 +2,6 @@ body {
     margin: 0;
 }
 
-
 li {
     list-style-type: none;
 }
@@ -11,11 +10,12 @@ a {
     text-decoration: none;
 }
 
+
 /*-------GRID ----------*/
 
 .container {
     max-width: 1200px;
-    margin: 0
+    margin: 0;
 }
 
 .row {
@@ -85,7 +85,7 @@ a {
     padding: 10px;
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
     .row {
         display: inherit;
     }
@@ -125,7 +125,6 @@ a {
 }
 
 .btn__primary {
-
     background-color: #f1f1f1;
     color: black;
     font-size: 16px;
@@ -136,9 +135,12 @@ a {
     text-align: center;
 }
 
+
 /*---------- BOTONES ---------------*/
 
+
 /*---------- NAVBAR ---------------*/
+
 .navbar {
     width: 100%;
     height: 0;
@@ -173,13 +175,11 @@ a {
     color: #454ade !important;
     position: relative;
     right: 4px;
-
 }
 
 .navbar__list {
     justify-content: flex-end;
     display: flex;
-
 }
 
 .padding__top {
@@ -204,9 +204,12 @@ a {
 
 /*---------- NAVBAR ---------------*/
 
+
 /*---------- HOME VIEW ---------------*/
 
+
 /*---------- PRINCIPAL ---------------*/
+
 .principal {
     width: 99vw;
     height: 100vh;
@@ -214,8 +217,6 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 5%; */
-
-
 }
 
 .overlay__principal {
@@ -249,7 +250,6 @@ a {
 
 .margin {
     margin: 50px 30.5px 0px 100px;
-
 }
 
 .paragraph__principal {
@@ -273,7 +273,6 @@ a {
     height: 74%;
     justify-content: flex-end;
     width: 577%;
-
 }
 
 .icon {
@@ -286,6 +285,7 @@ a {
     justify-content: center;
     height: 50%;
 }
+
 
 /*---------- PRINCIPAL ---------------*/
 
@@ -333,7 +333,6 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #1b1f3b;
-
 }
 
 .img__service {
@@ -342,21 +341,22 @@ a {
     object-fit: contain;
 }
 
+
 /*---------- SERVICES ---------------*/
+
 
 /*---------- ELO BOOTING PACKS ---------------*/
 
 .elo__booting__packs {
     width: auto;
     height: 905px;
-    
 }
-.background__color{
+
+.background__color {
     background-color: #1b1f3b;
 }
 
 .title__container__elo__booting__packs {
-
     font-family: Roboto;
     font-size: 40px;
     font-weight: normal;
@@ -457,7 +457,6 @@ a {
 }
 
 .before__elo__booting__packs {
-
     font-family: Roboto;
     font-size: 18px;
     font-weight: normal;
@@ -486,7 +485,6 @@ a {
 }
 
 .arg__elo__booting__packs {
-
     font-family: Roboto;
     font-size: 20px;
     font-weight: bold;
@@ -536,9 +534,12 @@ a {
     top: -276px;
 }
 
+
 /*---------- ELO BOOTING PACKS ---------------*/
 
+
 /*---------- REVIEW ---------------*/
+
 .reviews {
     width: auto;
     height: 460px;
@@ -601,7 +602,6 @@ a {
     position: relative;
     left: 185px;
 }
-
 
 .review {
     width: 263px;
@@ -669,7 +669,6 @@ a {
     position: relative;
     bottom: 111px;
     left: -27px;
-
 }
 
 .name__review {
@@ -705,7 +704,9 @@ a {
     bottom: 20px;
 }
 
+
 /*---------- REVIEW ---------------*/
+
 
 /*---------- HOW-TO-BUY ---------------*/
 
@@ -718,7 +719,6 @@ a {
 .container__how-to-buy {
     display: flex;
     justify-content: space-between;
-
 }
 
 .title__how-to-buy {
@@ -764,8 +764,8 @@ a {
 .example__how-to-buy {
     position: relative;
     right: -20px;
-
 }
+
 
 /*---------- HOW-TO-BUY ---------------*/
 
@@ -789,7 +789,6 @@ a {
     position: relative;
     top: 50px;
     left: -160px;
-
 }
 
 .title__out-methodology {
@@ -828,7 +827,6 @@ a {
 }
 
 .info-title__our-methodoly {
-
     font-family: Roboto;
     font-size: 25px;
     font-weight: 500;
@@ -838,7 +836,6 @@ a {
     letter-spacing: normal;
     color: #1b1f3b;
     position: relative;
-
 }
 
 .icon__our-methodology {
@@ -847,8 +844,8 @@ a {
     right: -22px;
 }
 
-/*---------- OUR METHODOLOGY ---------------*/
 
+/*---------- OUR METHODOLOGY ---------------*/
 
 
 /*---------- PRINCIPAL-BOOSING ---------------*/
@@ -857,7 +854,8 @@ a {
     position: absolute;
     background-image: linear-gradient(to top, rgba(25, 31, 59, 0.999) 48%, rgba(27, 31, 59, 0));
 }
-.toggle__options{
+
+.toggle__options {
     position: absolute;
     top: 50vh;
     right: 15vw;
@@ -904,15 +902,15 @@ a {
 
 .toggle__boosting {
     display: flex;
-
 }
-.toggle__img__text{
+
+.toggle__img__text {
     display: grid;
     padding-right: 6vw;
     margin-top: 80px;
-} 
+}
 
-.toggle__img{
+.toggle__img {
     position: relative;
     left: 2.27vw;
     padding-bottom: 25px;
@@ -930,83 +928,185 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 20px ;
+    margin-bottom: 20px;
 }
 
-.toggle__selected{
-    color:#56fffb
+.toggle__selected {
+    color: #56fffb;
 }
 
-.toggle__line{
+.toggle__line {
     border-bottom: #56fffb 3px solid;
     width: 165px;
-
 }
+
+
 /*---------- PRINCIPAL-BOOSING ---------------*/
 
 
 /*---------- LEAGUE-BOOSTING ---------------*/
 
-.league__boosting{
-
-height: 1150px;
-background: #060606 0% 0% no-repeat padding-box;
-opacity: 0.79;
+select {
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid #ffffff;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+    color:#ffffff
 }
 
-.league__boosting--rectangle{
+option {
+    width: 56px;
+    height: 17px;
+    text-align: center;
+    font: 14px Roboto;
+    letter-spacing: 0;
+    opacity: 1;
+    color: #000000
+}
 
+.league__boosting {
+    height: 1150px;
+    background: #060606 0% 0% no-repeat padding-box;
+}
+
+.league__boosting--rectangle {
     position: absolute;
     top: 111vh;
     left: 20vw;
     width: 1056px;
     height: 931px;
-    background: #E5E5E5 0% 0% no-repeat padding-box;
-    box-shadow: 0px 0px 19px #FFFFFF;
+    background: #e5e5e5 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 19px #ffffff;
     border-radius: 18px;
-    opacity: 0.72;
 }
 
-.form__rectangle{
-    top: 970px;
-    left: 461px;
-    width: 445px;
+.form__rectangle {
+    position: relative;
+    top: 10vh;
+    left: 16vw;
+    width: 32vw;
     height: 284px;
-    background: #8c8afc 0% 0% no-repeat padding-box;
-    opacity: 0.72;
+    background: #131313 62% 98% no-repeat padding-box;
+    border-radius: 10px;
+    /* opacity: 1.3; */
+    color: white;
 }
 
-.form__title{
-    top: 1017px;
-    left: 485px;
-    width: 46px;
-    height: 11px;
+.form__title {
     text-align: center;
-    font: Light 9px/27px Roboto;
+    font: 10px Roboto;
     letter-spacing: 0;
-    color: #FFFFFF;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.form__select {
+    margin-top: 20px;
+    margin-left: 20px
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: transparent linear-gradient(270deg, #1c8fdd 0%, #1d006b 100%) 0% 0% no-repeat padding-box;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    margin-top: 14vh;
+    transition: opacity 0.2s;
+    border-radius: 16px;
+    /* top: 1342px;
+    left: 338px;
+    width: 403px;
+    height: 27px;
+    background: transparent linear-gradient(270deg, #1C8FDD 0%, #1D006B 100%) 0% 0% no-repeat padding-box;
+    opacity: 1; */
+}
+
+.slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #ffffff 0% 0% no-repeat padding-box;
+    cursor: pointer;
+    /* Cursor on hover */
+    width: 73px;
+    height: 41px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 25px;
     opacity: 1;
 }
-select{
-    background: transparent;
-    border: none;
-     border-bottom:  0.5px solid #FFFFFF;
-     font-size: 14px;
-     height: 30px;
-     padding: 5px;
-     width: 250px;
+
+.payload {
+    align-items: center
 }
-option{
-    top: 1104px;
-    left: 485px;
-    width: 56px;
+
+.payload__price {
+    width: 103px;
+    height: 72px;
+    text-align: center;
+    font: 60px/60px Roboto;
+    letter-spacing: 0;
+    color: #454ADE;
+}
+
+.payload__price__ar {
+    width: 120px;
+    height: 24px;
+    text-align: center;
+    font: 20px/19px Roboto;
+    letter-spacing: 0;
+    color: #CD9E00;
+    opacity: 1;
+}
+
+.payload__time {
+    width: 194px;
     height: 17px;
     text-align: center;
-    font: Regular 14px/28px Roboto;
+    font: 14px/16px Roboto;
     letter-spacing: 0;
     color: #FFFFFF;
     opacity: 1;
 }
+
+.form__flex {
+    display: flex
+}
+
+.range__title {
+    text-align: center;
+    font: 24px Roboto;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+    padding-left: 8vw;
+}
+
+.bottom__form{
+    width: 534px;
+height: 104px;
+background: #454ADE 0% 0% no-repeat padding-box;
+border-radius: 52px;
+opacity: 1;
+font-size: 40px;
+color: #ffffff
+}
+
 
 /*---------- LEAGUE-BOOSTING ---------------*/
 
@@ -1019,6 +1119,7 @@ option{
     margin-top: 20px;
     background-color: #1b1f3b;
 }
+
 
 /* .footer a {
     font-family: Roboto;
@@ -1037,7 +1138,6 @@ option{
 
 .input::placeholder {
     text-indent: 20px;
-
 }
 
 .container__footer {
@@ -1083,13 +1183,11 @@ option{
     padding-left: 0;
 }
 
-
 .menu__footer a {
     color: #ffffff;
 }
 
 .menu__footer {
-
     font-family: Roboto;
     font-size: 16px;
     font-weight: normal;
@@ -1108,7 +1206,6 @@ option{
 .icons__footer {
     display: flex;
     padding: 0;
-
 }
 
 .icon__footer {
@@ -1124,7 +1221,6 @@ option{
 }
 
 .copyright__footer {
-
     opacity: 0.5;
     font-family: Roboto;
     font-size: 14px;
