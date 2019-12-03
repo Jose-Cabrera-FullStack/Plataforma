@@ -125,8 +125,8 @@
                     <div class="form__flex">
                         <div class="form__column">
                             <div class="form__select">
-                                <label class="form__title">Current Division</label><br>
-                                <select>
+                                <label class="form__title">Desired Division</label><br>
+                                <select id="desired__division" >
                                     <option>Iron</option>
                                     <option>Bronce</option>
                                     <option>Silver</option>
@@ -138,6 +138,8 @@
                                     <option>Challenger</option>
                                 </select>
                             </div>
+                            
+                            <!-- <button type="button" onclick="myFunction()">Display index</button> -->
 
                             <div class="form__select">
                                 <label class="form__title">Current Division</label><br>
@@ -228,10 +230,9 @@
 
                     </div>
 
-                        <input type="range" min="1" max="10" value="1" id="myRange" class="slider"><span class="range__title">Select Your Current League</span>
-
+                        <input onchange="Total()" type="range" min="1" max="100" value="5" id="myRange" >
                     <div class="payload">
-                        <h3 class="payload__price">$233</h3>
+                        <h3 class="payload__price" id="demo"><span id="demo"></span></h3>
                         <h4 class="payload__price__ar">(AR$ 13.980)</h4>
                         <p class="payload__time">COMPLETION TIME:9-13 DAYS</p>
                     </div>
@@ -316,14 +317,7 @@
 
 
     </footer>
-    <!-- <script>
-        var loader = document.getElementById('loader');
-        window.addEventListener("load", function (event) {
-            loader.classList.remove('loading');
-            loader.classList.add('loaded');
-            document.body.classList.add('imgloaded');
-        });
-    </script> -->
+    <script src="/Plataforma/js/logic.js"></script>
 
 </body>
 
