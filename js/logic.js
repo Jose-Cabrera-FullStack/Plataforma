@@ -1,14 +1,18 @@
-let slider = document.getElementById("myRange");
-let output = document.getElementById("demo");
-let total = document.getElementById("myRange").value;
+const slider = document.getElementById("myRange");
+const output = document.getElementById("demo");
+const outputArg = document.getElementById("arg");
+const total = document.getElementById("myRange").value;
 
 output.innerHTML = slider.value;
 
 function Total(sum) {
+    const argValue = 60
     slider.oninput = function () {
-        output.innerHTML = parseInt(this.value) + parseInt(sum);
+        let price = output.innerHTML = parseInt(this.value) + parseInt(sum);
+        outputArg.innerHTML = price * argValue;
+        return price
     }
-    return
+
 }
 
 function Sum() {
@@ -26,66 +30,47 @@ function Sum() {
 
 function disiredDivision() {
     let x = document.getElementById("desired__division").selectedIndex;
-    let price;
     // let y = document.getElementById("desired__division").options;
     switch (x) {
         case 0:
-            price = 1
-            break;
+            return price = 1
         case 1:
-            price = 2
-            break;
+            return price = 2
         case 2:
-            price = 3
-            break;
+            return price = 3
         case 3:
-            price = 4
-            break;
+            return price = 4
         case 4:
-            price = 5
-            break;
+            return price = 5
         case 5:
-            price = 6
-            break;
+            return price = 6
         case 6:
-            price = 7
-            break;
+            return price = 7
         case 7:
-            price = 8
-            break;
+            return price = 8
         case 8:
-            price = 9
-            break;
+            return price = 9
         default:
-            price = 0.5
-            break;
+            return price = 0.5
     }
-    return price;
 }
 
 function server() {
     let x = document.getElementById("server").selectedIndex;
-    let price;
 
     switch (x) {
         case 0:
-            price = 4
-            break;
+            return price = 4
         case 1:
-            price = 3
-            break;
+            return price = 3
         case 2:
-            price = 2
-            break;
+            return price = 2
         case 3:
-            price = 1
-            break;
+            return price = 1
 
         default:
-            price = 0.5
-            break;
+            return price = 0.5
     }
-    return price;
 }
 
 function division() {
@@ -94,23 +79,17 @@ function division() {
 
     switch (x) {
         case 0:
-            price = 1
-            break;
+            return price = 1
         case 1:
-            price = 2
-            break;
+            return price = 2
         case 2:
-            price = 3
-            break;
+            return price = 3
         case 3:
-            price = 4
-            break;
+            return price = 4
 
         default:
-            price = 0.5
-            break;
+            return price = 0.5
     }
-    return price;
 }
 
 function queue() {
@@ -119,38 +98,29 @@ function queue() {
 
     switch (x) {
         case 0:
-            price = 1
-            break;
+            return price = 1
         case 1:
-            price = 2
-            break;
+            return price = 2
         case 2:
-            price = 3
-            break;
+            return price = 3
         case 3:
-            price = 4
-            break;
+            return price = 4
         case 4:
-            price = 4
-            break;
+            return price = 4
 
         default:
-            price = 0.5
-            break;
+            return price = 0.5
     }
-    return price;
 }
 
 function checked() {
-    let queue = document.forms[0];
+    let queue = document.getElementsByName("title");
     let price;
     let i;
 
     for (i = 0; i < queue.length; i++) {
-        if (queue[i].checked) {
+        if (queue[i].value==="solo" && queue[i].checked) {
             price = 3
-
-            alert(price);
             break
         }else{
             price = 10
