@@ -893,20 +893,27 @@ option {
   opacity: 1;
   color: #000000; }
 
+.form__first__step {
+  width: 482px;
+  height: 48px;
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.6;
+  letter-spacing: normal;
+  text-align: center;
+  color: #454ade; }
+
 .league__boosting {
-  height: 1150px;
-  background: #060606 0% 0% no-repeat padding-box; }
+  height: 1602px;
+  background-color: #e5e5e5; }
 
 .league__boosting--rectangle {
   position: absolute;
-  top: 111vh;
-  left: 20vw;
-  width: 1056px;
-  height: 931px;
-  background: #e5e5e5 0% 0% no-repeat padding-box;
-  -webkit-box-shadow: 0px 0px 19px #ffffff;
-  box-shadow: 0px 0px 19px #ffffff;
-  border-radius: 18px; }
+  height: 1602px;
+  background-color: #e5e5e5; }
 
 .form__rectangle {
   position: relative;

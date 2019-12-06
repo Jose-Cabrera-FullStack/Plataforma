@@ -31,27 +31,29 @@ function Sum() {
 function disiredDivision() {
     let x = document.getElementById("desired__division").selectedIndex;
     // let y = document.getElementById("desired__division").options;
+    let val = (x + 0.1) * 2
+
     switch (x) {
         case 0:
-            return price = 1
+            return val 
         case 1:
-            return price = 2
+            return val
         case 2:
-            return price = 3
+            return val
         case 3:
-            return price = 4
+            return val
         case 4:
-            return price = 5
+            return val
         case 5:
-            return price = 6
+            return val
         case 6:
-            return price = 7
+            return val
         case 7:
-            return price = 8
+            return val
         case 8:
-            return price = 9
+            return val
         default:
-            return price = 0.5
+            return val
     }
 }
 
@@ -120,7 +122,7 @@ function checked() {
 
     for (i = 0; i < queue.length; i++) {
         if (queue[i].value==="solo" && queue[i].checked) {
-            price = 3
+            price = 34
             break
         }else{
             price = 10
