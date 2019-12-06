@@ -986,7 +986,37 @@ option {
 .payload {
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  width: 953px;
+  height: 390.4px;
+  background-color: #414141;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.payload__total {
+  width: 264px;
+  height: 248.7px;
+  opacity: 0.76;
+  background-color: #d5f1f0; }
+
+.payload__customize__title {
+  width: 126px;
+  height: 27px;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.23;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff; }
+
+.payload__customize {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .payload__price {
   width: 103px;
@@ -1055,13 +1085,12 @@ input[type=range]::-webkit-slider-thumb {
 
 /* ----------------INPUT ----------------*/
 .bottom__form {
-  width: 534px;
-  height: 104px;
-  background: #454ADE 0% 0% no-repeat padding-box;
+  width: 404px;
+  height: 54px;
   border-radius: 52px;
-  opacity: 1;
-  font-size: 40px;
-  color: #ffffff; }
+  background-color: #454ade;
+  color: #ffffff;
+  border: none; }
 
 /*---------- LEAGUE-BOOSTING ---------------*/
 /*---------- FOOTER ---------------*/
