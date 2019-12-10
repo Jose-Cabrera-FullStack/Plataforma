@@ -140,6 +140,13 @@ body {
     transform: translate3d(0, 0, 0);
     background-blend-mode: var(--blend-mode-1);
 }
+.img__glitch--league_boosting{
+    background: url(../img/Diana.jpg) no-repeat 50% 0;
+    background-color: var(--blend-color-1);
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    background-blend-mode: var(--blend-mode-1);
+}
 
 .glitchit:nth-child(n+2) {
     opacity: 0;
