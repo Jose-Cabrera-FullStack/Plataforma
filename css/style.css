@@ -1037,6 +1037,28 @@ option {
   display: -ms-flexbox;
   display: flex; }
 
+/*---------- CALENDAR ---------------*/
+.league__boosting__rectangle__inside {
+  width: 553px;
+  height: 309px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  margin-left: 140px;
+  margin-top: 77px; }
+
+.card-header {
+  height: 19px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.88;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2c3737; }
+
+/*---------- CALENDAR ---------------*/
 /*---------- LEAGUE-BOOSTING ---------------*/
 /*---------- FOOTER ---------------*/
 .footer {
