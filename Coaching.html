@@ -104,111 +104,82 @@
 
                     </ol>
                 </div>
+                <p class="toggle__img__paragraph">
+                    ¿Querés llegar a el Elo de tus sueños para lucirlos con tus amigos? pero te falta la habilidad y el
+                    conocimiento para llegar hasta <br>
+                    allá. Te ofrecemos Nuestros mejores paquetes de Elo Coaching a los mejores precios, para que no solo
+                    llegues a tu Elo deseado, <br>
+                    sino para que también entiendas como llegaste hasta ahí. Estamos celebrando Nuestra Apertura con
+                    precios
+                    alucinantes.
+                </p>
             </div>
 
-
         </section>
+        <div class="rectangle"></div>
     </div>
 
-    </div>
-    </div>
     <!------------------------------ PRINCIPAL-BOOTING  -------------------------------------------->
+
 
     <!------------------------------ LEAGUE-BOOTING  -------------------------------------------->
 
     <section id="league__boosting" class="league__boosting">
-        <div class="league__boosting--rectangle">
+        <h1 class="league__boosting__title">Selecciona la Liga en la que estas</h1>
+        <div class="league__boosting__rectangle" id="img">
+            <div>
+                <h4 class="league__boosting__rectangle__elo">Elo Actual</h4>
+                <img class="league__boosting__img" src="./static/images/elo/diamond.png" alt="">
+            </div>
 
-            <div class="form__rectangle">
-                <form action="/sendit" method="post">
+            <div class="league__boosting__inside">
+                <div>
+                    <h5 class="league__boosting__inside__tittle">¿Por qué quieres subir de Elo?</h5>
+                    <select>
+                        <option value="better">Ser Mejor Que Mis Amigos</option>
+                        <option value="better">Ser Mejor Que Mis Amigos</option>
+                    </select>
 
-                    <h1 class="form__first__step">Select Your Current League</h1>
+                    <h5 class="league__boosting__inside__tittle">¿Qué Elo estas Actualmente?</h5>
+                    <select>
+                        <option value="better">Ser Mejor Que Mis Amigos</option>
+                    </select>
 
-                    <div class="form__flex">
-                        <div class="form__column">
-                            <div class="form__select">
-                                <label class="form__title">Current Tier</label><br>
-                                <select id="desired__division" onchange="Sum()">
-                                    <option value="iron">Iron</option>
-                                    <option value="bronce">Bronce</option>
-                                    <option value="silver">Silver</option>
-                                    <option value="gold">Gold</option>
-                                    <option value="platinum">Platinum</option>
-                                    <option value="diamond">Diamond</option>
-                                    <option value="master">Master</option>
-                                    <option value="grand_master">Grand Master</option>
-                                    <option value="challenger">Challenger</option>
-                                </select>
-                            </div>
+                    <h5 class="league__boosting__inside__tittle">¿Qué Division eres?</h5>
+                    <select>
+                        <option value="better">Ser Mejor Que Mis Amigos</option>
+                    </select>
 
-                            <!-- <button type="button" onclick="myFunction()">Display index</button> -->
+                    <h5 class="league__boosting__inside__tittle">¿Cuántos LP ganas al terminar una partida?</h5>
+                    <select>
+                        <option value="better">Ser Mejor Que Mis Amigos</option>
+                    </select>
 
-                            <div class="form__select">
-                                <label class="form__title">Select your Server</label><br>
-                                <select id="server" onchange="Sum()">
-                                    <option>NA</option>
-                                    <option>LAN</option>
-                                    <option>BRASIL</option>
-                                    <option>LAS</option>
-                                </select>
-                            </div>
+                </div>
+                <div>
 
-                        </div>
+                    <h5 class="league__boosting__inside__tittle">¿Cuántos LP ganas al terminar una partida?</h5>
+                    <select>
+                        <option value="better">Ser Mejor Que Mis Amigos</option>
+                    </select>
 
-                        <div class="form__column">
+                    <h5 class="league__boosting__inside__tittle">¿Cuántos LP ganas al terminar una partida?</h5>
+                    <select>
+                        <option value="better">Ser Mejor Que Mis Amigos</option>
+                    </select>
 
-                            <div class="form__select">
-                                <label class="form__title">Current Division</label><br>
-                                <select id="division" onchange="Sum()">
-                                    <option>Division 1</option>
-                                    <option>Division 2</option>
-                                    <option>Division 3</option>
-                                    <option>Division 4</option>
-                                </select>
+                </div>
+            </div>
 
-
-                            </div>
-                            <div class="form__select">
-                                <label class="form__title">QUEUE type</label><br>
-                                <select id="queue" onchange="Sum()">
-                                    <option>5v5 Normal</option>
-                                    <option>5v5 Ranked</option>
-                                    <option>5v5 Flex</option>
-                                    <option>3V3 Normal</option>
-                                    <option>3V3 Flex</option>
-
-                                </select>
-                            </div>
-
-
-                            <p class="form__point" onclick="Sum()">
-                                <label>
-                                    <input type="radio" name="title" value="solo">
-                                    Solo
-                                </label>
-                                <br>
-                                <label>
-                                    <input type="radio" name="title" value="duo">
-                                    Duo
-                                </label>
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <input onchange="Sum()" type="range" min="1" max="10" value="5" id="myRange">
-                    <div class="payload">
-                        <h3 class="payload__price"><span id="demo"></span></h3>
-                        <h4 class="payload__price__ar"><span>($Arg: </span><span id="arg"></span>)<span</h4>
-                        <p class="payload__time">COMPLETION TIME:9-13 DAYS</p>
-                    </div>
-                    <input class="bottom__form" type="submit" value="BOOST ME !">
-                </form>
+            <div>
+                <h4 class="league__boosting__rectangle__elo">Elo Donde Estaras!</h4>
+                <img class="league__boosting__img" src="./static/images/elo/Emblem_Challenger.png" alt="">
             </div>
         </div>
-
+        <h1 class="league__boosting__title">Escoge la fecha y las especificaciones</h1>
+        <div class="league__boosting__rectangle" id="img1">
+                
+            </div>
     </section>
 
 

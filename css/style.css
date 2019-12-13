@@ -319,10 +319,16 @@ a {
 /*---------- ELO BOOTING PACKS ---------------*/
 .elo__booting__packs {
   width: auto;
-  height: 905px; }
+  height: 905px;
+  background-color: rgba(0, 0, 0, 0.5); }
 
 .background__color {
-  background-color: #1b1f3b; }
+  background-image: url(../img/Vayne.jpg);
+  background-size: cover; }
+
+.container__elo__booting__packs {
+  position: relative;
+  top: 10vh; }
 
 .title__container__elo__booting__packs {
   font-family: Roboto;
@@ -346,6 +352,9 @@ a {
   text-align: center;
   color: #ffffff;
   margin-bottom: 60px; }
+
+.paragraph__elo__booting__packs--span {
+  color: #56fffb; }
 
 .packs__elo__booting__packs {
   display: -webkit-box;
@@ -872,7 +881,40 @@ a {
   border-bottom: #56fffb 3px solid;
   width: 165px; }
 
+.toggle__img__paragraph {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  top: 46vh; }
+
 /*---------- PRINCIPAL-BOOSING ---------------*/
+.rectangle {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom-color: #1b1f3b;
+  position: relative;
+  top: 26vh;
+  left: 4vw;
+  z-index: 1; }
+
+.rectangle:after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 50px;
+  width: 0;
+  height: 0;
+  border: 30px solid transparent;
+  border-top-color: #1b1f3b; }
+
 /*---------- LEAGUE-BOOSTING ---------------*/
 select {
   background: transparent;
@@ -893,6 +935,19 @@ option {
   opacity: 1;
   color: #000000; }
 
+.league__boosting__inside__tittle {
+  width: 118px;
+  height: 11px;
+  font-family: Roboto;
+  font-size: 9px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff; }
+
 .form__first__step {
   width: 482px;
   height: 48px;
@@ -907,101 +962,23 @@ option {
   color: #454ade; }
 
 .league__boosting {
-  height: 1602px;
+  width: auto;
+  height: 1506px;
   background-color: #e5e5e5; }
 
-.league__boosting--rectangle {
-  position: absolute;
-  height: 1602px;
-  background-color: #e5e5e5; }
-
-.form__rectangle {
+.league__boosting__rectangle {
+  -webkit-box-shadow: 0 0 14px 0 #000000;
+  box-shadow: 0 0 14px 0 #000000;
   position: relative;
-  top: 10vh;
-  left: 16vw;
-  width: 32vw;
-  height: 284px;
-  background: #131313 62% 98% no-repeat padding-box;
-  border-radius: 10px;
-  /* opacity: 1.3; */
-  color: white; }
-
-.form__title {
-  text-align: center;
-  font: 10px Roboto;
-  letter-spacing: 0;
-  color: #ffffff;
-  opacity: 0.7; }
-
-.form__select {
-  margin-top: 20px;
-  margin-left: 20px; }
-
-.slider {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 25px;
-  background: transparent -webkit-gradient(linear, right top, left top, from(#1c8fdd), to(#1d006b)) 0% 0% no-repeat padding-box;
-  background: transparent -webkit-linear-gradient(right, #1c8fdd 0%, #1d006b 100%) 0% 0% no-repeat padding-box;
-  background: transparent -o-linear-gradient(right, #1c8fdd 0%, #1d006b 100%) 0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(270deg, #1c8fdd 0%, #1d006b 100%) 0% 0% no-repeat padding-box;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  margin-top: 14vh;
-  -webkit-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-  border-radius: 16px;
-  /* top: 1342px;
-    left: 338px;
-    width: 403px;
-    height: 27px;
-    background: transparent linear-gradient(270deg, #1C8FDD 0%, #1D006B 100%) 0% 0% no-repeat padding-box;
-    opacity: 1; */ }
-
-.slider:hover {
-  opacity: 1;
-  /* Fully shown on mouse-over */ }
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  /* Override default look */
-  appearance: none;
-  width: 25px;
-  /* Set a specific slider handle width */
-  height: 25px;
-  /* Slider handle height */
-  background: #ffffff 0% 0% no-repeat padding-box;
-  cursor: pointer;
-  /* Cursor on hover */
-  width: 73px;
-  height: 41px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  border-radius: 25px;
-  opacity: 1; }
-
-.payload {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 953px;
-  height: 390.4px;
-  background-color: #414141;
+  left: 25%;
+  margin-top: 8%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  border-radius: 16px; }
 
-.payload__total {
-  width: 264px;
-  height: 248.7px;
-  opacity: 0.76;
-  background-color: #d5f1f0; }
-
-.payload__customize__title {
-  width: 126px;
+.league__boosting__rectangle__elo {
+  width: 180px;
   height: 27px;
   font-family: Roboto;
   font-size: 22px;
@@ -1013,84 +990,52 @@ option {
   text-align: center;
   color: #ffffff; }
 
-.payload__customize {
+#img {
+  width: 953px;
+  height: 361.3px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 46, 0.77)), to(rgba(11, 12, 46, 0.77))), url(../img/Bardo.jpg);
+  background-image: -webkit-linear-gradient(top, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Bardo.jpg);
+  background-image: -o-linear-gradient(top, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Bardo.jpg);
+  background-image: linear-gradient(to bottom, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Bardo.jpg);
+  background-size: cover; }
+
+#img1 {
+  width: 953px;
+  height: 661.3px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 46, 0.77)), to(rgba(11, 12, 46, 0.77))), url(../img/Pantheon.jpg);
+  background-image: -webkit-linear-gradient(top, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Pantheon.jpg);
+  background-image: -o-linear-gradient(top, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Pantheon.jpg);
+  background-image: linear-gradient(to bottom, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Pantheon.jpg);
+  background-size: cover; }
+
+.league__boosting__title {
+  margin: 0;
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.6;
+  letter-spacing: normal;
+  color: #454ade;
+  position: relative;
+  top: 7%;
+  padding-left: 25%; }
+
+.league__boosting__img {
+  width: 220px;
+  height: 251px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -webkit-box-shadow: 0 0 10px 0 #404c4d;
+  box-shadow: 0 0 10px 0 #404c4d;
+  position: relative;
+  top: -8px; }
+
+.league__boosting__inside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-.payload__price {
-  width: 103px;
-  height: 72px;
-  text-align: center;
-  font: 60px/60px Roboto;
-  letter-spacing: 0;
-  color: #454ADE; }
-
-.payload__price__ar {
-  width: 120px;
-  height: 24px;
-  text-align: center;
-  font: 20px/19px Roboto;
-  letter-spacing: 0;
-  color: #CD9E00;
-  opacity: 1; }
-
-.payload__time {
-  width: 194px;
-  height: 17px;
-  text-align: center;
-  font: 14px/16px Roboto;
-  letter-spacing: 0;
-  color: #FFFFFF;
-  opacity: 1; }
-
-.form__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-/* ----------------INPUT ----------------*/
-input[type=range] {
-  -webkit-appearance: none;
-  margin: 10px 0;
-  width: 80%;
-  float: left; }
-
-input[type=range]:focus {
-  outline: none; }
-
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 5px;
-  cursor: pointer;
-  animate: 0.2s;
-  -webkit-box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  background: #ce1313;
-  border-radius: 1px;
-  border: 0px solid #000101;
-  float: left; }
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.1), 0px 5px 10px 2px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 2px 1px 1px rgba(0, 0, 0, 0.1), 0px 5px 10px 2px rgba(0, 0, 0, 0.15);
-  border: 0px solid #000000;
-  height: 20px;
-  width: 20px;
-  border-radius: 100%;
-  background: #f00;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -8.5px; }
-
-/* ----------------INPUT ----------------*/
-.bottom__form {
-  width: 404px;
-  height: 54px;
-  border-radius: 52px;
-  background-color: #454ade;
-  color: #ffffff;
-  border: none; }
 
 /*---------- LEAGUE-BOOSTING ---------------*/
 /*---------- FOOTER ---------------*/
