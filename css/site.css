@@ -127,11 +127,11 @@ body {
     
 }
 .img__glitch--principal{
-    background: url(../img/shen.jpg) no-repeat 50% 0;
-    background-color: var(--blend-color-1);
+    background-image: url(../img/shen.jpg);
+    /* background-image: linear-gradient( rgba(69, 74, 222, 0.9)),
+    url(../img/Ekko-True-Damage.jpg); */
     background-size: cover;
-    transform: translate3d(0, 0, 0);
-    background-blend-mode: var(--blend-mode-1);
+
 }
 .img__glitch--boosting{
     background: url(../img/Xayah-and-otro.jpg) no-repeat 50% 0;

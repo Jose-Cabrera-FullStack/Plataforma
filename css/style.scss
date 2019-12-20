@@ -113,6 +113,8 @@ a {
 /*---------- BOTONES ---------------*/
 
 .btn__secondary {
+    width: 358px;
+  height: 46px;
     color: #ffffff;
     font-size: 16px;
     font-family: Roboto;
@@ -120,6 +122,8 @@ a {
     border: none;
     cursor: pointer;
     border-radius: 30px;
+    margin-left: 5vw;
+    margin-top: 4vw;
     text-align: center;
     background-color: #454ade;
 }
@@ -213,10 +217,6 @@ a {
 .principal {
     width: 99vw;
     height: 100vh;
-    /* background-image: url(../static/images/shen.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 5%; */
 }
 
 .overlay__principal {
@@ -234,17 +234,20 @@ a {
 .title__principal {
     width: 513px;
     height: 135px;
-    font-family: Roboto;
+    font-family: 'Roboto Mono', monospace;
     font-size: 40px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.13;
+    line-height: 1.25;
     letter-spacing: 10px;
     color: #ffffff;
     margin-left: 100px;
     letter-spacing: 9px;
     text-shadow: 0 0 10px #ffffff;
+
+    padding-bottom: 6px;
+
     padding-top: 170px;
 }
 
@@ -254,12 +257,13 @@ a {
 
 .paragraph__principal {
     height: 52px;
-    font-family: Roboto;
+    font-family: 'Roboto Mono', monospace;
     font-size: 20px;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
-    line-height: normal;
+    margin-top: 60px;
+    line-height: 1.3;
     letter-spacing: normal;
     color: #ffffff;
     margin-left: 100px;
@@ -286,6 +290,15 @@ a {
     height: 50%;
 }
 
+.social_networks{
+    position: relative;
+    top: 12vh;
+    left: 39vw;
+}
+.social_network{
+    width: 24px;
+    height: 24px;
+}
 
 /*---------- PRINCIPAL ---------------*/
 
@@ -305,26 +318,26 @@ a {
     margin-right: 30px;
 }
 
+
 .title__services {
-    width: 750px;
-    height: 45px;
-    font-family: Roboto;
+
+    font-family: 'Roboto Mono', monospace;
     font-size: 40px;
     font-weight: normal;
-    width: auto;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.13;
     letter-spacing: 8.89px;
     text-align: center;
     color: #1b1f3b;
-    margin-bottom: 50px;
+    position: relative;
+    bottom: 10vh;
 }
 
 .title__service {
     width: 263px;
     height: 60px;
-    font-family: Roboto;
+    font-family:'Roboto Mono', monospace;
     font-size: 25px;
     font-weight: 500;
     font-stretch: normal;
@@ -333,6 +346,7 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #1b1f3b;
+ 
 }
 
 .img__service {
@@ -349,12 +363,14 @@ a {
 
 .elo__booting__packs {
     width: auto;
-    height: 905px;
+    height: 920px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .background__color {
-    background-image: url(../img/Vayne.jpg);
+    // background-image: url(../img/Vayne.jpg);
+    background-image: linear-gradient( rgba(27, 31, 57, 0.9)),
+    url(../img/Vayne.jpg);
     background-size: cover;
 
 }
@@ -365,7 +381,7 @@ a {
 }
 
 .title__container__elo__booting__packs {
-    font-family: Roboto;
+    font-family: 'Roboto Mono', monospace;
     font-size: 40px;
     font-weight: normal;
     font-stretch: normal;
@@ -374,11 +390,13 @@ a {
     letter-spacing: 8.89px;
     text-align: center;
     color: #ffffff;
+    position: relative;
+    bottom:2vw;
 }
 
 .paragraph__elo__booting__packs {
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -386,7 +404,8 @@ a {
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 60px;
+    position: relative;
+    bottom:2vw;
 }
 
 .paragraph__elo__booting__packs--span {
@@ -395,7 +414,7 @@ a {
 
 .packs__elo__booting__packs {
     display: flex;
-    padding-left: 113px;
+    padding-left: 15vw;
 }
 
 .pack__elo__booting__packs {
@@ -403,7 +422,7 @@ a {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
     margin-right: 29px;
-    height: 491px;
+    height: 560px;
 }
 
 .pack__elo__booting__packs h4 {
@@ -724,8 +743,10 @@ a {
 
 .how-to-buy {
     width: auto;
-    height: 768px;
-    background-color: #454ade;
+    height: 920px;
+    background-image: linear-gradient( rgba(69, 74, 222, 0.9)),
+    url(../img/Ekko-True-Damage.jpg);
+    background-size: cover;
 }
 
 .container__how-to-buy {
@@ -743,18 +764,20 @@ a {
     letter-spacing: 8.89px;
     color: #ffffff;
     position: relative;
-    left: 113px;
-    top: 273px;
+    left: 10vw;
+    top: 32vh;
 }
 
 .informations__how-to-buy {
     position: relative;
-    right: 240px;
-    top: 50px;
+    right: 14vw;
+    top: 12vh;
 }
 
 .paragraph__how-to-buy {
-    text-align: right;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    
 }
 
 .information__how-to-buy {
@@ -763,7 +786,7 @@ a {
 
 .information__how-to-buy {
     flex-wrap: inherit;
-    font-family: Roboto;
+
     font-size: 18px;
     font-weight: normal;
     font-stretch: normal;
@@ -786,7 +809,7 @@ a {
 
 .our-methodology {
     width: auto;
-    height: 768px;
+    height: 92vh;
     background-color: #ffffff;
 }
 
@@ -799,12 +822,12 @@ a {
     position: relative;
     left: -38px;
     position: relative;
-    top: 50px;
-    left: -160px;
+    top: 7vh;
+    left: -10vw;
 }
 
 .title__out-methodology {
-    font-family: Roboto;
+    font-family: 'Roboto Mono', monospace;
     margin: 144px 126px 0px 113px;
     font-size: 40px;
     font-weight: normal;
@@ -814,13 +837,14 @@ a {
     letter-spacing: 8.89px;
     color: #1b1f3b;
     position: relative;
-    top: 150px;
+    top: 24vh;
+    left: 7vw;
 }
 
 .information__our-methodology {
     display: flex;
     flex-wrap: inherit;
-    margin-bottom: -36px;
+    margin-bottom: -3vh;
 }
 
 .paragraph__our-methodology {
@@ -833,9 +857,9 @@ a {
     font-style: normal;
     line-height: 1.25;
     letter-spacing: normal;
-    color: #6d6b6b;
+    color: #1b1f3b;
     position: relative;
-    top: -14px;
+    top: -10px;
 }
 
 .info-title__our-methodoly {
@@ -852,8 +876,8 @@ a {
 
 .icon__our-methodology {
     position: relative;
-    top: 12px;
-    right: -22px;
+    top: 2vh;
+    right: 0vw;
 }
 
 
