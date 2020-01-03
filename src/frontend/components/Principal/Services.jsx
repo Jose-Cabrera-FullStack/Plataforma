@@ -1,9 +1,9 @@
 import React from 'react';
-import '../assets/styles/components/Services.scss';
-import Ranked from '../assets/static/images/boosting/ranked-wins-boost.svg';
-import TFT from '../assets/static/images/boosting/tft-boosting.svg';
-import Duo from '../assets/static/images/boosting/duo-queue-boosting.svg';
-import Promo from '../assets/static/images/boosting/promotion-boosting.svg';
+import '../../assets/styles/components/Services.scss';
+import Ranked from '../../assets/static/images/boosting/ranked-wins-boost.svg';
+import TFT from '../../assets/static/images/boosting/tft-boosting.svg';
+import Duo from '../../assets/static/images/boosting/duo-queue-boosting.svg';
+import Promo from '../../assets/static/images/boosting/promotion-boosting.svg';
 
 const Services = () =>(
 

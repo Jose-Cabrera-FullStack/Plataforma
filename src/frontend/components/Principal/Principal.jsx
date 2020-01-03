@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-
-import Header from '../components/Header';
-import '../assets/styles/components/Principal.scss';
-import shen from '../assets/static/images/shen.jpg';
-import eveline from '../assets/static/images/eveline.jpg';
-import scroll from '../assets/static/images/scroll.svg';
+import Range from '../Atomic/Range';
+import Header from '../Header';
+import '../../assets/styles/components/Principal.scss';
+import shen from '../../assets/static/images/shen.jpg';
+import eveline from '../../assets/static/images/eveline.jpg';
+import scroll from '../../assets/static/images/scroll.svg';
 
 
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Principal from '../components/Principal';
-import Services from '../components/Services';
+import Principal from '../components/Principal/Principal';
+import Services from '../components/Principal/Services';
 import EloBoostingPack from '../components/EloBoostingPack';
 import Reviews from '../components/Reviews';
-import HowToBuy from '../components/HowToBuy';
-import OurMethodology from '../components/OurMethodology';
+import HowToBuy from '../components/Principal/HowToBuy';
+import OurMethodology from '../components/Principal/OurMethodology';
 import '../assets/styles/App.scss';
 
 const Home = () => {

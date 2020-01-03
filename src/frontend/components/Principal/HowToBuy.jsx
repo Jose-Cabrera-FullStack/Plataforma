@@ -1,10 +1,10 @@
 import React from 'react';
-import '../assets/styles/components/HowToBuy.scss';
-import Hand from '../assets/static/images/hands/hand.svg';
-import Hand1 from '../assets/static/images/hands/hand-1.svg';
-import Hand2 from '../assets/static/images/hands/hand-2.svg';
-import Hand3 from '../assets/static/images/hands/hand-2.svg';
-import Example from '../assets/static/images/example-image.png';
+import '../../assets/styles/components/HowToBuy.scss';
+import Hand from '../../assets/static/images/hands/hand.svg';
+import Hand1 from '../../assets/static/images/hands/hand-1.svg';
+import Hand2 from '../../assets/static/images/hands/hand-2.svg';
+import Hand3 from '../../assets/static/images/hands/hand-2.svg';
+import Example from '../../assets/static/images/example-image.png';
 
 
 const HowToBuy = () =>(

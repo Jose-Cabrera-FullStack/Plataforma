@@ -1,9 +1,9 @@
 import React from 'react';
-import '../assets/styles/components/OurMethodology.scss';
-import Security from '../assets/static/images/our-methodology/security.svg';
-import Time from '../assets/static/images/our-methodology/time.svg';
-import Privacy from '../assets/static/images/our-methodology/privacy.svg';
-import Tracking from '../assets/static/images/our-methodology/tracking.svg';
+import '../../assets/styles/components/OurMethodology.scss';
+import Security from '../../assets/static/images/our-methodology/security.svg';
+import Time from '../../assets/static/images/our-methodology/time.svg';
+import Privacy from '../../assets/static/images/our-methodology/privacy.svg';
+import Tracking from '../../assets/static/images/our-methodology/tracking.svg';
 
 
 const OurMethodology = () =>(
