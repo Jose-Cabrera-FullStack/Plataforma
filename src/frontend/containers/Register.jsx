@@ -10,6 +10,8 @@ const Register = (props) => {
     email: '',
     name: '',
     password: '',
+    birthday: '',
+    server: '',
   });
 
   const handleInput = (event) => {
@@ -44,6 +46,22 @@ const Register = (props) => {
               className="input"
               type="text"
               placeholder="Correo"
+              onChange={handleInput}
+              required
+            />
+            <input
+              name="birthday"
+              className="input"
+              type="text"
+              placeholder="Fecha de Nacimiento"
+              onChange={handleInput}
+              required
+            />
+            <input
+              name="server"
+              className="input"
+              type="text"
+              placeholder="Colocar el server"
               onChange={handleInput}
               required
             />

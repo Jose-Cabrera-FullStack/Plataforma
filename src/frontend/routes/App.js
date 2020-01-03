@@ -3,6 +3,7 @@ import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import Home from '../containers/Home';
 import Login from '../containers/Login';
 import Register from '../containers/Register';
+import Coaching from '../containers/Coaching';
 import NotFound from '../containers/NotFound';
 import Footer from '../components/Footer'
 
@@ -12,6 +13,7 @@ const App = () => (
                 <Route exact path="/" component={Home} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
+                <Route exact path="/coaching" component={Coaching} />
                 <Route component={NotFound} />
             </Switch>
 
