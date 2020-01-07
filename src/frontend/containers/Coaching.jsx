@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Principal from '../components/Principal/Principal';
+import Coaching from '../components/Coaching/Coaching';
 import Services from '../components/Principal/Services';
 import EloBoostingPack from '../components/EloBoostingPack';
 import Reviews from '../components/Reviews';
@@ -10,9 +10,7 @@ import '../assets/styles/App.scss';
 const Boosting = () => {
     return(
       <div className="App">
-          <Principal/>
-          <Principal/>
-          <Principal/>
+          <Coaching/>
 
       </div>
 

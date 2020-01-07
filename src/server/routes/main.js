@@ -31,18 +31,25 @@ const main = async (req,res, next) => {
                 method: 'get',
               });
 
+            let userData = await axios({
+                url: `${process.env.API_URL}/api/users`,
+                headers: { Authorization: `Bearer ${token}` },
+                method: 'get',
+              });
+
+            userData = userData.data.data;
             courseList = courseList.data.data;
 
             initialState = {
                 user,
-                type: courseList.filter(course => course.type === 'Profesional Player'),
-                myList: courseList.filter(course => course._id === id),
+                data: userData.filter(user => user._id === id),
+                myClass:courseList.filter(course => course.user_id === id ),
             }
         }catch(error){
             initialState = {
                 user:{},
-                type: {},
-                myList: [],
+                myClass:[],
+                data: {}
             }
             console.log(error)
         }

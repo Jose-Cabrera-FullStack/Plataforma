@@ -32,9 +32,9 @@ const Header = props => {
     <div className="navbar__container">
 
         <ol className="navbar__list col-10" >
-            <Link to="/">
+            <Link to="/coaching">
               <li className="navbar__menu padding__top">
-                  PROMO
+                  COACHING
               </li>
             </Link>
             <Link to="/">
