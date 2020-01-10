@@ -3,7 +3,9 @@ import Login from '../containers/Login';
 import Register from '../containers/Register';
 import NotFound from '../containers/NotFound';
 
-const serverRoutes = [
+const serverRoutes = (state) =>{
+
+  return[
     {
       path: '/',
       component: Home,
@@ -24,5 +26,6 @@ const serverRoutes = [
       component: NotFound,
     },
   ];
+}
   
   export default serverRoutes;

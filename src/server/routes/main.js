@@ -43,7 +43,7 @@ const main = async (req,res, next) => {
             initialState = {
                 user,
                 data: userData.filter(user => user._id === id),
-                myClass:courseList.filter(course => course.user_id === id ),
+                myClass:courseList.filter(course => course.schedule === '1993-10-16 11:11:11' ),
             }
         }catch(error){
             initialState = {
@@ -53,11 +53,13 @@ const main = async (req,res, next) => {
             }
             console.log(error)
         }
+
+        const state = (initialState.data);
         const store = createStore(reducer,initialState);
         const html = renderToString(
             <Provider store={store}>
                 <StaticRouter location={req.url} context={{}}>
-                    {renderRoutes(Routes)}
+                    {renderRoutes(Routes(state))}
                 </StaticRouter>
             </Provider>
         )

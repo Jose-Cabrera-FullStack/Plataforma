@@ -100,6 +100,7 @@ app.post('/auth/courses', async (req, res, next) => {
     premium: req.body.premium,
     price: req.body.price,
     user_id: req.body.user_id,
+    date: req.body.date,
   }
 
   console.log(req)

@@ -15,7 +15,6 @@ const Agenda = props => {
         type: '',
         premium: false,
         price: '',
-        date: '',
       });
 
     const handleInput = (event) => {
@@ -41,7 +40,6 @@ const Agenda = props => {
             <input required onChange={handleInput} className="input" type="text" name="type" placeholder="type"/>
             <input required onChange={handleInput} className="input" type="text" name="price" placeholder="price"/>
             <input required onChange={handleInput} className="input" type="text" name="premium" placeholder="premium"/>
-            <input required onChange={handleInput} className="input" type="text" name="date" placeholder="date"/>
 
             <button className="btn__secondary" type="submit">Pagar!</button>
         </form>
