@@ -1,8 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import Range from '../Atomic/Range';
-import Header from '../Header';
 import '../../assets/styles/components/Principal.scss';
 import shen from '../../assets/static/images/shen.jpg';
 import eveline from '../../assets/static/images/eveline.jpg';
@@ -13,7 +11,6 @@ import scroll from '../../assets/static/images/scroll.svg';
 const Coaching = () => (
     <section className="principal">
         <div className="overlay__principal">
-    <Header/>
     <picture>
         <source srcSet={eveline} className="eveline" media="(max-width:1000px)"/>
         <img className="shen" src={shen} alt=""/>

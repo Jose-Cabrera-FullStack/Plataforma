@@ -5,8 +5,18 @@ export const setFavorite = payload => ({
   payload,
 });
 
-export const deleteFavorite = payload => ({
-  type: 'DELETE_FAVORITE',
+export const selectDate = payload => ({
+  type: 'SELECT_DATE',
+  payload,
+});
+
+export const submitDate = payload => ({
+  type: 'SUBMIT_DATE',
+  payload,
+});
+
+export const deleteSelectedDate = payload => ({
+  type: 'DELETE_DATE',
   payload,
 });
 
@@ -30,6 +40,18 @@ export const registerRequest = payload => ({
   payload,
 });
 
+export const submitSelectedDate = (payload, redirectUrl) => {
+  return(dispatch) => {
+    axios.post('/auth/courses', payload)
+    
+    .then(({data}) => dispatch(registerRequest(data)))
+    .then(() => { 
+      window.location.href = redirectUrl
+    })
+    .catch(error => dispatch(setError(error)))
+  };
+};
+
 export const registerUser = (payload, redirectUrl) => {
   return(dispatch) => {
     axios.post('/auth/sign-up', payload)
@@ -40,6 +62,7 @@ export const registerUser = (payload, redirectUrl) => {
     .catch(error => dispatch(setError(error)))
   };
 };
+
 export const loginUser = ({email, password}, redirectUrl) => {
   return(dispatch) => {
     axios({

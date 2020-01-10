@@ -1,16 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import Coaching from '../components/Coaching/Coaching';
-import Services from '../components/Principal/Services';
-import EloBoostingPack from '../components/EloBoostingPack';
-import Reviews from '../components/Reviews';
-import HowToBuy from '../components/Principal/HowToBuy';
-import OurMethodology from '../components/Principal/OurMethodology';
+
+import Agenda from '../components/Coaching/Agenda';
+
 import '../assets/styles/App.scss';
 const Boosting = () => {
     return(
       <div className="App">
-          <Coaching/>
+      
+            <Agenda/>
 
       </div>
 

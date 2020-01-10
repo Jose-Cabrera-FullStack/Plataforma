@@ -90,6 +90,34 @@ app.post('/auth/sign-up', async (req, res, next) => {
   }
 });
 
+app.post('/auth/courses', async (req, res, next) => {
+  const { token } = req.cookies
+
+  const course = {
+    schedule: req.body.schedule,
+    coach: req.body.coach,
+    type: req.body.type,
+    premium: req.body.premium,
+    price: req.body.price,
+    user_id: req.body.user_id,
+  }
+
+  console.log(req)
+  try {
+    const {data} = await axios({
+      url: `${process.env.API_URL}/api/courses`,
+      headers: { Authorization: `Bearer ${token}` },
+      method: 'post',
+      data:course
+    });
+
+  res.status(201).json({data});
+
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.get('*', main);
 
 app.listen(PORT, (err) => {

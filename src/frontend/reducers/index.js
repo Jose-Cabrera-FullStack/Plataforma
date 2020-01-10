@@ -5,10 +5,20 @@ const reducer = (state, action) => {
         ...state,
         myList: [...state.myList, action.payload],
       };
-    case 'DELETE_FAVORITE':
+    case 'SELECT_DATE':
       return {
         ...state,
-        myList: state.myList.filter(items => items.id !== action.payload),
+        myClass: [...state.myClass, action.payload],
+      };
+    case 'DELETE_DATE':
+      return {
+        ...state,
+        myClass: state.myList.filter(items => items.id !== action.payload),
+      };
+    case 'SUBMIT_DATE':
+      return {
+        ...state,
+        courses: action.payload,//revisar si es myClass
       };
     case 'LOGIN_REQUEST':
       return {

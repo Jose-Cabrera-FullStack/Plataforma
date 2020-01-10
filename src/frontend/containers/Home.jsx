@@ -13,12 +13,12 @@ const Home = () => {
   return(
     <div className="App">
 
-      <Principal/>
-      <Services/>
-      <EloBoostingPack/>
-      <Reviews/>
-      <HowToBuy/>
-      <OurMethodology/>      
+        <Principal/>
+        <Services/>
+        <EloBoostingPack/>
+        <Reviews/>
+        <HowToBuy/>
+        <OurMethodology/>   
 
     </div>
 
