@@ -64,7 +64,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    min-height: 115vh;
+    min-height: 100vh;
 }
 .logo {
     width: 50px;
@@ -127,7 +127,7 @@ body {
     
 }
 .img__glitch--principal{
-    background-image: url(../img/shen.jpg);
+    background-image: url(../img/Ekko-True-Damage.jpg);
     /* background-image: linear-gradient( rgba(69, 74, 222, 0.9)),
     url(../img/Ekko-True-Damage.jpg); */
     background-size: cover;

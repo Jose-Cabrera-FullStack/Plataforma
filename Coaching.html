@@ -59,51 +59,13 @@
 
             <div class="toggle__options">
                 <ol class="toggle__rectangle">
-                    <li class="toggle__rectangle--active"><span class="toggle__rectangle__text">REGULAR
-                            BOOSTING</span>
+                    <li class="toggle__rectangle--active"><span class="toggle__rectangle__text">COACHING PARA
+                            PLAYERS</span>
                     </li>
-                    <li class="toggle__rectangle--desactive"><span class="toggle__rectangle__text">TFT
-                            BOOSTING</span>
+                    <li class="toggle__rectangle--desactive"><span class="toggle__rectangle__text">COACHING PARA
+                            COACH</span>
                     </li>
                 </ol>
-                <div>
-                    <ol class="toggle__boosting ">
-
-                        <li class="toggle__img__text ">
-                            <img class="toggle__img " src="./static/images/boosting-view/ranked-wins-boost__white.svg"
-                                alt="">
-                            <span class="toggle__text ">
-                                RANKED WINS BOOST
-                            </span>
-                        </li>
-
-                        <li class="toggle__img__text">
-                            <img class="toggle__img" src="./static/images/boosting-view/tft-boosting__selected.svg"
-                                alt="">
-                            <span class="toggle__text toggle__selected">
-                                TFT <br> BOOSTING
-                            </span>
-                            <span class="toggle__line"></span>
-                        </li>
-
-                        <li class="toggle__img__text">
-                            <img class="toggle__img" src="./static/images/boosting-view/duo-queue-boosting__white.svg"
-                                alt="">
-                            <span class="toggle__text">
-                                DUO QUEUE BOOSTING
-                            </span>
-                        </li>
-
-                        <li class="toggle__img__text">
-                            <img class="toggle__img" src="./static/images/boosting-view/promotion-boosting__white.svg"
-                                alt="">
-                            <span class="toggle__text">
-                                PROMOTION BOOSTING
-                            </span>
-                        </li>
-
-                    </ol>
-                </div>
                 <p class="toggle__img__paragraph">
                     ¿Querés llegar a el Elo de tus sueños para lucirlos con tus amigos? pero te falta la habilidad y el
                     conocimiento para llegar hasta <br>
@@ -125,116 +87,117 @@
     <!------------------------------ LEAGUE-BOOTING  -------------------------------------------->
 
     <section id="league__boosting" class="league__boosting">
-        <h1 class="league__boosting__title">Selecciona la Liga en la que estas</h1>
-        <div class="league__boosting__rectangle" id="img">
-            <div>
-                <h4 class="league__boosting__rectangle__elo">Elo Actual</h4>
-                <img class="league__boosting__img" src="./static/images/elo/diamond.png" alt="">
-            </div>
+        <form action="/send.js">
 
-            <div class="league__boosting__inside">
-                <div>
-                    <h5 class="league__boosting__inside__tittle">¿Por qué quieres subir de Elo?</h5>
-                    <select>
-                        <option value="better">Ser Mejor Que Mis Amigos</option>
-                        <option value="better">Ser Mejor Que Mis Amigos</option>
-                    </select>
 
-                    <h5 class="league__boosting__inside__tittle">¿Qué Elo estas Actualmente?</h5>
-                    <select>
-                        <option value="better">Ser Mejor Que Mis Amigos</option>
-                    </select>
+            <div class="league__boosting__rectangle" id="img">
+                <div class="league__boosting__rectangle__left">
 
-                    <h5 class="league__boosting__inside__tittle">¿Qué Division eres?</h5>
-                    <select>
-                        <option value="better">Ser Mejor Que Mis Amigos</option>
-                    </select>
+                    <div class="card">
+                        <h3 class="card-header" id="monthAndYear"></h3>
 
-                    <h5 class="league__boosting__inside__tittle">¿Cuántos LP ganas al terminar una partida?</h5>
-                    <select>
-                        <option value="better">Ser Mejor Que Mis Amigos</option>
-                    </select>
+                        <div class="form-inline">
 
-                </div>
-                <div>
+                            <button class="btn btn-outline-primary col-sm-6" id="previous"
+                                onclick="previous()">Previous</button>
 
-                    <h5 class="league__boosting__inside__tittle">¿Cuántos LP ganas al terminar una partida?</h5>
-                    <select>
-                        <option value="better">Ser Mejor Que Mis Amigos</option>
-                    </select>
+                            <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Next</button>
+                        </div>
 
-                    <h5 class="league__boosting__inside__tittle">¿Cuántos LP ganas al terminar una partida?</h5>
-                    <select>
-                        <option value="better">Ser Mejor Que Mis Amigos</option>
-                    </select>
+                        <table class="table table-bordered table-responsive-sm" id="calendar">
+                            <thead>
+                                <tr>
+                                    <th>Sun</th>
+                                    <th>Mon</th>
+                                    <th>Tue</th>
+                                    <th>Wed</th>
+                                    <th>Thu</th>
+                                    <th>Fri</th>
+                                    <th>Sat</th>
+                                </tr>
+                            </thead>
 
-                </div>
-            </div>
+                            <tbody id="calendar-body">
 
-            <div>
-                <h4 class="league__boosting__rectangle__elo">Elo Donde Estaras!</h4>
-                <img class="league__boosting__img" src="./static/images/elo/Emblem_Challenger.png" alt="">
-            </div>
-        </div>
-        <h1 class="league__boosting__title">Escoge la fecha y las especificaciones</h1>
-        <div class="league__boosting__rectangle" id="img1">
-            <div class="league__boosting__rectangle__inside">
-                <div class="card">
-                    <h3 class="card-header" id="monthAndYear"></h3>
+                            </tbody>
+                        </table>
 
-                    <div class="form-inline">
 
-                        <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">Previous</button>
+                        <br />
+                        <form class="form-inline">
+                            <label class="lead mr-2 ml-2" for="month">Jump To: </label>
+                            <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+                                <option value=0>Jan</option>
+                                <option value=1>Feb</option>
+                                <option value=2>Mar</option>
+                                <option value=3>Apr</option>
+                                <option value=4>May</option>
+                                <option value=5>Jun</option>
+                                <option value=6>Jul</option>
+                                <option value=7>Aug</option>
+                                <option value=8>Sep</option>
+                                <option value=9>Oct</option>
+                                <option value=10>Nov</option>
+                                <option value=11>Dec</option>
+                            </select>
 
-                        <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Next</button>
+                            <label for="year"></label><select class="form-control col-sm-4" name="year" id="year"
+                                onchange="jump()">
+                                <option value=2019>2019</option>
+                                <option value=2020>2020</option>
+
+                            </select></form>
                     </div>
-
-                    <table class="table table-bordered table-responsive-sm" id="calendar">
-                        <thead>
-                            <tr>
-                                <th>Sun</th>
-                                <th>Mon</th>
-                                <th>Tue</th>
-                                <th>Wed</th>
-                                <th>Thu</th>
-                                <th>Fri</th>
-                                <th>Sat</th>
-                            </tr>
-                        </thead>
-
-                        <tbody id="calendar-body">
-
-                        </tbody>
-                    </table>
-
-
-                    <br />
-                    <form class="form-inline">
-                        <label class="lead mr-2 ml-2" for="month">Jump To: </label>
-                        <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
-                            <option value=0>Jan</option>
-                            <option value=1>Feb</option>
-                            <option value=2>Mar</option>
-                            <option value=3>Apr</option>
-                            <option value=4>May</option>
-                            <option value=5>Jun</option>
-                            <option value=6>Jul</option>
-                            <option value=7>Aug</option>
-                            <option value=8>Sep</option>
-                            <option value=9>Oct</option>
-                            <option value=10>Nov</option>
-                            <option value=11>Dec</option>
+                </div>
+                <div class="league__boosting__rectangle__right">
+                    <ul>
+                        <li><input type="checkbox"> 12:00 pm</li>
+                        <li><input type="checkbox"> 13:00 pm</li>
+                        <li><input type="checkbox"> 14:00 pm</li>
+                        <li><input type="checkbox"> 15:00 pm</li>
+                        <li><input type="checkbox"> 16:00 pm</li>
+                        <li><input type="checkbox"> 17:00 pm</li>
+                    </ul>
+                </div>
+                <div class="league__boosting__rectangle__bottom">
+                    <div class="rectangle__bot__left">
+                        <h3 class="rectangle__bot__left__title__left">¿Cuántas clases quieres tener?</h3>
+                        <h5 class="rectangle__bot__left__subtitle__left">Después de 10 partidas hacemos descuestos %
+                        </h5>
+                        <select name="" id="">
+                            <option value=0>1</option>
+                            <option value=1>2</option>
+                            <option value=1>3</option>
+                            <option value=1>4</option>
+                            <option value=1>5</option>
                         </select>
-
-                        <label for="year"></label><select class="form-control col-sm-4" name="year" id="year"
-                            onchange="jump()">
-                            <option value=2019>2019</option>
-                            <option value=2020>2020</option>
-
-                        </select></form>
+                    </div>
+                    <div class="rectangle__bot__center">
+                        <div class="rectangle__price">
+                            <h3>PRECIO</h3>
+                            <h2>$233</h2>
+                            <h4>(AR$ 13.900)</h4>
+                            <h4>Finaliza en: 9 - 14 Dias</h4>
+                        </div>
+                    </div>
+                    <div class="rectangle__bot__right">
+                        <h3 class="rectangle__bot__left__title__left">¿Cuántas clases quieres tener?</h3>
+                        <h5 class="rectangle__bot__left__subtitle__left">Después de 10 partidas hacemos descuestos %
+                        </h5>
+                        <select name="" id="">
+                            <option value=0>1</option>
+                            <option value=1>2</option>
+                            <option value=1>3</option>
+                            <option value=1>4</option>
+                            <option value=1>5</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <input type="submit" value="send">
+        </form>
+
     </section>
 
 

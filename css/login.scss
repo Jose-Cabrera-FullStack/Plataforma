@@ -1,0 +1,101 @@
+.login {
+    width: 964px;
+    height: 633px;
+    background-image: linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(245, 204, 20, 0.73)),
+        url(../img/master-yi-project.jpg);
+    background-size: cover;
+
+}
+
+.into__login {
+    width: 148px;
+    height: 67px;
+    text-shadow: 0 0 3px #ffffff;
+    font-family: Roboto;
+    font-size: 56px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 5px solid #F3C926;
+}
+
+.rectangle__inside__register {
+    padding-top: 1%;
+    padding-left: 10%;
+}
+
+.rectangle__login {
+    width: 407px;
+    height: 633px;
+    background-color: #1a1919f5;
+}
+
+
+
+.subtitle {
+    width: 174px;
+    height: 14px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: 0.23px;
+    text-align: left;
+    color: #cbcbcd;
+    margin-bottom: 20px;
+}
+
+.personal__data {
+    width: 256px;
+    height: 19px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #ffffff;
+
+}
+
+.border__login{
+    width: 250px;
+    margin-bottom: 30px;
+    border-bottom: 1.5px solid #F3C926;
+}
+
+.buttons__login{
+    margin: 60px 0px 60px;
+}
+
+.btn__login {
+    width: 119px;
+    height: 31px;
+    border-radius: 27px;
+    background-color: rgb(243, 201, 38)
+}
+
+
+
+.login__footer {
+    width: 120px;
+    height: 13px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: 0.21px;
+    text-align: center;
+    color: #F3C926;
+}
+

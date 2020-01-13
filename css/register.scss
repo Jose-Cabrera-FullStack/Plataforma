@@ -1,0 +1,115 @@
+.register {
+    width: 964px;
+    height: 633px;
+    background-image: linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+        url(../img/AkaliProyecto.jpg);
+    background-size: cover;
+
+}
+
+.rectangle__register {
+    width: 407px;
+    height: 633px;
+    background-color: #1a1919f5;
+}
+
+
+
+.subtitle {
+    width: 174px;
+    height: 14px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: 0.23px;
+    text-align: left;
+    color: #cbcbcd;
+    margin-bottom: 20px;
+}
+
+.personal__data {
+    width: 256px;
+    height: 19px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: #ffffff;
+
+}
+
+.into__register {
+    width: 148px;
+    height: 67px;
+    text-shadow: 0 0 3px #ffffff;
+    font-family: Roboto;
+    font-size: 56px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+
+    border-bottom: 5px solid #E01AC7;
+}
+
+.border__register{
+    width: 250px;
+    margin-bottom: 30px;
+    border-bottom: 1.5px solid #E01AC7;
+}
+
+.buttons__register{
+    margin: 60px 0px 60px;
+}
+
+.btn__register {
+    width: 119px;
+    height: 31px;
+    border-radius: 27px;
+    background-color: #454ade
+}
+
+.btn__register {
+    width: 119px;
+    height: 31px;
+    border-radius: 27px;
+    background-color: #fcf1f1;
+    color: #0b0d1d;
+}
+
+.btn__register {
+    width: 119px;
+    height: 31px;
+    border-radius: 27px;
+    background-color: #fcf1f1;
+    color: #0b0d1d;
+}
+
+.register__footer {
+    width: 120px;
+    height: 13px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: 0.21px;
+    text-align: center;
+    color: #E01AC7;
+}
+
+.rectangle__inside {
+    padding-top: 16%;
+    padding-left: 10%;
+}

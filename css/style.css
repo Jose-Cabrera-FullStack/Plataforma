@@ -86,16 +86,18 @@ a {
 
 /*-------GRID ----------*/
 /*---------- BOTONES ---------------*/
-.btn__secondary {
-  width: 358px;
-  height: 46px;
+.btn {
   color: #ffffff;
   font-size: 16px;
   font-family: Roboto;
   padding: 16px 30px;
   border: none;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 30px; }
+
+.btn__secondary {
+  width: 358px;
+  height: 46px;
   margin-left: 5vw;
   margin-top: 4vw;
   text-align: center;
@@ -184,7 +186,14 @@ a {
 /*---------- PRINCIPAL ---------------*/
 .principal {
   width: 99vw;
-  height: 100vh; }
+  height: 100vh;
+  opacity: 0.51;
+  background-image: -webkit-linear-gradient(219deg, #454ade 5%, #000000 100%);
+  background-image: -o-linear-gradient(219deg, #454ade 5%, #000000 100%);
+  background-image: linear-gradient(231deg, #454ade 5%, #000000 100%);
+  position: absolute;
+  top: 0px;
+  z-index: -1; }
 
 .overlay__principal {
   background-image: -webkit-linear-gradient(282deg, #1b1f3b -100%, rgba(133, 94, 210, 0.1));
@@ -214,7 +223,7 @@ a {
   margin-left: 100px;
   letter-spacing: 9px;
   text-shadow: 0 0 10px #ffffff;
-  padding-bottom: 6px;
+  padding-bottom: 12px;
   padding-top: 170px; }
 
 .margin {
@@ -255,20 +264,12 @@ a {
   margin-bottom: 10px; }
 
 .scroll__principal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 50%; }
+  position: relative;
+  top: 16vh; }
 
 .social_networks {
   position: relative;
-  top: 12vh;
+  top: 22vh;
   left: 39vw; }
 
 .social_network {
@@ -279,8 +280,7 @@ a {
 /*---------- SERVICES ---------------*/
 .container__services {
   width: auto;
-  height: 445px;
-  background-color: #ffffff; }
+  height: 445px; }
 
 .container__services {
   display: -webkit-box;
@@ -289,6 +289,8 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
+  top: 8vh;
   margin-left: 30px;
   margin-right: 30px; }
 
@@ -303,7 +305,7 @@ a {
   text-align: center;
   color: #1b1f3b;
   position: relative;
-  bottom: 10vh; }
+  top: 3vh; }
 
 .title__service {
   width: 263px;
@@ -577,7 +579,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  left: 185px; }
+  left: 5vw; }
 
 .review {
   width: 263px;
@@ -683,10 +685,10 @@ a {
 .how-to-buy {
   width: auto;
   height: 920px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(69, 74, 222, 0.9))), url(../img/Ekko-True-Damage.jpg);
-  background-image: -webkit-linear-gradient(rgba(69, 74, 222, 0.9)), url(../img/Ekko-True-Damage.jpg);
-  background-image: -o-linear-gradient(rgba(69, 74, 222, 0.9)), url(../img/Ekko-True-Damage.jpg);
-  background-image: linear-gradient(rgba(69, 74, 222, 0.9)), url(../img/Ekko-True-Damage.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(69, 74, 222, 0.9))), url(../img/Pantheon.jpg);
+  background-image: -webkit-linear-gradient(rgba(69, 74, 222, 0.9)), url(../img/Pantheon.jpg);
+  background-image: -o-linear-gradient(rgba(69, 74, 222, 0.9)), url(../img/Pantheon.jpg);
+  background-image: linear-gradient(rgba(69, 74, 222, 0.9)), url(../img/Pantheon.jpg);
   background-size: cover; }
 
 .container__how-to-buy {
@@ -912,9 +914,9 @@ a {
   text-align: center;
   color: #ffffff;
   position: absolute;
-  top: 46vh; }
+  top: 20vh; }
 
-/*---------- PRINCIPAL-BOOSING ---------------*/
+/*---------- PRINCIPAL-COACHING ---------------*/
 .rectangle {
   width: 0;
   height: 0;
@@ -935,7 +937,7 @@ a {
   border: 30px solid transparent;
   border-top-color: #1b1f3b; }
 
-/*---------- LEAGUE-BOOSTING ---------------*/
+/*---------- LEAGUE-COACHING ---------------*/
 select {
   background: transparent;
   border: none;
@@ -954,6 +956,16 @@ option {
   letter-spacing: 0;
   opacity: 1;
   color: #000000; }
+
+.league__boosting {
+  width: auto;
+  height: 982px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(10, 18, 255, 0.32)), to(rgba(11, 12, 46, 0.77))), url(../img/Pantheon.jpg);
+  background-image: -webkit-linear-gradient(top, rgba(10, 18, 255, 0.32), rgba(11, 12, 46, 0.77)), url(../img/Pantheon.jpg);
+  background-image: -o-linear-gradient(top, rgba(10, 18, 255, 0.32), rgba(11, 12, 46, 0.77)), url(../img/Pantheon.jpg);
+  background-image: linear-gradient(to bottom, rgba(10, 18, 255, 0.32), rgba(11, 12, 46, 0.77)), url(../img/Pantheon.jpg);
+  background-size: cover;
+  margin: 0; }
 
 .league__boosting__inside__tittle {
   width: 118px;
@@ -981,22 +993,6 @@ option {
   text-align: center;
   color: #454ade; }
 
-.league__boosting {
-  width: auto;
-  height: 1506px;
-  background-color: #e5e5e5; }
-
-.league__boosting__rectangle {
-  -webkit-box-shadow: 0 0 14px 0 #000000;
-  box-shadow: 0 0 14px 0 #000000;
-  position: relative;
-  left: 25%;
-  margin-top: 8%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 16px; }
-
 .league__boosting__rectangle__elo {
   width: 180px;
   height: 27px;
@@ -1009,24 +1005,6 @@ option {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff; }
-
-#img {
-  width: 953px;
-  height: 361.3px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 46, 0.77)), to(rgba(11, 12, 46, 0.77))), url(../img/Bardo.jpg);
-  background-image: -webkit-linear-gradient(top, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Bardo.jpg);
-  background-image: -o-linear-gradient(top, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Bardo.jpg);
-  background-image: linear-gradient(to bottom, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Bardo.jpg);
-  background-size: cover; }
-
-#img1 {
-  width: 953px;
-  height: 661.3px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(11, 12, 46, 0.77)), to(rgba(11, 12, 46, 0.77))), url(../img/Pantheon.jpg);
-  background-image: -webkit-linear-gradient(top, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Pantheon.jpg);
-  background-image: -o-linear-gradient(top, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Pantheon.jpg);
-  background-image: linear-gradient(to bottom, rgba(11, 12, 46, 0.77), rgba(11, 12, 46, 0.77)), url(../img/Pantheon.jpg);
-  background-size: cover; }
 
 .league__boosting__title {
   margin: 0;
@@ -1058,13 +1036,46 @@ option {
   display: flex; }
 
 /*---------- CALENDAR ---------------*/
-.league__boosting__rectangle__inside {
-  width: 553px;
-  height: 309px;
+.league__boosting__rectangle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.league__boosting__rectangle__left {
+  width: 58%;
+  height: 46vh;
   border-radius: 16px;
   background-color: #ffffff;
-  margin-left: 140px;
-  margin-top: 77px; }
+  position: relative;
+  top: 11vh;
+  left: 18vw; }
+
+.league__boosting__rectangle__right {
+  width: 241px;
+  height: 46vh;
+  background-color: #454ade;
+  position: relative;
+  left: 13%;
+  top: 11vh; }
+
+.league__boosting__rectangle__bottom {
+  width: 65.6%;
+  height: 32vh;
+  opacity: 0.85;
+  background-color: #040404;
+  position: absolute;
+  bottom: -88.9vh;
+  right: 16vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.rectangle__price {
+  width: 233.6px;
+  height: 233.6px;
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
+  background-color: #454ade; }
 
 .card-header {
   height: 19px;
@@ -1076,10 +1087,11 @@ option {
   line-height: 0.88;
   letter-spacing: normal;
   text-align: center;
-  color: #2c3737; }
+  color: #2c3737;
+  margin: 0; }
 
 /*---------- CALENDAR ---------------*/
-/*---------- LEAGUE-BOOSTING ---------------*/
+/*---------- LEAGUE-COACHING ---------------*/
 /*---------- FOOTER ---------------*/
 .footer {
   width: auto;
@@ -1202,3 +1214,193 @@ option {
   color: #56fffb; }
 
 /*---------- FOOTER ---------------*/
+/*---------- LOGIN ---------------*/
+.login {
+  width: 964px;
+  height: 633px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(245, 246, 252, 0.52)), to(rgba(245, 204, 20, 0.73))), url(../img/master-yi-project.jpg);
+  background-image: -webkit-linear-gradient(left, rgba(245, 246, 252, 0.52), rgba(245, 204, 20, 0.73)), url(../img/master-yi-project.jpg);
+  background-image: -o-linear-gradient(left, rgba(245, 246, 252, 0.52), rgba(245, 204, 20, 0.73)), url(../img/master-yi-project.jpg);
+  background-image: linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(245, 204, 20, 0.73)), url(../img/master-yi-project.jpg);
+  background-size: cover; }
+
+.into__login {
+  width: 148px;
+  height: 67px;
+  text-shadow: 0 0 3px #ffffff;
+  font-family: Roboto;
+  font-size: 56px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  border-bottom: 5px solid #F3C926; }
+
+.rectangle__inside__register {
+  padding-top: 1%;
+  padding-left: 10%; }
+
+.rectangle__login {
+  width: 407px;
+  height: 633px;
+  background-color: #1a1919f5; }
+
+.subtitle {
+  width: 174px;
+  height: 14px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: 0.23px;
+  text-align: left;
+  color: #cbcbcd;
+  margin-bottom: 20px; }
+
+.personal__data {
+  width: 256px;
+  height: 19px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: 0.3px;
+  text-align: left;
+  color: #ffffff; }
+
+.border__login {
+  width: 250px;
+  margin-bottom: 30px;
+  border-bottom: 1.5px solid #F3C926; }
+
+.buttons__login {
+  margin: 60px 0px 60px; }
+
+.btn__login {
+  width: 119px;
+  height: 31px;
+  border-radius: 27px;
+  background-color: #f3c926; }
+
+.login__footer {
+  width: 120px;
+  height: 13px;
+  font-family: Roboto;
+  font-size: 11px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: 0.21px;
+  text-align: center;
+  color: #F3C926; }
+
+.register {
+  width: 964px;
+  height: 633px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(245, 246, 252, 0.52)), to(rgba(117, 19, 93, 0.73))), url(../img/AkaliProyecto.jpg);
+  background-image: -webkit-linear-gradient(left, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url(../img/AkaliProyecto.jpg);
+  background-image: -o-linear-gradient(left, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url(../img/AkaliProyecto.jpg);
+  background-image: linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url(../img/AkaliProyecto.jpg);
+  background-size: cover; }
+
+.rectangle__register {
+  width: 407px;
+  height: 633px;
+  background-color: #1a1919f5; }
+
+.subtitle {
+  width: 174px;
+  height: 14px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: 0.23px;
+  text-align: left;
+  color: #cbcbcd;
+  margin-bottom: 20px; }
+
+.personal__data {
+  width: 256px;
+  height: 19px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: 0.3px;
+  text-align: left;
+  color: #ffffff; }
+
+.into__register {
+  width: 148px;
+  height: 67px;
+  text-shadow: 0 0 3px #ffffff;
+  font-family: Roboto;
+  font-size: 56px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  border-bottom: 5px solid #E01AC7; }
+
+.border__register {
+  width: 250px;
+  margin-bottom: 30px;
+  border-bottom: 1.5px solid #E01AC7; }
+
+.buttons__register {
+  margin: 60px 0px 60px; }
+
+.btn__register {
+  width: 119px;
+  height: 31px;
+  border-radius: 27px;
+  background-color: #454ade; }
+
+.btn__register {
+  width: 119px;
+  height: 31px;
+  border-radius: 27px;
+  background-color: #fcf1f1;
+  color: #0b0d1d; }
+
+.btn__register {
+  width: 119px;
+  height: 31px;
+  border-radius: 27px;
+  background-color: #fcf1f1;
+  color: #0b0d1d; }
+
+.register__footer {
+  width: 120px;
+  height: 13px;
+  font-family: Roboto;
+  font-size: 11px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: 0.21px;
+  text-align: center;
+  color: #E01AC7; }
+
+.rectangle__inside {
+  padding-top: 16%;
+  padding-left: 10%; }
+
+/*---------- LOGIN ---------------*/
