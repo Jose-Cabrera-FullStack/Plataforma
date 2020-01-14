@@ -14,9 +14,13 @@
         <div class="calendar" id="calendar">
         </div>
         <div class="hours" id="hours">
-            <input class="box" type="checkbox" value="first">
-            <input class="box" type="checkbox" value="second">
-            <input class="box" type="checkbox" value="third">
+            <input class="box" type="checkbox" value="12:00">12:00
+            <input class="box" type="checkbox" value="13:30">13:30
+            <input class="box" type="checkbox" value="15:00">15:00
+            <input class="box" type="checkbox" value="16:30">16:30
+            <input class="box" type="checkbox" value="18:00">18:00
+            <input class="box" type="checkbox" value="19:30">19:30
+
 
 
             <div>
@@ -33,27 +37,46 @@
     <script type="text/javascript">
         // <--------------------------FUNCIONA-------------------------->
         let arr = []
+
         let calendar = new Calendar('calendar');
         calendar.getElement().addEventListener('change', e => {
             arr.push(calendar.value().format('l'))
             let sinRepetidos = [...new Set(arr)];
+            calendar.date = calendar.value().format('l')
             // for (i=0; i<= arr.length; i++){
             //     console.log(arr[i])
             // }
-            console.log("Sin repetidos es:", sinRepetidos);
+            // console.log("Sin repetidos es:", sinRepetidos);
+             console.log("Objeto es : ", calendar.date);
         });
         
-        arrValue=[]
-        
+        let arrValue = new Array;
+        let course = new Object;
+
         var box = document.getElementsByClassName("box");
         for (i = 0; i < box.length; i++) {
             box[i].addEventListener("click", function () {
                 if (this.checked) {
                     arrValue.push(this.value)
+                    calendar.hour.push(this.value)
                 } else {
                     arrValue.pop(this.value)
+                    calendar.hour.pop(this.value)
                 }
-                console.log("Los horarios son:", arrValue);
+                // console.log("Los horarios son:", arrValue);
+                // console.log(calendar.date,"+", calendar.hour);
+                let day = calendar.date
+                let time = calendar.hour
+                
+                let object = {[day] : time }
+
+                course = JSON.stringify(object)
+
+                localStorage.setItem('datos', course);
+
+                console.log(object)
+                console.log(course)
+
             });
         }
         // <--------------------------FUNCIONA-------------------------->

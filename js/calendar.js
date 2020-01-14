@@ -1,6 +1,9 @@
 class Calendar {
     constructor(id) {
         this.cells = [];
+        this.date = '';
+        this.hour = [];
+        this.course = {};
         this.selectedDate = null;
         this.currentMonth = moment();
         this.elCalendar = document.getElementById(id);
@@ -8,6 +11,7 @@ class Calendar {
         this.elGridBody = this.elCalendar.querySelector('.grid__body');
         this.elMonthName = this.elCalendar.querySelector('.month-name');
         this.showCells();
+        
     }
 
     showTemplate() {
