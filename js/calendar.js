@@ -1,3 +1,5 @@
+const localStorageName = 'calendar-events';
+
 class Calendar {
     constructor(id) {
         this.cells = [];
@@ -11,10 +13,19 @@ class Calendar {
         this.elGridBody = this.elCalendar.querySelector('.grid__body');
         this.elMonthName = this.elCalendar.querySelector('.month-name');
         this.showCells();
-        
+
+        this.eventList = JSON.parse(localStorage.getItem(localStorageName)) || {};
     }
 
     showTemplate() {
+        let elCells = this.elGridBody;
+        let today = this.currentMonth.format('l')
+        let today1 = this.currentMonth.format('l')
+
+        if (today === today1) {
+            console.log('Es hoy!')
+        }
+
         this.elCalendar.innerHTML = this.getTemplate();
         this.addEventListenerToControls();
     }
@@ -75,12 +86,15 @@ class Calendar {
             console.error('No fue posible generar las fechas del calendario.');
             return;
         }
-
+        let today = new Date() //convertir en variable global 
         this.elGridBody.innerHTML = '';
         let templateCells = '';
         let disabledClass = '';
         for (let i = 0; i < this.cells.length; i++) {
             disabledClass = '';
+            if (this.cells[i].date._d.toDateString() === today.toDateString()) {
+                disabledClass = 'grid__cell--selected';
+            }
             if (!this.cells[i].isInCurrentMonth) {
                 disabledClass = 'grid__cell--disabled';
             }
@@ -155,4 +169,46 @@ class Calendar {
     value() {
         return this.selectedDate;
     }
+}
+
+let arr = []
+let calendar = new Calendar('calendar');
+calendar.getElement().addEventListener('change', e => {
+    arr.push(calendar.value().format('l'))
+    let sinRepetidos = [...new Set(arr)]; // usar cuando se pueda vincular horas con una fecha especifica 
+    calendar.date = calendar.value().format('l')
+
+    console.log("Objeto es : ", calendar.date);
+});
+
+let arrValue = new Array;
+let course = new Object;
+
+var box = document.getElementsByClassName("box");
+for (i = 0; i < box.length; i++) {
+    box[i].addEventListener("click", function () {
+        if (this.checked) {
+            arrValue.push(this.value)
+            calendar.hour.push(this.value)
+        } else {
+            arrValue.pop(this.value)
+            calendar.hour.pop(this.value)
+        }
+
+        let day = calendar.date
+        let time = calendar.hour
+
+        let object = {
+            [day]: time
+        }
+
+        course = JSON.stringify(object)
+
+        localStorage.setItem(localStorageName, course);
+
+        // console.log(calendar.date)
+        // console.log(object)
+        // console.log(course)
+
+    });
 }
