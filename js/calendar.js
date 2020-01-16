@@ -5,7 +5,7 @@ class Calendar {
         this.cells = [];
         this.date = '';
         this.hour = [];
-        this.course = {};
+        this.courses = JSON.parse(localStorage.getItem(localStorageName)) || {};
         this.selectedDate = null;
         this.currentMonth = moment();
         this.elCalendar = document.getElementById(id);
@@ -171,18 +171,18 @@ class Calendar {
     }
 }
 
+let arrCourse = new Array;
+
 let arr = []
 let calendar = new Calendar('calendar');
-calendar.getElement().addEventListener('change', e => {
+calendar.getElement().addEventListener('click', e => {
     arr.push(calendar.value().format('l'))
-    let sinRepetidos = [...new Set(arr)]; // usar cuando se pueda vincular horas con una fecha especifica 
     calendar.date = calendar.value().format('l')
-
     console.log("Objeto es : ", calendar.date);
 });
 
 let arrValue = new Array;
-let course = new Object;
+let courses = new Array();
 
 var box = document.getElementsByClassName("box");
 for (i = 0; i < box.length; i++) {
@@ -201,14 +201,17 @@ for (i = 0; i < box.length; i++) {
         let object = {
             [day]: time
         }
+        courses.push(object)
 
-        course = JSON.stringify(object)
+        localStorage.setItem(localStorageName, JSON.stringify(courses));
 
-        localStorage.setItem(localStorageName, course);
+        
+        // <-----------------------------PRUEBA------------------------>
+        let sinRepetidos = [...new Set(arrCourse)]; // usar cuando se pueda vincular horas con una fecha especifica 
 
-        // console.log(calendar.date)
-        // console.log(object)
-        // console.log(course)
-
+        for (i = 0; i < courses.length; i++) {
+            console.log(courses[i])
+        }
+        // <-----------------------------PRUEBA------------------------>
     });
 }
