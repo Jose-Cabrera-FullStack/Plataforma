@@ -1,39 +1,49 @@
-<!DOCTYPE html>
-<html lang="es">
-
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Calendario con moment.js y JavaScript | CodeMundo</title>
+    <title>Calendar - Speed coding, Neat Developer</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/calendar.css">
 </head>
-
 <body>
-    <div class="root">
-        <div class="calendar" id="calendar">
+
+<div class="calendar disable-selection" id="calendar">
+    <div class="left-side">
+        <div class="current-day text-center">
+            <h1 class="calendar-left-side-day"></h1>
+            <div class="calendar-left-side-day-of-week"></div>
         </div>
-        <div class="hours" id="hours">
-            <input class="box" type="checkbox" value="12:00">12:00
-            <input class="box" type="checkbox" value="13:30">13:30
-            <input class="box" type="checkbox" value="15:00">15:00
-            <input class="box" type="checkbox" value="16:30">16:30
-            <input class="box" type="checkbox" value="18:00">18:00
-            <input class="box" type="checkbox" value="19:30">19:30
-
-
-
-            <div>
-                <p class="resultado">
-                    </pclass="resultado">
+        <div class="current-day-events">
+            <div>Current Events:</div>
+            <ul class="current-day-events-list"></ul>
+        </div>
+        <div class="add-event-day">
+            <input type="text" class="add-event-day-field" placeholder="Create an Event">
+            <span class="fa fa-plus-circle cursor-pointer add-event-day-field-btn"></span>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="text-right calendar-change-year">
+            <div class="calendar-change-year-slider">
+                <span class="fa fa-caret-left cursor-pointer calendar-change-year-slider-prev"></span>
+                <span class="calendar-current-year"></span>
+                <span class="fa fa-caret-right cursor-pointer calendar-change-year-slider-next"></span>
             </div>
         </div>
-
-
+        <div class="calendar-month-list">
+            <ul class="calendar-month"></ul>
+        </div>
+        <div class="calendar-week-list">
+            <ul class="calendar-week"></ul>
+        </div>
+        <div class="calendar-day-list">
+            <ul class="calendar-days"></ul>
+        </div>
     </div>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
-    <script type="text/javascript" src="./js/calendar.js"></script>
-</body>
+</div>
 
+<script async src="./js/calendar.js"></script>
+</body>
 </html>

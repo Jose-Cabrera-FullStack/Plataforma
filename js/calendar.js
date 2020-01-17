@@ -1,238 +1,251 @@
+const AVAILABLE_WEEK_DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const localStorageName = 'calendar-events';
 
-class Calendar {
-    constructor(id) {
-        this.cells = [];
-        this.date = '';
-        this.hour = [];
-        this.courses = JSON.parse(localStorage.getItem(localStorageName)) || {};
-        this.selectedDate = null;
-        this.currentMonth = moment();
-        this.elCalendar = document.getElementById(id);
-        this.showTemplate();
-        this.elGridBody = this.elCalendar.querySelector('.grid__body');
-        this.elMonthName = this.elCalendar.querySelector('.month-name');
-        this.showCells();
+class CALENDAR {
+    constructor(options) {
+        this.options = options;
+        this.elements = {
+            days: this.getFirstElementInsideIdByClassName('calendar-days'),
+            week: this.getFirstElementInsideIdByClassName('calendar-week'),
+            month: this.getFirstElementInsideIdByClassName('calendar-month'),
+            year: this.getFirstElementInsideIdByClassName('calendar-current-year'),
+            eventList: this.getFirstElementInsideIdByClassName('current-day-events-list'),
+            eventField: this.getFirstElementInsideIdByClassName('add-event-day-field'),
+            eventAddBtn: this.getFirstElementInsideIdByClassName('add-event-day-field-btn'),
+            currentDay: this.getFirstElementInsideIdByClassName('calendar-left-side-day'),
+            currentWeekDay: this.getFirstElementInsideIdByClassName('calendar-left-side-day-of-week'),
+            prevYear: this.getFirstElementInsideIdByClassName('calendar-change-year-slider-prev'),
+            nextYear: this.getFirstElementInsideIdByClassName('calendar-change-year-slider-next')
+        };
 
         this.eventList = JSON.parse(localStorage.getItem(localStorageName)) || {};
+
+        this.date = +new Date();
+        this.options.maxDays = 37;
+        this.init();
     }
 
-    showTemplate() {
-        this.elCalendar.innerHTML = this.getTemplate();
-        this.addEventListenerToControls();
+// App methods
+    init() {
+        if (!this.options.id) return false;
+        this.eventsTrigger();
+        this.drawAll();
     }
 
-    getTemplate() {
-        let template = `
-            <div class="calendar__header">
-                <button type="button" class="control control--prev">&lt;</button>
-                <span class="month-name">dic 2019</span>
-                <button type="button" class="control control--next">&gt;</button>
-            </div>
-            <div class="calendar__body">
-                <div class="grid">
-                    <div class="grid__header">
-                        <span class="grid__cell grid__cell--gh">Lun</span>
-                        <span class="grid__cell grid__cell--gh">Mar</span>
-                        <span class="grid__cell grid__cell--gh">Mié</span>
-                        <span class="grid__cell grid__cell--gh">Jue</span>
-                        <span class="grid__cell grid__cell--gh">Vie</span>
-                        <span class="grid__cell grid__cell--gh">Sáb</span>
-                        <span class="grid__cell grid__cell--gh">Dom</span>
-                    </div>
-                    <div class="grid__body">
+    // draw Methods
+    drawAll() {
+        this.drawWeekDays();
+        this.drawMonths();
+        this.drawDays();
+        this.drawYearAndCurrentDay();
+        this.drawEvents();
 
-                    </div>
-                </div>
-            </div>
-        `;
-        return template;
     }
 
-    addEventListenerToControls() {
-        let elControls = this.elCalendar.querySelectorAll('.control');
-        elControls.forEach(elControl => {
-            elControl.addEventListener('click', e => {
-                let elTarget = e.target;
-                if (elTarget.classList.contains('control--next')) {
-                    this.changeMonth(true);
-                } else {
-                    this.changeMonth(false);
-                }
-                this.showCells();
-            });
+    drawEvents() {
+        let calendar = this.getCalendar();
+        let eventList = this.eventList[calendar.active.formatted] || ['There is not any events'];
+        let eventTemplate = "";
+        eventList.forEach(item => {
+            eventTemplate += `<li>${item}</li>`;
         });
+
+        this.elements.eventList.innerHTML = eventTemplate;
     }
 
-    changeMonth(next = true) {
-        if (next) {
-            this.currentMonth.add(1, 'months');
-        } else {
-            this.currentMonth.subtract(1, 'months');
-        }
+    drawYearAndCurrentDay() {
+        let calendar = this.getCalendar();
+        this.elements.year.innerHTML = calendar.active.year;
+        this.elements.currentDay.innerHTML = calendar.active.day;
+        this.elements.currentWeekDay.innerHTML = AVAILABLE_WEEK_DAYS[calendar.active.week];
     }
 
-    showCells() {
-        this.cells = this.generateDates(this.currentMonth);
-        if (this.cells === null) {
-            console.error('No fue posible generar las fechas del calendario.');
-            return;
-        }
-        let today = new Date()
-        let courses = this.courses
-        let array = []
-        let arrayDate = []
+    drawDays() {
+        let calendar = this.getCalendar();
 
-        this.elGridBody.innerHTML = '';
-        let templateCells = '';
-        let disabledClass = ''
-
-        let keys = Object.keys(courses);
-
-        for (let i = 0; i < keys.length; i++) {
-            //keys[i] for key
-            //dictionary[keys[i]] for the value
-            array.push(Object.keys(courses[keys[i]]))
-        }
-
-        for (let i = 0; i < keys.length; i++) {
-            for (let j = 0; j < keys.length; j++) {
-                arrayDate.push(array[i][j])
+        let latestDaysInPrevMonth = this.range(calendar.active.startWeek).map((day, idx) => {
+            return {
+                dayNumber: this.countOfDaysInMonth(calendar.pMonth) - idx,
+                month: new Date(calendar.pMonth).getMonth(),
+                year: new Date(calendar.pMonth).getFullYear(),
+                currentMonth: false
             }
-        }
-        let uniqueArray = [... new Set(arrayDate)];
-        console.log(uniqueArray)
+        }).reverse();
 
-        for (let i = 0; i < this.cells.length; i++) {
-            disabledClass = '';
-            let changeDate = this.cells[i].date._d.toJSON().slice(0, 10);
-            let formateDate = changeDate.slice(8, 10) + '/' +
-                changeDate.slice(5, 7) + '/' +
-                changeDate.slice(0, 4);
 
-            if (this.cells[i].date._d.toDateString() === today.toDateString()) {
-                disabledClass = 'grid__cell--selected';
+        let daysInActiveMonth = this.range(calendar.active.days).map((day, idx) => {
+            let dayNumber = idx + 1;
+            let today = new Date();
+            return {
+                dayNumber,
+                today: today.getDate() === dayNumber && today.getFullYear() === calendar.active.year && today.getMonth() === calendar.active.month,
+                month: calendar.active.month,
+                year: calendar.active.year,
+                selected: calendar.active.day === dayNumber,
+                currentMonth: true
             }
-            
-            if (!this.cells[i].isInCurrentMonth) {
-                disabledClass = 'grid__cell--disabled';
-            }
-
-            templateCells += `
-                <span class="grid__cell grid__cell--gd ${disabledClass}" data-cell-id="${i}">
-                    ${this.cells[i].date.date()}
-                </span>
-            `;
-
-        }
-
-        this.elMonthName.innerHTML = this.currentMonth.format('MMM YYYY');
-        this.elGridBody.innerHTML = templateCells;
-        this.addEventListenerToCells();
-    }
-
-    generateDates(monthToShow = moment()) {
-        if (!moment.isMoment(monthToShow)) {
-            return null;
-        }
-        let dateStart = moment(monthToShow).startOf('month');
-        let dateEnd = moment(monthToShow).endOf('month');
-        let cells = [];
-
-        // Encontrar la primer fecha que se va a mostrar en el calendario
-        while (dateStart.day() !== 1) {
-            dateStart.subtract(1, 'days');
-        }
-
-        // Encontrar la última fecha que se va a mostrar en el calendario
-        while (dateEnd.day() !== 0) {
-            dateEnd.add(1, 'days');
-        }
-
-        // Genera las fechas del grid
-        do {
-            cells.push({
-                date: moment(dateStart),
-                isInCurrentMonth: dateStart.month() === monthToShow.month()
-            });
-            dateStart.add(1, 'days');
-        } while (dateStart.isSameOrBefore(dateEnd));
-
-        return cells;
-    }
-
-    addEventListenerToCells() {
-        let elCells = this.elCalendar.querySelectorAll('.grid__cell--gd');
-        elCells.forEach(elCell => {
-            elCell.addEventListener('click', e => {
-                let elTarget = e.target;
-                if (elTarget.classList.contains('grid__cell--disabled') || elTarget.classList.contains('grid__cell--selected')) {
-                    return;
-                }
-                // Deselecionar la celda anterior
-                let selectedCell = this.elGridBody.querySelector('.grid__cell--selected');
-                if (selectedCell) {
-                    selectedCell.classList.remove('grid__cell--selected');
-                }
-                // Selecionar la nueva celda
-                elTarget.classList.add('grid__cell--selected');
-                this.selectedDate = this.cells[parseInt(elTarget.dataset.cellId)].date;
-                // Lanzar evento change
-                this.elCalendar.dispatchEvent(new Event('change'));
-            });
         });
+
+
+        let countOfDays = this.options.maxDays - (latestDaysInPrevMonth.length + daysInActiveMonth.length);
+        let daysInNextMonth = this.range(countOfDays).map((day, idx) => {
+            return {
+                dayNumber: idx + 1,
+                month: new Date(calendar.nMonth).getMonth(),
+                year: new Date(calendar.nMonth).getFullYear(),
+                currentMonth: false
+            }
+        });
+
+        let days = [...latestDaysInPrevMonth, ...daysInActiveMonth, ...daysInNextMonth];
+
+        days = days.map(day => {
+            let newDayParams = day;
+            let formatted = this.getFormattedDate(new Date(`${Number(day.month) + 1}/${day.dayNumber}/${day.year}`));
+            newDayParams.hasEvent = this.eventList[formatted];
+            return newDayParams;
+        });
+
+        let daysTemplate = "";
+        days.forEach(day => {
+            daysTemplate += `<li class="${day.currentMonth ? '' : 'another-month'}${day.today ? ' active-day ' : ''}${day.selected ? 'selected-day' : ''}${day.hasEvent ? ' event-day' : ''}" data-day="${day.dayNumber}" data-month="${day.month}" data-year="${day.year}"></li>`
+        });
+
+        this.elements.days.innerHTML = daysTemplate;
     }
 
-    getElement() {
-        return this.elCalendar;
+    drawMonths() {
+        let availableMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        let monthTemplate = "";
+        let calendar = this.getCalendar();
+        availableMonths.forEach((month, idx) => {
+            monthTemplate += `<li class="${idx === calendar.active.month ? 'active' : ''}" data-month="${idx}">${month}</li>`
+        });
+
+        this.elements.month.innerHTML = monthTemplate;
     }
 
-    value() {
-        return this.selectedDate;
+    drawWeekDays() {
+        let weekTemplate = "";
+        AVAILABLE_WEEK_DAYS.forEach(week => {
+            weekTemplate += `<li>${week.slice(0, 3)}</li>`
+        });
+
+        this.elements.week.innerHTML = weekTemplate;
+    }
+
+    // Service methods
+    eventsTrigger() {
+        this.elements.prevYear.addEventListener('click', e => {
+            let calendar = this.getCalendar();
+            this.updateTime(calendar.pYear);
+            this.drawAll()
+        });
+
+        this.elements.nextYear.addEventListener('click', e => {
+            let calendar = this.getCalendar();
+            this.updateTime(calendar.nYear);
+            this.drawAll()
+        });
+
+        this.elements.month.addEventListener('click', e => {
+            let calendar = this.getCalendar();
+            let month = e.srcElement.getAttribute('data-month');
+            if (!month || calendar.active.month == month) return false;
+
+            let newMonth = new Date(calendar.active.tm).setMonth(month);
+            this.updateTime(newMonth);
+            this.drawAll()
+        });
+
+
+        this.elements.days.addEventListener('click', e => {
+            let element = e.srcElement;
+            let day = element.getAttribute('data-day');
+            let month = element.getAttribute('data-month');
+            let year = element.getAttribute('data-year');
+            if (!day) return false;
+            let strDate = `${Number(month) + 1}/${day}/${year}`;
+            this.updateTime(strDate);
+            this.drawAll()
+        });
+
+
+        this.elements.eventAddBtn.addEventListener('click', e => {
+            let fieldValue = this.elements.eventField.value;
+            if (!fieldValue) return false;
+            let dateFormatted = this.getFormattedDate(new Date(this.date));
+            if (!this.eventList[dateFormatted]) this.eventList[dateFormatted] = [];
+            this.eventList[dateFormatted].push(fieldValue);
+            console.log(this.eventList)
+            localStorage.setItem(localStorageName, JSON.stringify(this.eventList));
+            this.elements.eventField.value = '';
+            this.drawAll()
+        });
+
+
+    }
+
+
+    updateTime(time) {
+        this.date = +new Date(time);
+    }
+
+    getCalendar() {
+        let time = new Date(this.date);
+
+        return {
+            active: {
+                days: this.countOfDaysInMonth(time),
+                startWeek: this.getStartedDayOfWeekByTime(time),
+                day: time.getDate(),
+                week: time.getDay(),
+                month: time.getMonth(),
+                year: time.getFullYear(),
+                formatted: this.getFormattedDate(time),
+                tm: +time
+            },
+            pMonth: new Date(time.getFullYear(), time.getMonth() - 1, 1),
+            nMonth: new Date(time.getFullYear(), time.getMonth() + 1, 1),
+            pYear: new Date(new Date(time).getFullYear() - 1, 0, 1),
+            nYear: new Date(new Date(time).getFullYear() + 1, 0, 1)
+        }
+    }
+
+    countOfDaysInMonth(time) {
+        let date = this.getMonthAndYear(time);
+        return new Date(date.year, date.month + 1, 0).getDate();
+    }
+
+    getStartedDayOfWeekByTime(time) {
+        let date = this.getMonthAndYear(time);
+        return new Date(date.year, date.month, 1).getDay();
+    }
+
+    getMonthAndYear(time) {
+        let date = new Date(time);
+        return {
+            year: date.getFullYear(),
+            month: date.getMonth()
+        }
+    }
+
+    getFormattedDate(date) {
+        return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
+    }
+
+    range(number) {
+        return new Array(number).fill().map((e, i) => i);
+    }
+
+    getFirstElementInsideIdByClassName(className) {
+        return document.getElementById(this.options.id).getElementsByClassName(className)[0];
     }
 }
 
-let arrCourse = new Array;
 
-let arr = []
-let calendar = new Calendar('calendar');
-calendar.getElement().addEventListener('click', e => {
-    arr.push(calendar.value().format('l'))
-    calendar.date = calendar.value().format('l')
-    console.log("Objeto es : ", calendar.date);
-});
-
-let arrValue = new Array;
-let courses = new Array();
-
-var box = document.getElementsByClassName("box");
-for (i = 0; i < box.length; i++) {
-    box[i].addEventListener("click", function () {
-        if (this.checked) {
-            arrValue.push(this.value)
-            calendar.hour.push(this.value)
-        } else {
-            arrValue.pop(this.value)
-            calendar.hour.pop(this.value)
-        }
-
-        let day = calendar.date
-        let time = calendar.hour
-
-        let object = {
-            [day]: time
-        }
-        courses.push(object)
-
-        localStorage.setItem(localStorageName, JSON.stringify(courses));
-
-
-        // <-----------------------------PRUEBA------------------------>
-        let sinRepetidos = [...new Set(arrCourse)]; // usar cuando se pueda vincular horas con una fecha especifica 
-
-        for (i = 0; i < courses.length; i++) {
-            console.log(courses[i])
-        }
-        // <-----------------------------PRUEBA------------------------>
-    });
-}
+(function () {
+    new CALENDAR({
+        id: "calendar"
+    })
+})();
