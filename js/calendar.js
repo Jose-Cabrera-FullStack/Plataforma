@@ -103,12 +103,6 @@ class Calendar {
         let uniqueArray = [... new Set(arrayDate)];
         console.log(uniqueArray)
 
-        this.cells.forEach((e1)=>uniqueArray.forEach((e2)=>{
-            if(e1===e2){
-                console.log('fi')
-            }
-        }))
-
         for (let i = 0; i < this.cells.length; i++) {
             disabledClass = '';
             let changeDate = this.cells[i].date._d.toJSON().slice(0, 10);
@@ -120,6 +114,9 @@ class Calendar {
                 disabledClass = 'grid__cell--selected';
             }
             
+            if (!this.cells[i].isInCurrentMonth) {
+                disabledClass = 'grid__cell--disabled';
+            }
 
             templateCells += `
                 <span class="grid__cell grid__cell--gd ${disabledClass}" data-cell-id="${i}">
