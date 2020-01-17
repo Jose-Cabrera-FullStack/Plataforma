@@ -18,14 +18,6 @@ class Calendar {
     }
 
     showTemplate() {
-        let elCells = this.elGridBody;
-        let today = this.currentMonth.format('l')
-        let today1 = this.currentMonth.format('l')
-
-        if (today === today1) {
-            console.log('Es hoy!')
-        }
-
         this.elCalendar.innerHTML = this.getTemplate();
         this.addEventListenerToControls();
     }
@@ -86,25 +78,57 @@ class Calendar {
             console.error('No fue posible generar las fechas del calendario.');
             return;
         }
-        let today = new Date() //convertir en variable global 
+        let today = new Date()
+        let courses = this.courses
+        let array = []
+        let arrayDate = []
+
         this.elGridBody.innerHTML = '';
         let templateCells = '';
-        let disabledClass = '';
+        let disabledClass = ''
+
+        let keys = Object.keys(courses);
+
+        for (let i = 0; i < keys.length; i++) {
+            //keys[i] for key
+            //dictionary[keys[i]] for the value
+            array.push(Object.keys(courses[keys[i]]))
+        }
+
+        for (let i = 0; i < keys.length; i++) {
+            for (let j = 0; j < keys.length; j++) {
+                arrayDate.push(array[i][j])
+            }
+        }
+        let uniqueArray = [... new Set(arrayDate)];
+        console.log(uniqueArray)
+
+        this.cells.forEach((e1)=>uniqueArray.forEach((e2)=>{
+            if(e1===e2){
+                console.log('fi')
+            }
+        }))
+
         for (let i = 0; i < this.cells.length; i++) {
             disabledClass = '';
+            let changeDate = this.cells[i].date._d.toJSON().slice(0, 10);
+            let formateDate = changeDate.slice(8, 10) + '/' +
+                changeDate.slice(5, 7) + '/' +
+                changeDate.slice(0, 4);
+
             if (this.cells[i].date._d.toDateString() === today.toDateString()) {
                 disabledClass = 'grid__cell--selected';
             }
-            if (!this.cells[i].isInCurrentMonth) {
-                disabledClass = 'grid__cell--disabled';
-            }
-            // <span class="grid__cell grid__cell--gd grid__cell--selected">1</span>
+            
+
             templateCells += `
                 <span class="grid__cell grid__cell--gd ${disabledClass}" data-cell-id="${i}">
                     ${this.cells[i].date.date()}
                 </span>
             `;
+
         }
+
         this.elMonthName.innerHTML = this.currentMonth.format('MMM YYYY');
         this.elGridBody.innerHTML = templateCells;
         this.addEventListenerToCells();
@@ -205,7 +229,7 @@ for (i = 0; i < box.length; i++) {
 
         localStorage.setItem(localStorageName, JSON.stringify(courses));
 
-        
+
         // <-----------------------------PRUEBA------------------------>
         let sinRepetidos = [...new Set(arrCourse)]; // usar cuando se pueda vincular horas con una fecha especifica 
 
