@@ -1,14 +1,7 @@
-import React from 'react';
-import { connect } from 'react-redux';
-
-// import '../../utils/Calendar';
-
-import '../../assets/styles/components/Calendar.scss';
-
 const AVAILABLE_WEEK_DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const localStorageName = 'calendar-events';
 
-class CALENDAR extends React.Component {
+class CALENDAR {
     constructor(options) {
         this.options = options;
         this.elements = {
@@ -262,63 +255,8 @@ class CALENDAR extends React.Component {
 }
 
 
-const Coaching = (props) => {
-  const { user, data, myClass } = props;
-
-  return (
-    <section className="principal">
-      <div class="calendar disable-selection" id="calendar">
-    <div class="left-side">
-        <div class="current-day text-center">
-            <h1 class="calendar-left-side-day"></h1>
-            <div class="calendar-left-side-day-of-week"></div>
-        </div>
-        <div class="current-day-events">
-            <div>Current Events:</div>
-            <ul class="current-day-events-list"></ul>
-        </div>
-        <div class="add-event-day">
-            <select name="" class="add-event-day-field">
-                <option value="12:00">12:00 pm</option>
-                <option value="13:30">13:30 pm</option>
-                <option value="15:00">15:00 pm</option>
-                <option value="16:30">16:30 pm</option>
-                <option value="18:00">18:00 pm</option>
-            </select>
-
-            <span class="fa fa-plus-circle cursor-pointer add-event-day-field-btn"></span>
-            <span class="fa fa-trash cursor-pointer delete-event-day-field-btn"></span>
-        </div>
-    </div>
-    <div class="right-side">
-        <div class="text-right calendar-change-year">
-            <div class="calendar-change-year-slider">
-                <span class="fa fa-caret-left cursor-pointer calendar-change-year-slider-prev"></span>
-                <span class="calendar-current-year"></span>
-                <span class="fa fa-caret-right cursor-pointer calendar-change-year-slider-next"></span>
-            </div>
-        </div>
-        <div class="calendar-month-list">
-            <ul class="calendar-month"></ul>
-        </div>
-        <div class="calendar-week-list">
-            <ul class="calendar-week"></ul>
-        </div>
-        <div class="calendar-day-list">
-            <ul class="calendar-days"></ul>
-        </div>
-    </div>
-</div>
-    </section>
-  );
-}
-
-const mapStateToProps = (state) => {
-  return {
-    user: state.user,
-    data: state.data,
-    myClass: state.myClass
-  };
-};
-
-export default connect(mapStateToProps, null)(CALENDAR);
+(function () {
+    new CALENDAR({
+        id: "calendar"
+    })
+})();

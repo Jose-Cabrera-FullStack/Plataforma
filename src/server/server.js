@@ -103,7 +103,6 @@ app.post('/auth/courses', async (req, res, next) => {
     date: req.body.date,
   }
 
-  console.log(req)
   try {
     const {data} = await axios({
       url: `${process.env.API_URL}/api/courses`,

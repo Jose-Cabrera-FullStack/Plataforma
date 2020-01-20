@@ -6,4 +6,3 @@ window.addEventListener("load", function (event) {
     loader.classList.add('loaded');
     document.body.classList.add('imgloaded');
 });
-console.log("funciona")
