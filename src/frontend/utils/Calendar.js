@@ -250,6 +250,7 @@ class CALENDAR {
     }
 
     getFirstElementInsideIdByClassName(className) {
+        debugger
         return document.getElementById(this.options.id).getElementsByClassName(className)[0];
     }
 }
