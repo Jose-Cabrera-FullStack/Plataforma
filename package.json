@@ -37,6 +37,7 @@
     "history": "4.9.0",
     "ignore-styles": "^5.0.1",
     "lodash": "^4.17.11",
+    "moment": "^2.24.0",
     "nodemon": "1.19.1",
     "passport": "^0.4.0",
     "passport-http": "^0.3.0",
