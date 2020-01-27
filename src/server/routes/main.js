@@ -44,12 +44,14 @@ const main = async (req,res, next) => {
                 user,
                 data: userData.filter(user => user._id === id),
                 myClass:courseList.filter(course => course.schedule === '1993-10-16 11:11:11' ),
+                class:{}
             }
         }catch(error){
             initialState = {
                 user:{},
                 myClass:[],
-                data: {}
+                data: {},
+                class:{}
             }
             console.log(error)
         }

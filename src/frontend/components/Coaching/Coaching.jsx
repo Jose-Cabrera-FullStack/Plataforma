@@ -1,15 +1,18 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import moment from 'moment';
+import { connect } from 'react-redux';
+import { selectDate, deleteSelectedDate } from '../../actions';
+import { submitSelectedDate } from '../../actions';
+import Agenda from './Agenda';
 import '../../assets/styles/components/Calendar.scss';
 
 export default class Calendar extends React.Component {
     state = {
         dateContext: moment(),
-        today: moment(),
         showMonthPopup: false,
         showYearPopup: false,
-        selectedDay: null
+        selectedDayFormated: moment().format('L'),
+        selectedDay: null,
     }
 
     constructor(props) {
@@ -34,13 +37,13 @@ export default class Calendar extends React.Component {
         return this.state.dateContext.daysInMonth();
     }
     currentDate = () => {
-        console.log("currentDate: ", this.state.dateContext.get("date"));
-        return this.state.dateContext.get("date");
+        return this.state.dateContext.toDate();
     }
     currentDay = () => {
         return this.state.dateContext.format("D");
     }
-
+    
+    
     firstDayOfMonth = () => {
         let dateContext = this.state.dateContext;
         let firstDay = moment(dateContext).startOf('month').format('d'); // Day of week 0...1..5...6
@@ -83,7 +86,7 @@ export default class Calendar extends React.Component {
         let popup = props.data.map((data) => {
             return (
                 <div key={data}>
-                    <a href="#" onClick={(e)=> {this.onSelectChange(e, data)}}>
+                    <a href="#" onClick={(e) => { this.onSelectChange(e, data) }}>
                         {data}
                     </a>
                 </div>
@@ -106,10 +109,10 @@ export default class Calendar extends React.Component {
     MonthNav = () => {
         return (
             <span className="label-month"
-                onClick={(e)=> {this.onChangeMonth(e, this.month())}}>
+                onClick={(e) => { this.onChangeMonth(e, this.month()) }}>
                 {this.month()}
                 {this.state.showMonthPopup &&
-                 <this.SelectList data={this.months} />
+                    <this.SelectList data={this.months} />
                 }
             </span>
         );
@@ -145,28 +148,30 @@ export default class Calendar extends React.Component {
     YearNav = () => {
         return (
             this.state.showYearNav ?
-            <input
-                defaultValue = {this.year()}
-                className="editor-year"
-                ref={(yearInput) => { this.yearInput = yearInput}}
-                onKeyUp= {(e) => this.onKeyUpYear(e)}
-                onChange = {(e) => this.onYearChange(e)}
-                type="number"
-                placeholder="year"/>
-            :
-            <span
-                className="label-year"
-                onDoubleClick={(e)=> { this.showYearEditor()}}>
-                {this.year()}
-            </span>
+                <input
+                    defaultValue={this.year()}
+                    className="editor-year"
+                    ref={(yearInput) => { this.yearInput = yearInput }}
+                    onKeyUp={(e) => this.onKeyUpYear(e)}
+                    onChange={(e) => this.onYearChange(e)}
+                    type="number"
+                    placeholder="year" />
+                :
+                <span
+                    className="label-year"
+                    onDoubleClick={(e) => { this.showYearEditor() }}>
+                    {this.year()}
+                </span>
         );
     }
-
+    
     onDayClick = (e, day) => {
         this.setState({
             selectedDay: day
         }, () => {
-            console.log("SELECTED DAY: ", this.state.selectedDay);
+            console.log("SELECTED DAY: ", this.state.selectedDayFormated);
+            console.log("Fecha formateada: ", this.currentDate());
+            // console.log("SELECTED DAY: ", this.state.selectedDay);
         });
 
         this.props.onDayClick && this.props.onDayClick(e, day);
@@ -184,25 +189,25 @@ export default class Calendar extends React.Component {
         for (let i = 0; i < this.firstDayOfMonth(); i++) {
             blanks.push(<td key={i * 80} className="emptySlot">
                 {""}
-                </td>
+            </td>
             );
         }
 
-        console.log("blanks: ", blanks);
+        // console.log("blanks: ", blanks);
 
         let daysInMonth = [];
-        for (let d = 1; d <= this.daysInMonth(); d++) {
-            let className = (d == this.currentDay() ? "day current-day": "day");
-            let selectedClass = (d == this.state.selectedDay ? " selected-day " : "")
+        for (let day = 1; day <= this.daysInMonth(); day++) {
+            let className = (day == this.currentDay() ? "day current-day" : "day");
+            let selectedClass = (day == this.state.selectedDay ? " selected-day " : "")
             daysInMonth.push(
-                <td key={d} className={className + selectedClass} >
-                    <span onClick={(e)=>{this.onDayClick(e, d)}}>{d}</span>
+                <td key={day} className={className + selectedClass} >
+                    <span onClick={(event) => { this.onDayClick(event, day) }}>{day}</span>
                 </td>
             );
         }
 
 
-        console.log("days: ", daysInMonth);
+        // console.log("days: ", daysInMonth);
 
         var totalSlots = [...blanks, ...daysInMonth];
         let rows = [];
@@ -225,42 +230,49 @@ export default class Calendar extends React.Component {
 
         let trElems = rows.map((d, i) => {
             return (
-                <tr key={i*100}>
+                <tr key={i * 100}>
                     {d}
                 </tr>
             );
         })
-
+        
         return (
-            <div className="calendar-container" style={this.style}>
-                <table className="calendar">
-                    <thead>
-                        <tr className="calendar-header">
-                            <td colSpan="5">
-                                <this.MonthNav />
-                                {" "}
-                                <this.YearNav />
-                            </td>
-                            <td colSpan="2" className="nav-month">
-                                <i className="prev fa fa-fw fa-chevron-left"
-                                    onClick={(e)=> {this.prevMonth()}}>
-                                </i>
-                                <i className="prev fa fa-fw fa-chevron-right"
-                                    onClick={(e)=> {this.nextMonth()}}>
-                                </i>
+            <>
+            
+                <div className="calendar-container" style={this.style}>
+                    <table className="calendar">
+                        <thead>
+                            <tr className="calendar-header">
+                                <td colSpan="6">
+                                    <this.MonthNav />
+                                    {" "}
+                                    <this.YearNav />
+                                </td>
+                                <td colSpan="2" className="nav-month">
+                                    <i className="prev fa fa-fw prueba"
+                                        onClick={(e) => { this.prevMonth() }}>
+                                    </i>
+                                    <i className="prev fa fa-fw prueba"
+                                        onClick={(e) => { this.nextMonth() }}>
+                                    </i>
 
-                            </td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            {weekdays}
-                        </tr>
-                        {trElems}
-                    </tbody>
-                </table>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                {weekdays}
+                            </tr>
+                            {trElems}
+                        </tbody>
+                    </table>
 
-            </div>
+                </div>
+                <Agenda 
+                    currentDay = {this.state.selectedDay}
+                    currentDayFormated = {this.state.today}
+                />
+            </>
 
         );
     }

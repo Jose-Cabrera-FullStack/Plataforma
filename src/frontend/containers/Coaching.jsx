@@ -10,7 +10,7 @@ const Boosting = () => {
       <div className="App">
       
             <Coaching/>
-            <Agenda/>
+            {/* <Agenda/> */}
 
       </div>
 

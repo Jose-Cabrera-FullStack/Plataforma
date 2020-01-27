@@ -17,6 +17,7 @@ const Agenda = props => {
         price: '',
       });
 
+      console.log('dato proveniente de otro componente: '+ props.currentDay)
     const handleInput = (event) => {
     setValues({
         ...form,
@@ -30,15 +31,20 @@ const Agenda = props => {
         props.submitSelectedDate(form, '/login');
     };
 
+    const total = () => {
+        return props.currentDay + 10
+    }
+
 
     return (
     <section className="">
         <form onSubmit={handleSubmit}>
-            <input required onChange={handleInput} className="input" type="text" name="user_id" placeholder="user_id"/>
+            <input required onChange={handleInput} className="input" type="text" name="user_id" placeholder="user_id" />
+            {/* <input required onChange={handleInput} className="input" type="text" name="schedule" placeholder="schedule"value={props.currentDay}/> */}
             <input required onChange={handleInput} className="input" type="text" name="schedule" placeholder="schedule"/>
             <input required onChange={handleInput} className="input" type="text" name="coach" placeholder="coach"/>
             <input required onChange={handleInput} className="input" type="text" name="type" placeholder="type"/>
-            <input required onChange={handleInput} className="input" type="text" name="price" placeholder="price"/>
+            <input required onChange={handleInput} className="input" type="text" name="price" placeholder="price" value={total()}/>
             <input required onChange={handleInput} className="input" type="text" name="premium" placeholder="premium"/>
 
             <button className="btn__secondary" type="submit">Pagar!</button>
@@ -47,13 +53,6 @@ const Agenda = props => {
     )
 }
 
-// CarouselItem.propTypes = {
-//     cover: PropTypes.string,
-//     title: PropTypes.string,
-//     year: PropTypes.number,
-//     contentRating: PropTypes.string,
-//     duration: PropTypes.number,
-//   };
   
 
 const mapDispatchToProps = {

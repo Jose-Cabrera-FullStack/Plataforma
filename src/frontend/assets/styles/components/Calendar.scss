@@ -85,10 +85,11 @@ tr {
     right:3px;
 }
 
-.prev {
-}
-
-.next {
+.prueba:before {
+    content: "\f053";
+    position: relative;
+    left: -1581px;
+    bottom: -74px;
 }
 
 .editor-year {
