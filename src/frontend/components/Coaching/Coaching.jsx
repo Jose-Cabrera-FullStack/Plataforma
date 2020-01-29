@@ -170,7 +170,7 @@ export default class Calendar extends React.Component {
             selectedDay: day
         }, () => {
             console.log("SELECTED DAY: ", this.state.selectedDayFormated);
-            console.log("Fecha formateada: ", this.currentDate());
+            // console.log("Fecha formateada: ", this.currentDate());
             // console.log("SELECTED DAY: ", this.state.selectedDay);
         });
 
