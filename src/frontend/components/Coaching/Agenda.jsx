@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { selectDate, deleteSelectedDate } from '../../actions';
 import '../../assets/styles/components/Principal.scss';
 import { submitSelectedDate } from '../../actions';
+import moment from 'moment';
 
 const Agenda = props => {
 
@@ -10,8 +11,8 @@ const Agenda = props => {
         user_id: checkCookie(),
         schedule: '',
         coach: 'Guido',
-        type: '',
-        premium: false,
+        type: 'SOLO',//Debe escogerse en la solapa antes del calendario
+        premium: 'NORMAL',
         price: null || totalPrice(),
     });
 
@@ -20,12 +21,15 @@ const Agenda = props => {
     useEffect(() => {
         document.title = form.price
         form.price = totalPrice()
-        form.schedule = props.selectedDayFormated
-
+        form.schedule = showFormatDate()
     })
 
-    function getCookie(cname) {
-        var name = cname + "=";
+    function showFormatDate(dateTime){
+        return dateTime = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
+    }
+
+    function getCookie(cookieName) {
+        var name = cookieName + "=";
         var decodedCookie = decodeURIComponent(document.cookie);
         var ca = decodedCookie.split(';');
         for (var i = 0; i < ca.length; i++) {
@@ -53,7 +57,6 @@ const Agenda = props => {
         setValues({
             ...form,
             [event.target.name]: event.target.value,
-            price: totalPrice()
         });
         // console.log(event.target.value)
     };
@@ -69,27 +72,31 @@ const Agenda = props => {
         }
     }
 
+    localStorage.setItem('prueba',JSON.stringify(totalPrice()))
+
 
     return (
         <section className="">
             <form onSubmit={handleSubmit}>
-                {/* <input required onChange={handleInput} className="input" type="text" name="user_id" placeholder="user_id" /> */}
-
-                {/* <input required onChange={handleInput} className="input" type="text" name="schedule" placeholder="schedule"value={props.currentDay}/> */}
-                {/* <input required onChange={handleInput} className="input" type="text" name="schedule" placeholder="schedule" /> */}
+               
                 <p name="schedule" onChange={handleInput} value={form.schedule}>{form.schedule}</p>
 
-                {/* <input required onChange={handleInput} className="input" type="text" name="coach" placeholder="coach" value={form.coach} /> */}
+                <select name="type" onChange={handleInput}>
+                    <option value="SOLO">SOLO</option>
+                    <option value="COACHING">COACHING</option>
+                </select>
+
                 <select name="coach" onChange={handleInput}>
                     <option value="Guido">Guido</option>
                     <option value="Murdoc">Murdoc</option>
                 </select>
 
-                <input required onChange={handleInput} className="input" type="text" name="type" placeholder="type" />
+                <select name="premium" onChange={handleInput}>
+                    <option value="NORMAL">NORMAL</option>
+                    <option value="PREMIUM">PREMIUM</option>
+                </select>
 
-                <input required onChange={handleInput} className="input" type="text" name="premium" placeholder="premium" />
-
-                <p name="price" onChange={handleInput} value={form.price}>{form.price}</p>
+                <p name="price" onChange={handleInput} value={form.price}>{totalPrice()}</p>
 
                 <button className="btn__secondary" type="submit">Pagar!</button>
             </form>

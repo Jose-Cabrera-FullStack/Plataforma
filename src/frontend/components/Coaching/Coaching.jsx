@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import moment from 'moment';
-import { connect } from 'react-redux';
-import { selectDate, deleteSelectedDate } from '../../actions';
-import { submitSelectedDate } from '../../actions';
 import Agenda from './Agenda';
 import '../../assets/styles/components/Calendar.scss';
 
@@ -169,7 +166,7 @@ export default class Calendar extends React.Component {
         this.setState({
             selectedDay: day
         }, () => {
-            console.log("SELECTED DAY: ", this.state.selectedDayFormated);
+            // console.log("SELECTED DAY: ", this.state.selectedDayFormated);
             // console.log("Fecha formateada: ", this.currentDate());
             // console.log("SELECTED DAY: ", this.state.selectedDay);
         });
@@ -270,7 +267,7 @@ export default class Calendar extends React.Component {
                 </div>
                 <Agenda 
                     currentDay = {this.state.selectedDay}
-                    currentDayFormated = {this.state.today}
+                    currentDayFormated = {this.state.selectedDayFormated}
                 />
             </>
 
