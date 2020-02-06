@@ -1,15 +1,19 @@
 import React from 'react';
 import moment from 'moment';
 import Agenda from './Agenda';
+import SelectedDate from './SelectedDate';
 import '../../assets/styles/components/Calendar.scss';
 
 export default class Calendar extends React.Component {
     state = {
         dateContext: moment(),
+        today: moment().format("DD"),
+        todayMonth: moment().format("MM"),
         showMonthPopup: false,
         showYearPopup: false,
-        selectedDayFormated: moment().format('L'),
-        selectedDay: null,
+        selectedDay: moment().format("DD"),
+        selectedMonth: moment().format("MM"),
+        selectedYear: moment().format("YYYY"),
     }
 
     constructor(props) {
@@ -39,7 +43,9 @@ export default class Calendar extends React.Component {
     currentDay = () => {
         return this.state.dateContext.format("D");
     }
-    
+    currentMonth = () => {
+        return this.state.dateContext.format("M");
+    }
     
     firstDayOfMonth = () => {
         let dateContext = this.state.dateContext;
@@ -60,7 +66,8 @@ export default class Calendar extends React.Component {
         let dateContext = Object.assign({}, this.state.dateContext);
         dateContext = moment(dateContext).add(1, "month");
         this.setState({
-            dateContext: dateContext
+            dateContext: dateContext,
+            selectedMonth: parseInt(this.currentMonth()) + 1
         });
         this.props.onNextMonth && this.props.onNextMonth();
     }
@@ -69,7 +76,8 @@ export default class Calendar extends React.Component {
         let dateContext = Object.assign({}, this.state.dateContext);
         dateContext = moment(dateContext).subtract(1, "month");
         this.setState({
-            dateContext: dateContext
+            dateContext: dateContext,
+            selectedMonth: parseInt(this.currentMonth()) - 1 
         });
         this.props.onPrevMonth && this.props.onPrevMonth();
     }
@@ -162,7 +170,7 @@ export default class Calendar extends React.Component {
         );
     }
     
-    onDayClick = (e, day) => {
+    onDayClick = (event, day) => {
         this.setState({
             selectedDay: day
         }, () => {
@@ -171,7 +179,7 @@ export default class Calendar extends React.Component {
             // console.log("SELECTED DAY: ", this.state.selectedDay);
         });
 
-        this.props.onDayClick && this.props.onDayClick(e, day);
+        this.props.onDayClick && this.props.onDayClick(event, day);
     }
 
     render() {
@@ -190,20 +198,28 @@ export default class Calendar extends React.Component {
             );
         }
 
-        // console.log("blanks: ", blanks);
+        console.log("SELECTED YEAR: ", this.year());
 
         let daysInMonth = [];
-        for (let day = 1; day <= this.daysInMonth(); day++) {
-            let className = (day == this.currentDay() ? "day current-day" : "day");
-            let selectedClass = (day == this.state.selectedDay ? " selected-day " : "")
-            daysInMonth.push(
-                <td key={day} className={className + selectedClass} >
-                    <span onClick={(event) => { this.onDayClick(event, day) }}>{day}</span>
-                </td>
-            );
+        for (let d = 1; d <= this.daysInMonth(); d++) {
+            let className = (d == this.currentDay() ? "day current-day": "day");
+            let selectedClass = (d == this.state.selectedDay ? " selected-day " : "")
+            let t = d
+
+            if(t < parseInt(this.state.today)||parseInt(this.state.todayMonth) > parseInt(this.state.selectedMonth)|| parseInt(this.year()) < parseInt(this.state.selectedYear) ){//se suma de manera indiscriminada el mes seleccionado
+                daysInMonth.push(                 
+                    <td key={d} className={ "disable" } disabled>
+                        <span>{d}</span>
+                    </td>           
+                );
+            }else{
+                daysInMonth.push( 
+                    <td key={d} className={className + selectedClass } onClick={(e)=>{this.onDayClick(e, d)}}>
+                        <span>{d}</span>
+                    </td>           
+                );
+            }
         }
-
-
         // console.log("days: ", daysInMonth);
 
         var totalSlots = [...blanks, ...daysInMonth];
@@ -265,6 +281,8 @@ export default class Calendar extends React.Component {
                     </table>
 
                 </div>
+                <SelectedDate 
+                />
                 <Agenda 
                     currentDay = {this.state.selectedDay}
                     currentDayFormated = {this.state.selectedDayFormated}

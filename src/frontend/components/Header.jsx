@@ -1,16 +1,14 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { logoutRequest } from '../actions';
-
-
 
 import '../assets/styles/components/Header.scss';
 
 const Header = props => {
-  
-  const { user= {} } = props;
-  const hasUser = Object.keys(user).length  >  0;
+
+  const { user = {} } = props;
+  const hasUser = Object.keys(user).length > 0;
 
   const handleLogout = () => {
     document.cookie = `email=`;
@@ -21,60 +19,60 @@ const Header = props => {
     window.location.href = '/';
   };
 
-  return(
-  
+  return (
+
     <header id="navbar" className="navbar">
-    <Link to="/">
-      <div className="navbar__logo">
+      <Link to="/">
+        <div className="navbar__logo">
           <h3 className="navbar__title">Summoner's Cave</h3>
-      </div>
-    </Link>
-    <div className="navbar__container">
+        </div>
+      </Link>
+      <div className="navbar__container">
 
         <ol className="navbar__list col-10" >
-            <Link to="/coaching">
-              <li className="navbar__menu padding__top">
-                  COACHING
+          <Link to="/coaching">
+            <li className="navbar__menu padding__top">
+              COACHING
               </li>
-            </Link>
-            <Link to="/">
-              <li className="navbar__menu padding__top">
-                  Boosting
+          </Link>
+          <Link to="/">
+            <li className="navbar__menu padding__top">
+              SOBRE NOSOTROS
               </li>
-            </Link>
-            <Link to="/">
-              <li className="navbar__menu padding__top">
-                  FAQ
+          </Link>
+          <Link to="/">
+            <li className="navbar__menu padding__top">
+              CONTACTO
               </li>
-            </Link>
-            <Link to="/login">
-              <li className="navbar__menu padding__top">
-                  Contact
+          </Link>
+          <Link to="/">
+            <li className="navbar__menu padding__top">
+              DUDAS
               </li>
-            </Link>
+          </Link>
 
           {hasUser ?
-            <Link to="/login"> 
+            <Link to="/login">
               <li className="navbar__menu btn__secondary">
-                  <a onClick={handleLogout} >Cerrar Sesión</a>
+                <a onClick={handleLogout} >Cerrar Sesión</a>
               </li>
             </Link> :
 
             <Link to="/register" >
               <li className="navbar__menu btn__primary">
-                  <a className="register__btn">REGISTER</a>
+                <a className="register__btn">REGISTER</a>
               </li>
             </Link>
           }
           {hasUser ?
-            <Link to="/"> 
+            <Link to="/">
               <li className="navbar__menu btn__secondary">
-                  <a>{user.email}</a>
+                <a>{user.email}</a>
               </li>
-            </Link>:
-            <Link to="/login"> 
+            </Link> :
+            <Link to="/login">
               <li className="navbar__menu btn__secondary">
-                  <a>LOGIN</a>
+                <a>LOGIN</a>
               </li>
             </Link>
 
@@ -82,8 +80,8 @@ const Header = props => {
 
         </ol>
 
-    </div>
-  </header>
+      </div>
+    </header>
   );
 };
 
@@ -98,4 +96,4 @@ const mapDispatchToProps = {
 };
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

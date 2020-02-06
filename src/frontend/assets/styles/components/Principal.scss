@@ -1,23 +1,18 @@
-.shen{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    left: -17px;
-    bottom: 80px;
-    z-index: -1;
-}
-
-.overlay__principal{
-    background-image: linear-gradient(168deg, #1b1f3b -100%, rgba(133, 94, 210, 0.1%));
+.principal {
     width: 99vw;
     height: 100vh;
+}
+.overlay__principal{
+    background-image: linear-gradient(168deg, #454ade -100%, rgba(0, 0, 0, 0.22));
+    width: 99vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
 }
 
 .container__principal {
     padding-top: 10px;
     display: flex;
-    position: relative;
-    bottom: 930px;
 }
 
 .title__principal {
@@ -55,23 +50,20 @@
 
 .icons{
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-    height: 74%;
-    justify-content: flex-end;
-    width: 577%;
-
+    flex-direction: column; 
+    position: absolute;
+    left: 86vw;
+    top: 40vh;
+    cursor: pointer
 }
 .icon{
     margin-bottom: 10px;
+
 }
 
 .scroll__principal{
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 40%;
-    position: relative;
-    bottom: 930px;
+  justify-content: center;
+  height: 40%;
 }

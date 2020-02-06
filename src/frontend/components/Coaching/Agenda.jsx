@@ -63,6 +63,7 @@ const Agenda = props => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        props.selectDate(form)
         props.submitSelectedDate(form, '/login');
     };
 
@@ -70,6 +71,11 @@ const Agenda = props => {
         if (!isNaN(props.currentDay)) {
             return props.currentDay + 1
         }
+    }
+
+    function allDateInArray(){
+        //Se debe agrupar todos los datos en un array o en un objeto
+        return
     }
 
     localStorage.setItem('prueba',JSON.stringify(totalPrice()))

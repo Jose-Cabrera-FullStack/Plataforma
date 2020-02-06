@@ -43,7 +43,7 @@ const main = async (req,res, next) => {
             initialState = {
                 user,
                 data: userData.filter(user => user._id === id),
-                myClass:courseList.filter(course => course.schedule === '1993-10-16 11:11:11' ),
+                myClass:courseList.filter(course => course.user_id === id ),
                 class:{}
             }
         }catch(error){

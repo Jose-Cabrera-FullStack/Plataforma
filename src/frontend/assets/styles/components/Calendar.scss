@@ -92,6 +92,10 @@ tr {
     bottom: -74px;
 }
 
+.disable{
+    opacity: 0.2;
+  }
+
 .editor-year {
     max-width: 3.6em;
 }
@@ -103,4 +107,8 @@ tr {
 
 .label-month {
     cursor: pointer;
+}
+
+.selected__date{
+    width: 22vw;
 }
