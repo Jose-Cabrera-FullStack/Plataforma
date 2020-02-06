@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
-import { selectDate, deleteSelectedDate } from '../../actions';
 import '../../assets/styles/components/Principal.scss';
-import { submitSelectedDate } from '../../actions';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 
@@ -16,7 +13,20 @@ const DATE = [
 
 const animatedComponents = makeAnimated();
 
-const Agenda = props => {
+const Date = props => {
+    
+    const handlePrueba = (event) => {
+        props.handlerPrueba([1,'esto es un array',3,4,5])
+
+    }
+
+    const handlerArray = (value) =>{
+        let arr = []
+        value.map(v => arr.push(v.value))
+        console.log(arr)
+    }
+
+    console.log(handlerArray)
 
     return (
         <section className="selected__date">
@@ -26,17 +36,11 @@ const Agenda = props => {
                 defaultValue={DATE[0]}
                 isMulti
                 options={DATE}
+                onChange= {handlerArray}
             />
+            <button onClick={handlePrueba} name="prueba">click on me!</button>
         </section>
     )
 }
 
-
-
-const mapDispatchToProps = {
-    selectDate,
-    deleteSelectedDate,
-    submitSelectedDate
-};
-
-export default connect(null, mapDispatchToProps)(Agenda);
+export default Date;

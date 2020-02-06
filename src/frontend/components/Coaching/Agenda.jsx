@@ -16,8 +16,6 @@ const Agenda = props => {
         price: null || totalPrice(),
     });
 
-    console.log('la fecha de hoy es :', props)
-
     useEffect(() => {
         document.title = form.price
         form.price = totalPrice()
@@ -50,9 +48,8 @@ const Agenda = props => {
             return user
         }
     }
-
-
-    console.log('Estado de price: ' + form.price)
+    
+    // console.log('Estado de price: ' + form.price)
     const handleInput = (event) => {
         setValues({
             ...form,

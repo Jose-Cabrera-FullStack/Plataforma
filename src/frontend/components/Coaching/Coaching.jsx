@@ -14,6 +14,7 @@ export default class Calendar extends React.Component {
         selectedDay: moment().format("DD"),
         selectedMonth: moment().format("MM"),
         selectedYear: moment().format("YYYY"),
+        eventList: []
     }
 
     constructor(props) {
@@ -46,7 +47,7 @@ export default class Calendar extends React.Component {
     currentMonth = () => {
         return this.state.dateContext.format("M");
     }
-    
+
     firstDayOfMonth = () => {
         let dateContext = this.state.dateContext;
         let firstDay = moment(dateContext).startOf('month').format('d'); // Day of week 0...1..5...6
@@ -77,7 +78,7 @@ export default class Calendar extends React.Component {
         dateContext = moment(dateContext).subtract(1, "month");
         this.setState({
             dateContext: dateContext,
-            selectedMonth: parseInt(this.currentMonth()) - 1 
+            selectedMonth: parseInt(this.currentMonth()) - 1
         });
         this.props.onPrevMonth && this.props.onPrevMonth();
     }
@@ -169,7 +170,7 @@ export default class Calendar extends React.Component {
                 </span>
         );
     }
-    
+
     onDayClick = (event, day) => {
         this.setState({
             selectedDay: day
@@ -181,6 +182,12 @@ export default class Calendar extends React.Component {
 
         this.props.onDayClick && this.props.onDayClick(event, day);
     }
+
+    handlerPrueba = (event) => {
+        this.setState({
+            eventList: event
+        })
+      }
 
     render() {
         // Map the weekdays i.e Sun, Mon, Tue etc as <td>
@@ -202,21 +209,21 @@ export default class Calendar extends React.Component {
 
         let daysInMonth = [];
         for (let d = 1; d <= this.daysInMonth(); d++) {
-            let className = (d == this.currentDay() ? "day current-day": "day");
+            let className = (d == this.currentDay() ? "day current-day" : "day");
             let selectedClass = (d == this.state.selectedDay ? " selected-day " : "")
             let t = d
 
-            if(t < parseInt(this.state.today)||parseInt(this.state.todayMonth) > parseInt(this.state.selectedMonth)|| parseInt(this.year()) < parseInt(this.state.selectedYear) ){//se suma de manera indiscriminada el mes seleccionado
-                daysInMonth.push(                 
-                    <td key={d} className={ "disable" } disabled>
+            if (t < parseInt(this.state.today) || parseInt(this.state.todayMonth) > parseInt(this.state.selectedMonth) || parseInt(this.year()) < parseInt(this.state.selectedYear)) {//se suma de manera indiscriminada el mes seleccionado
+                daysInMonth.push(
+                    <td key={d} className={"disable"} disabled>
                         <span>{d}</span>
-                    </td>           
+                    </td>
                 );
-            }else{
-                daysInMonth.push( 
-                    <td key={d} className={className + selectedClass } onClick={(e)=>{this.onDayClick(e, d)}}>
+            } else {
+                daysInMonth.push(
+                    <td key={d} className={className + selectedClass} onClick={(e) => { this.onDayClick(e, d) }}>
                         <span>{d}</span>
-                    </td>           
+                    </td>
                 );
             }
         }
@@ -248,15 +255,17 @@ export default class Calendar extends React.Component {
                 </tr>
             );
         })
-        
+
         return (
-            <>
             
+            <>
+
                 <div className="calendar-container" style={this.style}>
                     <table className="calendar">
                         <thead>
                             <tr className="calendar-header">
                                 <td colSpan="6">
+                                    <p>{this.state.eventList}</p>
                                     <this.MonthNav />
                                     {" "}
                                     <this.YearNav />
@@ -268,7 +277,6 @@ export default class Calendar extends React.Component {
                                     <i className="prev fa fa-fw prueba"
                                         onClick={(e) => { this.nextMonth() }}>
                                     </i>
-
                                 </td>
                             </tr>
                         </thead>
@@ -281,11 +289,12 @@ export default class Calendar extends React.Component {
                     </table>
 
                 </div>
-                <SelectedDate 
+                <SelectedDate
+                    handlerPrueba={this.handlerPrueba}
                 />
-                <Agenda 
-                    currentDay = {this.state.selectedDay}
-                    currentDayFormated = {this.state.selectedDayFormated}
+                <Agenda
+                    currentDay={this.state.selectedDay}
+                    currentDayFormated={this.state.selectedDayFormated}
                 />
             </>
 
