@@ -15,30 +15,22 @@ const animatedComponents = makeAnimated();
 
 const Date = props => {
     
-    const handlePrueba = (event) => {
-        props.handlerPrueba([1,'esto es un array',3,4,5])
-
-    }
-
-    const handlerArray = (value) =>{
+    const handleDate = (value) => {
         let arr = []
         value.map(v => arr.push(v.value))
-        console.log(arr)
+        props.handlerDate(arr)
     }
-
-    console.log(handlerArray)
 
     return (
         <section className="selected__date">
             <Select
                 closeMenuOnSelect={false}
                 components={animatedComponents}
-                defaultValue={DATE[0]}
                 isMulti
                 options={DATE}
-                onChange= {handlerArray}
+                onChange= {handleDate}
             />
-            <button onClick={handlePrueba} name="prueba">click on me!</button>
+            <button  name="Date">click on me!</button>
         </section>
     )
 }

@@ -4,6 +4,8 @@ import Agenda from './Agenda';
 import SelectedDate from './SelectedDate';
 import '../../assets/styles/components/Calendar.scss';
 
+const localStorageName = 'calendar-events';
+
 export default class Calendar extends React.Component {
     state = {
         dateContext: moment(),
@@ -14,14 +16,18 @@ export default class Calendar extends React.Component {
         selectedDay: moment().format("DD"),
         selectedMonth: moment().format("MM"),
         selectedYear: moment().format("YYYY"),
-        eventList: []
-    }
+        eventList: this.eventList || [] // arreglar el localStorage
+    };
 
+    
     constructor(props) {
         super(props);
         this.width = props.width || "350px";
         this.style = props.style || {};
         this.style.width = this.width; // add this
+
+        this.eventList =  {};
+
     }
 
 
@@ -183,7 +189,11 @@ export default class Calendar extends React.Component {
         this.props.onDayClick && this.props.onDayClick(event, day);
     }
 
-    handlerPrueba = (event) => {
+    formatDate = (year, month, day) => {
+        return `${year}-${month}-${day}`
+    }
+
+    handlerDate = (event) => {
         this.setState({
             eventList: event
         })
@@ -205,24 +215,27 @@ export default class Calendar extends React.Component {
             );
         }
 
-        console.log("SELECTED YEAR: ", this.year());
+
+        // console.log("SELECTED DAY: ", this.state.selectedMonth);
+        // console.log("SELECTED MONTH: ", this.state.selectedMonth);
+        // console.log("SELECTED YEAR: ", this.state.selectedMonth);
 
         let daysInMonth = [];
-        for (let d = 1; d <= this.daysInMonth(); d++) {
-            let className = (d == this.currentDay() ? "day current-day" : "day");
-            let selectedClass = (d == this.state.selectedDay ? " selected-day " : "")
-            let t = d
+        for (let day = 1; day <= this.daysInMonth(); day++) {
+            let className = (day == this.currentDay() ? "day current-day" : "day");
+            let selectedClass = (day == this.state.selectedDay ? " selected-day " : "")
+            let t = day
 
-            if (t < parseInt(this.state.today) || parseInt(this.state.todayMonth) > parseInt(this.state.selectedMonth) || parseInt(this.year()) < parseInt(this.state.selectedYear)) {//se suma de manera indiscriminada el mes seleccionado
+            if (t < parseInt(this.state.today) || parseInt(this.state.todayMonth) > parseInt(this.state.selectedMonth) || parseInt(this.year()) < parseInt(this.state.selectedYear)) {
                 daysInMonth.push(
-                    <td key={d} className={"disable"} disabled>
-                        <span>{d}</span>
+                    <td key={day} className={"disable"} disabled>
+                        <span>{day}</span>
                     </td>
                 );
             } else {
                 daysInMonth.push(
-                    <td key={d} className={className + selectedClass} onClick={(e) => { this.onDayClick(e, d) }}>
-                        <span>{d}</span>
+                    <td key={day} className={className + selectedClass} onClick={(e) => { this.onDayClick(e, day) }}>
+                        <span>{day}</span>
                     </td>
                 );
             }
@@ -256,6 +269,30 @@ export default class Calendar extends React.Component {
             );
         })
 
+        
+        let objectPrueba = {
+            [formatDateIso]: this.state.eventList
+        }
+        // objectPrueba[formatDateIso].push(this.state.eventList);
+        
+        let fieldValue = this.state.eventList;
+        if (!fieldValue) return false;
+        let formatDateIso = this.formatDate(this.year(),this.state.selectedMonth,this.state.selectedDay)
+        if (!this.eventList[formatDateIso]) this.eventList[formatDateIso] = [];
+        this.eventList[formatDateIso].push(fieldValue);
+        localStorage.setItem(localStorageName, JSON.stringify(this.eventList));
+        this.state.eventList = []
+        console.log('el objeto es: ',Object.values( this.eventList))
+        
+
+        // if(Object.values( objectPrueba)[0].length > 0 ){ // entra cuando el objeto tenga mas de una fecha
+        //     console.log('el objeto es: ',Object.values( objectPrueba))
+            
+        // }
+
+
+        // localStorage.setItem('localStorageName', JSON.stringify(this.state.eventList));
+
         return (
             
             <>
@@ -265,7 +302,6 @@ export default class Calendar extends React.Component {
                         <thead>
                             <tr className="calendar-header">
                                 <td colSpan="6">
-                                    <p>{this.state.eventList}</p>
                                     <this.MonthNav />
                                     {" "}
                                     <this.YearNav />
@@ -290,7 +326,7 @@ export default class Calendar extends React.Component {
 
                 </div>
                 <SelectedDate
-                    handlerPrueba={this.handlerPrueba}
+                    handlerDate={this.handlerDate}
                 />
                 <Agenda
                     currentDay={this.state.selectedDay}
