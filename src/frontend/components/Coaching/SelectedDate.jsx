@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../../assets/styles/components/Principal.scss';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
@@ -18,19 +18,21 @@ const Date = props => {
     const handleDate = (value) => {
         let arr = []
         value.map(v => arr.push(v.value))
+        props.handlerChangeDate(true)
         props.handlerDate(arr)
     }
+    console.log(props.valueState)
 
     return (
         <section className="selected__date">
             <Select
                 closeMenuOnSelect={false}
+                defaultValue={DATE[0]}
                 components={animatedComponents}
                 isMulti
                 options={DATE}
                 onChange= {handleDate}
             />
-            <button  name="Date">click on me!</button>
         </section>
     )
 }

@@ -9,24 +9,25 @@ const localStorageName = 'calendar-events';
 export default class Calendar extends React.Component {
     state = {
         dateContext: moment(),
-        today: moment().format("DD"),
+        today: moment().format("D"),
         todayMonth: moment().format("MM"),
         showMonthPopup: false,
         showYearPopup: false,
-        selectedDay: moment().format("DD"),
+        selectedDay: moment().format("D"),
         selectedMonth: moment().format("MM"),
         selectedYear: moment().format("YYYY"),
-        eventList: this.eventList || [] // arreglar el localStorage
+        eventList: this.eventList || [], // arreglar el localStorage
+        changeDate: false
     };
 
-    
+
     constructor(props) {
         super(props);
         this.width = props.width || "350px";
         this.style = props.style || {};
         this.style.width = this.width; // add this
 
-        this.eventList =  {};
+        this.eventList = {}; // array with all dates choosen
 
     }
 
@@ -51,7 +52,7 @@ export default class Calendar extends React.Component {
         return this.state.dateContext.format("D");
     }
     currentMonth = () => {
-        return this.state.dateContext.format("M");
+        return this.state.dateContext.format("MM");
     }
 
     firstDayOfMonth = () => {
@@ -190,6 +191,7 @@ export default class Calendar extends React.Component {
     }
 
     formatDate = (year, month, day) => {
+        if(day < 10){}
         return `${year}-${month}-${day}`
     }
 
@@ -197,7 +199,12 @@ export default class Calendar extends React.Component {
         this.setState({
             eventList: event
         })
-      }
+    }
+    handlerChangeDate = (event) => {
+        this.setState({
+            changeDate: event
+        })
+    }
 
     render() {
         // Map the weekdays i.e Sun, Mon, Tue etc as <td>
@@ -268,38 +275,54 @@ export default class Calendar extends React.Component {
                 </tr>
             );
         })
-
-        
-        let objectPrueba = {
-            [formatDateIso]: this.state.eventList
-        }
-        // objectPrueba[formatDateIso].push(this.state.eventList);
-        
+        //<--------------------------------- Experimentos --------------------------------->
         let fieldValue = this.state.eventList;
         if (!fieldValue) return false;
-        let formatDateIso = this.formatDate(this.year(),this.state.selectedMonth,this.state.selectedDay)
+        let formatDateIso = this.formatDate(this.year(), this.state.selectedMonth, this.state.selectedDay)
         if (!this.eventList[formatDateIso]) this.eventList[formatDateIso] = [];
         this.eventList[formatDateIso].push(fieldValue);
-        localStorage.setItem(localStorageName, JSON.stringify(this.eventList));
-        this.state.eventList = []
-        console.log('el objeto es: ',Object.values( this.eventList))
         
+        let functionTest = this.eventList
+        let functionTestLastItem = functionTest[formatDateIso].length - 1 // devuelve el array con todos los item seleccionados 
+        
+        let arrayValues = []
 
-        // if(Object.values( objectPrueba)[0].length > 0 ){ // entra cuando el objeto tenga mas de una fecha
-        //     console.log('el objeto es: ',Object.values( objectPrueba))
+        arrayValues.push(Object.keys(functionTest))
+        
+        const petList = Object.entries(functionTest).map(([key,value])=>{
+            let aux = Object.keys(functionTest)
+
+                return (
+                    <div key={key.toString()}>{key} : <tr>{value}</tr></div>
+                );
             
-        // }
-
-
-        // localStorage.setItem('localStorageName', JSON.stringify(this.state.eventList));
+          })
+        arrayValues.forEach(function(item) {
+            for(let date in item){
+                if(item[date] != formatDateIso){
+                    console.log("funciona")
+                }else{
+                    console.log("no funciona")
+                }
+            }
+        } )
+        
+        // console.info(Object.keys(functionTest))
+        
+        localStorage.setItem(localStorageName, JSON.stringify(functionTest));
+        this.state.eventList = []
+        
+        // if(Object.values( objectPrueba)[0].length > 0 ){ // entra cuando el objeto tenga mas de una fecha
+        //<--------------------------------- Experimentos --------------------------------->
 
         return (
-            
+
             <>
 
                 <div className="calendar-container" style={this.style}>
                     <table className="calendar">
                         <thead>
+
                             <tr className="calendar-header">
                                 <td colSpan="6">
                                     <this.MonthNav />
@@ -327,11 +350,14 @@ export default class Calendar extends React.Component {
                 </div>
                 <SelectedDate
                     handlerDate={this.handlerDate}
+                    handlerChangeDate={this.handlerChangeDate}
+                    valueState={this.state.changeDate}
                 />
                 <Agenda
                     currentDay={this.state.selectedDay}
                     currentDayFormated={this.state.selectedDayFormated}
                 />
+                <p>{petList}</p><br/>
             </>
 
         );
