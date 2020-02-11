@@ -9,31 +9,31 @@ const Services = () =>(
 
  <section id="services" className="services">
  <div className="title__services">
-     <h1>SERVICES_</h1>
+     <h1>¿Qué Enseñamos?_</h1>
  </div>
  <div className="container__services">
      <div className="service">
-         <h3 className="title__service">RANKED WINS <br/>BOOST</h3>
+         <h3 className="title__service">ENTRENAMIENTO <br/>MILITAR</h3>
          <figure>
-             <img className="img__service" src={Ranked} alt="RANKED WINS BOOSTING"/>
+             <img className="img__service contentText" src={Ranked} alt="RANKED WINS BOOSTING"/>
          </figure>
      </div>
      <div className="service">
-         <h3 className="title__service">TFT<br/>BOOSTING</h3>
+         <h3 className="title__service">TRABAJAR EN<br/>EQUIPO</h3>
          <figure>
-             <img className="img__service" src={TFT} alt="TFT BOOTING"/>
+             <img className="img__service contentText" src={TFT} alt="TFT BOOTING"/>
          </figure>
      </div>
      <div className="service">
-         <h3 className="title__service">DUO QUEUE<br/>BOOSTING</h3>
+         <h3 className="title__service">COACHING PARA<br/>COACH</h3>
          <figure>
-             <img className="img__service" src={Duo} alt="DUO QUEUE BOOSTING"/>
+             <img className="img__service contentText" src={Duo} alt="DUO QUEUE BOOSTING"/>
          </figure>
      </div>
      <div className="service">
-         <h3 className="title__service">PROMOTION<br/>BOOSTING</h3>
+         <h3 className="title__service">ÉTICA<br/>PROFESIONAL</h3>
          <figure>
-             <img className="img__service" src={Promo} alt="PROMOTION BOOSTING"/>
+             <img className="img__service contentText" src={Promo} alt="PROMOTION BOOSTING"/>
          </figure>
      </div>
 

@@ -14,13 +14,16 @@ const Agenda = props => {
         type: 'SOLO',//Debe escogerse en la solapa antes del calendario
         premium: 'NORMAL',
         price: null || totalPrice(),
+        dates: []
     });
 
     useEffect(() => {
         document.title = form.price
         form.price = totalPrice()
         form.schedule = showFormatDate()
+        form.dates = props.dates
     })
+    console.info('dentro de agenda',props.dates)
 
     function showFormatDate(dateTime){
         return dateTime = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
@@ -66,7 +69,7 @@ const Agenda = props => {
 
     function totalPrice() {
         if (!isNaN(props.currentDay)) {
-            return props.currentDay + 1
+            return props.currentDay 
         }
     }
 
@@ -100,6 +103,8 @@ const Agenda = props => {
                 </select>
 
                 <p name="price" onChange={handleInput} value={form.price}>{totalPrice()}</p>
+
+                <p name="dates" onChange={handleInput} value={props.dates}>{form.dates}</p>
 
                 <button className="btn__secondary" type="submit">Pagar!</button>
             </form>

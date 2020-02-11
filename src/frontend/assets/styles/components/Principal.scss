@@ -30,6 +30,11 @@
     padding-top: 170px;
 }
 
+.contentSection__internal{
+    position: relative;
+    bottom: 5vh;
+}
+
 .margin {
     margin: 50px 30.5px 0px 100px;
 
@@ -48,11 +53,19 @@
     margin-left: 100px;
 }
 
+.btn__secondary--fix{
+    position: relative;
+    top:12vh;
+    left:6vw;
+    width: 360px;
+    height: 46px;
+}
+
 .icons{
     display: flex;
     flex-direction: column; 
     position: absolute;
-    left: 86vw;
+    left: 84vw;
     top: 40vh;
     cursor: pointer
 }

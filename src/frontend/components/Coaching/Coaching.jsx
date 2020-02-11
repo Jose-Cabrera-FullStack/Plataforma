@@ -231,11 +231,11 @@ export default class Calendar extends React.Component {
         for (let day = 1; day <= this.daysInMonth(); day++) {
             let className = (day == this.currentDay() ? "day current-day" : "day");
             let selectedClass = (day == this.state.selectedDay ? " selected-day " : "")
-            let t = day
+            let t = day - 3
 
             if (t < parseInt(this.state.today) || parseInt(this.state.todayMonth) > parseInt(this.state.selectedMonth) || parseInt(this.year()) < parseInt(this.state.selectedYear)) {
                 daysInMonth.push(
-                    <td key={day} className={"disable"} disabled>
+                    <td key={day} className={selectedClass+"disable"} disabled>
                         <span>{day}</span>
                     </td>
                 );
@@ -247,8 +247,6 @@ export default class Calendar extends React.Component {
                 );
             }
         }
-        // console.log("days: ", daysInMonth);
-
         var totalSlots = [...blanks, ...daysInMonth];
         let rows = [];
         let cells = [];
@@ -275,7 +273,7 @@ export default class Calendar extends React.Component {
                 </tr>
             );
         })
-        //<--------------------------------- Experimentos --------------------------------->
+        //<--------------------------------- SEGUNDA FASE --------------------------------->
         let fieldValue = this.state.eventList;
         if (!fieldValue) return false;
         let formatDateIso = this.formatDate(this.year(), this.state.selectedMonth, this.state.selectedDay)
@@ -283,37 +281,24 @@ export default class Calendar extends React.Component {
         this.eventList[formatDateIso].push(fieldValue);
         
         let functionTest = this.eventList
-        let functionTestLastItem = functionTest[formatDateIso].length - 1 // devuelve el array con todos los item seleccionados 
-        
+        let functionTestLastItem = functionTest[formatDateIso].length - 1 // devuelve el array con todos los item seleccionados (ultimo elemento)
+
         let arrayValues = []
 
-        arrayValues.push(Object.keys(functionTest))
+        arrayValues.push(Object.keys(functionTest)) // devuelve un array con las fechas seleccionadas
         
-        const petList = Object.entries(functionTest).map(([key,value])=>{
-            let aux = Object.keys(functionTest)
+        console.log(this.state.eventList)
 
-                return (
-                    <div key={key.toString()}>{key} : <tr>{value}</tr></div>
-                );
-            
-          })
-        arrayValues.forEach(function(item) {
-            for(let date in item){
-                if(item[date] != formatDateIso){
-                    console.log("funciona")
-                }else{
-                    console.log("no funciona")
-                }
-            }
-        } )
+        const petList = this.state.eventList.map((value) => {
+            return (
+                <td key={value} className="week-day"><td>{value}</td><br/></td>
+            )
+        });
         
-        // console.info(Object.keys(functionTest))
-        
-        localStorage.setItem(localStorageName, JSON.stringify(functionTest));
-        this.state.eventList = []
+        localStorage.setItem(localStorageName, JSON.stringify());
         
         // if(Object.values( objectPrueba)[0].length > 0 ){ // entra cuando el objeto tenga mas de una fecha
-        //<--------------------------------- Experimentos --------------------------------->
+        //<--------------------------------- SEGUNDA FASE --------------------------------->
 
         return (
 
@@ -322,7 +307,7 @@ export default class Calendar extends React.Component {
                 <div className="calendar-container" style={this.style}>
                     <table className="calendar">
                         <thead>
-
+                        <p>{petList}</p><br/>
                             <tr className="calendar-header">
                                 <td colSpan="6">
                                     <this.MonthNav />
@@ -351,13 +336,13 @@ export default class Calendar extends React.Component {
                 <SelectedDate
                     handlerDate={this.handlerDate}
                     handlerChangeDate={this.handlerChangeDate}
-                    valueState={this.state.changeDate}
-                />
+                    formatDateIso= {formatDateIso}
+                /> 
                 <Agenda
                     currentDay={this.state.selectedDay}
-                    currentDayFormated={this.state.selectedDayFormated}
+                    dates={this.state.eventList}
                 />
-                <p>{petList}</p><br/>
+                
             </>
 
         );

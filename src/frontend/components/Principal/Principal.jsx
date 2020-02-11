@@ -1,11 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import '../../assets/styles/components/Principal.scss';
 import facebook from '../../assets/static/images/social-network/twitter-color.svg';
-import shen from '../../assets/static/images/shen.jpg';
-import eveline from '../../assets/static/images/eveline.jpg';
-import scroll from '../../assets/static/images/scroll.svg';
 import '../../hooks/loader'
 
 
@@ -47,7 +43,7 @@ const Principal = () => (
                     </div>
 
                     <div class="contentSection">
-                        <div class="">
+                        <div class="contentSection__internal">
                             <h1 class="title__principal contentTitle">
                                 PREPARATE PARA <br />
                                 SER MAS QUE <br />
@@ -60,7 +56,7 @@ const Principal = () => (
                             </p>
 
                             <div class="btn__principal">
-                                <button class="btn btn__secondary ">
+                                <button class="btn btn__secondary btn__secondary--fix">
                                     ¡VAMOS A ENTRENAR!
                                 </button>
                             </div>

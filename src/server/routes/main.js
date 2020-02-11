@@ -44,7 +44,7 @@ const main = async (req,res, next) => {
                 user,
                 data: userData.filter(user => user._id === id),
                 myClass:courseList.filter(course => course.user_id === id ),
-                class:{}
+                class:courseList.filter(course => course.dates)
             }
         }catch(error){
             initialState = {
