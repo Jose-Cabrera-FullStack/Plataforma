@@ -1,11 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-
-import Header from '../components/Header';
 import Principal from '../components/Principal/Principal';
 import Services from '../components/Principal/Services';
-import EloBoostingPack from '../components/EloBoostingPack';
+import CoachBoostingPack from '../components/CoachBoostingPack';
 import Reviews from '../components/Reviews';
 import HowToBuy from '../components/Principal/HowToBuy';
 import OurMethodology from '../components/Principal/OurMethodology';
@@ -17,7 +15,7 @@ const Home = () => {
 
         <Principal/>
         <Services/>
-        <EloBoostingPack/>
+        <CoachBoostingPack/>
         <Reviews/>
         <HowToBuy/>
         <OurMethodology/>   
