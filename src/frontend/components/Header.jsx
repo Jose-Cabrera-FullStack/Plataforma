@@ -35,17 +35,17 @@ const Header = props => {
               COACHING
               </li>
           </Link>
-          <Link to="/">
+          <Link to="/sobre-nosotros">
             <li className="navbar__menu padding__top padding__top--fix">
               SOBRE NOSOTROS
               </li>
           </Link>
-          <Link to="/">
+          <Link to="/contactanos">
             <li className="navbar__menu padding__top">
               CONTACTO
               </li>
           </Link>
-          <Link to="/">
+          <Link to="/faq">
             <li className="navbar__menu padding__top">
               DUDAS
               </li>

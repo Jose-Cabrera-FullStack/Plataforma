@@ -49,6 +49,14 @@ const Register = (props) => {
               onChange={handleInput}
               required
             />
+              <input
+                name="password"
+                className="input"
+                type="password"
+                placeholder="Contraseña"
+                onChange={handleInput}
+                required
+              />
             <input
               name="birthday"
               className="input"
@@ -62,14 +70,6 @@ const Register = (props) => {
               className="input"
               type="text"
               placeholder="Colocar el server"
-              onChange={handleInput}
-              required
-            />
-            <input
-              name="password"
-              className="input"
-              type="password"
-              placeholder="Contraseña"
               onChange={handleInput}
               required
             />

@@ -7,96 +7,96 @@ import Hand3 from '../../assets/static/images/hands/hand-2.svg';
 import Example from '../../assets/static/images/example-image.png';
 
 
-const HowToBuy = () =>(
+const HowToBuy = () => (
     <section id="how-to-buy" className="how-to-buy">
-        
+
         <div className="container__how-to-buy">
-            
+
             <div className="title__how-to-buy">
-                <h1>How to <br/> Buy?_</h1>
+                <h1>¿CÓMO<br /> COMPRAR?_</h1>
             </div>
-            
+
             <div className="informations__how-to-buy">
-                
+
                 <div className="information__how-to-buy">
-                    
+
                     <figure>
-                        <img src={Hand} alt=""/>
+                        <img src={Hand} alt="" />
                     </figure>
-                    
+
                     <p className="paragraph__how-to-buy">
-                        Select the details of your purchase. After <br/>
-                        clicking the 'Buy Boost' button, you can <br/> 
-                        either continue as a guest or as a <br/> 
-                        returning customer.
+                        Presiona el botón de Registrarse, créate  <br />
+                        una cuenta solo con tu correo electrónico <br />
+                        y una contraseña. ¡SI ASI DE SIMPLE!
                     </p>
-                    
+
                     <figure>
-                        <img className="example__how-to-buy" src={Example} alt=""/>
+                        <img className="example__how-to-buy" src={Example} alt="" />
                     </figure>
-                    
+
                 </div>
 
                 <div className="information__how-to-buy">
-                    
+
                     <figure>
-                        <img src={Hand1} alt=""/>
+                        <img src={Hand1} alt="" />
                     </figure>
-                    
-                    
+
+
                     <p className="paragraph__how-to-buy">
-                        After clicking the 'Buy Boost' button, you <br/>
-                            can either continue as a guest or as a <br/>
-                            returning customer.
+                    Escoge el Plan que mas te guste, presiona <br/>
+                        el botón de "Comprar Ahora!" y te llevara <br/>
+                        al ultimo paso para comenzar a ¡SUBIR!
                         </p>
-                        
+
                     <figure>
-                        <img className="example__how-to-buy" src={Example} alt=""/>
+                        <img className="example__how-to-buy" src={Example} alt="" />
                     </figure>
-                    
+
                 </div>
-                
-                <div className="information__how-to-buy">
-                    
-                    <figure>
-                        <img src={Hand2} alt=""/>
-                    </figure>
-                    
-                    <p className="paragraph__how-to-buy">
-                        After By clicking the 'Purchase' button, <br/>
-                        you will be redirected to the chosen <br/>
-                        payment gateway.licking the 'Buy Boost' <br/>
-                        button, you can either continue as a guest <br/>
-                        or as a returning customer.
-                    </p>
-                    
-                    <figure>
-                        <img className="example__how-to-buy" src={Example} alt=""/>
-                    </figure>
-                    
-                </div>
-                
+
                 <div className="information__how-to-buy">
 
                     <figure>
-                        <img src={Hand3} alt=""/>
+                        <img src={Hand2} alt="" />
                     </figure>
 
                     <p className="paragraph__how-to-buy">
-                        In the members area you can track your <br/>
-                        order, spectate, pause or chat live with <br/>
-                        your booster!
+                    Veras una ventana donde podrás escoger el <br/>
+                        método de pago que mas te guste RECUERDA <br/>
+                        VER EL PRECIO ANTES DE FINALIZAR LA COMPRA, <br/>
+                        luego presiona el botón de "Finalizar Compra" <br/>
+                        y ¡Felicidades eres parte de Summoner's Cave!
                     </p>
-                    
+
                     <figure>
-                        <img className="example__how-to-buy" src={Example} alt=""/>
+                        <img className="example__how-to-buy" src={Example} alt="" />
                     </figure>
-                    
+
                 </div>
-                
-                
+
+                <div className="information__how-to-buy">
+
+                    <figure>
+                        <img src={Hand3} alt="" />
+                    </figure>
+
+                    <p className="paragraph__how-to-buy">
+                    Nos comunicamos via Discord contigo. Esto con <br/>
+                        la finalidad de hacer lo mas personalizado <br/>
+                        posible las clases para ti. Recuerda que la <br/>
+                        primera clase es ¡GRATUITA!
+                    </p>
+
+                    <figure>
+                        <img className="example__how-to-buy" src={Example} alt="" />
+                    </figure>
+
+                </div>
+
+
             </div>
-            
+
         </div>
 
     </section>

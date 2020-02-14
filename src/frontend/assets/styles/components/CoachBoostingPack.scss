@@ -1,12 +1,14 @@
 .coach__booting__packs {
     width: auto;
     height: 905px;
-    background-image: url(../Ekko-True-Damage.jpg);
+    background-image:
+        linear-gradient(to bottom, rgba(27, 31, 57, 0.9), rgba(69, 74, 222, 0.9)),
+        url(../Ekko-True-Damage.jpg);
     background-size: cover;
 }
 
 
-.container__coach__booting__packs{
+.container__coach__booting__packs {
     position: relative;
     top: 10vh;
 }
@@ -94,7 +96,7 @@
     right: -12px;
 }
 
-.coachs__coach__booting__packs{
+.coachs__coach__booting__packs {
     position: relative;
     top: -35px;
 }
@@ -192,7 +194,7 @@
     left: -35px;
 }
 
-.position_btn_packs__coach__booting__packs{
+.position_btn_packs__coach__booting__packs {
     position: relative;
     top: -276px;
     right: 15px;

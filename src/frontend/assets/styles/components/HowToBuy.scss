@@ -1,7 +1,10 @@
 .how-to-buy {
     width: auto;
     height: 768px;
-    background-color: #454ade;
+    background-image:
+        linear-gradient(to bottom, rgba(69, 74, 222, 0.9), rgba(27, 31, 57, 0.9)),
+        url(../Ekko-True-Damage.jpg);
+    background-size: cover;
 }
 
 .container__how-to-buy {
