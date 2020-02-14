@@ -9,9 +9,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-select{
-  -webkit-appearance: none;
-}
 
 .text-center {
   text-align: center;
@@ -131,7 +128,7 @@ select{
   padding-right: 30px;
 }
 
-.position-left {
+.delete-event-day-field-btn {
   position: relative;
   left: 30px;
   top:-3px;

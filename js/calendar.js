@@ -12,6 +12,7 @@ class CALENDAR {
             eventList: this.getFirstElementInsideIdByClassName('current-day-events-list'),
             eventField: this.getFirstElementInsideIdByClassName('add-event-day-field'),
             eventAddBtn: this.getFirstElementInsideIdByClassName('add-event-day-field-btn'),
+            eventDeleteBtn: this.getFirstElementInsideIdByClassName('delete-event-day-field-btn'),
             currentDay: this.getFirstElementInsideIdByClassName('calendar-left-side-day'),
             currentWeekDay: this.getFirstElementInsideIdByClassName('calendar-left-side-day-of-week'),
             prevYear: this.getFirstElementInsideIdByClassName('calendar-change-year-slider-prev'),
@@ -179,7 +180,17 @@ class CALENDAR {
             this.eventList[dateFormatted].push(fieldValue);
             console.log(this.eventList)
             localStorage.setItem(localStorageName, JSON.stringify(this.eventList));
-            this.elements.eventField.value = '';
+            this.drawAll()
+        });
+
+        this.elements.eventDeleteBtn.addEventListener('click', e => {
+            let fieldValue = this.elements.eventField.value;
+            if (!fieldValue) return false;
+            let dateFormatted = this.getFormattedDate(new Date(this.date));
+            if (!this.eventList[dateFormatted]) this.eventList[dateFormatted] = [];
+            this.eventList= []
+            console.log(this.eventList[dateFormatted])
+            localStorage.setItem(localStorageName, JSON.stringify(this.eventList));
             this.drawAll()
         });
 
