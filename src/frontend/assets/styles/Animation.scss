@@ -111,7 +111,7 @@ body {
 .glitch {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -1vw;
     width: var(--glitch-width);
     height: var(--glitch-height);
     overflow: hidden;
@@ -123,7 +123,7 @@ body {
     left: calc(-1 * var(--gap-horizontal));
     width: calc(100% + var(--gap-horizontal) * 2);
     height: calc(100% + var(--gap-vertical) * 2);
-    background: url(Ekko-True-Damage.jpg) no-repeat 50% 0;
+    background: url(../styles/Screen/Ekko-True-Damage.jpg) no-repeat 50% 0;
     background-color: var(--blend-color-1);
     background-size: cover;
     transform: translate3d(0, 0, 0);

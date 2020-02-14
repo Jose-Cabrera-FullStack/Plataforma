@@ -12,12 +12,9 @@ const HowToBuy = () => (
 
         <div className="container__how-to-buy">
 
-            <div className="title__how-to-buy">
-                <h1>¿CÓMO<br /> COMPRAR?_</h1>
-            </div>
+            <h1 className="title__how-to-buy">¿CÓMO<br /> COMPRAR?_</h1>
 
             <div className="informations__how-to-buy">
-
                 <div className="information__how-to-buy">
 
                     <figure>
@@ -33,11 +30,9 @@ const HowToBuy = () => (
                     <figure>
                         <img className="example__how-to-buy" src={Example} alt="" />
                     </figure>
-
                 </div>
 
                 <div className="information__how-to-buy">
-
                     <figure>
                         <img src={Hand1} alt="" />
                     </figure>
@@ -52,11 +47,9 @@ const HowToBuy = () => (
                     <figure>
                         <img className="example__how-to-buy" src={Example} alt="" />
                     </figure>
-
                 </div>
 
                 <div className="information__how-to-buy">
-
                     <figure>
                         <img src={Hand2} alt="" />
                     </figure>
@@ -72,11 +65,9 @@ const HowToBuy = () => (
                     <figure>
                         <img className="example__how-to-buy" src={Example} alt="" />
                     </figure>
-
                 </div>
 
                 <div className="information__how-to-buy">
-
                     <figure>
                         <img src={Hand3} alt="" />
                     </figure>
@@ -91,7 +82,6 @@ const HowToBuy = () => (
                     <figure>
                         <img className="example__how-to-buy" src={Example} alt="" />
                     </figure>
-
                 </div>
 
 

@@ -16,7 +16,7 @@
 }
 
 .title__principal {
-    width: 513px;
+    width: 517px;
     height: 135px;
     font-family: Roboto;
     font-size: 40px;
@@ -28,6 +28,12 @@
     color: #ffffff;
     margin-left: 100px;
     padding-top: 170px;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+.blue__lightning{
+    color: #56FFFB;
+    text-shadow: 0 0 10px #56FFFB;
 }
 
 .contentSection__internal{
@@ -41,12 +47,12 @@
 
 .paragraph__principal {
     height: 52px;
-    font-family: Roboto;
+    font-family: 'Roboto Mono', monospace;
     font-size: 20px;
     font-weight: 500;
     font-stretch: normal;
     font-style: normal;
-    line-height: normal;
+    line-height: 1.6;
     letter-spacing: normal;
     color: #ffffff;
     margin-left: 100px;
@@ -70,7 +76,11 @@
 }
 .icon{
     margin-bottom: 10px;
+    filter: drop-shadow( 0px 0px 4px rgba(255, 255, 255, .7));
+}
 
+.discord{
+    width: 30px;
 }
 
 .scroll__principal{

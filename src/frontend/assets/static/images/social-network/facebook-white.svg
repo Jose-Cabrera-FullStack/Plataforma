@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <path fill="#FFF" fill-rule="evenodd" d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm1.21 8c-1.032 0-1.784.663-1.784 1.88v.92h-1.14v1.6h1.14V16h1.52v-3.601h1.165l.175-1.599h-1.34V10c0-.413.032-.673.594-.673h.71V8.055A9.423 9.423 0 0 0 13.21 8z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="facebook-white" transform="translate(-0.225 0.536)">
+    <path id="Combined_Shape" data-name="Combined Shape" d="M15,30A15,15,0,0,1,4.393,4.393,15,15,0,1,1,25.606,25.606,14.9,14.9,0,0,1,15,30ZM14.28,15.5V20h1.9V15.5h1.457l.218-2H16.182v-1c0-.523.05-.84.744-.84h.886V10.069A11.73,11.73,0,0,0,16.542,10h-.031a2.126,2.126,0,0,0-2.23,2.349V13.5H12.859v2Z" transform="translate(0.225 -0.536)" fill="#fff"/>
+  </g>
 </svg>

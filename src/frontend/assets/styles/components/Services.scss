@@ -25,6 +25,8 @@
     text-align: center;
     color: #1b1f3b;
     margin-bottom: 50px;
+    position: relative;
+    bottom: 4vh;
 }
 
 .title__service {
@@ -46,4 +48,21 @@
     width: 190px;
     height: 125px;
     object-fit: contain;
+}
+span:hover .pop__service {
+    visibility: visible;
+
+}
+
+.pop__service{
+    display:inline;
+    position:absolute;
+    visibility: hidden;
+    background-color: #FFFFFF;
+    border: solid 2px #000000;
+    padding: 5px;margin: 0 0 0 10px;
+    color: #000000;text-align: left;
+    font-weight: normal;
+    z-index: 1;
+    
 }

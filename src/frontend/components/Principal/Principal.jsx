@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../../assets/styles/components/Principal.scss';
-import facebook from '../../assets/static/images/social-network/twitter-color.svg';
+import facebook from '../../assets/static/images/social-network/facebook-white.svg';
+import reddit from '../../assets/static/images/social-network/reddit-white.svg';
+import instagram from '../../assets/static/images/social-network/instagram-white.svg';
+import discord from '../../assets/static/images/social-network/discord-white.svg';
 import '../../hooks/loader'
 
 
@@ -28,16 +32,16 @@ const Principal = () => (
                     <div className="social-network__principal">
                         <ol className="icons">
                             <li class="icon" >
-                                <img src={facebook} />
+                                <a href="http://facebook.com"><img src={facebook}/></a>
+                            </li>
+                            <li class="icon discord" >
+                                <a href="http://reddit.com"><img src={reddit} /></a>
                             </li>
                             <li class="icon" >
-                                <img src={facebook} />
+                                <a href="http://instagram.com"><img src={instagram} /></a>
                             </li>
                             <li class="icon" >
-                                <img src={facebook} />
-                            </li>
-                            <li class="icon" >
-                                <img src={facebook} />
+                                <a href="http://discord.com"><img src={discord} /></a>
                             </li>
                         </ol>
                     </div>
@@ -47,18 +51,21 @@ const Principal = () => (
                             <h1 class="title__principal contentTitle">
                                 PREPARATE PARA <br />
                                 SER MAS QUE <br />
-                                <span class="">UN ESPECTADOR!</span>_
+                                <strong class="blue__lightning">¡UN ESPECTADOR!</strong>_
                             </h1>
 
                             <p class="paragraph__principal">BRINDAMOS COACHING A PLAYERS DE LEAGUE OF LEGEND <br />
-                                DESDE LA TEMPORADA 7. EL MOMENTO DE SER <br />
-                                EL PROTAGONISTA ES AHORA...
+                                DESDE LA TEMPORADA 7.<strong class="blue__lightning "> TU MOMENTO DE SER <br />
+                                EL PROTAGONISTA ES AHORA...</strong>
+                                
                             </p>
 
                             <div class="btn__principal">
+                                <Link to="/coaching">
                                 <button class="btn btn__secondary btn__secondary--fix">
                                     ¡VAMOS A ENTRENAR!
                                 </button>
+                                </Link>
                             </div>
 
                         </div>
@@ -69,9 +76,9 @@ const Principal = () => (
 
             </div>
 
-            <figure className="scroll__principal col-11">
+            {/* <figure className="scroll__principal col-11">
                 <img src="./static/images/scroll.svg" alt="" />
-            </figure>
+            </figure> */}
         </div>
     </section>
 
