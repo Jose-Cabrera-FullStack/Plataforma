@@ -30,26 +30,26 @@ const Header = props => {
       <div className="navbar__container">
 
         <ol className="navbar__list col-10" >
-          <Link to="/coaching">
-            <li className="navbar__menu padding__top">
+          <li className="navbar__menu padding__top">
+            <Link to="/coaching">
               COACHING
-              </li>
           </Link>
-          <Link to="/sobre-nosotros">
-            <li className="navbar__menu padding__top padding__top--fix">
+          </li>
+          <li className="navbar__menu padding__top padding__top--fix">
+            <Link to="/sobre-nosotros">
               SOBRE NOSOTROS
-              </li>
           </Link>
+          </li>
+            <li className="navbar__menu padding__top">
           <Link to="/contactanos">
-            <li className="navbar__menu padding__top">
               CONTACTO
-              </li>
           </Link>
-          <Link to="/faq">
+              </li>
             <li className="navbar__menu padding__top">
+          <Link to="/faq">
               DUDAS
-              </li>
           </Link>
+              </li>
 
           {hasUser ?
             <Link to="/login">

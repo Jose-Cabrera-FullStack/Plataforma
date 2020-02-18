@@ -15,7 +15,7 @@ const Services = () => (
                     <h3 className="title__service">ENTRENAMIENTO <br />MILITAR</h3>
                     <figure>
                         <img className="img__service contentText" src={Ranked} alt="RANKED WINS BOOSTING" />
-                        <strong className="pop__service">
+                        <strong className="pop__service pop__service--special__1">
                         Aprenderas a tener un pensamiento estratega, <br/>
                         dominar tus emociones usando conceptos avanzados <br/>
                         de psicología moderna. Conceptualización de <br/>
@@ -31,7 +31,7 @@ const Services = () => (
                     <h3 className="title__service">TRABAJAR EN<br />EQUIPO</h3>
                     <figure>
                         <img className="img__service contentText" src={TFT} alt="TFT BOOTING" />
-                        <strong className="pop__service">
+                        <strong className="pop__service pop__service--special__2">
                         Entenderás lo importante que es la comunicación <br/>
                         asertiva con tus compañeros. Saber cuando, donde  <br/>
                         y en que momento ir por objetivos. Cuando iniciar una <br/>
@@ -46,7 +46,7 @@ const Services = () => (
                     <h3 className="title__service">COACHING PARA<br />COACH</h3>
                     <figure>
                         <img className="img__service contentText" src={Duo} alt="DUO QUEUE BOOSTING" />
-                        <strong className="pop__service">
+                        <strong className="pop__service pop__service--special__3">
                         ¿Quieres ser la figura que todos admiran y hace que <br/>
                         el equipo alcance la victoria? <br/>
                         Capacitate en Pedagogia enfocada en los eSport. <br/>
@@ -62,7 +62,7 @@ const Services = () => (
                     <h3 className="title__service">ÉTICA<br />PROFESIONAL</h3>
                     <figure>
                         <img className="img__service contentText" src={Promo} alt="PROMOTION BOOSTING" />
-                        <strong className="pop__service">
+                        <strong className="pop__service pop__service--special__4 ">
                         Te enseñaremos "Qué es ser un profesional <br/>
                         de los eSport y vivir de jugar videojuegos". Dietas,  <br/>
                         Dedicación, Compromiso,  <br/>

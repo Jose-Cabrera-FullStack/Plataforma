@@ -1,0 +1,111 @@
+.contact {
+    width: auto;
+    height: 120vh;
+    background-image: linear-gradient(to top, #1b1f3b 67%, rgba(27, 31, 59, 0.96) 77%, rgba(27, 31, 59, 0)), url(../Screen/Taric.jpg);
+    background-size: contain;
+    position: relative;
+    bottom: 4.5vw;
+    margin: 0px 0px -6% 0;
+}
+
+.contact__principal__title {
+    width: 600px;
+    height: 53px;
+    font-family: RobotoMono;
+    font-size: 40px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    padding: 12% 0px 0px 40%;
+}
+
+.contact__principal__subtitle {
+    width: 1014px;
+    height: 50px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    padding: 0% 0px 0% 18%;
+}
+
+.contact__form {
+    width: 384px;
+    height: 41vh;
+    background-color: #454ade;
+    border-radius: 16px;
+    margin: 0px 0px 8% 38%;
+}
+
+.contact__input{
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid #ffffff;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+    color: #ffffff
+}
+
+::placeholder{
+    color: #ffffff;
+}
+
+.contact__socials {
+    display: flex;
+    margin: 0px 0px 0px 14.5vw;
+}
+
+.contact__social {
+    width: 261px;
+    height: 97px;
+    border-radius: 8px;
+    border: solid 4px #ffffff;
+    background-color: rgba(15, 15, 15, 0.34);
+    color: #ffffff;
+    text-align: end;
+    margin: 0px 2vw 0 0;
+}
+
+.contact__form__internal{
+    padding: 10% 0px 0px 15%;
+}
+
+.contact__input--height{
+    height: 17vh;
+}
+
+.btn__secondary--fix{
+    margin: 10vh 0px 0px -1vw;
+}
+
+.contact__socials__subtitle{
+    position: relative;
+    bottom: 3vh;
+    right: 1vw;
+}
+
+.contact__socials__title{
+    position: relative;
+    bottom: 5vh;
+    right: 1vw;
+}
+
+.contact__social:hover {
+    width: 261px;
+    height: 97px;
+    border-radius: 8px;
+    border: solid 4px #454ade;
+    background-color: #454ade;
+    color: #56fffb;
+}

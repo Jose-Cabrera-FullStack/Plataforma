@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../assets/styles/components/HowToBuy.scss';
-import Hand from '../../assets/static/images/hands/hand.svg';
-import Hand1 from '../../assets/static/images/hands/hand-1.svg';
-import Hand2 from '../../assets/static/images/hands/hand-2.svg';
-import Hand3 from '../../assets/static/images/hands/hand-2.svg';
+import Hand1 from '../../assets/static/images/hands/h1.svg';
+import Hand2 from '../../assets/static/images/hands/h2.svg';
+import Hand3 from '../../assets/static/images/hands/h3.svg';
+import Hand4 from '../../assets/static/images/hands/h4.svg';
 import Example from '../../assets/static/images/example-image.png';
 
 
@@ -18,34 +18,17 @@ const HowToBuy = () => (
                 <div className="information__how-to-buy">
 
                     <figure>
-                        <img src={Hand} alt="" />
+                        <img src={Hand1} alt="" />
                     </figure>
 
-                    <p className="paragraph__how-to-buy">
+                    <p className="paragraph__how-to-buy text__1">
                         Presiona el botón de Registrarse, créate  <br />
                         una cuenta solo con tu correo electrónico <br />
                         y una contraseña. ¡SI ASI DE SIMPLE!
                     </p>
 
                     <figure>
-                        <img className="example__how-to-buy" src={Example} alt="" />
-                    </figure>
-                </div>
-
-                <div className="information__how-to-buy">
-                    <figure>
-                        <img src={Hand1} alt="" />
-                    </figure>
-
-
-                    <p className="paragraph__how-to-buy">
-                    Escoge el Plan que mas te guste, presiona <br/>
-                        el botón de "Comprar Ahora!" y te llevara <br/>
-                        al ultimo paso para comenzar a ¡SUBIR!
-                        </p>
-
-                    <figure>
-                        <img className="example__how-to-buy" src={Example} alt="" />
+                        <img className="example__how-to-buy example__1" src={Example} alt="" />
                     </figure>
                 </div>
 
@@ -54,16 +37,15 @@ const HowToBuy = () => (
                         <img src={Hand2} alt="" />
                     </figure>
 
-                    <p className="paragraph__how-to-buy">
-                    Veras una ventana donde podrás escoger el <br/>
-                        método de pago que mas te guste RECUERDA <br/>
-                        VER EL PRECIO ANTES DE FINALIZAR LA COMPRA, <br/>
-                        luego presiona el botón de "Finalizar Compra" <br/>
-                        y ¡Felicidades eres parte de Summoner's Cave!
-                    </p>
+
+                    <p className="paragraph__how-to-buy text__2">
+                    Escoge el Plan que mas te guste, presiona <br/>
+                        el botón de "Comprar Ahora!" y te llevara <br/>
+                        al ultimo paso para comenzar a ¡SUBIR!
+                        </p>
 
                     <figure>
-                        <img className="example__how-to-buy" src={Example} alt="" />
+                        <img className="example__how-to-buy example__2" src={Example} alt="" />
                     </figure>
                 </div>
 
@@ -72,7 +54,24 @@ const HowToBuy = () => (
                         <img src={Hand3} alt="" />
                     </figure>
 
-                    <p className="paragraph__how-to-buy">
+                    <p className="paragraph__how-to-buy text__3">
+                    Veras una ventana donde podrás escoger el <br/>
+                        método de pago que mas te guste RECUERDA <br/>
+                        Luego presiona el botón de "Finalizar Compra" <br/>
+                        <span className="blue__lightning">VER EL PRECIO ANTES DE FINALIZAR LA COMPRA.</span>    
+                    </p>
+
+                    <figure>
+                        <img className="example__how-to-buy example__3" src={Example} alt="" />
+                    </figure>
+                </div>
+
+                <div className="information__how-to-buy">
+                    <figure>
+                        <img src={Hand4} alt="" />
+                    </figure>
+
+                    <p className="paragraph__how-to-buy text__4">
                     Nos comunicamos via Discord contigo. Esto con <br/>
                         la finalidad de hacer lo mas personalizado <br/>
                         posible las clases para ti. Recuerda que la <br/>
@@ -80,7 +79,7 @@ const HowToBuy = () => (
                     </p>
 
                     <figure>
-                        <img className="example__how-to-buy" src={Example} alt="" />
+                        <img className="example__how-to-buy example__4" src={Example} alt="" />
                     </figure>
                 </div>
 
