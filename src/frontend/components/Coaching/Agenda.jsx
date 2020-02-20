@@ -106,7 +106,6 @@ const Agenda = props => {
 
                 <p name="dates" onChange={handleInput} value={props.dates}>{form.dates}</p>
 
-                <button className="btn__secondary" type="submit">Pagar!</button>
             </form>
         </section>
     )

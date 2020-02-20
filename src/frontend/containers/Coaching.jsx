@@ -1,16 +1,15 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Agenda from '../components/Coaching/Agenda';
 import Coaching from '../components/Coaching/Coaching';
 
 import '../assets/styles/App.scss';
 const Boosting = () => {
+
     return(
       <div className="App">
       
             <Coaching/>
-            {/* <Agenda/> */}
 
       </div>
 
