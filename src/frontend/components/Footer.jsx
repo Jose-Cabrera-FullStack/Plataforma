@@ -87,7 +87,7 @@ const Footer = () => (
 
         <p className="copyright__footer">
             © 2019 Summonerscave.com All Rights Reserved <br/>
-            <a>Terms of use</a> | <a>Privacy Policy</a>
+            <Link to="/term">Terms of use</Link> | <Link to="/privacy">Privacy Policy</Link>
         </p>
 
 

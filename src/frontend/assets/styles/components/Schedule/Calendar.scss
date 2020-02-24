@@ -5,17 +5,20 @@ td,
 tr {
     padding: 0;
     margin: 0;
+    
 }
 
 .calendar-container {
-    border: 2px solid skyblue;
 }
 
 .calendar {
     background-color: white;
     border-spacing: 0;
     border-collapse: collapse;
-    width: 100%;
+    width: 939px;
+    height: 440px;
+    margin: 0px 0px 0px 21vw;
+    border-radius: 19px 19px 0 0;
 }
 
 .calendar-header {
@@ -111,8 +114,4 @@ tr {
 
 .label-month {
     cursor: pointer;
-}
-
-.selected__date{
-    width: 22vw;
 }

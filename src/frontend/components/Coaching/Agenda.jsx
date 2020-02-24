@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { selectDate, deleteSelectedDate } from '../../actions';
-import '../../assets/styles/components/Principal.scss';
 import { submitSelectedDate } from '../../actions';
+import PaypalCheckoutButton from '../Coaching/PaypalCheckoutButton';
 import moment from 'moment';
 
-import PaypalCheckoutButton from '../Coaching/PaypalCheckoutButton';
+import '../../assets/styles/components/Principal.scss';
+import '../../assets/styles/components/Schedule/Agenda.scss';
 
 const Agenda = props => {
 
@@ -24,9 +25,9 @@ const Agenda = props => {
         customer: form.user_id,
         total: form.price,
         test: 'test'
-      };
-    
-    console.info("valor de price:",form.price)
+    };
+
+    console.info("valor de price:", form.price)
 
     useEffect(() => {
         document.title = form.price
@@ -34,9 +35,9 @@ const Agenda = props => {
         form.schedule = showFormatDate()
         form.dates = props.dates
     })
-    console.info('dentro de agenda',props.dates)
+    console.info('dentro de agenda', props.dates)
 
-    function showFormatDate(dateTime){
+    function showFormatDate(dateTime) {
         return dateTime = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
     }
 
@@ -56,7 +57,7 @@ const Agenda = props => {
         return "";
     }
 
-    function checkStateCurrency(){} // recibe el estado de la transaccion
+    function checkStateCurrency() { } // recibe el estado de la transaccion
 
     function checkCookie() {
         var user = getCookie("id");
@@ -64,7 +65,7 @@ const Agenda = props => {
             return user
         }
     }
-    
+
     // console.log('Estado de price: ' + form.price)
     const handleInput = (event) => {
         setValues({
@@ -79,49 +80,88 @@ const Agenda = props => {
         props.selectDate(form)
         props.submitSelectedDate(form, '/');
     };
-    
+
     function totalPrice() {
         if (!isNaN(props.currentDay)) {
-            return props.currentDay 
+            return props.currentDay
         }
     }
 
-    function allDateInArray(){
+    function allDateInArray() {
         //Se debe agrupar todos los datos en un array o en un objeto
         return
     }
 
-    localStorage.setItem('prueba',JSON.stringify(totalPrice()))
+    localStorage.setItem('prueba', JSON.stringify(totalPrice()))
 
 
     return (
-        <section className=""> 
+        <section className="agenda">
             <form onSubmit={handleSubmit}>
-               
-                <p name="schedule" onChange={handleInput} value={form.schedule}>{form.schedule}</p>
+                <div className="agenda__price">
+                    <h2 className="agenda__price__title">Precio</h2>
+                    <h1 className="agenda__dollar__price" name="price" onChange={handleInput} value={totalPrice()}>${totalPrice()}</h1>
+                    <h3 className="agenda__pesos__price">AR${totalPrice() * 72}esto debe ser una function</h3>
+                    <p className="agenda__time">Finaliza en : 9 -14 Dias</p>
 
-                <select name="type" onChange={handleInput}>
-                    <option value="SOLO">SOLO</option>
-                    <option value="COACHING">COACHING</option>
-                </select>
+                </div>
 
-                <select name="coach" onChange={handleInput}>
-                    <option value="Guido">Guido</option>
-                    <option value="Murdoc">Murdoc</option>
-                </select>
+                <div className="agenda__selection">
 
-                <select name="premium" onChange={handleInput}>
-                    <option value="NORMAL">NORMAL</option>
-                    <option value="PREMIUM">PREMIUM</option>
-                </select>
+                    <span className="span__invisible" name="schedule" onChange={handleInput} value={form.schedule}>{form.schedule}</span>
 
-                <p name="price" onChange={handleInput} value={totalPrice()}>{totalPrice()}</p>
+                    <p className="select__title">¿Qué tipo de Coach quieres recibir?</p>
 
-                <p name="dates" onChange={handleInput} value={props.dates}>{form.dates}</p>
+                    <select name="type" onChange={handleInput} className="select__agenda">
+                        <option value="SOLO">SOLO</option>
+                        <option value="COACHING">COACHING</option>
+                    </select>
 
-                {/* <button type="submit">pagar</button> */}
+                    <br />
 
-                <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit}/>
+                    <p className="select__title">¿Quién será tu coach?</p>
+
+                    <select name="coach" onChange={handleInput} className="select__agenda">
+                        <option value="Guido">Guido</option>
+                        <option value="Murdoc">Murdoc</option>
+                    </select>
+
+                    <br />
+
+                    <p className="select__title">¿Cuántas clases quieres?</p>
+
+                    <select name="number" onChange={handleInput} className="select__agenda">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+
+                    <br />
+                    <p className="select__title">¿Cuántas clases quieres?</p>
+
+                    <select name="premium" onChange={handleInput} className="select__agenda">
+                        <option value="NORMAL">NORMAL</option>
+                        <option value="PREMIUM">PREMIUM</option>
+                    </select>
+
+
+
+                    <p name="dates" onChange={handleInput} value={props.dates}>{form.dates}</p>
+
+                    {/* <button type="submit">pagar</button> */}
+
+                </div>
+
+                <div className="agenda__paypal">
+                    <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit} />
+                </div>
+
             </form>
         </section>
     )

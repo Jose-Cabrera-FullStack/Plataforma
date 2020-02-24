@@ -5,7 +5,8 @@ import Agenda from './Agenda';
 import SelectedDate from './SelectedDate';
 
 
-import '../../assets/styles/components/Calendar.scss';
+import '../../assets/styles/components/Schedule/Calendar.scss';
+import '../../assets/styles/components/Schedule/Schedule.scss';
 
 const localStorageName = 'calendar-events';
 
@@ -194,7 +195,7 @@ export default class Calendar extends React.Component {
     }
 
     formatDate = (year, month, day) => {
-        if(day < 10){}
+        if (day < 10) { }
         return `${year}-${month}-${day}`
     }
 
@@ -238,7 +239,7 @@ export default class Calendar extends React.Component {
 
             if (t < parseInt(this.state.today) || parseInt(this.state.todayMonth) > parseInt(this.state.selectedMonth) || parseInt(this.year()) < parseInt(this.state.selectedYear)) {
                 daysInMonth.push(
-                    <td key={day} className={selectedClass+"disable"} disabled>
+                    <td key={day} className={selectedClass + "disable"} disabled>
                         <span>{day}</span>
                     </td>
                 );
@@ -282,70 +283,75 @@ export default class Calendar extends React.Component {
         let formatDateIso = this.formatDate(this.year(), this.state.selectedMonth, this.state.selectedDay)
         if (!this.eventList[formatDateIso]) this.eventList[formatDateIso] = [];
         this.eventList[formatDateIso].push(fieldValue);
-        
+
         let functionTest = this.eventList
         let functionTestLastItem = functionTest[formatDateIso].length - 1 // devuelve el array con todos los item seleccionados (ultimo elemento)
 
         let arrayValues = []
 
         arrayValues.push(Object.keys(functionTest)) // devuelve un array con las fechas seleccionadas
-        
+
         console.log(this.state.eventList)
 
         const petList = this.state.eventList.map((value) => {
             return (
-                <td key={value} className="week-day"><td>{value}</td><br/></td>
+                <td key={value} className="week-day"><td>{value}</td><br /></td>
             )
         });
-        
+
         localStorage.setItem(localStorageName, JSON.stringify());
-        
+
         // if(Object.values( objectPrueba)[0].length > 0 ){ // entra cuando el objeto tenga mas de una fecha
         //<--------------------------------- SEGUNDA FASE --------------------------------->
 
         return (
 
             <>
+                <div className="schedule">
 
-                <div className="calendar-container" style={this.style}>
-                    <table className="calendar">
-                        <thead>
-                        <p>{petList}</p><br/>
-                            <tr className="calendar-header">
-                                <td colSpan="6">
-                                    <this.MonthNav />
-                                    {" "}
-                                    <this.YearNav />
-                                </td>
-                                <td colSpan="2" className="nav-month">
-                                    <i className="prev fa fa-fw prueba"
-                                        onClick={(e) => { this.prevMonth() }}>
-                                    </i>
-                                    <i className="prev fa fa-fw prueba"
-                                        onClick={(e) => { this.nextMonth() }}>
-                                    </i>
-                                </td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                {weekdays}
-                            </tr>
-                            {trElems}
-                        </tbody>
-                    </table>
+                    <h1 className="schedule__title">ESCOGE LAS FECHAS EN LA QUE VERAS LAS CLASES</h1>
+                    <h4 className="schedule__subtitle">Las clases son personalizadas, adaptando cada Sesión a tu manera de Aprender. </h4>
+                    <div className="calendar-container" style={this.style}>
+                        <table className="calendar">
+                            <thead>
+                                <p>{petList}</p><br />
+                                <tr className="calendar-header">
+                                    <td colSpan="6">
+                                        <this.MonthNav />
+                                        {" "}
+                                        <this.YearNav />
+                                    </td>
+                                    <td colSpan="2" className="nav-month">
+                                        <i className="prev fa fa-fw prueba"
+                                            onClick={(e) => { this.prevMonth() }}>
+                                        </i>
+                                        <i className="prev fa fa-fw prueba"
+                                            onClick={(e) => { this.nextMonth() }}>
+                                        </i>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    {weekdays}
+                                </tr>
+                                {trElems}
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <SelectedDate
+                        handlerDate={this.handlerDate}
+                        handlerChangeDate={this.handlerChangeDate}
+                        formatDateIso={formatDateIso}
+                    />
+                    <Agenda
+                        currentDay={this.state.selectedDay}
+                        dates={this.state.eventList}
+                    />
 
                 </div>
-                <SelectedDate
-                    handlerDate={this.handlerDate}
-                    handlerChangeDate={this.handlerChangeDate}
-                    formatDateIso= {formatDateIso}
-                /> 
-                <Agenda
-                    currentDay={this.state.selectedDay}
-                    dates={this.state.eventList}
-                />
-                
+
             </>
 
         );

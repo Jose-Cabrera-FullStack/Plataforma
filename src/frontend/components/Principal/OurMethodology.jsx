@@ -11,8 +11,8 @@ const OurMethodology = () =>(
         
         <div className="container__our-methodology">
             
-            <div className="title__out-methodology">
-                <h1>NUESTRA <br/> METODOLOGIA_</h1>
+            <div >
+                <h1 className="title__out-methodology">NUESTRA <br/> METODOLOGIA_</h1>
             </div>
 
             <div className="informations__our-methodology">

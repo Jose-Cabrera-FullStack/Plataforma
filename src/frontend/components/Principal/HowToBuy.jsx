@@ -18,7 +18,7 @@ const HowToBuy = () => (
                 <div className="information__how-to-buy">
 
                     <figure>
-                        <img src={Hand1} alt="" />
+                        <img className="icon__how-to-buy" src={Hand1} alt="" />
                     </figure>
 
                     <p className="paragraph__how-to-buy text__1">
@@ -34,7 +34,7 @@ const HowToBuy = () => (
 
                 <div className="information__how-to-buy">
                     <figure>
-                        <img src={Hand2} alt="" />
+                        <img className="icon__how-to-buy" src={Hand2} alt="" />
                     </figure>
 
 
@@ -51,7 +51,7 @@ const HowToBuy = () => (
 
                 <div className="information__how-to-buy">
                     <figure>
-                        <img src={Hand3} alt="" />
+                        <img className="icon__how-to-buy" src={Hand3} alt="" />
                     </figure>
 
                     <p className="paragraph__how-to-buy text__3">
@@ -68,7 +68,7 @@ const HowToBuy = () => (
 
                 <div className="information__how-to-buy">
                     <figure>
-                        <img src={Hand4} alt="" />
+                        <img className="icon__how-to-buy" src={Hand4} alt="" />
                     </figure>
 
                     <p className="paragraph__how-to-buy text__4">

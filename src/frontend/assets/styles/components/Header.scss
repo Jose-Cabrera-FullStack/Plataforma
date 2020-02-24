@@ -61,3 +61,13 @@
   letter-spacing: normal;
   color: #ffffff;
 }
+
+.navbar a:hover{
+  color:#56fffb
+}
+
+.active{
+  color:#56fffb !important;
+  text-shadow: 0 0 2px #56fffb;
+
+}

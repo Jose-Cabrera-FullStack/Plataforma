@@ -1,0 +1,138 @@
+.agenda {
+    position: relative;
+    bottom: 30%;
+    padding: 0px 0px 0px 37%;
+    @media (max-width: 768px) {
+      color: blue
+    }
+}
+
+.agenda form {
+    display: flex;
+}
+
+.agenda option {
+    color: black
+}
+
+.agenda__price {
+    width: 300.6px;
+    height: 300.6px;
+    box-shadow: 0 0 3px 0 #454ade;
+    background-color: #454ade;
+    border-radius: 19px;
+    position: relative;
+    right: 13.5%;
+}
+
+.agenda__price__title {
+    width: 76px;
+    height: 33px;
+    font-family: Roboto;
+    font-size: 27px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    padding: 2% 0px 0px 37%;
+}
+
+.span__invisible {
+    visibility: hidden;
+    display: none;
+}
+
+.agenda__dollar__price {
+    width: 172px;
+    height: 99px;
+    text-shadow: 0 0 2px #56fffb;
+    font-family: Roboto;
+    font-size: 82px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #56fffb;
+    margin: 0;
+    padding: 0px 0px 0px 17%;
+}
+
+.agenda__pesos__price {
+    width: 156px;
+    height: 32px;
+    text-shadow: 0 0 2px #cd9e00;
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.96;
+    letter-spacing: normal;
+    text-align: center;
+    color: #cd9e00;
+    margin: 0;
+    padding: 0px 0px 0px 23%;
+}
+
+.agenda__time {
+    width: 189px;
+    height: 23px;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    padding: 0px 0px 0px 17%;
+}
+
+.agenda__selection{
+    margin: 0;
+    position: relative;
+    right: 4%;
+}
+
+.select__agenda {
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid #56fffb;
+    box-shadow: 0px 3px 9px 0px #56fffb;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 250px;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    color: #ffffff
+}
+
+.select__title {
+    width: 120px;
+    height: 14px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: 0.23px;
+    text-align: center;
+    color: #cbcbcd;
+}
+
+.agenda__paypal{
+    position: relative;
+    right: 30%;
+    top: 36vh;
+}

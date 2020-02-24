@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logoutRequest } from '../actions';
 
@@ -22,59 +22,54 @@ const Header = props => {
   return (
 
     <header id="navbar" className="navbar">
-      <Link to="/">
+      <NavLink to="/">
         <div className="navbar__logo">
           <h3 className="navbar__title">Summoner's Cave</h3>
         </div>
-      </Link>
+      </NavLink>
       <div className="navbar__container">
 
         <ol className="navbar__list col-10" >
           <li className="navbar__menu padding__top">
-            <Link to="/coaching">
+            <NavLink exact to="/coaching" activeClassName="active">
               COACHING
-          </Link>
+          </NavLink>
           </li>
-          <li className="navbar__menu padding__top">
-            <Link to="/sobre-nosotros">
-              NOSOTROS
-          </Link>
-          </li>
-            <li className="navbar__menu padding__top">
-          <Link to="/contactanos">
+          <li exact className="navbar__menu padding__top">
+            <NavLink to="/contactanos" activeClassName="active">
               CONTACTO
-          </Link>
-              </li>
-            <li className="navbar__menu padding__top">
-          <Link to="/faq">
+          </NavLink>
+          </li>
+          <li exact className="navbar__menu padding__top">
+            <NavLink to="/faq" activeClassName="active">
               DUDAS
-          </Link>
-              </li>
+          </NavLink>
+          </li>
 
           {hasUser ?
-            <Link to="/login">
+            <NavLink to="/login" activeClassName="active">
               <li className="navbar__menu btn__secondary">
                 <a onClick={handleLogout} >Cerrar Sesión</a>
               </li>
-            </Link> :
+            </NavLink> :
 
-            <Link to="/register" >
+            <NavLink to="/register" >
               <li className="navbar__menu btn__primary">
                 <a className="register__btn">REGISTER</a>
               </li>
-            </Link>
+            </NavLink>
           }
           {hasUser ?
-            <Link to="/">
+            <NavLink to="/">
               <li className="navbar__menu btn__secondary">
                 <a>{user.email}</a>
               </li>
-            </Link> :
-            <Link to="/login">
+            </NavLink> :
+            <NavLink to="/login">
               <li className="navbar__menu btn__secondary">
                 <a>LOGIN</a>
               </li>
-            </Link>
+            </NavLink>
 
           }
 
