@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import paypal from 'paypal-checkout';
 
-const PaypalCheckoutButton = ({ order }) => {
+import { selectDate, deleteSelectedDate } from '../../actions';
+import { submitSelectedDate } from '../../actions';
+import { connect } from 'react-redux';
+
+const PaypalCheckoutButton = (props) => {
 
   const paypalConf = {
     currency: 'USD',
@@ -14,7 +18,7 @@ const PaypalCheckoutButton = ({ order }) => {
     style: {
       label: 'pay',
       size: 'medium', // small | medium | large | responsive
-      shape: 'rect',   // pill | rect
+      shape: 'pill',   // pill | rect
       color: 'gold',  // gold | blue | silver | black
     },
   };
@@ -25,14 +29,16 @@ const PaypalCheckoutButton = ({ order }) => {
     const payment = {
       transactions: [
         {
+          item_list:'pruebita',
           amount: {
-            total: order.total,
+            total: props.order.total,
             currency: paypalConf.currency,
           },
           description: 'Compra en Test App',
-          custom: order.customer || '',
+          custom: props.order.customer || '',
           item_list: {
-            items: order.items
+            items: props.order.items,
+            
           },
         },
       ],
@@ -44,10 +50,12 @@ const PaypalCheckoutButton = ({ order }) => {
     });
   };
 
+  console.log('recibio el test',props.order.test)
   const onAuthorize = (data, actions) => {
     return actions.payment.execute()
       .then(response => {
         console.log(response);
+        props.submitSelectedDate(props.form, '/login');
         alert(`El Pago fue procesado correctamente, ID: ${response.id}`)
       })
       .catch(error => {
@@ -61,6 +69,8 @@ const PaypalCheckoutButton = ({ order }) => {
   };
 
   const onCancel = (data, actions) => {
+    props.selectDate(form)
+    props.submitSelectedDate(form, '/login');
     alert( 'El pago con PayPal no fue realizado, el usuario canceló el proceso.' );
   };
 
@@ -81,4 +91,12 @@ const PaypalCheckoutButton = ({ order }) => {
   );
 }
 
-export default PaypalCheckoutButton;
+const mapDispatchToProps = {
+  selectDate,
+  deleteSelectedDate,
+  submitSelectedDate
+};
+
+
+
+export default connect(null, mapDispatchToProps)(PaypalCheckoutButton);

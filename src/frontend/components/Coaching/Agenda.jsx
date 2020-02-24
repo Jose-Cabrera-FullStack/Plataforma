@@ -5,6 +5,8 @@ import '../../assets/styles/components/Principal.scss';
 import { submitSelectedDate } from '../../actions';
 import moment from 'moment';
 
+import PaypalCheckoutButton from '../Coaching/PaypalCheckoutButton';
+
 const Agenda = props => {
 
     const [form, setValues] = useState({
@@ -13,9 +15,18 @@ const Agenda = props => {
         coach: 'Guido',
         type: 'SOLO',//Debe escogerse en la solapa antes del calendario
         premium: 'NORMAL',
-        price: null || totalPrice(),
-        dates: []
+        price: null || parseInt(totalPrice()),
+        dates: [],
+        check: false || checkStateCurrency()
     });
+
+    const order = {
+        customer: form.user_id,
+        total: form.price,
+        test: 'test'
+      };
+    
+    console.info("valor de price:",form.price)
 
     useEffect(() => {
         document.title = form.price
@@ -45,6 +56,8 @@ const Agenda = props => {
         return "";
     }
 
+    function checkStateCurrency(){} // recibe el estado de la transaccion
+
     function checkCookie() {
         var user = getCookie("id");
         if (user != "") {
@@ -64,9 +77,9 @@ const Agenda = props => {
     const handleSubmit = (event) => {
         event.preventDefault();
         props.selectDate(form)
-        props.submitSelectedDate(form, '/login');
+        props.submitSelectedDate(form, '/');
     };
-
+    
     function totalPrice() {
         if (!isNaN(props.currentDay)) {
             return props.currentDay 
@@ -82,7 +95,7 @@ const Agenda = props => {
 
 
     return (
-        <section className="">
+        <section className=""> 
             <form onSubmit={handleSubmit}>
                
                 <p name="schedule" onChange={handleInput} value={form.schedule}>{form.schedule}</p>
@@ -102,10 +115,13 @@ const Agenda = props => {
                     <option value="PREMIUM">PREMIUM</option>
                 </select>
 
-                <p name="price" onChange={handleInput} value={form.price}>{totalPrice()}</p>
+                <p name="price" onChange={handleInput} value={totalPrice()}>{totalPrice()}</p>
 
                 <p name="dates" onChange={handleInput} value={props.dates}>{form.dates}</p>
 
+                {/* <button type="submit">pagar</button> */}
+
+                <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit}/>
             </form>
         </section>
     )

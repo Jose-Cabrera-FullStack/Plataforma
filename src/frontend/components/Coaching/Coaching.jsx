@@ -1,33 +1,13 @@
 import React from 'react';
 import moment from 'moment';
+
 import Agenda from './Agenda';
 import SelectedDate from './SelectedDate';
+
+
 import '../../assets/styles/components/Calendar.scss';
-import PaypalCheckoutButton from '../Coaching/PaypalCheckoutButton';
 
 const localStorageName = 'calendar-events';
-
-const order = {
-    customer: '123456',
-    total: '550.00',
-    items: [
-      {
-        sku: '112',
-        name: 'Camisa ReactJS',
-        price: '300.00',
-        quantity: 1,
-        currency: 'USD'
-      },
-      {
-        sku: '99',
-        name: 'Camisa JS',
-        price: '125.00',
-        quantity: 2,
-        currency: 'USD'
-      },
-    ],
-  };
-
 
 export default class Calendar extends React.Component {
     state = {
@@ -365,8 +345,6 @@ export default class Calendar extends React.Component {
                     currentDay={this.state.selectedDay}
                     dates={this.state.eventList}
                 />
-
-                <PaypalCheckoutButton order={order}/>
                 
             </>
 
