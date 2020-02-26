@@ -1,7 +1,6 @@
 .agenda {
-    position: relative;
-    bottom: 30%;
-    padding: 0px 0px 0px 37%;
+    position: absolute;
+    padding: 3% 0px 0px 13%;
     @media (max-width: 768px) {
       color: blue
     }
@@ -97,7 +96,7 @@
 .agenda__selection{
     margin: 0;
     position: relative;
-    right: 4%;
+    right: -5%;
 }
 
 .select__agenda {
@@ -134,5 +133,5 @@
 .agenda__paypal{
     position: relative;
     right: 30%;
-    top: 36vh;
+    top: 320px;
 }

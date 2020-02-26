@@ -1,12 +1,13 @@
 .schedule {
-    height: 150vh;
     width: 99vw;
+    height: 195vh;
     background-image:
-        linear-gradient(to bottom, rgba(27, 31, 57, 0.9), rgba(69, 74, 222, 0.9)),
-        url(../../Screen/Pantheon-Dragon_Slayer.jpg);
+        linear-gradient(to bottom, rgba(69, 74, 222, 0.9),rgba(27, 31, 57, 0.9)),
+        url(../../Screen/League-displays.jpg);
     background-size: cover;
     position: relative;
     bottom: 13vh;
+    margin: 0px 0 -8% 0px;
 }
 
 .schedule__title {

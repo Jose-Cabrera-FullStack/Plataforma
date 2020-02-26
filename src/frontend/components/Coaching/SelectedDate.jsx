@@ -23,7 +23,7 @@ const Date = props => {
     }
 
     return (
-        <section className="selected__date">
+        <section >
             <h2 className="selected__date__title">Confirma las fechas en la que quieres ver las clases personalizadas</h2>
             <div className="selected__date__form">
                 <Select

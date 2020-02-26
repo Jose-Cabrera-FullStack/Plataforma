@@ -1,6 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 
+import arrowLeft from '../../assets/static/images/social-network/arrow-left.svg';
+import arrowRight from '../../assets/static/images/social-network/arrow-right.svg';
+
 import Agenda from './Agenda';
 import SelectedDate from './SelectedDate';
 
@@ -213,6 +216,7 @@ export default class Calendar extends React.Component {
     render() {
         // Map the weekdays i.e Sun, Mon, Tue etc as <td>
         let weekdays = this.weekdaysShort.map((day) => {
+            // hacer un switch case para convertir los dias de ingles a español
             return (
                 <td key={day} className="week-day">{day}</td>
             )
@@ -235,18 +239,18 @@ export default class Calendar extends React.Component {
         for (let day = 1; day <= this.daysInMonth(); day++) {
             let className = (day == this.currentDay() ? "day current-day" : "day");
             let selectedClass = (day == this.state.selectedDay ? " selected-day " : "")
-            let t = day - 3
+            let t = day
 
             if (t < parseInt(this.state.today) || parseInt(this.state.todayMonth) > parseInt(this.state.selectedMonth) || parseInt(this.year()) < parseInt(this.state.selectedYear)) {
                 daysInMonth.push(
                     <td key={day} className={selectedClass + "disable"} disabled>
-                        <span>{day}</span>
+                        <span className="calendar__days">{day}</span>
                     </td>
                 );
             } else {
                 daysInMonth.push(
                     <td key={day} className={className + selectedClass} onClick={(e) => { this.onDayClick(e, day) }}>
-                        <span>{day}</span>
+                        <span className="calendar__days">{day}</span>
                     </td>
                 );
             }
@@ -314,20 +318,19 @@ export default class Calendar extends React.Component {
                     <div className="calendar-container" style={this.style}>
                         <table className="calendar">
                             <thead>
-                                <p>{petList}</p><br />
                                 <tr className="calendar-header">
                                     <td colSpan="6">
-                                        <this.MonthNav />
-                                        {" "}
-                                        <this.YearNav />
+                                        <div className="calendar__top">
+                                            <div className="calendar__mini_rectangle">
+                                                <spam className="calendar__button" onClick={(e) => { this.prevMonth() }}>Anterior</spam>
+                                            </div>
+                                            <this.MonthNav />
+                                            <div className="calendar__mini_rectangle">
+                                                <spam className="calendar__button" onClick={(e) => { this.nextMonth() }}>Siguiente</spam>
+                                            </div>
+                                        </div>
                                     </td>
                                     <td colSpan="2" className="nav-month">
-                                        <i className="prev fa fa-fw prueba"
-                                            onClick={(e) => { this.prevMonth() }}>
-                                        </i>
-                                        <i className="prev fa fa-fw prueba"
-                                            onClick={(e) => { this.nextMonth() }}>
-                                        </i>
                                     </td>
                                 </tr>
                             </thead>
@@ -340,15 +343,19 @@ export default class Calendar extends React.Component {
                         </table>
 
                     </div>
-                    <SelectedDate
-                        handlerDate={this.handlerDate}
-                        handlerChangeDate={this.handlerChangeDate}
-                        formatDateIso={formatDateIso}
-                    />
-                    <Agenda
-                        currentDay={this.state.selectedDay}
-                        dates={this.state.eventList}
-                    />
+
+                    <div className="selected__date">
+
+                        <SelectedDate
+                            handlerDate={this.handlerDate}
+                            handlerChangeDate={this.handlerChangeDate}
+                            formatDateIso={formatDateIso}
+                        />
+                        <Agenda
+                            currentDay={this.state.selectedDay}
+                            dates={this.state.eventList}
+                        />
+                    </div>
 
                 </div>
 

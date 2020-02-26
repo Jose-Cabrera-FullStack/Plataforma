@@ -31,23 +31,23 @@ const Header = props => {
 
         <ol className="navbar__list col-10" >
           <li className="navbar__menu padding__top">
-            <NavLink exact to="/coaching" activeClassName="active">
+            <NavLink exact to="/coaching" activeClassName="active contentTitle">
               COACHING
           </NavLink>
           </li>
           <li exact className="navbar__menu padding__top">
-            <NavLink to="/contactanos" activeClassName="active">
+            <NavLink to="/contactanos" activeClassName="active contentTitle">
               CONTACTO
           </NavLink>
           </li>
           <li exact className="navbar__menu padding__top">
-            <NavLink to="/faq" activeClassName="active">
+            <NavLink to="/faq" activeClassName="active contentTitle">
               DUDAS
           </NavLink>
           </li>
 
           {hasUser ?
-            <NavLink to="/login" activeClassName="active">
+            <NavLink to="/login" >
               <li className="navbar__menu btn__secondary">
                 <a onClick={handleLogout} >Cerrar Sesión</a>
               </li>

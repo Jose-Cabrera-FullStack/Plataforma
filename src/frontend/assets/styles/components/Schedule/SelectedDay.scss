@@ -1,14 +1,20 @@
 .selected__date {
-    width: 939px;
+    width: 940px;
     height: 650.3px;
     opacity: 0.94;
-    background-color: #01010e;
-    margin: 0vh 0px 0px 21%;
+    background-color: #021414;
+    margin: 0vh 0px 0px 21.18%;
 }
 
-.selected__date > div > div > div > div > div > div > div {color:#56fffb}
+.selected__date__form > div > div > div > div > div > div {
+    background-color:#454ade;
+    color:#56fffb
+}
 
-.selected__date__form > div > div > div > div > div > div {background-color:#454ade}
+.selected__date__form > div  {
+    border: 2px solid #56fffb;
+    border-radius: 6px
+}
 
 .selected__date__title {
     width: 724px;

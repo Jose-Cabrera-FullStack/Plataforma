@@ -8,6 +8,8 @@ import moment from 'moment';
 import '../../assets/styles/components/Principal.scss';
 import '../../assets/styles/components/Schedule/Agenda.scss';
 
+const dollarAR = 82;
+
 const Agenda = props => {
 
     const [form, setValues] = useState({
@@ -87,6 +89,10 @@ const Agenda = props => {
         }
     }
 
+    function totalPriceAR() {
+        return totalPrice() * dollarAR
+    }
+
     function allDateInArray() {
         //Se debe agrupar todos los datos en un array o en un objeto
         return
@@ -101,7 +107,7 @@ const Agenda = props => {
                 <div className="agenda__price">
                     <h2 className="agenda__price__title">Precio</h2>
                     <h1 className="agenda__dollar__price" name="price" onChange={handleInput} value={totalPrice()}>${totalPrice()}</h1>
-                    <h3 className="agenda__pesos__price">AR${totalPrice() * 72}esto debe ser una function</h3>
+                    <h3 className="agenda__pesos__price">(AR$ {totalPriceAR()})</h3>
                     <p className="agenda__time">Finaliza en : 9 -14 Dias</p>
 
                 </div>
