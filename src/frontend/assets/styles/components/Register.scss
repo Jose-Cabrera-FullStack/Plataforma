@@ -1,37 +1,115 @@
 .register {
-  background-image: linear-gradient(#21c08b, #8f57fd);
+  height: 970px;
+  background-image:
+  linear-gradient(to bottom, #56fffb7d ,#56fffbe0),
+  url(../Screen/Ekko.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0px 30px;
-  min-height: calc(100vh - 200px); /* El ancho será igual al tamaño de todo el height menos 200px (100px del header + 100px del footer) */
+  position: relative;
+  bottom: 12vh;
+  margin: 0 0px -7% 0px;
 }
 
-.register__container {
-  background-color: rgba(255,255,255,0.1);
-  border: 2px solid white;
-  border-radius: 40px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 60px 68px 40px;
-}
-
-.register__container--form {
-  display: flex;
-  flex-direction: column;
-}
-
-.register__container a {
-  color: white;
-  font-size: 16px;
+.register__container__title{
+  width: 206px;
+  height: 43px;
+  text-shadow: 0 0 3px #ffffff;
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
   text-align: center;
-  text-decoration: none;
+  color: #ffffff;
+  margin: 30% 0 1% -4%;
 }
 
-.register__container a:hover {
-  text-decoration: underline;
+.register__container{
+  width: 583px;
+  height: 970px;
+  background-color: #1a1919e6;
+}
+
+.register p {
+  width: 240px;
+  height: 14px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: 0.23px;
+  text-align: left;
+  color: #cbcbcd;
+}
+
+.register__input {
+  margin: 2% 0 0% 0px;
+  border: none;
+  background: none;
+  width: 75%;
+  color: #ffffff;
+  height: 35px;
+}
+
+.register__container__inside{
+  margin: 70px 60px 0px 40px;
+}
+
+.register__input__line{
+  border-top: 1.5px solid #56fffb;
+  box-shadow: 0 0px 10px #56fffb;
+  border-radius: 21px;
+  margin: 0px 24.3% 5% 0px;
+}
+
+.register__input__line--fix{
+  margin: 0px 70% 12% 5px;
+  border-top: 3.5px solid #56fffb;
+}
+
+.register__checkbox{
+  width: 380px;
+  height: 0px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: 0.21px;
+  color: #ffffff;
+  margin: 0 0 10% 0;
+}
+
+.btn__register{
+  width: 370px;
+  margin: 10% 164px 6% 0px;;
+}
+
+.links__display{
+  display: flex;
+}
+
+.links__display a {
+  width: 353px;
+  height: 13px;
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: 0.21px;
+  text-align: center;
+  color: #56fffb;
+  margin: 0 67px 0px 0;
+}
+.slogan{
+  margin: 40% 0px 0px 17%;
+  text-align: center;
+  color: #ffffff;
 }

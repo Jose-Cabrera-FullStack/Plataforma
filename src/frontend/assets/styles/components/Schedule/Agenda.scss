@@ -115,12 +115,11 @@ span:hover .schedule__information__rectangle {
 .select__agenda {
     background: transparent;
     border: none;
-    border-bottom: 0.5px solid #56fffb;
-    box-shadow: 0px 3px 9px 0px #56fffb;
+    background: none;
     font-size: 14px;
     height: 30px;
     padding: 5px;
-    width: 250px;
+    width: 366px;
     font-family: Roboto;
     font-size: 19px;
     font-weight: normal;
@@ -174,7 +173,7 @@ span:hover .schedule__information__rectangle {
     width: 213px;
     height: 94px;
     border-radius: 15px;
-    border: solid 3px #454ade;
+    border: solid 3px #e01ac7;
     background-color: #192429;
     visibility: hidden;
 }

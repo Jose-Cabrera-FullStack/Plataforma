@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginUser } from '../actions';
-import Header from '../components/Header';
 import '../assets/styles/components/Login.scss';
-import googleIcon from '../assets/static/images/social-network/google-white.svg';
-import twitterIcon from '../assets/static/images/social-network/twitter-white.svg';
+
+import facebook from '../assets/static/images/social-network/facebook-white.svg';
+import reddit from '../assets/static/images/social-network/reddit-white.svg';
+import instagram from '../assets/static/images/social-network/instagram-white.svg';
+import discord from '../assets/static/images/social-network/discord-white.svg';
 
 const Login = (props) => {
   const [form, setValues] = useState({
@@ -26,56 +28,80 @@ const Login = (props) => {
 
   return (
     <>
-      <Header isLogin />
       <section className="login">
-        <section className="login__container">
-          <h2>Inicia sesión</h2>
-          <form className="login__container--form" onSubmit={handleSubmit}>
-            <input
-              name="email"
-              className="input"
-              type="text"
-              placeholder="Correo"
-              onChange={handleInput}
-              required
-            />
-            <input
-              name="password"
-              className="input"
-              type="password"
-              placeholder="Contraseña"
-              onChange={handleInput}
-              required
-            />
-            <button className="button" type="submit">Iniciar sesión</button>
+        
+      <div className="register__container">
+          <div className="register__container__inside">
+            <h2 className="register__container__title">Regístrate</h2>
+            <hr className="register__input__line register__input__line--fix" />
+            <form className="register__container--form" onSubmit={handleSubmit}>
+    
+              <hr className="register__input__line" />
+              <p>INGRESA TU EMAIL</p>
+              <input
+                name="email"
+                className="register__input"
+                type="text"
+                placeholder="ingresa su email aquí"
+                onChange={handleInput}
+                required
+              />
+              <hr className="register__input__line" />
+              <p>INGRESA TU CONTRASEÑA</p>
+              <input
+                name="password"
+                className="register__input"
+                type="password"
+                placeholder="Contraseña"
+                onChange={handleInput}
+                required
+              />
+              <hr className="register__input__line" />
+              {/* Colorcar la verificaciòn de la contraseña */}
+              
 
-            <div className="login__container--remember-me">
-              <label htmlFor="cbox1">
-                <input type="checkbox" id="cbox1" value="first_checkbox" />
-                Recuérdame
-              </label>
-              <a href="/">Olvidé mi contraseña</a>
+              <div className="register__checkbox">
+                <input type="checkbox" />Leí los "Los Términos y Condiciones", también leí "Privacy Policy"
+              </div>
+
+              <button className="btn btn__secondary btn__register " type="submit">¡VAMOS A ENTRENAR!</button>
+            </form>
+
+            <div className="links__display">
+              <div>
+                <Link to="/login">
+                  Iniciar sesión
+                </Link>
+              </div>
+
+              <div>
+                <Link to="/login">
+                  ¿No haz recibido aún el mail de confirmación?
+                </Link>
+              </div>
             </div>
-          </form>
-          
-          <section className="login__container--social-media">
-            <div>
-              <img src={googleIcon} alt="googleicon" />
-                Inicia sesión con Google
-            </div>
-            <div>
-              <img src={twitterIcon} alt="twitterIcon" />
-              Inicia sesión con Twitter
-            </div>
-          </section>
-          <p className="login__container--register">
-            No tienes ninguna cuenta
-            {' '}
-            <Link to="/register">
-              Regístrate
-            </Link>
-          </p>
-        </section>
+
+          </div>
+        </div>
+        <div className="slogan">
+          <h1>¿Estas preparado para dejar de ser un Espectador?</h1>
+          <h2>Entra para comenzar a entrenar y estar mas cerca de tus sueños</h2>
+          <ol className="icons">
+            <li class="icon" >
+              <a href="http://facebook.com"><img src={facebook} /></a>
+            </li>
+            <li class="icon discord" >
+              <a href="http://reddit.com"><img src={reddit} /></a>
+            </li>
+            <li class="icon" >
+              <a href="http://instagram.com"><img src={instagram} /></a>
+            </li>
+            <li class="icon" >
+              <a href="http://discord.com"><img src={discord} /></a>
+            </li>
+          </ol>
+        </div>
+
       </section>
     </>
   );
