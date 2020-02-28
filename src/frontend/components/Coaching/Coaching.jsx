@@ -1,8 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import arrowLeft from '../../assets/static/images/social-network/arrow-left.svg';
-import arrowRight from '../../assets/static/images/social-network/arrow-right.svg';
+import information from '../../assets/static/images/info-violet.svg'
 
 import Agenda from './Agenda';
 import SelectedDate from './SelectedDate';
@@ -321,12 +320,25 @@ export default class Calendar extends React.Component {
                                 <tr className="calendar-header">
                                     <td colSpan="6">
                                         <div className="calendar__top">
-                                            <div className="calendar__mini_rectangle">
-                                                <spam className="calendar__button" onClick={(e) => { this.prevMonth() }}>Anterior</spam>
+                                            <div className="calendar__mini_rectangle" onClick={(e) => { this.prevMonth() }}>
+                                                <spam className="calendar__button" >Anterior</spam>
                                             </div>
-                                            <this.MonthNav />
-                                            <div className="calendar__mini_rectangle">
-                                                <spam className="calendar__button" onClick={(e) => { this.nextMonth() }}>Siguiente</spam>
+                                            <div className="schedule__information">
+                                                <this.MonthNav />
+                                                <img className="icon__information" src={information} alt="information" />
+                                                <span>
+                                                    <div className="schedule__information__rectangle">
+                                                        <p className="schedule__information__pop">Acá escogerás las fechas en la que
+                                                            veras las clases personalizadas. Después
+                                                            de escoger nos estaremos comunicando
+                                                            contigo mediante Discord para hacer un
+                                                            Plan especifico para ti.</p>
+                                                    </div>
+
+                                                </span>
+                                            </div>
+                                            <div className="calendar__mini_rectangle" onClick={(e) => { this.nextMonth() }}>
+                                                <spam className="calendar__button" >Siguiente</spam>
                                             </div>
                                         </div>
                                     </td>

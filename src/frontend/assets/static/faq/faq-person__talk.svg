@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix___24px_11_" width="24" height="24" data-name="24px (11)" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#fff}
+        </style>
+    </defs>
+    <circle id="prefix__Elipse_94" cx="4" cy="4" r="4" class="prefix__cls-1" data-name="Elipse 94" transform="translate(5 5)"/>
+    <path id="prefix__Trazado_109" d="M9 15c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm7.76-9.64l-1.68 1.69a3.317 3.317 0 010 3.89l1.68 1.69a5.117 5.117 0 000-7.27zM20.07 2l-1.63 1.63a7.978 7.978 0 010 10.74L20.07 16a9.829 9.829 0 000-14z" class="prefix__cls-1" data-name="Trazado 109"/>
+    <path id="prefix__Trazado_110" d="M0 0h24v24H0z" data-name="Trazado 110" style="fill:none"/>
+</svg>

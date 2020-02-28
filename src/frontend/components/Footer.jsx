@@ -11,7 +11,7 @@ import Linkedin from '../assets/static/images/social-network/twitter-color.svg';
 
 const Footer = () => (
   <footer id="footer" className="footer">
-        <form action="" method="POST">
+        <form className="footer__form" action="" method="POST">
             <input className="input" type="email" name="email" placeholder="Enter your email address"/>
             <button className="btn__secondary" type="submit">Get more info</button>
         </form>
@@ -89,8 +89,6 @@ const Footer = () => (
             © 2019 Summonerscave.com All Rights Reserved <br/>
             <Link to="/term">Terms of use</Link> | <Link to="/privacy">Privacy Policy</Link>
         </p>
-
-
 
     </footer>
 );

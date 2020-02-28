@@ -12,6 +12,7 @@ const Register = (props) => {
     password: '',
     birthday: '',
     server: '',
+    verified: false
   });
 
   const handleInput = (event) => {

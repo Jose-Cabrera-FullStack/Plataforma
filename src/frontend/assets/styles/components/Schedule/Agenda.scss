@@ -1,8 +1,9 @@
 .agenda {
     position: absolute;
     padding: 3% 0px 0px 13%;
+
     @media (max-width: 768px) {
-      color: blue
+        color: blue
     }
 }
 
@@ -42,6 +43,18 @@
 .span__invisible {
     visibility: hidden;
     display: none;
+}
+
+.agenda__info {
+    display: flex;
+}
+
+.schedule__information {
+    display: flex;
+}
+
+span:hover .schedule__information__rectangle {
+    visibility: visible;
 }
 
 .agenda__dollar__price {
@@ -93,10 +106,10 @@
     padding: 0px 0px 0px 17%;
 }
 
-.agenda__selection{
+.agenda__selection {
     margin: 0;
     position: relative;
-    right: -5%;
+    left: 40%;
 }
 
 .select__agenda {
@@ -117,21 +130,66 @@
 }
 
 .select__title {
-    width: 120px;
+    width: 230px;
     height: 14px;
     font-family: Roboto;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.17;
     letter-spacing: 0.23px;
     text-align: center;
-    color: #cbcbcd;
+    color: #ffffff;
+    text-align: inherit;
 }
 
-.agenda__paypal{
-    position: relative;
-    right: 30%;
-    top: 320px;
+.agenda__bullet__list {
+    color: #ffffff;
+    margin: 10% 0px 0px 0px;
+    position: absolute;
+    left: 12%;
+    top: 93%;
+}
+
+.agenda__bullet__list li {
+    margin: 0 0 15px 0px;
+}
+
+.agenda__bullet__list li::before {
+    content: url(../../../static/images/Bullet-list.svg);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.agenda__paypal {
+    position: absolute;
+    right: 0%;
+    top: 162%;
+}
+
+.schedule__information__rectangle {
+    width: 213px;
+    height: 94px;
+    border-radius: 15px;
+    border: solid 3px #454ade;
+    background-color: #192429;
+    visibility: hidden;
+}
+
+.schedule__information__pop {
+    width: 200px;
+    height: 59px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: inherit;
+    color: #ffffff;
+    margin-top: 6%;
 }

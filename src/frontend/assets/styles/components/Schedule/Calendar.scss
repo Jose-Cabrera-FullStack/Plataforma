@@ -3,10 +3,9 @@
 .calendar-header,
 td,
 tr {
-    padding: 0;
     margin: 0;
     text-align: center;
-
+    width: 1px;
 }
 
 .calendar {
@@ -15,7 +14,7 @@ tr {
     border-collapse: collapse;
     width: 939px;
     height: 440px;
-    margin: 0px 0px 0px 21vw;
+    margin: 0px 0px 0px 18vw;
     border-radius: 19px 19px 0 0;
 }
 
@@ -25,7 +24,7 @@ tr {
 }
 
 .calendar-header td {
-    padding-left: 10%;
+    padding-left: 6%;
 }
 
 .empty-slot,
@@ -127,6 +126,10 @@ tr {
 .calendar__arrows {
     cursor: pointer;
     display: flex;
+}
+
+.calendar__button::selection {
+    background: none;
 }
 
 .calendar__button {

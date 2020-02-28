@@ -4,6 +4,7 @@ import { selectDate, deleteSelectedDate } from '../../actions';
 import { submitSelectedDate } from '../../actions';
 import PaypalCheckoutButton from '../Coaching/PaypalCheckoutButton';
 import moment from 'moment';
+import information from '../../assets/static/images/info.svg'
 
 import '../../assets/styles/components/Principal.scss';
 import '../../assets/styles/components/Schedule/Agenda.scss';
@@ -116,7 +117,9 @@ const Agenda = props => {
 
                     <span className="span__invisible" name="schedule" onChange={handleInput} value={form.schedule}>{form.schedule}</span>
 
-                    <p className="select__title">¿Qué tipo de Coach quieres recibir?</p>
+                    <div className="agenda__info">
+                        <p className="select__title">¿Qué tipo de Coach quieres recibir?</p> <img src={information} alt="information" />
+                    </div>
 
                     <select name="type" onChange={handleInput} className="select__agenda">
                         <option value="SOLO">SOLO</option>
@@ -125,7 +128,14 @@ const Agenda = props => {
 
                     <br />
 
-                    <p className="select__title">¿Quién será tu coach?</p>
+                    <div className="agenda__info">
+                        <p className="select__title">¿Quién será tu coach?</p> <img src={information} alt="information" />
+                        <strong className="pop__service pop__service--special__1">
+                            Elige al coach que te guiara en este <br/>
+                            interesante viaje
+                         </strong>
+
+                    </div>
 
                     <select name="coach" onChange={handleInput} className="select__agenda">
                         <option value="Guido">Guido</option>
@@ -133,8 +143,15 @@ const Agenda = props => {
                     </select>
 
                     <br />
+                    <div className="agenda__info">
+                        <p className="select__title">¿Cuántas clases quieres?</p> <img src={information} alt="information" />
+                        <strong className="pop__service pop__service--special__1">
+                        Selecciona el número de sesiones <br/>
+                        que desea tener. Cada sesión dura <br/>
+                        Una Hora y Media ( 90 Minutos)
+                         </strong>
 
-                    <p className="select__title">¿Cuántas clases quieres?</p>
+                    </div>
 
                     <select name="number" onChange={handleInput} className="select__agenda">
                         <option value="1">1</option>
@@ -149,7 +166,9 @@ const Agenda = props => {
                     </select>
 
                     <br />
-                    <p className="select__title">¿Cuántas clases quieres?</p>
+                    <div className="agenda__info">
+                        <p className="select__title">¿Qué tipo de clases quieres ver?</p> <img src={information} alt="information" />
+                    </div>
 
                     <select name="premium" onChange={handleInput} className="select__agenda">
                         <option value="NORMAL">NORMAL</option>
@@ -164,11 +183,18 @@ const Agenda = props => {
 
                 </div>
 
+
                 <div className="agenda__paypal">
                     <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit} />
                 </div>
 
             </form>
+                    <ul className="agenda__bullet__list">
+                        <li>Horarios flexibles que se adapten a tus necesidades</li>
+                        <li>Tendrás un PDF con el plan de estudio</li>
+                        <li>La entrevista es completamente gratuita (no cuenta como una sesión)</li>
+                        <li>Entras en nuestro programa de fidelización</li>
+                    </ul>
         </section>
     )
 }

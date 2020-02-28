@@ -51,7 +51,6 @@
 }
 span:hover .pop__service {
     visibility: visible;
-
 }
 
 .pop__service{
@@ -61,10 +60,10 @@ span:hover .pop__service {
     background-color: #FFFFFF;
     border: solid 2px #000000;
     padding: 5px;margin: 0 0 0 10px;
-    color: #000000;text-align: left;
+    color: #000000;
+    text-align: left;
     font-weight: normal;
-    z-index: 1;
-    
+    z-index: 1; 
 }
 
 .pop__service--special__1{

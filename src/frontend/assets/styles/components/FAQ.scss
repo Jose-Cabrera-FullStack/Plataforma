@@ -1,0 +1,114 @@
+.faq {
+    height: 170vh;
+    background-image:
+        linear-gradient(to bottom, rgba(69, 74, 222, 0.9), rgba(27, 31, 57, 0.9)),
+        url(../Screen/Taric.jpg);
+    background-size: cover;
+    position: relative;
+    bottom: 12vh;
+    margin: 0 0 -7% 0;
+}
+
+.faq__tittle {
+    width: 800px;
+    height: 53px;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin: 0px 0px 4% 30%;
+    padding: 13% 0 0 0;
+}
+
+.faq__subtittle {
+    width: 1014px;
+    height: 50px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin: 5% 0% 5% 25%;
+}
+
+.faq__display{
+    display: flex;
+}
+
+.faq__left__rectangle {
+    width: 400px;
+    height: 470px;
+    border-radius: 19px;
+    background-color: #454ade;
+    margin: 0px 3% 0 15%;
+}
+
+.faq__left__rectangle__inside{
+    margin: 50px;
+}
+
+.faq__left__rectangle__display {
+    display: flex;
+}
+
+.faq__left__rectangle__tittle {
+    width: 160px;
+    height: 17px;
+    text-shadow: 0 0 1px #ffffff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.faq__left__rectangle__img{
+    margin: 25px 25px 0px 0px;
+}
+
+.faq__left__rectangle__text{
+    width: 230px;
+    height: 70px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.faq__right__rectangle{
+    width: 820px;
+    height: 765px;
+    border-radius: 19px;
+    background-color: #454ade;
+    color: #fff;
+}
+
+.faq__right__rectangle__display{
+    display: flex;
+}
+
+.faq__right__rectangle__inside__person{
+    margin: 15px;
+}
+
+.faq__right__rectangle__inside{
+    margin: 0% 5% 0% 5%;
+}

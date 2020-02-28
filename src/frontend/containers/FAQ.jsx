@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import Faq from '../components/FAQ/FAQ'
 
 const FAQ = () => {
     return(
         <p>
-            FAQ
+            <Faq/>
         </p>
     )
 }
