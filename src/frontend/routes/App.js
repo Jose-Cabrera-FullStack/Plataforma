@@ -8,6 +8,7 @@ import ContactUs from '../containers/ContactUs';
 import AboutUs from '../containers/AboutUs';
 import FAQ from '../containers/FAQ';
 import NotFound from '../containers/NotFound';
+import Profile from '../containers/Profile';
 import Layout from '../components/Layout'
 
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
                     <Route exact path="/coaching" component={Coaching} />
                     <Route exact path="/contactanos" component={ContactUs} />
                     <Route exact path="/sobre-nosotros" component={AboutUs} />
+                    <Route exact path="/perfil" component={Profile} />
                     <Route exact path="/faq" component={FAQ} />
                     <Route component={NotFound} />
                 </Switch>

@@ -19,9 +19,10 @@ const Agenda = props => {
         coach: 'Guido',
         type: 'SOLO',//Debe escogerse en la solapa antes del calendario
         premium: 'NORMAL',
-        price: null || parseInt(totalPrice()),
+        price: 3 || parseInt(totalPrice()),
         dates: [],
-        check: false || checkStateCurrency()
+        check: false || checkStateCurrency(),
+        classes: 2,
     });
 
     const order = {
@@ -85,8 +86,9 @@ const Agenda = props => {
     };
 
     function totalPrice() {
+        let total = 3
         if (!isNaN(props.currentDay)) {
-            return props.currentDay
+            return total * form.dates.length
         }
     }
 
@@ -98,9 +100,6 @@ const Agenda = props => {
         //Se debe agrupar todos los datos en un array o en un objeto
         return
     }
-
-    localStorage.setItem('prueba', JSON.stringify(totalPrice()))
-
 
     return (
         <section className="agenda">
@@ -126,6 +125,7 @@ const Agenda = props => {
                         <option value="COACHING">COACHING</option>
                     </select>
 
+                    <hr className="register__input__line register__input__line--agenda" />
                     <br />
 
                     <div className="agenda__info">
@@ -141,6 +141,7 @@ const Agenda = props => {
                         <option value="Guido">Guido</option>
                         <option value="Murdoc">Murdoc</option>
                     </select>
+                    <hr className="register__input__line register__input__line--agenda" />
 
                     <br />
                     <div className="agenda__info">
@@ -153,8 +154,7 @@ const Agenda = props => {
 
                     </div>
 
-                    <select name="number" onChange={handleInput} className="select__agenda">
-                        <option value="1">1</option>
+                    <select name="classes" onChange={handleInput} className="select__agenda">
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -164,6 +164,7 @@ const Agenda = props => {
                         <option value="8">8</option>
                         <option value="9">9</option>
                     </select>
+                    <hr className="register__input__line register__input__line--agenda" />
 
                     <br />
                     <div className="agenda__info">
@@ -175,11 +176,9 @@ const Agenda = props => {
                         <option value="PREMIUM">PREMIUM</option>
                     </select>
 
-
+                    <hr className="register__input__line register__input__line--agenda" />
 
                     <p name="dates" onChange={handleInput} value={props.dates}>{form.dates}</p>
-
-                    {/* <button type="submit">pagar</button> */}
 
                 </div>
 

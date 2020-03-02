@@ -35,8 +35,6 @@ const Login = (props) => {
             <h2 className="register__container__title">Regístrate</h2>
             <hr className="register__input__line register__input__line--fix" />
             <form className="register__container--form" onSubmit={handleSubmit}>
-    
-              <hr className="register__input__line" />
               <p>INGRESA TU EMAIL</p>
               <input
                 name="email"
@@ -57,12 +55,6 @@ const Login = (props) => {
                 required
               />
               <hr className="register__input__line" />
-              {/* Colorcar la verificaciòn de la contraseña */}
-              
-
-              <div className="register__checkbox">
-                <input type="checkbox" />Leí los "Los Términos y Condiciones", también leí "Privacy Policy"
-              </div>
 
               <button className="btn btn__secondary btn__register " type="submit">¡VAMOS A ENTRENAR!</button>
             </form>

@@ -69,5 +69,44 @@
 .active{
   color:#56fffb !important;
   text-shadow: 0 0 2px #56fffb;
+}
 
+.navbar__menu__perfil{
+  display: flex;
+  position: relative;
+  top: -5px;
+
+}
+
+.navbar__menu__perfil__avatar{
+  margin: 0 4px 0px 0px;
+}
+
+.navbar__menu__perfil__name{
+  color: #FFFFFE;
+  margin: 0px 6vw 30px 1vw;
+  position: relative;
+  top: 2.3vh;
+}
+
+.navbar__menu__perfil__menu{
+  display: none;
+}
+
+.navbar__menu__perfil__menu--on{
+  color: #ffffff;
+  background: #454ade;
+  border: 2px solid #56fffb;
+  border-radius: 19px;
+  width: 99px;
+  height: 110px;
+  position: absolute;
+  top: 106%;
+  text-align: center;
+  right: 14.5%;
+  
+}
+.navbar__menu__perfil__menu--on a{
+  position: relative;
+  top: 6%;
 }

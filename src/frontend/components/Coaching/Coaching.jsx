@@ -6,7 +6,6 @@ import information from '../../assets/static/images/info-violet.svg'
 import Agenda from './Agenda';
 import SelectedDate from './SelectedDate';
 
-
 import '../../assets/styles/components/Schedule/Calendar.scss';
 import '../../assets/styles/components/Schedule/Schedule.scss';
 
@@ -34,7 +33,6 @@ export default class Calendar extends React.Component {
         this.style.width = this.width; // add this
 
         this.eventList = {}; // array with all dates choosen
-
     }
 
 
@@ -293,8 +291,6 @@ export default class Calendar extends React.Component {
         let arrayValues = []
 
         arrayValues.push(Object.keys(functionTest)) // devuelve un array con las fechas seleccionadas
-
-        console.log(this.state.eventList)
 
         const petList = this.state.eventList.map((value) => {
             return (

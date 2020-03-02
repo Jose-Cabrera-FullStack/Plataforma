@@ -3,16 +3,32 @@ import '../../assets/styles/components/Principal.scss';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 
+import { components } from "react-select";
 import '../../assets/styles/components/Schedule/SelectedDay.scss';
 
 
 const animatedComponents = makeAnimated();
 
-const Date = props => {
+const Menu = props => {
+    const optionSelectedLength = props.getValue().length || 0;
+    return (
+      <components.Menu {...props}>
+        {optionSelectedLength < 3 ? (
+          props.children
+        ) : (
+          <div style={{ margin: 15 }}>Solo se puede escoger 3 fechas distintas.</div>
+        )}
+      </components.Menu>
+    );
+  };
+
+  const isValidNewOption = (inputValue, selectValue) =>
+    inputValue.length > 0 && selectValue.length < 3;
+  
+
+const Dates = props => {
     let DATE = [
         { value: props.formatDateIso, label: props.formatDateIso },
-
-
     ]
 
     const handleDate = (value) => {
@@ -30,7 +46,8 @@ const Date = props => {
                     closeMenuOnSelect={false}
                     onSelectResetsInput={true}
                     defaultValue={DATE[0]}
-                    components={animatedComponents}
+                    isValidNewOption={isValidNewOption}
+                    components={{Menu}}
                     isMulti
                     options={DATE}
                     onChange={handleDate}
@@ -41,4 +58,4 @@ const Date = props => {
     )
 }
 
-export default Date;
+export default Dates;

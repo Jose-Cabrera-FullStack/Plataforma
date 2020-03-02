@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from "react";
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logoutRequest } from '../actions';
 
+import Perfil from '../assets/static/images/perfil-image.png'
+import Arrow from '../assets/static/images/arrow-down.svg'
+
 import '../assets/styles/components/Header.scss';
 
 const Header = props => {
+
+  const [isToggled, setToggled] = useState(false);
+
+  const toggleTrueFalse = () => setToggled(!isToggled);
 
   const { user = {} } = props;
   const hasUser = Object.keys(user).length > 0;
@@ -47,11 +54,25 @@ const Header = props => {
           </li>
 
           {hasUser ?
-            <NavLink to="/login" >
-              <li className="navbar__menu btn__secondary">
-                <a onClick={handleLogout} >Cerrar Sesión</a>
+            <div>
+
+              <li className="navbar__menu__perfil">
+                <img className="navbar__menu__perfil__avatar" src={Perfil} alt="" />
+                <img src={Arrow} alt="" onClick={toggleTrueFalse}/>
+                  <p className="navbar__menu__perfil__name">{user.name}</p>
+                <div className={isToggled ? "navbar__menu__perfil__menu--on":"navbar__menu__perfil__menu"}>
+                  <NavLink to="/perfil" >
+                    <a >Perfil</a>
+                  </NavLink>
+                  <br/>
+                  <br/>
+                  <NavLink to="/login" >
+                    <a onClick={handleLogout} >Cerrar Sesión</a>
+                  </NavLink>
+                </div>
               </li>
-            </NavLink> :
+            </div>
+            :
 
             <NavLink to="/register" >
               <li className="navbar__menu btn__primary">
@@ -61,9 +82,7 @@ const Header = props => {
           }
           {hasUser ?
             <NavLink to="/">
-              <li className="navbar__menu btn__secondary">
-                <a>{user.email}</a>
-              </li>
+
             </NavLink> :
             <NavLink to="/login">
               <li className="navbar__menu btn__secondary">
