@@ -1,29 +1,38 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import { selectDate, setFavorite } from '../actions';
 import Perfil from '../assets/static/images/perfil-image2x.png'
 
 import '../assets/styles/components/Profile.scss';
 
-const Profile = () => {
+const Profile = ({data,classes}) => {
+    console.log("classes",classes.length)
     return (
         <section className="profile">
             <div className="profile__display">
 
                 <div>
-                    <img src={Perfil} alt="" />
+                    <img className="profile__user__avatar" src={Perfil} alt="Avatar de perfil" />
                     <div className="profile__user__data">
-                        <p>Nombre</p>
-                        <h5>Murdoc</h5>
+                        <div>
 
-                        <p>Email</p>
-                        <h5>murdoc.jose.6@gmail.com</h5>
+                            <p>Nickname</p>
+                            <h5>{data[0].name}</h5>
+                            <hr className="register__input__line register__input__line--profile" />
 
-                        <p>Servidor</p>
-                        <h5>LAN</h5>
+                            <p>Email</p>
+                            <h5>{data[0].email}</h5>
+                            <hr className="register__input__line register__input__line--profile" />
 
+                            <p>Servidor</p>
+                            <h5>{data[0].server}</h5>
+                            <hr className="register__input__line register__input__line--profile" />
+
+                        </div>
                     </div>
                 </div>
 
-                <div>
+                <div className="profile__right">
                     <div className="profile__welcome">
                         <h1>Welcome Back, MURDOC!</h1>
                         <h3>Si quieres llevar un seguimiento de tus clases,
@@ -32,7 +41,7 @@ const Profile = () => {
 
                     <div className="profile__stats">
                         <table >
-                            <tr>
+                            <tr className="profile__stats__title">
                                 <th>ID</th>
                                 <th>STATUS</th>
                                 <th>PRECIO</th>
@@ -40,30 +49,18 @@ const Profile = () => {
                                 <th>N°CLASES</th>
                                 <th>FECHA INICIO</th>
                             </tr>
-                            <tr>
+                            {classes.map(item=>(
+
+                                <tr>
                                 <td>123</td>
                                 <td>Terminada</td>
-                                <td>$50</td>
-                                <td>GUIDO</td>
-                                <td>8</td>
-                                <td>12/1/2020</td>
+                                <td>${item.price}</td>
+                                <td>{item.coach}</td>
+                                <td>{item.premium}</td>
+                                <td>{item.schedule}</td>
                             </tr>
-                            <tr>
-                                <td>123</td>
-                                <td>Terminada</td>
-                                <td>$50</td>
-                                <td>GUIDO</td>
-                                <td>8</td>
-                                <td>12/1/2020</td>
-                            </tr>
-                            <tr>
-                                <td>123</td>
-                                <td>Terminada</td>
-                                <td>$50</td>
-                                <td>GUIDO</td>
-                                <td>8</td>
-                                <td>12/1/2020</td>
-                            </tr>
+                            ))}
+                            
                         </table>
 
                     </div>
@@ -73,4 +70,13 @@ const Profile = () => {
     )
 }
 
-export default Profile
+const mapStateToProps = (state) => {
+    return {
+        user:state.user,
+        myClass:state.myClass,
+        data:state.data,
+        classes:state.class
+    };
+  };
+  
+export default connect(mapStateToProps, null)(Profile);

@@ -82,7 +82,7 @@ const Register = (props) => {
               />
               <hr className="register__input__line" />
               <p>INGRESA EL SERVIDOR DONDE JUEGAS</p>
-              <select name="server" onChange={handleInput} className="select__agenda">
+              <select name="server" onChange={handleInput} className="select__agenda" required>
                 <option value="LAN">LAN</option>
                 <option value="LAS">LAS</option>
                 <option value="BR">BR</option>

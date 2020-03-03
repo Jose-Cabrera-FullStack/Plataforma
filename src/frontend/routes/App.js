@@ -11,17 +11,17 @@ import NotFound from '../containers/NotFound';
 import Profile from '../containers/Profile';
 import Layout from '../components/Layout'
 
-const App = () => (
+const App = ({ isLogged }) => (
     <BrowserRouter>
             <Layout>
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route exact path="/login" component={Login} />
-                    <Route exact path="/register" component={Register} />
-                    <Route exact path="/coaching" component={Coaching} />
+                    <Route exact path="/login" component={isLogged ? Home : Login} />
+                    <Route exact path="/register" component={isLogged ? Home : Register} />
+                    <Route exact path="/coaching" component={isLogged ? Coaching : Login} />
                     <Route exact path="/contactanos" component={ContactUs} />
                     <Route exact path="/sobre-nosotros" component={AboutUs} />
-                    <Route exact path="/perfil" component={Profile} />
+                    <Route exact path="/perfil" component={isLogged ? Profile : Login} />
                     <Route exact path="/faq" component={FAQ} />
                     <Route component={NotFound} />
                 </Switch>

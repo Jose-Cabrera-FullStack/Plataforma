@@ -23,6 +23,7 @@ const Agenda = props => {
         dates: [],
         check: false || checkStateCurrency(),
         classes: 2,
+        status: 'En Curso'
     });
 
     const order = {
@@ -177,8 +178,6 @@ const Agenda = props => {
                     </select>
 
                     <hr className="register__input__line register__input__line--agenda" />
-
-                    <p name="dates" onChange={handleInput} value={props.dates}>{form.dates}</p>
 
                 </div>
 

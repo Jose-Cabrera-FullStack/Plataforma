@@ -101,7 +101,8 @@ app.post('/auth/courses', async (req, res, next) => {
     price: req.body.price,
     user_id: req.body.user_id,
     dates: req.body.dates,
-    classes: req.body.classes
+    classes: req.body.classes,
+    status: req.body.status
   }
 
   try {

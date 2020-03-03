@@ -55,7 +55,7 @@ const PaypalCheckoutButton = (props) => {
     return actions.payment.execute()
       .then(response => {
         console.log(response);
-        props.submitSelectedDate(props.form, '/login');
+        props.submitSelectedDate(props.form, '/perfil');
         alert(`El Pago fue procesado correctamente, ID: ${response.id}`)
       })
       .catch(error => {
