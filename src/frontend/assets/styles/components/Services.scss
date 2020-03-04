@@ -59,11 +59,16 @@ span:hover .pop__service {
     visibility: hidden;
     background-color: #FFFFFF;
     border: solid 2px #000000;
-    padding: 5px;margin: 0 0 0 10px;
+    padding: 5px;
+    margin: 0 0 0 10px;
     color: #000000;
     text-align: left;
     font-weight: normal;
     z-index: 1; 
+    color: #fff;
+    border: solid 3px #e01ac7;
+    background-color: #192429;
+    border-radius: 19px;
 }
 
 .pop__service--special__1{

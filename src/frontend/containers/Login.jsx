@@ -4,10 +4,7 @@ import { Link } from 'react-router-dom';
 import { loginUser } from '../actions';
 import '../assets/styles/components/Login.scss';
 
-import facebook from '../assets/static/images/social-network/facebook-white.svg';
-import reddit from '../assets/static/images/social-network/reddit-white.svg';
-import instagram from '../assets/static/images/social-network/instagram-white.svg';
-import discord from '../assets/static/images/social-network/discord-white.svg';
+import Socials from '../components/Socials';
 
 const Login = (props) => {
   const [form, setValues] = useState({
@@ -32,7 +29,7 @@ const Login = (props) => {
         
       <div className="register__container">
           <div className="register__container__inside">
-            <h2 className="register__container__title">Regístrate</h2>
+            <h2 className="register__container__title register__container__title--login">ENTRAR</h2>
             <hr className="register__input__line register__input__line--fix" />
             <form className="register__container--form" onSubmit={handleSubmit}>
               <p>INGRESA TU EMAIL</p>
@@ -78,20 +75,7 @@ const Login = (props) => {
         <div className="slogan">
           <h1>¿Estas preparado para dejar de ser un Espectador?</h1>
           <h2>Entra para comenzar a entrenar y estar mas cerca de tus sueños</h2>
-          <ol className="icons">
-            <li class="icon" >
-              <a href="http://facebook.com"><img src={facebook} /></a>
-            </li>
-            <li class="icon discord" >
-              <a href="http://reddit.com"><img src={reddit} /></a>
-            </li>
-            <li class="icon" >
-              <a href="http://instagram.com"><img src={instagram} /></a>
-            </li>
-            <li class="icon" >
-              <a href="http://discord.com"><img src={discord} /></a>
-            </li>
-          </ol>
+          <Socials/>
         </div>
 
       </section>

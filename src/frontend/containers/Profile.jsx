@@ -5,8 +5,8 @@ import Perfil from '../assets/static/images/perfil-image2x.png'
 
 import '../assets/styles/components/Profile.scss';
 
-const Profile = ({data,classes}) => {
-    console.log("classes",classes.length)
+const Profile = ({ data, myClass }) => {
+    console.log("classes", myClass.length)
     return (
         <section className="profile">
             <div className="profile__display">
@@ -44,23 +44,26 @@ const Profile = ({data,classes}) => {
                             <tr className="profile__stats__title">
                                 <th>ID</th>
                                 <th>STATUS</th>
-                                <th>PRECIO</th>
+                                <th>PRECIO USD$</th>
+                                <th>PRECIO AR$</th>
                                 <th>COACH</th>
-                                <th>N°CLASES</th>
+                                <th>TIPO/CLASE</th>
+                                <th>N° CLASES</th>
                                 <th>FECHA INICIO</th>
                             </tr>
-                            {classes.map(item=>(
-
+                            {myClass.slice(myClass.length - 5, myClass.length).map(item => (
                                 <tr>
-                                <td>123</td>
-                                <td>Terminada</td>
-                                <td>${item.price}</td>
-                                <td>{item.coach}</td>
-                                <td>{item.premium}</td>
-                                <td>{item.schedule}</td>
-                            </tr>
-                            ))}
-                            
+                                    <td>{item._id}</td>
+                                    <td>{item.status}</td>
+                                    <td>${item.price}</td>
+                                    <td>${item.price * 82}</td>
+                                    <td>{item.coach}</td>
+                                    <td>{item.premium}</td>
+                                    <td>{item.classes}</td>
+                                    <td>{item.schedule}</td>
+                                </tr>
+                            )).reverse()}
+
                         </table>
 
                     </div>
@@ -72,11 +75,11 @@ const Profile = ({data,classes}) => {
 
 const mapStateToProps = (state) => {
     return {
-        user:state.user,
-        myClass:state.myClass,
-        data:state.data,
-        classes:state.class
+        user: state.user,
+        myClass: state.myClass,
+        data: state.data,
+        classes: state.class
     };
-  };
-  
+};
+
 export default connect(mapStateToProps, null)(Profile);

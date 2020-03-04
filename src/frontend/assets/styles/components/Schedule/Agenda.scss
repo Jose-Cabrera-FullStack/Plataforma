@@ -125,7 +125,14 @@ span:hover .schedule__information__rectangle {
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    color: #ffffff
+    color: #56fffb;
+    height: 40px;
+    width: 75%;
+}
+
+.select__agenda option {
+    background-color: #1a1919;
+    color:#56fffb ;
 }
 
 .select__title {

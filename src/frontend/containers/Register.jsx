@@ -3,10 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { registerUser } from '../actions';
 
-import facebook from '../assets/static/images/social-network/facebook-white.svg';
-import reddit from '../assets/static/images/social-network/reddit-white.svg';
-import instagram from '../assets/static/images/social-network/instagram-white.svg';
-import discord from '../assets/static/images/social-network/discord-white.svg';
+import Socials from '../components/Socials';
 
 import '../assets/styles/components/Register.scss';
 
@@ -116,20 +113,7 @@ const Register = (props) => {
         <div className="slogan">
           <h1>¿Estas preparado para dejar de ser un Espectador?</h1>
           <h2>Registrate y acércate mas a lograr tus sueños</h2>
-          <ol className="icons">
-            <li class="icon" >
-              <a href="http://facebook.com"><img src={facebook} /></a>
-            </li>
-            <li class="icon discord" >
-              <a href="http://reddit.com"><img src={reddit} /></a>
-            </li>
-            <li class="icon" >
-              <a href="http://instagram.com"><img src={instagram} /></a>
-            </li>
-            <li class="icon" >
-              <a href="http://discord.com"><img src={discord} /></a>
-            </li>
-          </ol>
+          <Socials/>
         </div>
       </section>
     </>

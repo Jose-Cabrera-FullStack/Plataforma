@@ -49,7 +49,7 @@ const main = async (req,res, next) => {
         }catch(error){
             initialState = {
                 user:{},
-                myClass:[],
+                myClass:{},
                 data: {},
                 class:{}
             }

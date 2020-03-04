@@ -30,7 +30,7 @@
 .register__container{
   width: 583px;
   height: 970px;
-  background-color: #1a1919e6;
+  background-color: #1a1919;
 }
 
 .login p {
@@ -65,13 +65,16 @@
   margin: 2% 0 0% 0px;
   border: none;
   background: none;
+  font-family: Roboto;
   width: 75%;
+  font-size: 18px;
+  letter-spacing: 0.3px;
   color: #ffffff;
   height: 35px;
 }
 
 .register__container__inside{
-  margin: 70px 60px 0px 40px;
+  margin: 70px -4px 0px 105px;
 }
 
 .register__input__line{
@@ -101,7 +104,7 @@
 
 .btn__register{
   width: 370px;
-  margin: 10% 164px 6% 0px;;
+  margin: 10% 112px 9% 0px;
 }
 
 .links__display{
@@ -126,4 +129,12 @@
   margin: 40% 10% 0px 11%;
   text-align: center;
   color: #ffffff;
+}
+
+.register__container__title--login{
+  margin: 30% 0 1% -7%;
+}
+
+.register__container__title--contact{
+  margin: 30% 0 1% 0%;
 }

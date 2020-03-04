@@ -364,7 +364,9 @@ export default class Calendar extends React.Component {
                             dates={this.state.eventList}
                         />
                     </div>
-
+                    <br className="break__line" />
+                    <br className="break__line" />
+                    <br className="break__line" />
                 </div>
 
             </>
