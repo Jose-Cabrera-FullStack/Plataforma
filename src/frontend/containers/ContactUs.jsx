@@ -35,10 +35,10 @@ const Login = (props) => {
               
               <p>¿QUÉ ESTAS BUSCANDO?</p>
               <select name="contact-us" onChange={handleInput} className="select__agenda" required>
-                <option value="COACHING">¿QUIERES SER PARTE?</option>
-                <option value="RECOMENDACION">¿ALGUNA RECOMENDACIÓN?</option>
-                <option value="QUEJA">¿ALGO NO FUNCIONA BIEN?</option>
-                <option value="REVIEW">¿QUÉ TE PARECIERON LAS CLASES?</option>
+                <option value="COACHING">¿Quieres ser parte?</option>
+                <option value="RECOMENDACION">¿Alguna recomendación?</option>
+                <option value="QUEJA">¿Algo no funciona?</option>
+                <option value="REVIEW">¿Qué te parecieron las clases?</option>
               </select>
               <hr className="register__input__line" />
 

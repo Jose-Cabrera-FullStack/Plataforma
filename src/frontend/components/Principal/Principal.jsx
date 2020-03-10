@@ -37,7 +37,7 @@ const Principal = () => (
                                 <strong class="blue__lightning">¡UN ESPECTADOR!</strong>_
                             </h1>
 
-                            <p class="paragraph__principal">BRINDAMOS COACHING A PLAYERS DE LEAGUE OF LEGEND <br />
+                            <p class="paragraph__principal">BRINDAMOS COACHING A PLAYERS DE LEAGUE OF LEGENDS <br />
                                 DESDE LA TEMPORADA 7.<strong class="blue__lightning "> TU MOMENTO DE SER <br />
                                 EL PROTAGONISTA ES AHORA...</strong>
                                 

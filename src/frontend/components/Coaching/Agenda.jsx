@@ -9,9 +9,9 @@ import information from '../../assets/static/images/info.svg'
 import '../../assets/styles/components/Principal.scss';
 import '../../assets/styles/components/Schedule/Agenda.scss';
 
-const dollarAR = 82;
+const dollarAR = 62;
 
-const Agenda = props => {
+const Agenda = (props) => {
 
     const [form, setValues] = useState({
         user_id: checkCookie(),
@@ -19,7 +19,7 @@ const Agenda = props => {
         coach: 'Guido',
         type: 'SOLO',//Debe escogerse en la solapa antes del calendario
         premium: 'NORMAL',
-        price: 3 || parseInt(totalPrice()),
+        price: 2 ,
         dates: [],
         check: false || checkStateCurrency(),
         classes: 2,
@@ -32,15 +32,14 @@ const Agenda = props => {
         test: 'test'
     };
 
-    console.info("valor de price:", form.price)
+    // console.info("valor de price:", form.price)--> adaptar con las especificaciones escogidas
 
     useEffect(() => {
         document.title = form.price
-        form.price = totalPrice()
+        form.price = totalPrice() + 2
         form.schedule = showFormatDate()
         form.dates = props.dates
     })
-    console.info('dentro de agenda', props.dates)
 
     function showFormatDate(dateTime) {
         return dateTime = moment(dateTime).format("YYYY-MM-DD HH:mm:ss");
@@ -87,9 +86,22 @@ const Agenda = props => {
     };
 
     function totalPrice() {
-        let total = 3
+        let total = 2
+
+        if(form.type==="SOLO"){
+            total = total * 0.5
+        }else{
+            total = total * 0.7
+        }
+        
+        total =total * form.classes
+        
+        if(form.premium==="PREMIUM"){
+            total = total * 1.28 
+        }
+
         if (!isNaN(props.currentDay)) {
-            return total * form.dates.length
+            return Math.floor(total * form.dates.length)
         }
     }
 
@@ -97,19 +109,20 @@ const Agenda = props => {
         return totalPrice() * dollarAR
     }
 
-    function allDateInArray() {
-        //Se debe agrupar todos los datos en un array o en un objeto
-        return
-    }
+    let lastItemProps = props.myClass.length
+    console.log(props.dates.length)
 
     return (
         <section className="agenda">
+            {(props.dates.length < 2) ?
+                (<p className="agenda__warning agenda__warning--fix">Debes escoger al menos dos fechas</p>):('')
+            }
             <form onSubmit={handleSubmit}>
                 <div className="agenda__price">
                     <h2 className="agenda__price__title">Precio</h2>
-                    <h1 className="agenda__dollar__price" name="price" onChange={handleInput} value={totalPrice()}>${totalPrice()}</h1>
-                    <h3 className="agenda__pesos__price">(AR$ {totalPriceAR()})</h3>
-                    <p className="agenda__time">Finaliza en : 9 -14 Dias</p>
+                    <p className="agenda__time">Antes : ${Math.floor((totalPrice() * 1.9) + 4)}</p>
+                    <h1 className="agenda__dollar__price" name="price" onChange={handleInput} value={totalPrice()+2}>${totalPrice()+2}</h1>
+                    <h3 className="agenda__pesos__price">(AR$ {totalPriceAR() + (dollarAR*2)})</h3>
 
                 </div>
 
@@ -121,7 +134,7 @@ const Agenda = props => {
                         <p className="select__title">¿Qué tipo de Coach quieres recibir?</p> <img src={information} alt="information" />
                     </div>
 
-                    <select name="type" onChange={handleInput} className="select__agenda">
+                    <select name="type" onChange={handleInput} className="select__agenda select__agenda--fix">
                         <option value="SOLO">SOLO</option>
                         <option value="COACHING">COACHING</option>
                     </select>
@@ -132,13 +145,13 @@ const Agenda = props => {
                     <div className="agenda__info">
                         <p className="select__title">¿Quién será tu coach?</p> <img src={information} alt="information" />
                         <strong className="pop__service pop__service--special__1">
-                            Elige al coach que te guiara en este <br/>
+                            Elige al coach que te guiara en este <br />
                             interesante viaje
                          </strong>
 
                     </div>
 
-                    <select name="coach" onChange={handleInput} className="select__agenda">
+                    <select name="coach" onChange={handleInput} className="select__agenda select__agenda--fix">
                         <option value="Guido">Guido</option>
                         <option value="Murdoc">Murdoc</option>
                     </select>
@@ -148,14 +161,14 @@ const Agenda = props => {
                     <div className="agenda__info">
                         <p className="select__title">¿Cuántas clases quieres?</p> <img src={information} alt="information" />
                         <strong className="pop__service pop__service--special__1">
-                        Selecciona el número de sesiones <br/>
-                        que desea tener. Cada sesión dura <br/>
-                        Una Hora y Media ( 90 Minutos)
+                            Selecciona el número de sesiones <br />
+                            que desea tener. Cada sesión dura <br />
+                            Una Hora y Media ( 90 Minutos)
                          </strong>
 
                     </div>
 
-                    <select name="classes" onChange={handleInput} className="select__agenda">
+                    <select name="classes" onChange={handleInput} className="select__agenda select__agenda--fix">
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -172,7 +185,7 @@ const Agenda = props => {
                         <p className="select__title">¿Qué tipo de clases quieres ver?</p> <img src={information} alt="information" />
                     </div>
 
-                    <select name="premium" onChange={handleInput} className="select__agenda">
+                    <select name="premium" onChange={handleInput} className="select__agenda select__agenda--fix">
                         <option value="NORMAL">NORMAL</option>
                         <option value="PREMIUM">PREMIUM</option>
                     </select>
@@ -181,20 +194,34 @@ const Agenda = props => {
 
                 </div>
 
+                {
+                    (props.myClass[lastItemProps - 1].status === 'En Curso' ) ?
+                        (<p className="agenda__warning">¡HASTA QUE NO TERMINES TU ORDEN, NO PODRAS ADQUIRIR UN NUEVO CURSO!</p>) :
+                        (props.dates.length < 2 ?
+                            '' : <div className="agenda__paypal">
+                            <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit} />
+                        </div>
+                        )
+                }
 
-                <div className="agenda__paypal">
-                    <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit} />
-                </div>
 
             </form>
-                    <ul className="agenda__bullet__list">
-                        <li>Horarios flexibles que se adapten a tus necesidades</li>
-                        <li>Tendrás un PDF con el plan de estudio</li>
-                        <li>La entrevista es completamente gratuita (no cuenta como una sesión)</li>
-                        <li>Entras en nuestro programa de fidelización</li>
-                    </ul>
+            <ul className="agenda__bullet__list">
+                <li>Horarios flexibles que se adapten a tus necesidades</li>
+                <li>Tendrás un PDF con el plan de estudio</li>
+                <li>La entrevista es completamente gratuita (no cuenta como una sesión)</li>
+                <li>Entras en nuestro programa de fidelización</li>
+            </ul>
         </section>
     )
+}
+
+const mapStateToProps = state => {
+    return {
+
+        myClass: state.myClass,
+
+    }
 }
 
 
@@ -205,4 +232,4 @@ const mapDispatchToProps = {
     submitSelectedDate
 };
 
-export default connect(null, mapDispatchToProps)(Agenda);
+export default connect(mapStateToProps, mapDispatchToProps)(Agenda);

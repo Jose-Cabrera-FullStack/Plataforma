@@ -9,6 +9,7 @@
 
 .selected__date__form > div > div > div > div > div  {
     background: #454ade;
+    color: #56fffb;
 }
 .selected__date__form > div > div > div > div > div > div::selection {
     background:none;
@@ -28,16 +29,17 @@
     width: 724px;
     height: 24px;
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 2.22;
     letter-spacing: normal;
     text-align: center;
-    color: #ffffff;
+    text-shadow: 0px 0px 10px;
+    color: #56fffb;
     margin: 0;
-    padding: 4% 0px 0px 10%;
+    padding: 4% 0px 0px 17%;
 }
 
 .selected__date__form {

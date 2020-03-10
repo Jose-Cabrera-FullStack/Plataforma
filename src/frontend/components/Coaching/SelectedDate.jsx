@@ -45,7 +45,6 @@ const Dates = props => {
                 <Select
                     closeMenuOnSelect={false}
                     onSelectResetsInput={true}
-                    defaultValue={DATE[0]}
                     isValidNewOption={isValidNewOption}
                     components={{Menu}}
                     isMulti

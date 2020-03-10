@@ -50,9 +50,8 @@ const PaypalCheckoutButton = (props) => {
     });
   };
 
-  console.log('recibio el test',props.order.test)
   const onAuthorize = (data, actions) => {
-    return actions.payment.execute()
+      return actions.payment.execute()
       .then(response => {
         console.log(response);
         props.submitSelectedDate(props.form, '/perfil');

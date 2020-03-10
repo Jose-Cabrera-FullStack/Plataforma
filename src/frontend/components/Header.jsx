@@ -56,9 +56,9 @@ const Header = props => {
           {hasUser ?
             <div>
 
-              <li className="navbar__menu__perfil">
+              <li className="navbar__menu__perfil" onClick={toggleTrueFalse}>
                 <img className="navbar__menu__perfil__avatar" src={Perfil} alt="" />
-                <img src={Arrow} alt="" onClick={toggleTrueFalse}/>
+                <img src={Arrow} alt="Arrow" className="navbar__menu__perfil__arrow" />
                   <p className="navbar__menu__perfil__name">{user.name}</p>
                 <div className={isToggled ? "navbar__menu__perfil__menu--on":"navbar__menu__perfil__menu"}>
                   <NavLink to="/perfil" >

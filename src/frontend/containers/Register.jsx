@@ -13,7 +13,7 @@ const Register = (props) => {
     name: '',
     password: '',
     birthday: '',
-    server: '',
+    server: 'LAS',
     verified: false
   });
 

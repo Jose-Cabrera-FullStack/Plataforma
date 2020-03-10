@@ -27,17 +27,17 @@
 
 .agenda__price__title {
     width: 76px;
-    height: 33px;
+    height: 25px;
     font-family: Roboto;
-    font-size: 27px;
-    font-weight: normal;
+    font-size: 35px;
+    font-weight: 370;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.15;
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-    padding: 2% 0px 0px 37%;
+    padding: 0% 0px 0px 32%;
 }
 
 .span__invisible {
@@ -59,7 +59,7 @@ span:hover .schedule__information__rectangle {
 
 .agenda__dollar__price {
     width: 172px;
-    height: 99px;
+    height: 110px;
     text-shadow: 0 0 2px #56fffb;
     font-family: Roboto;
     font-size: 82px;
@@ -71,7 +71,7 @@ span:hover .schedule__information__rectangle {
     text-align: center;
     color: #56fffb;
     margin: 0;
-    padding: 0px 0px 0px 17%;
+    padding: 0px 0px 0px 20%;
 }
 
 .agenda__pesos__price {
@@ -95,15 +95,17 @@ span:hover .schedule__information__rectangle {
     width: 189px;
     height: 23px;
     font-family: Roboto;
-    font-size: 19px;
-    font-weight: normal;
+    font-size: 18px;
+    font-weight: 350;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.21;
+    opacity: 0.79;
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
     padding: 0px 0px 0px 17%;
+    text-decoration: line-through;
 }
 
 .agenda__selection {
@@ -113,13 +115,11 @@ span:hover .schedule__information__rectangle {
 }
 
 .select__agenda {
-    background: transparent;
     border: none;
     background: none;
     font-size: 14px;
     height: 30px;
     padding: 5px;
-    width: 247px;
     font-family: Roboto;
     font-size: 19px;
     font-weight: normal;
@@ -128,6 +128,10 @@ span:hover .schedule__information__rectangle {
     color: #56fffb;
     height: 40px;
     width: 75%;
+}
+
+.select__agenda--fix{
+    width: 100%;
 }
 
 .select__agenda option {
@@ -183,6 +187,7 @@ span:hover .schedule__information__rectangle {
     border: solid 3px #e01ac7;
     background-color: #192429;
     visibility: hidden;
+    position: absolute;
 }
 
 .schedule__information__pop {
@@ -202,4 +207,21 @@ span:hover .schedule__information__rectangle {
 
 .register__input__line--agenda{
     margin: 0px 0% 5% 0px;
+}
+
+.agenda__warning{
+    color: #e01ac7;
+    text-shadow: 0px 0px 15px #e01ac7;
+    margin: 0px;
+    position: absolute;
+    top: -20%;
+    left: 24%;
+    width: 800px;
+    font-size: 20px;
+    font-family: roboto;
+    font-weight: 900;
+}
+
+.agenda__warning--fix{
+    top: -15%;
 }
