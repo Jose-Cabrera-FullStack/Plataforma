@@ -25,14 +25,4 @@ const Home = () => {
   );
 }
 
-const mapStateToProps = state => {
-  return{
-
-    myList: state.myList,
-    trends: state.trends,
-    originals: state.originals,
-
-  }
-}
-
-export default connect(mapStateToProps,null)(Home);
+export default connect(null,null)(Home);

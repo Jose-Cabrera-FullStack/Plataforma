@@ -58,14 +58,14 @@ const Login = (props) => {
 
             <div className="links__display">
               <div>
-                <Link to="/login">
-                  Iniciar sesión
+                <Link to="/register">
+                  ¿Aún no tienes una cuenta? Registrate
                 </Link>
               </div>
 
               <div>
                 <Link to="/login">
-                  ¿No haz recibido aún el mail de confirmación?
+                  ¿Olvidaste tu contraseña?
                 </Link>
               </div>
             </div>

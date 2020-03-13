@@ -23,15 +23,6 @@ const render = (html, preloadedState) => {
         </script>
         <script src="${files ? files['main.js'] : 'assets/app.js'}" type="text/javascript"></script>
         <script src="${files ? files['vendors.js'] : 'assets/vendor.js'}" type="text/javascript"></script>
-        <script>
-        var loader = document.getElementById('loader');
-        window.addEventListener("load", function (event) {
-            loader.classList.remove('loading');
-            loader.classList.add('loaded');
-            document.body.classList.add('imgloaded');
-        console.log("funciona")
-        });
-        </script>
       </body>
     </html>
   `);

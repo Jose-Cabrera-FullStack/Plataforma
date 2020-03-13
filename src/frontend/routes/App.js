@@ -1,5 +1,5 @@
 import React , { Component, lazy, Suspense }from 'react';
-import {BrowserRouter,Switch,Route} from 'react-router-dom';
+import {BrowserRouter,Switch,Route,Redirect} from 'react-router-dom';
 import Home from '../containers/Home';
 import Login from '../containers/Login';
 import Register from '../containers/Register';
@@ -15,15 +15,15 @@ import Wrapper from '../containers/Wrapper';
 const App = ({ isLogged }) => (
     <BrowserRouter>
         <Switch>
-                {/* <Route exact path="/" component={Wrapper(Home)} /> DEBE SER ASI! */}
-                <Route exact path="/" component={(Home)} />
-                <Route exact path="/login" component={(isLogged ? Home : Login)} />
-                <Route exact path="/register" component={(isLogged ? Home : Register)} />
-                <Route exact path="/coaching" component={(isLogged ? Coaching : Login)} />
-                <Route exact path="/contactanos" component={(ContactUs)} />
-                <Route exact path="/sobre-nosotros" component={(AboutUs)} />
-                <Route exact path="/perfil" component={(isLogged ? Profile : Login)} />
-                <Route exact path="/faq" component={(FAQ)} />
+                <Redirect exact from="/" to="/home" component={Wrapper(Home)} />
+                <Route exact path="/home" component={Wrapper(Home)} />
+                <Route exact path="/login" component={Wrapper(isLogged ? Home : Login)} />
+                <Route exact path="/register" component={Wrapper(isLogged ? Home : Register)} />
+                <Route exact path="/coaching" component={Wrapper(isLogged ? Coaching : Login)} />
+                <Route exact path="/contactanos" component={Wrapper(ContactUs)} />
+                <Route exact path="/sobre-nosotros" component={Wrapper(AboutUs)} />
+                <Route exact path="/perfil" component={Wrapper(isLogged ? Profile : Login)} />
+                <Route exact path="/faq" component={Wrapper(FAQ)} />
                 <Route component={NotFound} />
         </Switch>
     </BrowserRouter>

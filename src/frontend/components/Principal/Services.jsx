@@ -9,7 +9,7 @@ const Services = () => (
 
     <section id="services" className="services">
             <h1 className="title__services ">¿QUÉ TE ENSEÑAMOS?_</h1>
-        <div className="container__services">
+        <div className="container__services imgloaded">
             <div className="service pop">
                 <span>
                     <h3 className="title__service">ENTRENAMIENTO <br />MILITAR</h3>
@@ -28,7 +28,7 @@ const Services = () => (
             </div>
             <div className="service">
                 <span>
-                    <h3 className="title__service">TRABAJAR EN<br />EQUIPO</h3>
+                    <h3 className="title__service ">TRABAJAR EN<br />EQUIPO</h3>
                     <figure>
                         <img className="img__service contentText" src={TFT} alt="TFT BOOTING" />
                         <strong className="pop__service pop__service--special__2">

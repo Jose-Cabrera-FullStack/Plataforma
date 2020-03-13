@@ -15,7 +15,7 @@ const Principal = () => (
             <div class="loading-logo"></div>
         </div>
 
-        <div className="overlay__principal">
+        <div className="overlay__principal imgloaded">
             <div className="container__principal col-1">
 
                 <div class="content">
