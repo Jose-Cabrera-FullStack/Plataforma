@@ -40,6 +40,11 @@ export const registerRequest = payload => ({
   payload,
 });
 
+export const sendRequest = payload => ({
+  type: 'SEND_REQUEST',
+  payload
+})
+
 export const submitSelectedDate = (payload, redirectUrl) => {
   return(dispatch) => {
     axios.post('/auth/courses', payload)
@@ -56,6 +61,18 @@ export const registerUser = (payload, redirectUrl) => {
   return(dispatch) => {
     axios.post('/auth/sign-up', payload)
     .then(({data}) => dispatch(registerRequest(data)))
+    .then(() => { 
+      window.location.href = redirectUrl
+    })
+    .catch(error => dispatch(setError(error)))
+  };
+};
+
+export const sendEmail = (payload, redirectUrl) => {
+  return(dispatch) => {
+    console.log(payload)
+    axios.post('/api/email', payload)
+    .then(({data}) => dispatch(sendRequest(data)))
     .then(() => { 
       window.location.href = redirectUrl
     })

@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { loginUser } from '../actions';
+import { sendEmail } from '../actions';
 import '../assets/styles/components/ContactUs.scss';
 import '../assets/styles/components/Register.scss';
 
 import Socials from '../components/Socials';
 
-const Login = (props) => {
+const Contact = (props) => {
   const [form, setValues] = useState({
+    name: '',
     email: '',
+    case: '¿Quieres ser parte?',
+    message: '',
   });
 
   const handleInput = (event) => {
@@ -21,7 +23,7 @@ const Login = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.loginUser(form, '/');
+    props.sendEmail(form, '/');
   };
 
   return (
@@ -34,7 +36,7 @@ const Login = (props) => {
             <form className="register__container--form" onSubmit={handleSubmit}>
               
               <p>¿QUÉ ESTAS BUSCANDO?</p>
-              <select name="contact-us" onChange={handleInput} className="select__agenda" required>
+              <select name="case" onChange={handleInput} className="select__agenda" required>
                 <option value="COACHING">¿Quieres ser parte?</option>
                 <option value="RECOMENDACION">¿Alguna recomendación?</option>
                 <option value="QUEJA">¿Algo no funciona?</option>
@@ -47,7 +49,7 @@ const Login = (props) => {
                 name="name"
                 className="register__input"
                 type="text"
-                placeholder="ingresa Tu apodo aquí"
+                placeholder="Ingresa Tu apodo aquí"
                 onChange={handleInput}
                 required
               />
@@ -57,8 +59,8 @@ const Login = (props) => {
               <input
                 name="email"
                 className="register__input"
-                type="text"
-                placeholder="ingresa su email aquí"
+                type="email"
+                placeholder="Ingresa su email aquí"
                 onChange={handleInput}
                 required
               />
@@ -92,7 +94,7 @@ const Login = (props) => {
 };
 
 const mapDispatchToProps = {
-  loginUser,
+  sendEmail,
 };
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(null, mapDispatchToProps)(Contact);

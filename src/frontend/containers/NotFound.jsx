@@ -1,9 +1,6 @@
-import React, { useState } from 'react';
-// import { connect } from 'react-redux';
-// import { loginUser } from '../actions';
+import React from 'react';
 import Header from '../components/Header';
 import '../assets/styles/components/Register.scss';
-
 
 const NotFound = () => {
   return (
@@ -11,7 +8,6 @@ const NotFound = () => {
         <Header/>
         <h1>ERROR 404</h1>
         <h3>Not Found</h3>
-
     </>
       );
 };

@@ -22,6 +22,8 @@ app.use(express.static(`${__dirname}/public`));
 
 // Basic strategy
 require('./utils/auth/strategies/basic');
+//OAuth strategy
+require('./utils/auth/strategies/oauth');
 
 if (ENV === 'development') {
   console.log('Loading dev config');
@@ -90,8 +92,53 @@ app.post('/auth/sign-up', async (req, res, next) => {
   }
 });
 
+app.post('/api/email', async (req, res, next) => {
+
+  const info = {
+    name: req.body.name,
+    email: req.body.email,
+    case: req.body.case,
+    message: req.body.message
+  }
+
+  try {
+    const {data} = await axios({
+      url: `${process.env.API_URL}/api/email`,
+      method: 'post',
+      data:info
+    });
+
+  res.status(201).json({data});
+
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.get("/auth/google-oauth", passport.authenticate("google-oauth",{
+  scope:['email','profile','openid']
+}))
+
+app.get(
+  "/auth/google-oauth/callback",
+  passport.authenticate("google-oauth", { session: false }),
+  function(req, res, next) {
+    if (!req.user) {
+      next(boom.unauthorized());
+    }
+
+    const { token, ...user } = req.user;
+
+    res.cookie("token", token, {
+      httpOnly: !config.dev,
+      secure: !config.dev
+    });
+
+    res.status(200).json(user);
+  }
+);
+
 app.post('/auth/courses', async (req, res, next) => {
-  const { token } = req.cookies
 
   const course = {
     schedule: req.body.schedule,
