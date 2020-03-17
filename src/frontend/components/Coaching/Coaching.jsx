@@ -233,8 +233,8 @@ export default class Calendar extends React.Component {
         // console.log("SELECTED YEAR: ", this.state.selectedMonth);
 
         let daysInMonth = [];
-        console.log("SELECTED MONTH: ", parseInt(this.state.selectedMonth));
-        console.log("ACTUAL MONTH: ", parseInt(this.state.todayMonth));
+        // console.log("SELECTED MONTH: ", parseInt(this.state.selectedMonth));
+        // console.log("ACTUAL MONTH: ", parseInt(this.state.todayMonth));
         for (let day = 1; day <= this.daysInMonth(); day++) {
             let className = (day == this.currentDay() ? "day current-day" : "day");
             let selectedClass = (day == this.state.selectedDay ? " selected-day " : "")

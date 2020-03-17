@@ -110,7 +110,7 @@ const Agenda = (props) => {
     }
 
     let lastItemProps = props.myClass.length
-    console.log(props.dates.length)
+    // console.log(props.dates.length)
 
     return (
         <section className="agenda">

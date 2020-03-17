@@ -6,7 +6,7 @@ import Perfil from '../assets/static/images/perfil-image2x.png'
 import '../assets/styles/components/Profile.scss';
 
 const Profile = ({ data, myClass }) => {
-    console.log("classes", myClass.length)
+    // console.log("classes", myClass.length)
     return (
         <section className="profile">
             <div className="profile__display">

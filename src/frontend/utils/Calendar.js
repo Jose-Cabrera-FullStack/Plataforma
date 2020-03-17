@@ -178,7 +178,7 @@ class CALENDAR {
             let dateFormatted = this.getFormattedDate(new Date(this.date));
             if (!this.eventList[dateFormatted]) this.eventList[dateFormatted] = [];
             this.eventList[dateFormatted].push(fieldValue);
-            console.log(this.eventList)
+            // console.log(this.eventList)
             localStorage.setItem(localStorageName, JSON.stringify(this.eventList));
             this.drawAll()
         });
@@ -189,7 +189,7 @@ class CALENDAR {
             let dateFormatted = this.getFormattedDate(new Date(this.date));
             if (!this.eventList[dateFormatted]) this.eventList[dateFormatted] = [];
             this.eventList= []
-            console.log(this.eventList[dateFormatted])
+            // console.log(this.eventList[dateFormatted])
             localStorage.setItem(localStorageName, JSON.stringify(this.eventList));
             this.drawAll()
         });

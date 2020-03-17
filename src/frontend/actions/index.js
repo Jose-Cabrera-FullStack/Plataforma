@@ -70,7 +70,6 @@ export const registerUser = (payload, redirectUrl) => {
 
 export const sendEmail = (payload, redirectUrl) => {
   return(dispatch) => {
-    console.log(payload)
     axios.post('/api/email', payload)
     .then(({data}) => dispatch(sendRequest(data)))
     .then(() => { 

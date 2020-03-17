@@ -9,6 +9,7 @@ import AboutUs from '../containers/AboutUs';
 import FAQ from '../containers/FAQ';
 import NotFound from '../containers/NotFound';
 import Profile from '../containers/Profile';
+import Confirm from '../containers/Confirm';
 import Wrapper from '../containers/Wrapper';
 
 
@@ -18,6 +19,7 @@ const App = ({ isLogged }) => (
                 <Redirect exact from="/" to="/home" component={Wrapper(Home)} />
                 <Route exact path="/home" component={Wrapper(Home)} />
                 <Route exact path="/login" component={Wrapper(isLogged ? Home : Login)} />
+                <Route exact path="/confirm:id" component={Wrapper(Confirm)} />
                 <Route exact path="/register" component={Wrapper(isLogged ? Home : Register)} />
                 <Route exact path="/coaching" component={Wrapper(isLogged ? Coaching : Login)} />
                 <Route exact path="/contactanos" component={Wrapper(ContactUs)} />
