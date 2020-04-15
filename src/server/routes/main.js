@@ -24,6 +24,12 @@ const main = async (req,res, next) => {
                     name
                 };
             }
+            
+            // let userId = await axios({
+            //     url: `${process.env.API_URL}/api/users/ids`,
+            //     headers: { Authorization: `Bearer ${token}` },
+            //     method: 'get',
+            //   });
 
             let courseList = await axios({
                 url: `${process.env.API_URL}/api/courses`,
@@ -44,14 +50,16 @@ const main = async (req,res, next) => {
                 user,
                 data: userData.filter(user => user._id === id),
                 myClass:courseList.filter(course => course.user_id === id ),
-                class:courseList.filter(course => course.dates)
+                class:courseList.filter(course => course.dates),
+                // id:userId.filter(course => course.dates)
             }
         }catch(error){
             initialState = {
                 user:{},
                 myClass:{},
                 data: {},
-                class:{}
+                class:{},
+                // id:{}
             }
             console.log(error)
         }

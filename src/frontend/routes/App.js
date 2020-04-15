@@ -19,7 +19,7 @@ const App = ({ isLogged }) => (
                 <Redirect exact from="/" to="/home" component={Wrapper(Home)} />
                 <Route exact path="/home" component={Wrapper(Home)} />
                 <Route exact path="/login" component={Wrapper(isLogged ? Home : Login)} />
-                <Route exact path="/confirm:id" component={Wrapper(Confirm)} />
+                <Route exact path="/confirm:id" component={Wrapper(Confirm)} id/>
                 <Route exact path="/register" component={Wrapper(isLogged ? Home : Register)} />
                 <Route exact path="/coaching" component={Wrapper(isLogged ? Coaching : Login)} />
                 <Route exact path="/contactanos" component={Wrapper(ContactUs)} />

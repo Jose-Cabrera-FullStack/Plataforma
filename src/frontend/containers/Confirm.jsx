@@ -1,20 +1,38 @@
 import React from 'react';
-import {Route,Redirect} from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import '../assets/styles/components/Confirm.scss';
-const Confirm = () => {
 
-    return(
-      <div className="App">
-      
-           <p>confirm</p>
+const Confirm = (props) => {
+  let idCompleted = props.match.params.id
+  let idWithoutColon = idCompleted.substr(1, idCompleted.lenght)
 
-            <a className="link" href="http://localhost:4000/login">hola</a>
+  let propsID = props.id
 
-      </div>
+  return (
+    <div className="App">
 
-    );
-  }
+      {propsID.map(user => {
+        if (user === idWithoutColon) {
+          return (
+            <>
+              <h1>¡FELICIDADES, YA ERES PARTE DE LA COMUNIDAD DE SUMMONERS!</h1>
+              <a className="link" href="http://localhost:4000/login">HAZ LOGIN CON TU NUEVO USER</a>
+            </>
+          )
+        }
+      })}
+
+    </div>
+
+  );
+}
 
 
-export default Confirm;
+const mapStateToProps = (state) => {
+  return {
+    id: state.id
+  };
+};
+
+export default connect(mapStateToProps, null)(Confirm);
