@@ -9,7 +9,7 @@ import information from '../../assets/static/images/info.svg'
 import '../../assets/styles/components/Principal.scss';
 import '../../assets/styles/components/Schedule/Agenda.scss';
 
-const dollarAR = 62;
+const dollarAR = 82;
 
 const Agenda = (props) => {
 

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginUser } from '../actions';
+import Google from '../assets/static/images/social-network/google.png';
+
 import '../assets/styles/components/Login.scss';
 
 import Socials from '../components/Socials';
@@ -22,6 +24,8 @@ const Login = (props) => {
     event.preventDefault();
     props.loginUser(form, '/');
   };
+
+  const googleLogin = 'http://localhost:4000/auth/google-oauth/'
 
   return (
     <>
@@ -55,6 +59,13 @@ const Login = (props) => {
 
               <button className="btn btn__secondary btn__register " type="submit">¡VAMOS A ENTRENAR!</button>
             </form>
+
+            <div className="social__network__login">
+              <p>or</p>
+              <figure>
+                <a href={googleLogin}><img src={Google} alt="Google Login"/></a>
+              </figure>
+            </div>
 
             <div className="links__display">
               <div>

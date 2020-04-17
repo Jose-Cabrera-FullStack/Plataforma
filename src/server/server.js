@@ -8,6 +8,8 @@ import boom from '@hapi/boom';
 import cookieParser from 'cookie-parser';
 import main from './routes/main';
 
+const { config } = require("./config");
+
 dotenv.config();
 
 const ENV = process.env.NODE_ENV;
@@ -126,15 +128,22 @@ app.get(
     if (!req.user) {
       next(boom.unauthorized());
     }
-
+  
     const { token, ...user } = req.user;
-
+    
     res.cookie("token", token, {
       httpOnly: !config.dev,
-      secure: !config.dev
+      secure: !config.dev,
     });
 
+    res.cookie("email",user.user.email)
+    
+    res.cookie("name",user.user.name)
+
+    res.cookie("id",user.user.id)
+
     res.status(200).json(user);
+
   }
 );
 
