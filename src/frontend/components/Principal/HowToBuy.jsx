@@ -4,6 +4,10 @@ import Hand1 from '../../assets/static/images/hands/h1.svg';
 import Hand2 from '../../assets/static/images/hands/h2.svg';
 import Hand3 from '../../assets/static/images/hands/h3.svg';
 import Hand4 from '../../assets/static/images/hands/h4.svg';
+import Schedule from '../../assets/static/images/how-to-buy/Schedule-Circle.png';
+import Paypal from '../../assets/static/images/how-to-buy/Paypal-Cicle.png';
+import Perfil from '../../assets/static/images/how-to-buy/Perfil-Cicle.png';
+import Register from '../../assets/static/images/how-to-buy/Register-Cicle.png';
 import Example from '../../assets/static/images/example-image.png';
 
 
@@ -22,13 +26,13 @@ const HowToBuy = () => (
                     </figure>
 
                     <p className="paragraph__how-to-buy text__1">
-                        Presiona el botón de Registrarse, créate  <br />
+                        Presiona el botón de <span className="blue__lightning">Registrarse</span>, créate  <br />
                         una cuenta solo con tu correo electrónico <br />
                         y una contraseña. ¡SI ASI DE SIMPLE!
                     </p>
 
                     <figure>
-                        <img className="example__how-to-buy example__1" src={Example} alt="" />
+                        <img className="example__how-to-buy example__1" src={Register} alt="" />
                     </figure>
                 </div>
 
@@ -40,12 +44,12 @@ const HowToBuy = () => (
 
                     <p className="paragraph__how-to-buy text__2">
                     Escoge el Plan que mas te guste, presiona <br/>
-                        el botón de "Comprar Ahora!" y te llevara <br/>
+                        el botón de "<span className="blue__lightning">¡Comprar Ahora!</span>" y te llevara <br/>
                         al ultimo paso para comenzar a ¡SUBIR!
                         </p>
 
                     <figure>
-                        <img className="example__how-to-buy example__2" src={Example} alt="" />
+                        <img className="example__how-to-buy example__2" src={Schedule} alt="" />
                     </figure>
                 </div>
 
@@ -62,7 +66,7 @@ const HowToBuy = () => (
                     </p>
 
                     <figure>
-                        <img className="example__how-to-buy example__3" src={Example} alt="" />
+                        <img className="example__how-to-buy example__3" src={Paypal} alt="" />
                     </figure>
                 </div>
 
@@ -75,11 +79,11 @@ const HowToBuy = () => (
                     Nos comunicamos via Discord contigo. Esto con <br/>
                         la finalidad de hacer lo mas personalizado <br/>
                         posible las clases para ti. Recuerda que la <br/>
-                        primera clase es ¡GRATUITA!
+                        primera clase es <span className="blue__lightning">¡GRATUITA!</span>
                     </p>
 
                     <figure>
-                        <img className="example__how-to-buy example__4" src={Example} alt="" />
+                        <img className="example__how-to-buy example__4" src={Perfil} alt="" />
                     </figure>
                 </div>
 

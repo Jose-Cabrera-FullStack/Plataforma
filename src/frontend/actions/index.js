@@ -79,6 +79,14 @@ export const sendEmail = (payload, redirectUrl) => {
   };
 };
 
+export const sendConfirmation = (payload) => {
+  return(dispatch) => {
+    axios.post('/api/email/confirm', payload)
+    .then(({data}) => dispatch(sendRequest(data)))
+    .catch(error => dispatch(setError(error)))
+  };
+};
+
 export const loginUser = ({email, password}, redirectUrl) => {
   return(dispatch) => {
     axios({

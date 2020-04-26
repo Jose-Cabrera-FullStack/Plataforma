@@ -186,8 +186,15 @@ span:hover .schedule__information__rectangle {
     border-radius: 15px;
     border: solid 3px #e01ac7;
     background-color: #192429;
-    visibility: hidden;
     position: absolute;
+}
+
+.block{
+    color: red;
+}
+
+.hidden{
+    display: hidden;
 }
 
 .schedule__information__pop {

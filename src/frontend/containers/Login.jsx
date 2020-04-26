@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginUser } from '../actions';
-import Google from '../assets/static/images/social-network/google.png';
+// import Google from '../assets/static/images/social-network/google.png'; habilitar despues
 
 import '../assets/styles/components/Login.scss';
 
@@ -25,7 +25,7 @@ const Login = (props) => {
     props.loginUser(form, '/');
   };
 
-  const googleLogin = 'http://localhost:4000/auth/google-oauth/'
+  // const googleLogin = 'http://localhost:4000/auth/google-oauth/' *habilitar el login cuando se reciba los campos necesarios (ex : status)*
 
   return (
     <>
@@ -60,12 +60,12 @@ const Login = (props) => {
               <button className="btn btn__secondary btn__register " type="submit">¡VAMOS A ENTRENAR!</button>
             </form>
 
-            <div className="social__network__login">
+            {/* <div className="social__network__login">
               <p>or</p>
               <figure>
                 <a href={googleLogin}><img src={Google} alt="Google Login"/></a>
-              </figure>
-            </div>
+              </figure> 
+            </div> */}
 
             <div className="links__display">
               <div>

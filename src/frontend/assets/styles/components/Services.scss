@@ -56,7 +56,6 @@ span:hover .pop__service {
 .pop__service{
     display:inline;
     position:absolute;
-    visibility: hidden;
     background-color: #FFFFFF;
     border: solid 2px #000000;
     padding: 5px;
@@ -73,7 +72,11 @@ span:hover .pop__service {
 
 .pop__service--special__1{
     position: absolute;
-    left: 0vw;
+    right: -115%;
+}
+
+.pop__service__width {
+    width: 108%;
 }
 
 .pop__service--special__2{

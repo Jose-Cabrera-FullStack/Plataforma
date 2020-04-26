@@ -31,6 +31,9 @@ export default class Calendar extends React.Component {
         this.width = props.width || "350px";
         this.style = props.style || {};
         this.style.width = this.width; // add this
+        this.toggle = {
+            close:true,
+        }
 
         this.eventList = {}; // array with all dates choosen
     }
@@ -39,6 +42,26 @@ export default class Calendar extends React.Component {
     weekdays = moment.weekdays(); //["Sunday", "Monday", "Tuesday", "Wednessday", "Thursday", "Friday", "Saturday"]
     weekdaysShort = moment.weekdaysShort(); // ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     months = moment.months();
+
+    getInitialState =  () => {
+        return {
+          hover: false
+        };
+    }
+
+    hoverOn =  () => {
+        this.setState({ hover: true });
+    }
+    
+    hoverOff =  () => {
+        this.setState({ hover: false });
+    }
+
+    toggleFunction = () => {
+        this.setState({
+            close: !this.toggle.close,
+        });
+    };
 
     year = () => {
         return this.state.dateContext.format("Y");
@@ -305,6 +328,8 @@ export default class Calendar extends React.Component {
         // if(Object.values( objectPrueba)[0].length > 0 ){ // entra cuando el objeto tenga mas de una fecha
         //<--------------------------------- SEGUNDA FASE --------------------------------->
 
+        const {close} = this.toggle;
+
         return (
 
             <>
@@ -323,15 +348,18 @@ export default class Calendar extends React.Component {
                                             </div>
                                             <div className="schedule__information">
                                                 <this.MonthNav />
-                                                <img className="icon__information" src={information} alt="information" />
+                                                <img className="icon__information" src={information} alt="information" onMouseEnter={() => this.hoverOn()} onMouseLeave={this.hoverOff} />
                                                 <span>
-                                                    <div className="schedule__information__rectangle">
+                                                {this.state.hover ? 
+                                                <div className={"schedule__information__rectangle"}>
                                                         <p className="schedule__information__pop">Acá escogerás las fechas en la que
                                                             veras las clases personalizadas. Después
                                                             de escoger nos estaremos comunicando
                                                             contigo mediante Discord para hacer un
-                                                            Plan especifico para ti.</p>
-                                                    </div>
+                                                            Plan especifico para ti.
+                                                            </p>
+                                                    </div> : ""}
+                                                    
 
                                                 </span>
                                             </div>

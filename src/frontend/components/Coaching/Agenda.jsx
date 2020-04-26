@@ -26,6 +26,11 @@ const Agenda = (props) => {
         status: 'En Curso'
     });
 
+    const [isShown1, setIsShown1] = useState(false);
+    const [isShown2, setIsShown2] = useState(false);
+    const [isShown3, setIsShown3] = useState(false);
+    const [isShown4, setIsShown4] = useState(false);
+
     const order = {
         customer: form.user_id,
         total: form.price,
@@ -131,7 +136,12 @@ const Agenda = (props) => {
                     <span className="span__invisible" name="schedule" onChange={handleInput} value={form.schedule}>{form.schedule}</span>
 
                     <div className="agenda__info">
-                        <p className="select__title">¿Qué tipo de Coach quieres recibir?</p> <img src={information} alt="information" />
+                        <p className="select__title">¿Qué tipo de Coach quieres recibir?</p> <img src={information} alt="information" onMouseEnter={() => setIsShown1(true)} onMouseLeave={() => setIsShown1(false)}/>
+                        {isShown1 ? <strong className="pop__service pop__service--special__1 pop__service__width">
+                            SOLOQ para entender las mecanicas de jugar por tu propia cuenta <br/>
+                            CLASH para aprender a trabajar en sinergia con tu equipo <br/>
+                            COACHING para convertirte el guia de los futuros Pro Players 
+                         </strong> : ""}
                     </div>
 
                     <select name="type" onChange={handleInput} className="select__agenda select__agenda--fix">
@@ -143,12 +153,11 @@ const Agenda = (props) => {
                     <br />
 
                     <div className="agenda__info">
-                        <p className="select__title">¿Quién será tu coach?</p> <img src={information} alt="information" />
-                        <strong className="pop__service pop__service--special__1">
+                        <p className="select__title">¿Quién será tu coach?</p> <img src={information} alt="information" onMouseEnter={() => setIsShown2(true)} onMouseLeave={() => setIsShown2(false)} />
+                        {isShown2 ? <strong className="pop__service pop__service--special__1">
                             Elige al coach que te guiara en este <br />
                             interesante viaje
-                         </strong>
-
+                         </strong> : ""}
                     </div>
 
                     <select name="coach" onChange={handleInput} className="select__agenda select__agenda--fix">
@@ -159,13 +168,13 @@ const Agenda = (props) => {
 
                     <br />
                     <div className="agenda__info">
-                        <p className="select__title">¿Cuántas clases quieres?</p> <img src={information} alt="information" />
-                        <strong className="pop__service pop__service--special__1">
-                            Selecciona el número de sesiones <br />
-                            que desea tener. Cada sesión dura <br />
-                            Una Hora y Media ( 90 Minutos)
-                         </strong>
-
+                        <p className="select__title">¿Cuántas clases quieres?</p> <img src={information} alt="information" onMouseEnter={() => setIsShown3(true)} onMouseLeave={() => setIsShown3(false)}/>
+                        {isShown3 ? <strong className="pop__service pop__service--special__1">
+                        Selecciona el número de sesiones <br />
+                        que desea tener. Cada sesión dura <br />
+                        Una Hora y Media ( 90 Minutos)
+                    </strong> : ""}
+                        
                     </div>
 
                     <select name="classes" onChange={handleInput} className="select__agenda select__agenda--fix">
@@ -182,7 +191,13 @@ const Agenda = (props) => {
 
                     <br />
                     <div className="agenda__info">
-                        <p className="select__title">¿Qué tipo de clases quieres ver?</p> <img src={information} alt="information" />
+                        <p className="select__title">¿Qué tipo de clases quieres ver?</p> <img src={information} alt="information" onMouseEnter={() => setIsShown4(true)} onMouseLeave={() => setIsShown4(false)}/>
+                        {isShown4 ? <strong className="pop__service pop__service--special__1">
+                        Accede a nuestros cursos Premiun  <br />
+                        en cualquier momento <br />
+                        tambien obten las guias avanzadas <br/>
+                        de MicroGame y MacroGame
+                    </strong> : ""}
                     </div>
 
                     <select name="premium" onChange={handleInput} className="select__agenda select__agenda--fix">
@@ -194,7 +209,7 @@ const Agenda = (props) => {
 
                 </div>
 
-                {
+                {/* {
                     (props.myClass[lastItemProps - 1].status === 'En Curso' ) ?
                         (<p className="agenda__warning">¡HASTA QUE NO TERMINES TU ORDEN, NO PODRAS ADQUIRIR UN NUEVO CURSO!</p>) :
                         (props.dates.length < 2 ?
@@ -202,9 +217,11 @@ const Agenda = (props) => {
                             <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit} />
                         </div>
                         )
-                }
+                    } */}
 
-
+                        <div className="agenda__paypal">
+                            <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit} />
+                        </div>
             </form>
             <ul className="agenda__bullet__list">
                 <li>Horarios flexibles que se adapten a tus necesidades</li>

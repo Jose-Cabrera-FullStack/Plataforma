@@ -1,38 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { sendConfirmation } from '../actions';
 
 import '../assets/styles/components/Confirm.scss';
 
 const Confirm = (props) => {
   let idCompleted = props.match.params.id
   let idWithoutColon = idCompleted.substr(1, idCompleted.lenght)
-
-  let propsID = props.id
+  
+  props.sendConfirmation(idWithoutColon)
 
   return (
     <div className="App">
 
-      {propsID.map(user => {
-        if (user === idWithoutColon) {
-          return (
-            <>
-              <h1>¡FELICIDADES, YA ERES PARTE DE LA COMUNIDAD DE SUMMONERS!</h1>
-              <a className="link" href="http://localhost:4000/login">HAZ LOGIN CON TU NUEVO USER</a>
-            </>
-          )
-        }
-      })}
+      <h1>¡FELICIDADES, YA ERES PARTE DE LA COMUNIDAD DE SUMMONERS!</h1>
 
     </div>
 
   );
 }
 
-
-const mapStateToProps = (state) => {
-  return {
-    id: state.id
-  };
+const mapDispatchToProps = {
+  sendConfirmation,
 };
 
-export default connect(mapStateToProps, null)(Confirm);
+
+export default connect(null, mapDispatchToProps)(Confirm);

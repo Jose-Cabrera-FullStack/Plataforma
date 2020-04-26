@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { selectDate, setFavorite } from '../actions';
 import Perfil from '../assets/static/images/perfil-image2x.png'
 
 import '../assets/styles/components/Profile.scss';

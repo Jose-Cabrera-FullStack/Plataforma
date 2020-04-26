@@ -9,43 +9,6 @@ import Integrate from '../../assets/static/faq/faq-integrate.svg';
 import Question from '../../assets/static/faq/faq-question.svg';
 import Person from '../../assets/static/faq/faq-person__talk.svg';
 
-// const style = {
-//     listContainer: {
-//       listStyle: 'none',
-//       paddingLeft: 0
-//     },
-//     itemStyle: {
-//       cursor: 'pointer',
-//       padding: 5
-//     }
-//   };
-  
-//   function MultiselectCheckbox({ options, onChange }) {
-//     const [data, setData] = React.useState(options);
-  
-//     const toggle = item => {
-//       data.map((_, key) => {
-//         if (data[key].label === item.label) data[key].checked = !item.checked;
-//       });
-//       setData([...data]);
-//       onChange(data);
-//     };
-  
-//     return (
-//       <ul style={style.listContainer}>
-//         {data.map(item => {
-//           return (
-//             <li key={item.label} style={style.itemStyle} onClick={() => toggle(item)}>
-//               <input readOnly type="checkbox" checked={item.checked || false} />
-//               {item.label}
-//             </li>
-//           );
-//         })}
-//       </ul>
-//     );
-//   }
-
-
 const FAQ = () => {
 
     const [isToggled1, setToggled1] = useState(false);
@@ -58,11 +21,9 @@ const FAQ = () => {
     const toggleTrueFalse3 = () => setToggled3(!isToggled3);
     const toggleTrueFalse4 = () => setToggled4(!isToggled4);
 
-    // const options = [{ label: 'Item One' }, { label: 'Item Two' }];
-
     return (
         <section id="faq" className="faq">
-            <h1 className="faq__tittle">HAS LLEGADO HASTA AQUI POR ALGO...</h1>
+            <h1 className="faq__tittle">Preguntas Frecuentes</h1>
             <h2 className="faq__subtittle">Necesitas dominar el arte de jugar bien para poder alcanzar las metas que te propusiste, Ser LA PROXIMA estrella
                 de League Of Legends.
         </h2>
@@ -175,12 +136,6 @@ const FAQ = () => {
                 </div>
 
             </div>
-            {/* <MultiselectCheckbox
-            options={options}
-            onChange={data => {
-              console.log(data);
-            }} 
-            />*/}
 
         </section>
     )

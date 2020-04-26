@@ -96,6 +96,8 @@ app.post('/auth/sign-up', async (req, res, next) => {
 
 app.post('/api/email', async (req, res, next) => {
 
+  console.log('hola',req)
+
   const info = {
     name: req.body.name,
     email: req.body.email,
@@ -117,13 +119,41 @@ app.post('/api/email', async (req, res, next) => {
   }
 });
 
+app.post('/api/email/confirm', async (req, res, next) => {
+
+  console.log('req.body',req.body)
+  const info = {
+    name: req.body.name,
+    email: req.body.email,
+    case: req.body.case,
+    message: req.body.message,
+    id: req.body.id,
+  }
+  
+  try {
+    const {data} = await axios({
+      url: `${process.env.API_URL}/api/email/confirm`,
+      method: 'post',
+      data: info
+    });
+    
+    console.log(data)
+    res.status(201).json({data});
+
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.get("/auth/google-oauth", passport.authenticate("google-oauth",{
   scope:['email','profile','openid']
 }))
 
 app.get(
   "/auth/google-oauth/callback",
-  passport.authenticate("google-oauth", { session: false }),
+  passport.authenticate("google-oauth",
+  { session: false ,
+  failureRedirect: '/login'}),
   function(req, res, next) {
     if (!req.user) {
       next(boom.unauthorized());
@@ -131,18 +161,36 @@ app.get(
   
     const { token, ...user } = req.user;
     
-    res.cookie("token", token, {
-      httpOnly: !config.dev,
-      secure: !config.dev,
-    });
+    if (req.isAuthenticated()) {
 
-    res.cookie("email",user.user.email)
-    
-    res.cookie("name",user.user.name)
+      res.cookie("token", token, {
+        httpOnly: !config.dev,
+        secure: !config.dev,
+      });
+      
+      
+      res.cookie("email",user.user.email,{
+        httpOnly: !config.dev,
+        secure: !config.dev,
+      });
+      
+      res.cookie("name",user.user.name,{
+        httpOnly: !config.dev,
+        secure: !config.dev,
+      });
 
-    res.cookie("id",user.user.id)
-
-    res.status(200).json(user);
+      res.cookie("id",user.user.id,{
+        httpOnly: !config.dev,
+        secure: !config.dev,
+      });
+      
+      res.status(200).json(user,{
+        httpOnly: !config.dev,
+        secure: !config.dev,
+      });
+      
+      res.redirect('/')
+    }
 
   }
 );
@@ -160,6 +208,8 @@ app.post('/auth/courses', async (req, res, next) => {
     classes: req.body.classes,
     status: req.body.status
   }
+
+  const token = req.cookies.token
 
   try {
     const {data} = await axios({
