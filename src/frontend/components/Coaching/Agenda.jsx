@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { selectDate, deleteSelectedDate } from '../../actions';
-import { submitSelectedDate } from '../../actions';
+import { selectDate, deleteSelectedDate,submitSelectedDate } from '../../actions';
 import PaypalCheckoutButton from '../Coaching/PaypalCheckoutButton';
 import moment from 'moment';
 import information from '../../assets/static/images/info.svg'
@@ -128,7 +127,6 @@ const Agenda = (props) => {
                     <p className="agenda__time">Antes : ${Math.floor((totalPrice() * 1.9) + 4)}</p>
                     <h1 className="agenda__dollar__price" name="price" onChange={handleInput} value={totalPrice()+2}>${totalPrice()+2}</h1>
                     <h3 className="agenda__pesos__price">(AR$ {totalPriceAR() + (dollarAR*2)})</h3>
-
                 </div>
 
                 <div className="agenda__selection">

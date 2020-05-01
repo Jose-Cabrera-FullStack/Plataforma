@@ -1,0 +1,118 @@
+
+.promotion__irons{
+  height: 112vh;
+  background-image: linear-gradient(to bottom, #1a19199e, #1a1919a8), url(../Screen/Ashe-project.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: relative;
+  bottom: 12vh;
+  margin: 0 0px -7% 0px;
+}
+
+.promotion__left{
+  display: flex;
+}
+
+.promotion__iron__emblem{
+  height: 540px;
+  padding: 8% 0px 0px 10%;
+  position: absolute;
+  left: 0;
+}
+
+.promotion__title{
+  width: 360px; 
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.93;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  padding: 5% 0px 0px 10%;
+  position: absolute;
+  left: 5%;
+}
+
+.promotion__discount__box{
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #e01ac7;
+  margin: 83% 0px 0% 30%;
+}
+          
+.promotion__discount{
+  width: 130px;
+  height: 37px;
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  top: 8px;
+  left: 4px;
+}
+
+.promotion__classes{
+  width: 530px;
+  height: 37px;
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+  position: relative;
+  top: 90%;
+  right: 28%;
+}
+
+.promotion__vertical__line{
+    margin: 0px;
+    height: 525px;
+    position: relative;
+    top: 18vh;
+    right: 7vw;
+    border-radius: 10px;
+    border: solid 1.5px #56fffb;
+}
+
+.promotion__description__list{
+    color: #ffffff;
+    margin: 10% 0px 0px 0px;
+    position: absolute;
+}
+
+.promotion__description__list li {
+  padding: 0px 0px 21px 0px;
+}
+
+.promotion__side{
+  width: 300.6px;
+  height: 300.6px;
+  box-shadow: 0 0 3px 0 #454ade;
+  background-color: #454ade;
+  border-radius: 19px;
+  position: absolute;
+  top: 40%;
+  right: 23%;
+}
+
+.promotion__buttom{
+  position: absolute;
+  top: 82%;
+  right: 25%;
+}

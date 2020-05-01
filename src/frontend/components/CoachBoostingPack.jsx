@@ -45,7 +45,7 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__coach__booting__packs">Cantidad de sesiones: 10</p>
                     </div>
-                    <Link to="/login">
+                    <Link to="/coaching">
                     <a className="btn__secondary margin position_btn_packs__coach__booting__packs">¡ENTRENEMOS!</a>
                     </Link>
 
@@ -68,7 +68,7 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__coach__booting__packs">Cantidad de sesiones: 50</p>
                     </div>
-                    <Link to="/login">
+                    <Link to="/coaching">
                     <a className="btn__secondary margin position_btn_packs__coach__booting__packs">¡ENTRENEMOS!</a>
                     </Link>
 
@@ -91,7 +91,7 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__coach__booting__packs">Cantidad de sesiones: 30</p>
                     </div>
-                    <Link to="/login">
+                    <Link to="/coaching">
                     <a className="btn__secondary margin position_btn_packs__coach__booting__packs">BOOST ME</a>
                     </Link>
 
@@ -114,7 +114,7 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__coach__booting__packs">Cantidad de sesiones: 20</p>
                     </div>
-                    <Link to="/login">
+                    <Link to="/coaching">
                     <a className="btn__secondary margin position_btn_packs__coach__booting__packs">BOOST ME</a>
                     </Link>
 

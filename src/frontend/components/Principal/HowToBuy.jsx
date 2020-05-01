@@ -8,8 +8,6 @@ import Schedule from '../../assets/static/images/how-to-buy/Schedule-Circle.png'
 import Paypal from '../../assets/static/images/how-to-buy/Paypal-Cicle.png';
 import Perfil from '../../assets/static/images/how-to-buy/Perfil-Cicle.png';
 import Register from '../../assets/static/images/how-to-buy/Register-Cicle.png';
-import Example from '../../assets/static/images/example-image.png';
-
 
 const HowToBuy = () => (
     <section id="how-to-buy" className="how-to-buy">

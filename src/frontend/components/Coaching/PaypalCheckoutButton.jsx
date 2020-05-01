@@ -64,6 +64,7 @@ const PaypalCheckoutButton = (props) => {
   };
 
   const onError = (error) => {
+    console.log('props',props);
     alert ('El pago con PayPal no fue realizado, vuelva a intentarlo.' );
   };
 

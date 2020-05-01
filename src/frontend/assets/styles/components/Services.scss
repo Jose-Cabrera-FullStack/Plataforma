@@ -65,9 +65,29 @@ span:hover .pop__service {
     font-weight: normal;
     z-index: 1; 
     color: #fff;
-    border: solid 3px #e01ac7;
+    border: solid 3px #56FFFB;
     background-color: #192429;
     border-radius: 19px;
+}
+
+.pop__service__services1{
+    position: absolute;
+    left: 0;
+}
+
+.pop__service__services2{
+    position: absolute;
+    left: 25%;
+}
+
+.pop__service__services3{
+    position: absolute;
+    left: 50%;
+}
+
+.pop__service__services4{
+    position: absolute;
+    left: 75%;
 }
 
 .pop__service--special__1{
