@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import { selectDate, deleteSelectedDate, submitSelectedDate } from '../../actions';
 import { connect } from 'react-redux';
 import PaypalCheckoutButton from '../../components/Coaching/PaypalCheckoutButton';
@@ -7,16 +8,26 @@ import moment from 'moment';
 import '../../assets/styles/components/Promotion.scss';
 import '../../assets/styles/components/Schedule/Agenda.scss';
 
-import EmblemIron from '../../assets/static/images/promotion/Emblem_Iron.png';
+import EmblemIron from '../../assets/static/images/promotion/Emblem_Diamond.png';
 
-const Irons = (props) =>{
+const Diamonds = (props) =>{
+
+    const price = {
+        total:93
+    }
+    
+    const priceARS = 100
+
+    const saveMoney = 15
+
+    const numClasses = 20
 
     const [form, setValues] = useState({
         user_id: checkCookie(),
         schedule: showFormatDate(),
         coach: 'Guido',
         type: 'SOLO',
-        premium: 'IRONS',
+        premium: 'DIAMONDS',
         price: 2 ,
         dates: [],
         check: false,
@@ -60,19 +71,6 @@ const Irons = (props) =>{
         props.selectDate(form)
         props.submitSelectedDate(form, '/');
     };
-
-
-    console.log(form.schedule)
-
-    const price = {
-        total:48
-    }
-    
-    const priceARS = 100
-
-    const saveMoney = 10
-
-    const numClasses = 15
 
     return(
 
@@ -120,4 +118,4 @@ const mapDispatchToProps = {
     submitSelectedDate
 };
 
-export default connect(null, mapDispatchToProps)(Irons);
+export default connect(null, mapDispatchToProps)(Diamonds);

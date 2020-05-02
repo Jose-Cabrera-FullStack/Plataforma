@@ -12,6 +12,9 @@ import Profile from '../containers/Profile';
 import Confirm from '../containers/Confirm';
 import Wrapper from '../containers/Wrapper';
 import Irons from '../containers/Promotion/Irons';
+import Diamonds from '../containers/Promotion/Diamonds';
+import Masters from '../containers/Promotion/Masters';
+import Challengers from '../containers/Promotion/Challengers';
 
 
 const App = ({ isLogged }) => (
@@ -26,10 +29,10 @@ const App = ({ isLogged }) => (
                 <Route exact path="/contactanos" component={Wrapper(ContactUs)} />
                 <Route exact path="/sobre-nosotros" component={Wrapper(AboutUs)} />
                 <Route exact path="/perfil" component={Wrapper(isLogged ? Profile : Login)} />
-                <Route exact path="/irons" component={Wrapper(Irons)} />
-                <Route exact path="/diamonds" component={Wrapper(isLogged ? Profile : Login)} />
-                <Route exact path="/masters" component={Wrapper(isLogged ? Profile : Login)} />
-                <Route exact path="/challengers" component={Wrapper(isLogged ? Profile : Login)} />
+                <Route exact path="/irons" component={Wrapper(isLogged ? Irons : Login)} />
+                <Route exact path="/diamonds" component={Wrapper(isLogged ? Diamonds : Login)} />
+                <Route exact path="/masters" component={Wrapper(isLogged ? Masters: Login)} />
+                <Route exact path="/challengers" component={Wrapper(isLogged ? Challengers : Login)} />
                 <Route exact path="/faq" component={Wrapper(FAQ)} />
                 <Route component={NotFound} />
         </Switch>

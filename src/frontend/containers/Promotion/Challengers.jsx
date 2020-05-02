@@ -7,16 +7,26 @@ import moment from 'moment';
 import '../../assets/styles/components/Promotion.scss';
 import '../../assets/styles/components/Schedule/Agenda.scss';
 
-import EmblemIron from '../../assets/static/images/promotion/Emblem_Iron.png';
+import EmblemIron from '../../assets/static/images/promotion/Emblem_Challenger.png';
 
-const Irons = (props) =>{
+const Challengers = (props) =>{
+
+    const price = {
+        total:206
+    }
+    
+    const priceARS = 100
+
+    const saveMoney = 25
+
+    const numClasses = 50
 
     const [form, setValues] = useState({
         user_id: checkCookie(),
         schedule: showFormatDate(),
         coach: 'Guido',
         type: 'SOLO',
-        premium: 'IRONS',
+        premium: 'CHALLENGERS',
         price: 2 ,
         dates: [],
         check: false,
@@ -60,19 +70,6 @@ const Irons = (props) =>{
         props.selectDate(form)
         props.submitSelectedDate(form, '/');
     };
-
-
-    console.log(form.schedule)
-
-    const price = {
-        total:48
-    }
-    
-    const priceARS = 100
-
-    const saveMoney = 10
-
-    const numClasses = 15
 
     return(
 
@@ -120,4 +117,4 @@ const mapDispatchToProps = {
     submitSelectedDate
 };
 
-export default connect(null, mapDispatchToProps)(Irons);
+export default connect(null, mapDispatchToProps)(Challengers);

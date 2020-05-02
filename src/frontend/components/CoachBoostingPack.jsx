@@ -45,7 +45,7 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__coach__booting__packs">Cantidad de sesiones: 10</p>
                     </div>
-                    <Link to="/coaching">
+                    <Link to="/irons">
                     <a className="btn__secondary margin position_btn_packs__coach__booting__packs">¡ENTRENEMOS!</a>
                     </Link>
 
@@ -68,7 +68,7 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__coach__booting__packs">Cantidad de sesiones: 50</p>
                     </div>
-                    <Link to="/coaching">
+                    <Link to="/challengers">
                     <a className="btn__secondary margin position_btn_packs__coach__booting__packs">¡ENTRENEMOS!</a>
                     </Link>
 
@@ -91,8 +91,8 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__coach__booting__packs">Cantidad de sesiones: 30</p>
                     </div>
-                    <Link to="/coaching">
-                    <a className="btn__secondary margin position_btn_packs__coach__booting__packs">BOOST ME</a>
+                    <Link to="/masters">
+                    <a className="btn__secondary margin position_btn_packs__coach__booting__packs">¡ENTRENEMOS!</a>
                     </Link>
 
                 </div>
@@ -114,8 +114,8 @@ const EloBoostingPack = () =>(
                         </figure>
                         <p className="completion__completion__coach__booting__packs">Cantidad de sesiones: 20</p>
                     </div>
-                    <Link to="/coaching">
-                    <a className="btn__secondary margin position_btn_packs__coach__booting__packs">BOOST ME</a>
+                    <Link to="/diamonds">
+                    <a className="btn__secondary margin position_btn_packs__coach__booting__packs">¡ENTRENEMOS!</a>
                     </Link>
 
                 </div>
