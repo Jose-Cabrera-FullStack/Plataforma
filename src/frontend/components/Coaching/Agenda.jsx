@@ -8,7 +8,7 @@ import information from '../../assets/static/images/info.svg'
 import '../../assets/styles/components/Principal.scss';
 import '../../assets/styles/components/Schedule/Agenda.scss';
 
-const dollarAR = 82;
+const dollarAR = 100;
 
 const Agenda = (props) => {
 
@@ -176,8 +176,6 @@ const Agenda = (props) => {
                     </div>
 
                     <select name="classes" onChange={handleInput} className="select__agenda select__agenda--fix">
-                        <option value="2">2</option>
-                        <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
                         <option value="6">6</option>

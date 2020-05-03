@@ -1,3 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="44" viewBox="0 0 30 44">
-    <path fill="#FFF" fill-rule="evenodd" d="M16.726 0C24.045 0 30 5.955 30 13.274v17.452C30 38.046 24.045 44 16.726 44h-3.452C5.955 44 0 38.045 0 30.726V13.274C0 5.955 5.955 0 13.274 0zm0 3h-3.452C7.6 3 3 7.6 3 13.274v17.452C3 36.4 7.6 41 13.274 41h3.452C22.4 41 27 36.4 27 30.726V13.274C27 7.6 22.4 3 16.726 3zM15.5 8.5c1.035 0 1.5.84 1.5 1.875v6.25c0 1.035-.465 1.875-1.5 1.875s-1.5-.84-1.5-1.875v-6.25c0-1.035.465-1.875 1.5-1.875z"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58.505" height="81.859" viewBox="0 0 58.505 81.859">
+  <defs>
+    <filter id="Trazado_241" x="0.035" y="0" width="58.456" height="52.469" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Trazado_242" x="32.505" y="29.193" width="26" height="26.057" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-2"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Trazado_243" x="0" y="16.81" width="58.505" height="65.049" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-3"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Trazado_244" x="13.97" y="10.019" width="30.584" height="35.434" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-4"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_415" data-name="Grupo 415" transform="translate(-669 -652)">
+    <g transform="matrix(1, 0, 0, 1, 669, 652)" filter="url(#Trazado_241)">
+      <path id="Trazado_241-2" data-name="Trazado 241" d="M386,327.575a16.418,16.418,0,0,1,1.33-5.017,13.384,13.384,0,0,1,6.083-6.55,17.29,17.29,0,0,1,6.918-1.833c.156-.015.3-.06.453-.075h2.674c1.047.15,2.108.24,3.141.451a14,14,0,0,1,7.541,3.906,14.583,14.583,0,0,1,3.99,8.352,21.96,21.96,0,0,1,.212,3.2c.014,3.515.014,7.045.014,10.56" transform="translate(-372.86 -301.1)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 669, 652)" filter="url(#Trazado_242)">
+      <path id="Trazado_242-2" data-name="Trazado 242" d="M614.8,508.461h0" transform="translate(-569.29 -466.24)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 669, 652)" filter="url(#Trazado_243)">
+      <path id="Trazado_243-2" data-name="Trazado 243" d="M417.605,441.172v8.277a17.287,17.287,0,0,1-1.443,7.181,13.17,13.17,0,0,1-6.057,6.5,19.33,19.33,0,0,1-9.906,1.893,17.689,17.689,0,0,1-7.5-1.833,13.571,13.571,0,0,1-6.665-7.872,17.854,17.854,0,0,1-.934-5.994V426" transform="translate(-372.1 -396.19)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 669, 652)" filter="url(#Trazado_244)">
+      <path id="Trazado_244-2" data-name="Trazado 244" d="M484.762,385.456c0,.8-.015,1.592,0,2.4a2.285,2.285,0,1,0,4.567,0q.023-2.343,0-4.687a2.285,2.285,0,1,0-4.567,0C484.747,383.939,484.762,384.69,484.762,385.456Z" transform="translate(-457.79 -357.78)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    </g>
+  </g>
 </svg>

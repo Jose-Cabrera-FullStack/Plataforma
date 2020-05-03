@@ -3,7 +3,7 @@
     height: 100vh;
 }
 .overlay__principal{
-    background-image: linear-gradient(168deg, #454ade -100%, rgba(0, 0, 0, 0.22));
+    background-image: linear-gradient(168deg, #010215 -100%, rgba(0, 0, 0, 0.22));
     width: 99vw;
     height: 100vh;
     position: absolute;
@@ -27,13 +27,14 @@
     letter-spacing: 10px;
     color: #ffffff;
     margin-left: 100px;
-    padding-top: 170px;
+    padding-top: 100px;
     text-shadow: 0 0 5px #ffffff;
 }
 
 .blue__lightning{
-    color: #56FFFB;
-    text-shadow: 0 0 10px #56FFFB;
+    color: #010215;
+    text-shadow: 0 0 1px #010215;
+    background: white;
 }
 
 .contentSection__internal{
@@ -60,7 +61,7 @@
 
 .btn__secondary--fix{
     margin: 15%;
-    width: 360px;
+    width: 300px;
     height: 46px;
 }
 
@@ -84,6 +85,9 @@
 .scroll__principal{
     display: flex;
     align-items: center;
-  justify-content: center;
-  height: 40%;
+    justify-content: center;
+    height: 40%;
+    position: absolute;
+    top: 70vh;
+    left: 50vw;
 }

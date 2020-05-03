@@ -13,10 +13,10 @@ const Menu = props => {
     const optionSelectedLength = props.getValue().length || 0;
     return (
       <components.Menu {...props}>
-        {optionSelectedLength < 5 ? (
+        {optionSelectedLength < 3 ? (
           props.children
         ) : (
-          <div style={{ margin: 15 }}>Solo se puede escoger 5 fechas distintas.</div>
+          <div style={{ margin: 15 }}>Solo se puede escoger 3 fechas distintas.</div>
         )}
       </components.Menu>
     );

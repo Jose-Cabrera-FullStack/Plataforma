@@ -1,23 +1,28 @@
 .btn__secondary {
-    color: #ffffff;
+    color: #56fffb;
     font-size: 16px;
     font-family: Roboto;
-    padding: 16px 30px;
-    border: none;
+    padding: 13px 25px;
+    border: 1px solid #56fffb;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 4px;
+    text-shadow: 0px 0px 3px #56fffb;
     text-align: center;
-    background-color: #454ade;
+    background-color: initial;
+    box-shadow: 0px 0px 5px #56fffb;
 }
 
 .btn__primary {
-
     background-color: #f1f1f1;
+    font-family: Roboto;
     color: black;
     font-size: 16px;
-    padding: 16px 30px;
-    border: none;
+    text-shadow: 0px 0px 3px #e01ac7;
+    padding: 13px 25px;
+    border: 1px solid #e01ac7;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 4px;
     text-align: center;
+    background-color: initial;
+    box-shadow: 0px 0px 5px #e01ac7;
 }

@@ -1,0 +1,91 @@
+@keyframes movement__left__to__right {
+    0%,
+    100% {
+      left:0px;
+    }
+    50% {
+      left:200px;
+    }
+  }
+
+@keyframes movement__right__to__left {
+    0%,
+    100% {
+      right:0px;
+    }
+    50% {
+      right:200px;
+    }
+  }
+@keyframes movement__top__to__bottom {
+    0%,
+    100% {
+      top:0px;
+    }
+    50% {
+      top:200px;
+    }
+  }
+@keyframes movement__bottom__to__top {
+    0%,
+    100% {
+      bottom:0px;
+    }
+    50% {
+      bottom:200px;
+    }
+  }
+
+.movement__left__to__right{ animation: movement__left__to__right 10s infinite;}
+.movement__right__to__left{ animation: movement__right__to__left 10s infinite;}
+.movement__top__to__bottom{ animation: movement__top__to__bottom 10s infinite;}
+.movement__bottom__to__top{ animation: movement__bottom__to__top 10s infinite;}
+
+.rectangle__principal{
+    width: 73px;
+    height: 11px;
+    background: #e01ac7;
+    box-shadow: 0px 0px 2px 1px rgb(204, 6, 187);
+    position: absolute;
+}
+
+.rectangle__secundary{
+    width: 73px;
+    height: 11px;
+    background: #56FFFB;
+    box-shadow: 0px 0px 2px 1px rgba(86,255,251,1);
+    position: absolute;
+}
+
+.rectangle__white{
+  width: 11px;
+  height: 73px;
+  background: #fff;
+  box-shadow: 0px 0px 2px 1px white;
+  position: absolute;
+}
+
+.rectangle__1{
+    top: 76vh;
+}
+.rectangle__2 {
+  top: 48vh;
+}
+.rectangle__3{
+  top: 75vh;
+}
+
+.rectangle__4 {
+  left: 92vw;
+}
+
+.rectangle__5 {
+  bottom: 46vw;
+}
+
+.rectangle__6 {
+  top: 55vh;
+  width: 120px;
+  height: 10px;
+  margin: 19% 0px 0px 110%;
+}

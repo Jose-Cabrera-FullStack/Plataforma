@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import Socials from '../Socials';
 
 import '../../assets/styles/components/Principal.scss';
-import '../../hooks/loader'
-
+import '../../assets/styles/components/Animation.scss';
+import Scroll from '../../assets/static/images/Scroll.svg';
 
 
 const Principal = () => (
@@ -34,18 +34,30 @@ const Principal = () => (
                             <h1 class="title__principal contentTitle">
                                 PREPARATE PARA <br />
                                 SER MAS QUE <br />
-                                <strong class="blue__lightning">¡UN ESPECTADOR!</strong>_
+                                UN <strong class="blue__lightning">ESPECTADOR!</strong>
                             </h1>
 
+                            <div className="rectangle__principal movement__left__to__right rectangle__1"></div>
+                            
+                            <div className="rectangle__secundary movement__right__to__left rectangle__2"></div>
+                            
+                            <div className="rectangle__white movement__top__to__bottom rectangle__3"></div>
+                            
+                            <div className="rectangle__white movement__top__to__bottom rectangle__4"></div>
+            
+                            <div className="rectangle__principal movement__right__to__left rectangle__5"></div>
+                            
+                            <div className="rectangle__principal movement__left__to__right rectangle__6"></div>
+
                             <p class="paragraph__principal">BRINDAMOS COACHING A PLAYERS DE LEAGUE OF LEGENDS <br />
-                                DESDE LA TEMPORADA 7.<strong class="blue__lightning "> TU MOMENTO DE SER <br />
-                                EL PROTAGONISTA ES AHORA...</strong>
+                                DESDE LA TEMPORADA 7.TU MOMENTO DE SER <br />
+                                <strong class="blue__lightning ">EL PROTAGONISTA</strong> ES AHORA...
                                 
                             </p>
 
                             <div class="btn__principal">
                                 <Link to="/coaching">
-                                <button class="btn btn__secondary btn__secondary--fix">
+                                <button class="btn__secondary btn__secondary--fix">
                                     ¡VAMOS A ENTRENAR!
                                 </button>
                                 </Link>
@@ -59,9 +71,9 @@ const Principal = () => (
 
             </div>
 
-            {/* <figure className="scroll__principal col-11">
-                <img src="./static/images/scroll.svg" alt="" />
-            </figure> */}
+            <figure className="scroll__principal">
+                <img src={Scroll} alt="" />
+            </figure>
         </div>
     </section>
 
