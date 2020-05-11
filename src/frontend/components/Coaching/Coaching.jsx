@@ -148,8 +148,7 @@ export default class Calendar extends React.Component {
 
     MonthNav = () => {
         return (
-            <span className="label-month"
-                onClick={(e) => { this.onChangeMonth(e, this.month()) }}>
+            <span className="label-month">
                 {this.month()}
                 {this.state.showMonthPopup &&
                     <this.SelectList data={this.months} />
@@ -199,7 +198,7 @@ export default class Calendar extends React.Component {
                 :
                 <span
                     className="label-year"
-                    onDoubleClick={(e) => { this.showYearEditor() }}>
+                >
                     {this.year()}
                 </span>
         );
@@ -255,14 +254,15 @@ export default class Calendar extends React.Component {
         // console.log("SELECTED MONTH: ", this.state.selectedMonth);
         // console.log("SELECTED YEAR: ", this.state.selectedMonth);
 
-        let daysInMonth = [];
+        let daysInMonth = [];  
         // console.log("SELECTED MONTH: ", parseInt(this.state.selectedMonth));
         // console.log("ACTUAL MONTH: ", parseInt(this.state.todayMonth));
         for (let day = 1; day <= this.daysInMonth(); day++) {
             let className = (day == this.currentDay() ? "day current-day" : "day");
             let selectedClass = (day == this.state.selectedDay ? " selected-day " : "")
             let t = day
-            if (t < parseInt(this.state.today) || parseInt(this.state.todayMonth) > parseInt(this.state.selectedMonth) || parseInt(this.state.selectedMonth) > (parseInt(this.state.todayMonth) + 1) || parseInt(this.year()) < parseInt(this.state.selectedYear)) {
+            // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------> +1 se agrega para colocar el mes extra al actual.
+            if (t < parseInt(this.state.today) || parseInt(this.state.todayMonth) > parseInt(this.state.selectedMonth) || parseInt(this.state.selectedMonth) > (parseInt(this.state.todayMonth)) || parseInt(this.year()) < parseInt(this.state.selectedYear)) {
                 daysInMonth.push(
                     <td key={day} className={selectedClass + "disable"} disabled>
                         <span className="calendar__days">{day}</span>

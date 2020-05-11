@@ -1,5 +1,6 @@
 import React, { useState }  from 'react';
 import '../../assets/styles/components/Services.scss';
+import '../../assets/styles/components/Animation.scss';
 import Ranked from '../../assets/static/images/coaching/ranked.svg';
 import TFT from '../../assets/static/images/coaching/tft.svg';
 import Duo from '../../assets/static/images/coaching/duo-queue.svg';
@@ -33,6 +34,7 @@ const Services = () => {
                     </figure>
                 </span>
             </div>
+            
             <div className="service" onMouseEnter={() => setIsShown2(true)} onMouseLeave={() => setIsShown2(false)}>
                 <span>
                     <h3 className="title__service ">TRABAJAR EN<br />EQUIPO</h3>

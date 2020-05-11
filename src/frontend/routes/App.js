@@ -6,6 +6,8 @@ import Register from '../containers/Register';
 import Coaching from '../containers/Coaching';
 import ContactUs from '../containers/ContactUs';
 import AboutUs from '../containers/AboutUs';
+import PrivacyPolicy from '../containers/PrivacyPolicy';
+import TermAndConditions from '../containers/TermAndConditions';
 import FAQ from '../containers/FAQ';
 import NotFound from '../containers/NotFound';
 import Profile from '../containers/Profile';
@@ -28,6 +30,8 @@ const App = ({ isLogged }) => (
                 <Route exact path="/coaching" component={Wrapper(isLogged ? Coaching : Login)} />
                 <Route exact path="/contactanos" component={Wrapper(ContactUs)} />
                 <Route exact path="/sobre-nosotros" component={Wrapper(AboutUs)} />
+                <Route exact path="/terminos-y-condiciones" component={Wrapper(TermAndConditions)} />
+                <Route exact path="/privacidad" component={Wrapper(PrivacyPolicy)} />
                 <Route exact path="/perfil" component={Wrapper(isLogged ? Profile : Login)} />
                 <Route exact path="/irons" component={Wrapper(isLogged ? Irons : Login)} />
                 <Route exact path="/diamonds" component={Wrapper(isLogged ? Diamonds : Login)} />

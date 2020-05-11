@@ -22,7 +22,7 @@ const Login = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.loginUser(form, '/');
+    props.loginUser(form, '/perfil');
   };
 
   // const googleLogin = 'http://localhost:4000/auth/google-oauth/' *habilitar el login cuando se reciba los campos necesarios (ex : status)*

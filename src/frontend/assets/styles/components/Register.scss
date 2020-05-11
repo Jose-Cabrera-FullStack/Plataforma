@@ -30,7 +30,7 @@
 .register__container{
   width: 583px;
   height: 970px;
-  background-color: #1a1919f2;
+  background-color: #020202;
 }
 
 .login p {
@@ -73,6 +73,10 @@
   height: 35px;
 }
 
+.register__input:focus{
+  background: #e01ac7;
+}
+
 .register__container__inside{
   margin: 70px -4px 0px 105px;
 }
@@ -96,8 +100,8 @@
   font-size: 12px;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.18;
-  letter-spacing: 0.21px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
   color: #ffffff;
   margin: 0 0 10% 0;
 }
@@ -125,6 +129,15 @@
   color: #56fffb;
   margin: 0px 51px 0px 0;
 }
+
+.links__hover{
+  color: #56fffb;
+}
+
+.links__hover:hover{
+  color: #e01ac7;
+}
+
 .slogan{
   margin: 40% 10% 0px 11%;
   text-align: center;

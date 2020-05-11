@@ -214,10 +214,15 @@ const Agenda = (props) => {
                         </div>
                         )
                     } */}
+                        {props.dates.length < 2 ?
+                            <div className="agenda__paypal__disable" disable>
+                                <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit} disable />
+                            </div> : 
+                            <div className="agenda__paypal">
+                                <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit} />
+                            </div>
+                        }
 
-                        <div className="agenda__paypal">
-                            <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit} />
-                        </div>
             </form>
             <ul className="agenda__bullet__list">
                 <li>Horarios flexibles que se adapten a tus necesidades</li>

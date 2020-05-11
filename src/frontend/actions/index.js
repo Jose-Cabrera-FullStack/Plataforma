@@ -79,10 +79,13 @@ export const sendEmail = (payload, redirectUrl) => {
   };
 };
 
-export const sendConfirmation = (payload) => {
+export const sendConfirmation = (payload,redirectUrl) => {
   return(dispatch) => {
     axios.post('/api/email/confirm', payload)
     .then(({data}) => dispatch(sendRequest(data)))
+    .then(()=>{
+      window.location.href = redirectUrl
+    })
     .catch(error => dispatch(setError(error)))
   };
 };

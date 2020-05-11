@@ -12,6 +12,16 @@
     box-shadow: 0px 0px 5px #56fffb;
 }
 
+.btn__secondary:hover {
+    background-color: #56fffb; /* Green */
+    text-shadow: 0px 0px 3px black;
+    color: black;
+}
+
+.navbar__menu .btn__secondary a{
+    color: black;
+}
+
 .btn__primary {
     background-color: #f1f1f1;
     font-family: Roboto;
@@ -25,4 +35,21 @@
     text-align: center;
     background-color: initial;
     box-shadow: 0px 0px 5px #e01ac7;
+}
+
+.btn__primary:hover{
+    background-color: #e01ac7; /* Green */
+    text-shadow: 0px 0px 3px black;
+    color: black;
+}
+
+.btn__not__allowed{
+    cursor: not-allowed;
+    background: gray;
+    color: #000000;
+}    
+
+.btn__not__allowed:hover{
+    background: gray;
+    color: #000000;
 }

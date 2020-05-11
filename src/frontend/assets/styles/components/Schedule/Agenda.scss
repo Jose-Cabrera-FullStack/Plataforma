@@ -163,7 +163,11 @@ span:hover .schedule__information__rectangle {
 }
 
 .agenda__bullet__list li {
-    margin: 0 0 15px 0px;
+    margin: 0 0 25px 0px;
+}
+
+.agenda__bullet__list__text{
+    margin: 0;
 }
 
 .agenda__bullet__list li::before {
@@ -176,8 +180,12 @@ span:hover .schedule__information__rectangle {
 
 .agenda__paypal {
     position: absolute;
-    right: 0%;
-    top: 115%;
+    right: 10%;
+    top: 130%;
+}
+
+.agenda__paypal__disable {
+    cursor: not-allowed;
 }
 
 .schedule__information__rectangle {

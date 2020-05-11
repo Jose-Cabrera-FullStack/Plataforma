@@ -116,8 +116,8 @@ const Footer = (props) => {
             <hr className="line__footer" />
 
             <p className="copyright__footer">
-                © 2019 Summonerscave.com All Rights Reserved <br />
-                <Link to="/term">Terms of use</Link> | <Link to="/privacy">Privacy Policy</Link>
+                © 2020 Summonerscave.com All Rights Reserved <br />
+                <Link to="/terminos-y-condiciones">Terminos y Condiciones</Link> | <Link to="/privacidad">Politica de Privacidad</Link>
             </p>
 
         </footer>

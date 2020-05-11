@@ -17,6 +17,10 @@ const Register = (props) => {
     verified: false
   });
 
+  const [checked, setChecked] = useState(false)
+
+  const handleClick = () => setChecked(!checked)
+
   const handleInput = (event) => {
     setValues({
       ...form,
@@ -28,6 +32,8 @@ const Register = (props) => {
     event.preventDefault();
     props.registerUser(form, '/login');
   };
+
+  console.log(checked)
 
   return (
     <>
@@ -88,22 +94,22 @@ const Register = (props) => {
               <hr className="register__input__line" />
 
               <div className="register__checkbox">
-                <input type="checkbox" />Leí los "Los Términos y Condiciones", también leí "Privacy Policy"
+                <input type="checkbox" checked={checked} onClick={handleClick}/>Leí los "<Link to="/terminos-y-condiciones"><strong className="links__hover">Términos y Condiciones</strong></Link>", también leí "<Link to="/privacidad"><strong className="links__hover">Politicas de Privacidad</strong></Link>"
               </div>
-
-              <button className="btn btn__secondary btn__register " type="submit">Registrarme</button>
+              {checked ? <button className="btn btn__secondary btn__register " type="submit">Registrarme</button> : <button className="btn btn__secondary btn__register btn__not__allowed " type="submit" disabled>Registrarme</button> }
+            
             </form>
 
             <div className="links__display">
               <div>
                 <Link to="/login">
-                  Iniciar sesión
+                  <strong className="links__hover">Iniciar sesión</strong>
                 </Link>
               </div>
 
-              <div>
+              <div >
                 <Link to="/login">
-                  ¿No haz recibido aún el mail de confirmación?
+                  <strong className="links__hover">¿No haz recibido aún el mail de confirmación?</strong>
                 </Link>
               </div>
             </div>
