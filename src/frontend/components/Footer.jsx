@@ -13,7 +13,7 @@ import Linkedin from '../assets/static/images/social-network/twitter-color.svg';
 
 const Footer = (props) => {
     const [form, setValues] = useState({
-        name:'SOLO INFORMACION',
+        name:'SOLO INFORMACION ',
         email : '',
         case: 'INFORMACION',
         message: 'SOLO INFORMACION'
