@@ -1,0 +1,153 @@
+.register {
+  height: 970px;
+  background-image:
+  linear-gradient(to bottom, #56fffb7d ,#56fffbe0),
+  url(../Screen/Ekko.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: relative;
+  bottom: 12vh;
+  margin: 0 0px -7% 0px;
+}
+
+.register__container__title{
+  width: 206px;
+  height: 43px;
+  text-shadow: 0 0 3px #ffffff;
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 30% 0 1% -4%;
+}
+
+.register__container{
+  width: 583px;
+  height: 970px;
+  background-color: #020202;
+}
+
+.login p {
+  width: 240px;
+  height: 14px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: 0.23px;
+  text-align: left;
+  color: #cbcbcd;
+}
+
+.register p {
+  width: 240px;
+  height: 14px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: 0.23px;
+  text-align: left;
+  color: #cbcbcd;
+}
+
+.register__input {
+  margin: 2% 0 0% 0px;
+  border: none;
+  background: none;
+  font-family: Roboto;
+  width: 75%;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  height: 35px;
+}
+
+.register__input:focus{
+  background: #e01ac7;
+}
+
+.register__container__inside{
+  margin: 70px -4px 0px 105px;
+}
+
+.register__input__line{
+  border-top: 1.5px solid #56fffb;
+  box-shadow: 0 0px 10px #56fffb;
+  border-radius: 21px;
+  margin: 0px 24.3% 5% 0px;
+}
+
+.register__input__line--fix{
+  margin: 0px 70% 12% 5px;
+  border-top: 3.5px solid #56fffb;
+}
+
+.register__checkbox{
+  width: 380px;
+  height: 0px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin: 0 0 10% 0;
+}
+
+.btn__register{
+  width: 370px;
+  margin: 10% 112px 9% 0px;
+}
+
+.links__display{
+  display: flex;
+}
+
+.links__display a {
+  width: 557px;
+  height: 13px;
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  letter-spacing: 0.21px;
+  text-align: center;
+  color: #56fffb;
+  margin: 0px 51px 0px 0;
+}
+
+.links__hover{
+  color: #56fffb;
+}
+
+.links__hover:hover{
+  color: #e01ac7;
+}
+
+.slogan{
+  margin: 40% 10% 0px 11%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.register__container__title--login{
+  margin: 30% 0 1% -7%;
+}
+
+.register__container__title--contact{
+  margin: 30% 0 1% 0%;
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.545" height="16.545" viewBox="0 0 16.545 16.545">
+    <defs>
+        <filter id="prefix__Trazado_236" width="16.545" height="16.545" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation=".5"/>
+            <feFlood flood-color="#56fffb"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="prefix__info-24px" transform="translate(.146 .146)">
+        <path id="prefix__Trazado_235" d="M0 0h16.254v16.254H0z" data-name="Trazado 235" style="fill:none"/>
+        <g transform="translate(-.15 -.15)">
+            <path id="prefix__Trazado_236-2" d="M8.773 2a6.773 6.773 0 106.773 6.773A6.775 6.775 0 008.773 2zm.677 10.159H8.1V8.1h1.35zm0-5.418H8.1V5.386h1.35z" data-name="Trazado 236" transform="translate(-.5 -.5)" style="fill:#56fffb"/>
+        </g>
+    </g>
+</svg>

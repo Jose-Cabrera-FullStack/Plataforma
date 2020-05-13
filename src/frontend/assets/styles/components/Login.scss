@@ -1,0 +1,32 @@
+.login {
+  height: 970px;
+  background-image:
+  linear-gradient(to bottom, #b8498470 ,#b84984),
+  url(../Screen/League-displays.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: relative;
+  bottom: 12vh;
+  margin: 0 0px -7% 0px;
+}
+
+.login__container__title{
+  width: 206px;
+  height: 43px;
+  text-shadow: 0 0 3px #ffffff;
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin: 30% 0 1% -4%;
+}
+
+.social__network__login{
+  padding: 0;
+}

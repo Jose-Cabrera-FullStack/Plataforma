@@ -1,0 +1,168 @@
+.calendar-container,
+.calendar,
+.calendar-header,
+td,
+tr {
+    margin: 0;
+    text-align: center;
+    width: 1px;
+}
+
+.calendar {
+    background-color: white;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 939px;
+    height: 440px;
+    margin: 0px 0px 0px 18vw;
+    border-radius: 19px 19px 0 0;
+}
+
+.calendar-header {
+    border-bottom: 1px solid #454ade;
+    font-size: 1.6em;
+}
+
+.calendar-header td {
+    padding-left: 6.9%;
+}
+
+.empty-slot,
+.week-day {
+    text-align: center;
+    height: 40px;
+}
+
+.week-day {
+    font-size: 0.8em;
+    padding: 0px 23px 0px 87px;
+    position: relative;
+    right: 4%;
+}
+
+.day {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    padding: 24px;
+    font-size: 0.8em;
+}
+
+.current-day {
+    background-color: #454ade;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 2%;
+    color: white;
+}
+
+.selected-day {
+    background-color: #56fffb;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 2%;
+    color: white;
+}
+
+.month-popup {
+    position: absolute;
+    padding: 5px;
+    background: white;
+    border: 2px solid #56fffb;
+}
+
+.month-popup div {
+    padding: 0.3em;
+}
+
+.nav-month {
+    position: absolute;
+    top: 0.6em;
+    font-size: 0.6em;
+    right: 3px;
+}
+
+.selected {
+    background-color: #454ade
+}
+
+.disable {
+    opacity: 0.2;
+    padding: 24px;
+}
+
+.editor-year {
+    max-width: 3.6em;
+}
+
+.label-month,
+.label-year {
+    width: 54px;
+    height: 27px;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.86;
+    letter-spacing: normal;
+    text-align: center;
+    color: #2c3737;
+    margin: 43px 47px 0px 0;
+}
+
+.label-month {
+    cursor: pointer;
+}
+
+.calendar__days {
+    position: relative;
+    padding: 0;
+}
+
+.calendar__arrows {
+    cursor: pointer;
+    display: flex;
+}
+
+.calendar__button::selection {
+    background: none;
+}
+
+.calendar__button {
+    width: 60px;
+    height: 20px;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+.icon__information{
+    cursor: pointer;
+    height: 30px;
+    margin-top: 30%;
+}
+
+.calendar__mini_rectangle {
+    width: 91px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: #454ade;
+    color: white;
+    cursor: pointer;
+    margin: 30px 125px 30px 90px;
+}
+
+.calendar__top {
+    display: flex;
+    margin: 0px 0 0 22vh;
+}

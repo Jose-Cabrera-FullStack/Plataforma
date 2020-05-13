@@ -1,0 +1,94 @@
+.principal {
+    width: 99vw;
+    height: 100vh;
+}
+.overlay__principal{
+    background-image: linear-gradient(168deg, #010215 -100%, rgba(0, 0, 0, 0.22));
+    width: 99vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+}
+
+.container__principal {
+    padding-top: 10px;
+    display: flex;
+}
+
+.title__principal {
+    width: 517px;
+    height: 135px;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: 10px;
+    color: #ffffff;
+    margin-left: 100px;
+    padding-top: 100px;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+.blue__lightning{
+    color: #010215;
+    text-shadow: 0 0 1px #010215;
+    background: white;
+    letter-spacing: 1.5px;
+}
+
+.contentSection__internal{
+    position: relative;
+    bottom: 2vh;
+}
+
+.margin {
+    margin: 50px 30.5px 0px 100px;
+}
+
+.paragraph__principal {
+    height: 52px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-left: 100px;
+}
+
+.btn__secondary--fix{
+    margin: 15%;
+    width: 300px;
+    height: 46px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column; 
+    position: absolute;
+    left: 85vw;
+    top: 40vh;
+    cursor: pointer
+}
+.icon{
+    margin-bottom: 10px;
+    filter: drop-shadow( 0px 0px 4px rgba(255, 255, 255, .7));
+}
+
+.discord{
+    width: 30px;
+}
+
+.scroll__principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    position: absolute;
+    top: 70vh;
+    left: 50vw;
+}

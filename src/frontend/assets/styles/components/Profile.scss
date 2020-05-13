@@ -1,0 +1,90 @@
+.profile {
+    height: 1080px;
+    background-image: linear-gradient(to bottom, rgba(69, 74, 222, 0.9), rgba(27, 31, 57, 0.9)), url(../Screen/renek.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    bottom: 12vh;
+    margin: 0 0px -7% 0px;
+  }
+
+.profile__display{
+  display: flex;
+}
+
+.profile__user__avatar{
+  margin: 35% 0px 10% 15%;
+  width: 65%;
+}
+
+.profile__user__data{
+  background: #454ade;
+    width: 65%;
+    height: 44vh;
+    color: #fff;
+    margin: 0 0 0 15%;
+    border-radius: 19px;
+}
+
+.profile__user__data div{
+  margin: 0px -28px 0px 36px;
+  padding: 1px 0 0 0;
+}
+
+.profile__user__data div h5{
+  margin: 24px 4px;
+  width: 177px;
+  height: 18px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.register__input__line--profile{
+  top: -15px;
+  position: relative;
+}
+
+.profile__right{
+  margin: 17% 0px;
+  color: #fff;
+}
+
+.profile__welcome{
+  background: #454ade;
+  width: 455px;
+  height: 132px;
+  border-radius: 19px;
+  margin: 10% 0px 10% 0;
+}
+
+.profile__stats{
+  height: 349px;
+  background: #454ade;
+  border-radius: 19px;
+}
+
+.profile__stats table{
+  border-spacing: 0px;
+}
+
+.profile__stats__title th{
+  height: 60px;
+}
+
+.profile__stats td{
+  width: 133px;
+  height: 51px;
+
+}
+
+.profile__stats tr:nth-child(even) {
+  background-color: #100404
+}

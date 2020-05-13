@@ -1,0 +1,52 @@
+.selected__date {
+    width: 70.3%;
+    height: 891.3px;
+    opacity: 0.94;
+    background-color: #000000;
+    margin: 0px 0px 0px 18vw;
+    border-radius: 0 0 19px 19px;
+}
+
+.selected__date__form > div > div > div > div > div  {
+    background: #454ade;
+    color: #56fffb;
+}
+.selected__date__form > div > div > div > div > div > div::selection {
+    background:none;
+    color:none
+}
+.selected__date__form > div > div > div > div > div > div {
+    background-color:#454ade;
+    color:#56fffb
+}
+
+.selected__date__form > div  {
+    border: 2px solid #56fffb;
+    border-radius: 6px
+}
+
+.selected__date__title {
+    width: 724px;
+    height: 24px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.22;
+    letter-spacing: normal;
+    text-align: center;
+    text-shadow: 0px 0px 10px;
+    color: #56fffb;
+    margin: 0;
+    padding: 4% 0px 0px 17%;
+}
+
+.selected__date__form {
+    margin: 0px 10% 0px 10%;
+    padding: 7% 0 0 0;
+}
+
+.break__line{
+    margin: 0;
+}

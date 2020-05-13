@@ -1,0 +1,40 @@
+.schedule {
+    width: 99vw;
+    background-image:
+        linear-gradient(to bottom, rgba(69, 74, 222, 0.9),rgba(27, 31, 57, 0.9)),
+        url(../../Screen/fight__wallpeaper.png);
+    background-size: cover;
+    position: relative;
+    bottom: 13vh;
+    margin: 0px 0 -8% 0px;
+}
+
+.schedule__title {
+    width: 845px;
+    height: 43px;
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.34;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    padding: 25vh 0px 0px 50vh;
+}
+
+.schedule__subtitle {
+    width: 843px;
+    height: 24px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    padding: 3vh 0px 0px 29vw;
+}

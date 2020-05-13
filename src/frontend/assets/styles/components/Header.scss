@@ -1,0 +1,112 @@
+.navbar {
+  width: auto;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+  background: transparent; background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0));
+  position: relative;
+  z-index: 1;
+}
+
+.navbar a {
+  color: #ffffff
+}
+.navbar__logo{
+  cursor: pointer;
+}
+
+.navbar__title {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-left: 113px;
+  color: #ffffff;    
+  position: relative;
+  top: 8px;
+}
+
+.register__btn{
+  position: relative;
+  right: 4px;
+
+}
+
+.navbar__list {
+  justify-content: flex-end;
+  display: flex;
+
+}
+
+.padding__top{
+  padding-top: 16px;
+}
+
+.navbar__menu {
+  width: 62px;
+  height: 16px;
+  font-family: Roboto;
+  font-size: 16px;
+  justify-content: flex-end;
+  margin: 0 30px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.navbar a:hover{
+  color:#56fffb
+}
+
+.active{
+  color:#56fffb !important;
+  text-shadow: 0 0 2px #56fffb;
+}
+
+.navbar__menu__perfil{
+  display: flex;
+  position: relative;
+  top: -5px;
+
+}
+
+.navbar__menu__perfil__avatar{
+  margin: 0 4px 0px 0px;
+}
+
+.navbar__menu__perfil__name{
+  color: #56fffb;
+  margin: 7% 6vw 22px 1vw;
+  position: relative;
+}
+
+.navbar__menu__perfil__arrow {
+  margin: 0;
+}
+
+.navbar__menu__perfil__menu{
+  display: none;
+}
+
+.navbar__menu__perfil__menu--on{
+  color: #ffffff;
+  background: #454ade;
+  border: 2px solid #56fffb;
+  border-radius: 19px;
+  width: 99px;
+  height: 110px;
+  position: absolute;
+  text-align: center;
+  margin: 60px 0px 0px -20px;
+}
+.navbar__menu__perfil__menu--on a{
+  position: relative;
+  top: 6%;
+}

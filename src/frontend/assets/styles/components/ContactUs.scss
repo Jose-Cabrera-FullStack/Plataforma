@@ -1,0 +1,33 @@
+.contact {
+    height: 970px;
+    background-image:
+    linear-gradient(to bottom, rgba(27, 31, 59, 0),#454ade),
+    url(../Screen/ziggs.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    bottom: 12vh;
+    margin: 0 0px -7% 0px;
+}
+
+.contact p {
+    width: 219px;
+    height: 14px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: 0.23px;
+    color: #cbcbcd;
+}
+
+.contact textarea {
+    height: 150px;
+}
+
+.contact textarea::placeholder {
+    color:#56fffb;
+}

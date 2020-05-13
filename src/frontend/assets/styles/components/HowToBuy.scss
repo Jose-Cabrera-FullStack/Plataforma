@@ -1,0 +1,104 @@
+.how-to-buy {
+    width: auto;
+    height: 768px;
+    background-image:
+        linear-gradient(to bottom, rgba(69, 74, 222, 0.9), rgba(27, 31, 57, 0.9)),
+        url(../Screen/stadium.jpg);
+    background-size: cover;
+}
+
+.container__how-to-buy {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.title__how-to-buy {
+    font-family: Roboto;
+    font-size: 70px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: 8.89px;
+    color: #ffffff;
+    position: relative;
+    left:113px;
+    top: 273px;
+}
+
+.informations__how-to-buy{
+    position: relative;
+    right: 8vw;
+    top: 50px;
+}
+
+.paragraph__how-to-buy{
+    text-align: left;
+}
+
+.information__how-to-buy {
+    display: flex;
+}
+
+.information__how-to-buy {
+    flex-wrap: inherit;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.example__how-to-buy{
+    position: relative;
+    right: -20px;
+
+}
+
+.text__1{
+    position: relative;
+    top: 5vh;
+}
+
+.text__2{
+    position: relative;
+    top: 4vh;
+}
+
+.text__3{
+    position: relative;
+}
+
+.text__4{
+    position: relative;
+}
+
+.example__1{
+    position: relative;
+    left: 4vw;
+}
+
+.example__2{
+    position: relative;
+    left: 4vw;
+}
+
+.example__3{
+    position: relative;
+    right: 0.6vw;
+}
+
+.example__4{
+    position: relative;
+    left: 0.5vw;
+}
+
+.icon__how-to-buy{
+    position: relative;
+    right: 2vh;
+    filter: drop-shadow(0px 0px 4px #56fffb);
+}
