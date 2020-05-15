@@ -29,12 +29,12 @@ const PaypalCheckoutButton = (props) => {
     const payment = {
       transactions: [
         {
-          item_list:'pruebita',
+          item_list:'Sesiones de League of Legends',
           amount: {
             total: props.order.total,
             currency: paypalConf.currency,
           },
-          description: 'Compra en Test App',
+          description: 'Clases personalizadas para jugar de manera profesional League of Legends',
           custom: props.order.customer || '',
           item_list: {
             items: props.order.items,

@@ -7,7 +7,7 @@ import { components } from "react-select";
 import '../../assets/styles/components/Schedule/SelectedDay.scss';
 
 
-const animatedComponents = makeAnimated();
+// const animatedComponents = makeAnimated();
 
 const Menu = props => {
     const optionSelectedLength = props.getValue().length || 0;

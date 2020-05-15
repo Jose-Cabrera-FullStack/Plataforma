@@ -344,14 +344,14 @@ export default class Calendar extends React.Component {
                                     <td colSpan="6">
                                         <div className="calendar__top">
                                             <div className="calendar__mini_rectangle" onClick={(e) => { this.prevMonth() }}>
-                                                <spam className="calendar__button" >Anterior</spam>
+                                                <strong className="calendar__button" >Anterior</strong>
                                             </div>
                                             <div className="schedule__information">
                                                 <this.MonthNav />
                                                 <img className="icon__information" src={information} alt="information" onMouseEnter={() => this.hoverOn()} onMouseLeave={this.hoverOff} />
                                                 <span>
                                                 {this.state.hover ? 
-                                                <div className={"schedule__information__rectangle"}>
+                                                <div className="schedule__information__rectangle">
                                                         <p className="schedule__information__pop">Acá escogerás las fechas en la que
                                                             veras las clases personalizadas. Después
                                                             de escoger nos estaremos comunicando
@@ -364,7 +364,7 @@ export default class Calendar extends React.Component {
                                                 </span>
                                             </div>
                                             <div className="calendar__mini_rectangle" onClick={(e) => { this.nextMonth() }}>
-                                                <spam className="calendar__button" >Siguiente</spam>
+                                                <strong className="calendar__button" >Siguiente</strong>
                                             </div>
                                         </div>
                                     </td>

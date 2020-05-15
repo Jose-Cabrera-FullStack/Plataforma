@@ -62,12 +62,12 @@ const Header = props => {
                   <p className="navbar__menu__perfil__name">{user.name}</p>
                 <div className={isToggled ? "navbar__menu__perfil__menu--on":"navbar__menu__perfil__menu"}>
                   <NavLink to="/perfil" >
-                    <a >Perfil</a>
+                    <p >Perfil</p>
                   </NavLink>
                   <br/>
                   <br/>
                   <NavLink to="/login" >
-                    <a onClick={handleLogout} >Cerrar Sesión</a>
+                    <p className="navbar__menu__signout" onClick={handleLogout} >Cerrar Sesión</p>
                   </NavLink>
                 </div>
               </li>
@@ -86,7 +86,7 @@ const Header = props => {
             </NavLink> :
             <NavLink to="/login">
               <li className="navbar__menu btn__secondary">
-                <a>LOGIN</a>
+                <p className="navbar__menu__login">LOGIN</p>
               </li>
             </NavLink>
 

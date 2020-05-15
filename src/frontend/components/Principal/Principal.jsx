@@ -5,7 +5,7 @@ import Socials from '../Socials';
 
 import '../../assets/styles/components/Principal.scss';
 import '../../assets/styles/components/Animation.scss';
-import Scroll from '../../assets/static/images/Scroll.svg';
+import Scroll from '../../assets/static/images/scroll.svg';
 
 
 const Principal = () => (
@@ -67,6 +67,7 @@ const Principal = () => (
                                 </Link>
                             </div>
 
+
                         </div>
 
                     </div>
@@ -79,6 +80,11 @@ const Principal = () => (
                 <img src={Scroll} alt="" />
             </figure>
         </div>
+
+        <p className="version">
+            version: Alpha 1.0
+        </p>
+
     </section>
 
 )

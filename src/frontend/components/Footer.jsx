@@ -5,10 +5,10 @@ import { sendEmail } from '../actions';
 
 import '../assets/styles/components/Footer.scss';
 import Payment from '../assets/static/images/payment-icons-footer.png';
-import Facebook from '../assets/static/images/social-network/facebook-color.svg';
-import Google from '../assets/static/images/social-network/google-color.svg';
-import Twitter from '../assets/static/images/social-network/linkedin-color.svg';
-import Linkedin from '../assets/static/images/social-network/twitter-color.svg';
+import facebook from '../assets/static/images/social-network/facebook-white.svg';
+import reddit from '../assets/static/images/social-network/reddit-white.svg';
+import instagram from '../assets/static/images/social-network/instagram-white.svg';
+import discord from '../assets/static/images/social-network/discord-white.svg';
 
 
 const Footer = (props) => {
@@ -87,24 +87,16 @@ const Footer = (props) => {
                     <div>
                         <ol className="icons__footer">
                             <li className="icon__footer">
-                                <Link>
-                                    <img src={Facebook} alt="" />
-                                </Link>
+                            <a href="http://facebook.com"><img src={facebook} /></a>
                             </li>
                             <li className="icon__footer">
-                                <Link>
-                                    <img src={Google} alt="" />
-                                </Link>
+                            <a href="http://reddit.com"><img src={reddit} /></a>
                             </li>
                             <li className="icon__footer">
-                                <Link>
-                                    <img src={Linkedin} alt="" />
-                                </Link>
+                            <a href="http://instagram.com"><img src={instagram} /></a>
                             </li>
                             <li className="icon__footer">
-                                <Link>
-                                    <img src={Twitter} alt="" />
-                                </Link>
+                            <a href="http://discord.com"><img src={discord} /></a>
                             </li>
                         </ol>
                     </div>

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import Perfil from '../assets/static/images/perfil-image2x.png'
+import Perfil from '../assets/static/images/perfil.png'
 
 import '../assets/styles/components/Profile.scss';
 
 const Profile = ({ data, myClass }) => {
-    // console.log("classes", myClass.length)
+
+    const name = data[0].name
+
     return (
         <section className="profile">
             <div className="profile__display">
@@ -33,8 +35,8 @@ const Profile = ({ data, myClass }) => {
 
                 <div className="profile__right">
                     <div className="profile__welcome">
-                        <h1>Welcome Back, MURDOC!</h1>
-                        <h3>Si quieres llevar un seguimiento de tus clases,
+                        <h1 className="profile__welcome__tittle">Welcome Back, {name}!</h1>
+                        <h3 className="profile__welcome__sub__tittle">Si quieres llevar un seguimiento de tus clases,
                         llegaste al lugar correcto.</h3>
                     </div>
 
@@ -43,12 +45,12 @@ const Profile = ({ data, myClass }) => {
                             <tr className="profile__stats__title">
                                 <th>ID</th>
                                 <th>STATUS</th>
-                                <th>PRECIO USD$</th>
-                                <th>PRECIO AR$</th>
+                                <th>USD$</th>
+                                <th>AR$</th>
                                 <th>COACH</th>
-                                <th>TIPO/CLASE</th>
+                                <th>TIPO</th>
                                 <th>N° CLASES</th>
-                                <th>FECHA INICIO</th>
+                                <th>INICIO</th>
                             </tr>
                             {myClass.slice(myClass.length - 5, myClass.length).map(item => (
                                 <tr>

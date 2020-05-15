@@ -8,7 +8,7 @@
     border-radius: 4px;
     text-shadow: 0px 0px 3px #56fffb;
     text-align: center;
-    background-color: initial;
+    background-color: #56fffb05;
     box-shadow: 0px 0px 5px #56fffb;
 }
 
@@ -18,8 +18,9 @@
     color: black;
 }
 
-.navbar__menu .btn__secondary a{
+.navbar__menu .btn__secondary p{
     color: black;
+    margin: 0;
 }
 
 .btn__primary {

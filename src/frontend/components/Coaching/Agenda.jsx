@@ -215,9 +215,7 @@ const Agenda = (props) => {
                         )
                     } */}
                         {props.dates.length < 2 ?
-                            <div className="agenda__paypal__disable" disable>
-                                <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit} disable />
-                            </div> : 
+                            "" : 
                             <div className="agenda__paypal">
                                 <PaypalCheckoutButton order={order} form={form} handleSubmit={handleSubmit} />
                             </div>
