@@ -39,7 +39,6 @@ const Agenda = (props) => {
     // console.info("valor de price:", form.price)--> adaptar con las especificaciones escogidas
 
     useEffect(() => {
-        document.title = form.price
         form.price = totalPrice() + 2
         form.schedule = showFormatDate()
         form.dates = props.dates
@@ -176,6 +175,8 @@ const Agenda = (props) => {
                     </div>
 
                     <select name="classes" onChange={handleInput} className="select__agenda select__agenda--fix">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
                         <option value="6">6</option>

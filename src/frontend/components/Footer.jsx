@@ -77,11 +77,11 @@ const Footer = (props) => {
                 <div className="footer__information">
                     <h2 className="footer__title">SUMMONER’S CAVE</h2>
                     <p className="parragraph__footer">
-                        Summoner’s Cave isn’t endorsed by Riot Games and doesn’t reflect the views <br />
-                        or opinions of Riot Games or anyone officially involved in producing or <br />
-                        managing League of Legends. League of Legends and Riot Games are <br />
-                        trademarks or registered trademarks of Riot Games, Inc. League of Legends © <br />
-                        Riot Games, Inc.
+                    SUMMONER’S CAVE no está respaldada por Riot Games y no refleja la opinión
+                    de Riot Games o cualquier persona oficialmente involucrada en la producción o
+                    manejo de League of Legends. League of Legends y Riot Games son
+                    marcas comerciales o marcas comerciales registradas de Riot Games, Inc. League of Legends ©
+                    Riot Games, Inc.
                 </p>
 
                     <div>

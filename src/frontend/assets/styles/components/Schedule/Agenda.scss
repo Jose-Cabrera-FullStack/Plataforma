@@ -189,12 +189,11 @@ span:hover .schedule__information__rectangle {
 }
 
 .schedule__information__rectangle {
-    width: 213px;
-    height: 94px;
     border-radius: 15px;
-    border: solid 3px #e01ac7;
-    background-color: #192429;
+    border: solid 3px #454ade;
+    background-color: #000000;
     position: absolute;
+    z-index: 1;
 }
 
 .block{
@@ -206,10 +205,9 @@ span:hover .schedule__information__rectangle {
 }
 
 .schedule__information__pop {
-    width: 200px;
-    height: 59px;
+    width: 220px;
     font-family: Roboto;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -218,6 +216,7 @@ span:hover .schedule__information__rectangle {
     text-align: inherit;
     color: #ffffff;
     margin-top: 6%;
+    margin: 14px;
 }
 
 .register__input__line--agenda{

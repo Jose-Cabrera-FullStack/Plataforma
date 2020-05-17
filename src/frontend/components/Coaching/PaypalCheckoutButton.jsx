@@ -10,10 +10,10 @@ const PaypalCheckoutButton = (props) => {
 
   const paypalConf = {
     currency: 'USD',
-    env: 'sandbox',//pasar a poduccion
+    env: 'production',//pasar a produccion
     client: {
       sandbox: 'AZfahP9W_0_g74mkO4jzUQuj5_ZzGOhAMsG_qPs5NrZGijmWEQ6HVwH0kWplw_pob1ykr2cDah1XfA88',
-      production: '--',
+      production: 'AUfrNdYdfVHyNfVC9he8rozBaXq2NRbMO92jOPiM_bZ_zzwZ7KhjYmv1QpiQy87R9Uy1GmsInRXMs9Rs',
     },
     style: {
       label: 'pay',
