@@ -40,10 +40,10 @@ const FAQ = () => {
                             </div>
                             <div className="faq__left__rectangle__info">
                                 <h3 className="faq__left__rectangle__tittle">Años de experiencia</h3>
-                                <p className="faq__left__rectangle__text">Tenemos mas de 10 años jugando League
-                                of Legend. Mas te 3 años enseñando y
+                                <p className="faq__left__rectangle__text">Tenemos mas de 8 años jugando League
+                                of Legend. Mas de 3 años enseñando y
                                 capacitando a jugadores de todas partes
-                        del mundo. </p>
+                                del mundo. </p>
                             </div>
                         </div>
 

@@ -1,5 +1,5 @@
 .faq {
-    background-image: linear-gradient(to bottom, rgba(69, 74, 222, 0.7), #454ade), url(../Screen/Karma.jpg);
+    background-image: linear-gradient(to bottom, #000000c9, #040404), url(../Screen/Karma.jpg);
     background-size: cover;
     position: relative;
     bottom: 14vh;
@@ -48,10 +48,11 @@
     background-color: #02030e;
     margin: 0px 3% 50px 15%;
     border: 1px solid #56fffb;
+    box-shadow: 0px 0px 19px rgba(14, 247, 255, 0.7);
 }
 
 .faq__left__rectangle__inside {
-    margin: 50px;
+    margin: 35px 0px 0px 40px;
 }
 
 .faq__left__rectangle__display {
@@ -81,11 +82,11 @@
     width: 230px;
     height: 70px;
     font-family: Roboto;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 300;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.22;
+    line-height: 1.5;
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
@@ -99,6 +100,7 @@
     border: 1px solid #56fffb;
     margin: 0 0 50px 0px;
     height: fit-content;
+    box-shadow: 0px 0px 19px rgba(14, 247, 255, 0.7);
 }
 
 .faq__right__rectangle--fix {

@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import '../assets/styles/components/Term.scss';
+import '../assets/styles/components/Privacy.scss';
 
 import ArrowDown from '../assets/static/images/arrow-blue-down.svg'
 import ArrowRight from '../assets/static/images/arrow-blue-right.svg'
@@ -20,7 +21,7 @@ const PrivacyPolicy = () => {
 
     
     return(
-    <section id="faq" className="faq">
+    <section id="faq" className="privacy">
 
         <h1 className="faq__tittle">Politica de Privacidad</h1>
         

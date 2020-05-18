@@ -24,7 +24,7 @@ const TermAndConditions = () => {
 
     
     return(
-    <section id="faq" className="faq">
+    <section id="faq" className="term">
 
         <h1 className="faq__tittle">Terminos y Condiciones</h1>
 

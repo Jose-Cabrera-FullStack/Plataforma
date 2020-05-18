@@ -24,11 +24,11 @@ const Services = () => {
                     <figure>
                         <img className="img__service contentText" src={Ranked} alt="RANKED WINS BOOSTING" />
                         {isShown1 ? <strong className="pop__service pop__service__services1">
-                        Aprenderas a tener un pensamiento estratega, <br/>
-                        dominar tus emociones usando conceptos avanzados <br/>
-                        de psicología moderna. Conceptualización de <br/>
-                        lógica simbolica en el Macro y Micro juego. <br/>
-                        Ve nuestras clases para <br/>
+                        Aprenderas a tener un pensamiento estratega, 
+                        dominar tus emociones usando conceptos avanzados 
+                        de psicología moderna. Conceptualización de 
+                        lógica simbolica en el Macro y Micro juego. 
+                        Ve nuestras clases para 
                         volverte UN JUGADOR PROFESIONAL
                         </strong> : ""}
                     </figure>
@@ -41,10 +41,10 @@ const Services = () => {
                     <figure>
                         <img className="img__service contentText" src={TFT} alt="TFT BOOTING" />
                         {isShown2 ? <strong className="pop__service pop__service__services2">
-                        Entenderás lo importante que es la comunicación <br/>
-                        asertiva con tus compañeros. Saber cuando, donde  <br/>
-                        y en que momento ir por objetivos. Cuando iniciar una <br/>
-                        Team Fighter o cuando retirarse. ¡Acepta el reto de  <br/>
+                        Entenderás lo importante que es la comunicación 
+                        asertiva con tus compañeros. Saber cuando, donde  
+                        y en que momento ir por objetivos. Cuando iniciar una 
+                        Team Fighter o cuando retirarse. ¡Acepta el reto de  
                         ser mejor de lo que jamas imaginaste Ser!
                          </strong> : ""}                    
                     </figure>
@@ -56,11 +56,11 @@ const Services = () => {
                     <figure>
                         <img className="img__service contentText" src={Duo} alt="DUO QUEUE BOOSTING" />
                         {isShown3 ? <strong className="pop__service pop__service__services3">
-                            ¿Quieres ser la figura que todos admiran y hace que <br/>
-                            el equipo alcance la victoria? <br/>
-                            Capacitate en Pedagogia enfocada en los eSport. <br/>
-                            Tendrás las herramientas necesarias para enseñar  <br/>
-                            de manera profesional a el Próximo| equipo que gane <br/>
+                            ¿Quieres ser la figura que todos admiran y hace que 
+                            el equipo alcance la victoria? 
+                            Capacitate en Pedagogia enfocada en los eSport. 
+                            Tendrás las herramientas necesarias para enseñar  
+                            de manera profesional a el Próximo| equipo que gane 
                             La LCS y sea reconocido por todo el Mundo.
                             </strong>: ""}
                         
@@ -73,11 +73,11 @@ const Services = () => {
                     <figure>
                         <img className="img__service contentText" src={Promo} alt="PROMOTION BOOSTING" />
                         {isShown4 ? <strong className="pop__service pop__service__services4">
-                        Te enseñaremos "Qué es ser un profesional <br/>
-                        de los eSport y vivir de jugar videojuegos". Dietas,<br/>
-                        Dedicación, Compromiso,  <br/>
-                        Motivación, Liderazgo, Controlar Emocional <br/>
-                        No solo sabrás que es ser un jugador  <br/>
+                        Te enseñaremos "Qué es ser un profesional 
+                        de los eSport y vivir de jugar videojuegos". Dietas,
+                        Dedicación, Compromiso,  
+                        Motivación, Liderazgo, Controlar Emocional 
+                        No solo sabrás que es ser un jugador  
                         eSport, serás UN PROFESIONAL
                         </strong>: ""} 
                     </figure>

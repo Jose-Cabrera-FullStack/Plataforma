@@ -1,10 +1,8 @@
 .register {
   height: 970px;
-  background-image:
-  linear-gradient(to bottom, #56fffb7d ,#56fffbe0),
-  url(../Screen/Ekko.jpg);
+  background-image: linear-gradient(to bottom, #07071575, #050404), url(/assets/Bardo.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: 100px 0px;
   display: flex;
   position: relative;
   bottom: 12vh;

@@ -1,4 +1,7 @@
 .term{
-    background: red;
-    height: 100vh;
+    background-image: linear-gradient(to bottom, #000000c9, #040404), url(../Screen/FPX.jpg);
+    background-size: cover;
+    position: relative;
+    bottom: 14vh;
+    margin: 0 0 -8% 0;
 }
