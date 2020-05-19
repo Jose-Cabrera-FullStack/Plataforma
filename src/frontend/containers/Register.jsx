@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { registerUser } from '../actions';
 
 import Socials from '../components/Socials';
+import information from '../assets/static/images/info.svg'
 
 import '../assets/styles/components/Register.scss';
 
@@ -16,6 +17,12 @@ const Register = (props) => {
     server: 'LAS',
     verified: false
   });
+
+    const [isShown1, setIsShown1] = useState(false);
+    const [isShown2, setIsShown2] = useState(false);
+    const [isShown3, setIsShown3] = useState(false);
+    const [isShown4, setIsShown4] = useState(false);
+    const [isShown5, setIsShown5] = useState(false);
 
   const [checked, setChecked] = useState(false)
 
@@ -33,7 +40,7 @@ const Register = (props) => {
     props.registerUser(form, '/login');
   };
 
-  console.log(checked)
+  // console.log(checked) se necesita estar verificado para realizar las compras
 
   return (
     <>
@@ -52,6 +59,8 @@ const Register = (props) => {
                 onChange={handleInput}
                 required
               />
+              <img src={information} alt="Informacion" onMouseEnter={() => setIsShown1(true)} onMouseLeave={() => setIsShown1(false)}/>
+              {isShown1 ? <strong className="pop__service ">Coloca tu nombre de Invocador de League of Legends. Esto nos ayudara a crear las clases mas personalizadas para ti que sea posible.</strong>:""}
               <hr className="register__input__line" />
               <p>INGRESA TU EMAIL</p>
               <input
@@ -62,6 +71,8 @@ const Register = (props) => {
                 onChange={handleInput}
                 required
               />
+              <img src={information} alt="Informacion" onMouseEnter={() => setIsShown2(true)} onMouseLeave={() => setIsShown2(false)}/>
+              {isShown2 ? <strong className="pop__service pop__info">Escoge el E-Mail donde recibiras toda la información que te brindemos.</strong>: ""}
               <hr className="register__input__line" />
               <p>INGRESA TU CONTRASEÑA</p>
               <input
@@ -72,6 +83,8 @@ const Register = (props) => {
                 onChange={handleInput}
                 required
               />
+              <img src={information} alt="Informacion" onMouseEnter={() => setIsShown3(true)} onMouseLeave={() => setIsShown3(false)}/>
+              {isShown3 ? <strong className="pop__service ">Escoge la contraseña con la que ingresaras a Summoner's Cave. ¡Debe tener al menos 6 caracteres!</strong>:""}
               <hr className="register__input__line" />
               {/* Colorcar la verificaciòn de la contraseña */}
               <p>INGRESA LA FECHA EN QUE NACISTE</p>
@@ -83,6 +96,8 @@ const Register = (props) => {
                 onChange={handleInput}
                 required
               />
+              <img src={information} alt="Informacion" onMouseEnter={() => setIsShown4(true)} onMouseLeave={() => setIsShown4(false)}/>
+              {isShown4 ? <strong className="pop__service ">Coloca el año en el que naciste. ¡Debes ser mayor de 13 años para ingresar!</strong>:""}
               <hr className="register__input__line" />
               <p>INGRESA EL SERVIDOR DONDE JUEGAS</p>
               <select name="server" onChange={handleInput} className="select__agenda" required>
@@ -91,6 +106,8 @@ const Register = (props) => {
                 <option value="BR">BR</option>
                 <option value="NA">NA</option>
               </select>
+              <img src={information} alt="Informacion" onMouseEnter={() => setIsShown5(true)} onMouseLeave={() => setIsShown5(false)}/>
+              {isShown5 ? <strong className="pop__service ">Escoge el Servidor donde juegas con tu Nickname de Invocador. Esto nos ayudara a escoger un coach de tu region.</strong>:""}
               <hr className="register__input__line" />
 
               <div className="register__checkbox">

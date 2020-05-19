@@ -138,7 +138,7 @@ const Agenda = (props) => {
                             SOLOQ para entender las mecanicas de jugar por tu propia cuenta <br/>
                             CLASH para aprender a trabajar en sinergia con tu equipo <br/>
                             COACHING para convertirte el guia de los futuros Pro Players 
-                         </strong> : ""}
+                        </strong> : ""}
                     </div>
 
                     <select name="type" onChange={handleInput} className="select__agenda select__agenda--fix">

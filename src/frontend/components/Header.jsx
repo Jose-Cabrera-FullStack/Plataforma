@@ -76,7 +76,7 @@ const Header = props => {
 
             <NavLink to="/register" >
               <li className="navbar__menu btn__primary">
-                <a className="register__btn">REGISTER</a>
+                <p className="register__btn">REGISTER</p>
               </li>
             </NavLink>
           }

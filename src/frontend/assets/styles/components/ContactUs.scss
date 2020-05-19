@@ -1,14 +1,11 @@
 .contact {
-    height: 970px;
-    background-image:
-    linear-gradient(to bottom, rgba(27, 31, 59, 0),#060606),
-    url(../Screen/Pijama-party.jpg);
+    background-image: linear-gradient(to bottom, rgba(27, 31, 59, 0), #060606), url(/assets/Pijama-party.jpg);
     background-size: cover;
-    background-position: center;
     display: flex;
     position: relative;
-    bottom: 12vh;
+    bottom: 11.5vh;
     margin: 0 0px -7% 0px;
+    background-position: -85px;
 }
 
 .contact p {

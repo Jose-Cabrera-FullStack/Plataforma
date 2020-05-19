@@ -5,10 +5,10 @@ import { sendEmail } from '../actions';
 
 import '../assets/styles/components/Footer.scss';
 import Payment from '../assets/static/images/payment-icons-footer.png';
-import facebook from '../assets/static/images/social-network/facebook-white.svg';
-import reddit from '../assets/static/images/social-network/reddit-white.svg';
-import instagram from '../assets/static/images/social-network/instagram-white.svg';
-import discord from '../assets/static/images/social-network/discord-white.svg';
+import Facebook from '../assets/static/images/social-network/facebook-white.svg';
+import Reddit from '../assets/static/images/social-network/reddit-white.svg';
+import Instagram from '../assets/static/images/social-network/instagram-white.svg';
+import Discord from '../assets/static/images/social-network/discord-white.svg';
 
 
 const Footer = (props) => {
@@ -31,7 +31,6 @@ const Footer = (props) => {
         props.sendEmail(form, '/');
       };
     
-      
     return (
         <footer id="footer" className="footer">
             <form className="footer__form" onSubmit={handleSubmit}>
@@ -52,19 +51,19 @@ const Footer = (props) => {
 
                     <ol className="list__footer">
                         <li className="menu__footer">
-                            <Link to="/">
-                                Medios de pago
-                    </Link>
+                            <Link to="/coaching">
+                                Coaching
+                            </Link>
                         </li>
                         <li className="menu__footer">
-                            <Link to="/">
-                                About Us
-                    </Link>
+                            <Link to="/faq">
+                                FAQ
+                            </Link>
                         </li>
                         <li className="menu__footer">
-                            <Link to="/">
-                                Medios de pago
-                    </Link>
+                            <Link to="/contactanos">
+                                Contactanos
+                            </Link>
                         </li>
 
                     </ol>
@@ -84,19 +83,19 @@ const Footer = (props) => {
                     Riot Games, Inc.
                 </p>
 
-                    <div>
+                <div>
                         <ol className="icons__footer">
                             <li className="icon__footer">
-                            <a href="http://facebook.com"><img src={facebook} /></a>
+                                <a href="https://www.facebook.com/Summoners-Cave-113506403700157"><img src={Facebook} alt="" /></a>
                             </li>
                             <li className="icon__footer">
-                            <a href="http://reddit.com"><img src={reddit} /></a>
+                                <a href="https://www.reddit.com/r/leagueoflegends/comments/gmd46m/clases_de_league_of_legends_para_ser_un_proplayer/"><img src={Reddit} alt="" /></a>
                             </li>
                             <li className="icon__footer">
-                            <a href="http://instagram.com"><img src={instagram} /></a>
+                                <a href="https://www.instagram.com/summonerscaves/"><img src={Instagram} alt="" /></a>
                             </li>
                             <li className="icon__footer">
-                            <a href="http://discord.com"><img src={discord} /></a>
+                                <a href="https://discord.gg/Nu3GRn"><img src={Discord} alt="" /></a>
                             </li>
                         </ol>
                     </div>
