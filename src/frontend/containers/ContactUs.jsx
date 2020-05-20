@@ -49,7 +49,7 @@ const Contact = (props) => {
                 name="name"
                 className="register__input"
                 type="text"
-                placeholder="Ingresa Tu apodo aquí"
+                placeholder="Coloca tu Nombre de Invocador"
                 onChange={handleInput}
                 required
               />
@@ -60,7 +60,7 @@ const Contact = (props) => {
                 name="email"
                 className="register__input"
                 type="email"
-                placeholder="Ingresa su email aquí"
+                placeholder="Coloca el E-mail donde te contactaremos"
                 onChange={handleInput}
                 required
               />
@@ -70,7 +70,7 @@ const Contact = (props) => {
               name="message"
               className="register__input"
               type="text"
-              placeholder="Ingresa Tu comentario aquí"
+              placeholder="Coloca tu comentario"
               onChange={handleInput}
               required>
               </textarea>

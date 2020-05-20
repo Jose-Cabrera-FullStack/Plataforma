@@ -55,7 +55,7 @@ const Register = (props) => {
                 name="name"
                 className="register__input"
                 type="text"
-                placeholder="ingresa Tu apodo aquí"
+                placeholder="Coloca Tu apodo aquí"
                 onChange={handleInput}
                 required
               />
@@ -67,19 +67,19 @@ const Register = (props) => {
                 name="email"
                 className="register__input"
                 type="text"
-                placeholder="ingresa su email aquí"
+                placeholder="Coloca su email aquí"
                 onChange={handleInput}
                 required
               />
               <img src={information} alt="Informacion" onMouseEnter={() => setIsShown2(true)} onMouseLeave={() => setIsShown2(false)}/>
-              {isShown2 ? <strong className="pop__service pop__info">Escoge el E-Mail donde recibiras toda la información que te brindemos.</strong>: ""}
+              {isShown2 ? <strong className="pop__service pop__info">Con este E-mail vas a ingresar a la plataforma Summoner's Cave. También te enviaremos todos los apuntes de las sesiones a este mismo E-mail.</strong>: ""}
               <hr className="register__input__line" />
               <p>INGRESA TU CONTRASEÑA</p>
               <input
                 name="password"
                 className="register__input"
                 type="password"
-                placeholder="Contraseña"
+                placeholder="Coloca tu nueva contraseña"
                 onChange={handleInput}
                 required
               />
@@ -92,7 +92,7 @@ const Register = (props) => {
                 name="birthday"
                 className="register__input"
                 type="text"
-                placeholder="Fecha de Nacimiento"
+                placeholder="Ejemplo: '1996'"
                 onChange={handleInput}
                 required
               />
@@ -101,8 +101,8 @@ const Register = (props) => {
               <hr className="register__input__line" />
               <p>INGRESA EL SERVIDOR DONDE JUEGAS</p>
               <select name="server" onChange={handleInput} className="select__agenda" required>
-                <option value="LAN">LAN</option>
                 <option value="LAS">LAS</option>
+                <option value="LAN">LAN</option>
                 <option value="BR">BR</option>
                 <option value="NA">NA</option>
               </select>

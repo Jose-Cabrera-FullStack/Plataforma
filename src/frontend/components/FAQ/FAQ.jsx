@@ -24,7 +24,7 @@ const FAQ = () => {
     return (
         <section id="faq" className="faq">
             <h1 className="faq__tittle">Preguntas Frecuentes</h1>
-            <h2 className="faq__subtittle">Necesitas dominar el arte de jugar bien para poder alcanzar las metas que te propusiste, Ser LA PROXIMA estrella
+            <h2 className="faq__subtittle">Necesitas dominar el arte de jugar bien para poder alcanzar las metas que te propusiste. Ser LA PROXIMA estrella
                 de League Of Legends.
         </h2>
 
@@ -98,12 +98,11 @@ const FAQ = () => {
                         <div onClick={toggleTrueFalse2} >
                             <div className="faq__right__rectangle__display">
                                 <img className="faq__right__rectangle__inside__person" src={Person} alt="" />
-                                <h2>Nuestra Mision</h2>
+                                <h2>Nuestra Motivación</h2>
                                 <img className="faq__right__rectangle__inside__person" src={isToggled2 ? ArrowDown : ArrowRight} alt="" />
                             </div>
-                            <p className={isToggled2 ? "faq__right__rectangle__text--on" : "faq__right__rectangle__text--off"}>Es apoyar a la escena competitiva de los eSport en el continente de America. Dando mayor énfasis a
-                            Latinoametica, somos un diamante en brutal esperando a ser descubierto. Nuestra misión es convertir
-                a todos ustedes, apasionados jugadores, en los máximos exponentes de los eSport en todo el mundo.</p>
+                            <p className={isToggled2 ? "faq__right__rectangle__text--on" : "faq__right__rectangle__text--off"}>Es lograr que nuestros estudiantes logren alcanzar las metas que se colocan usando el conocimiento que le brindamos como 
+                            impulso. Estamos seguro de que hay mucho potencial esperando a ser descubierto.</p>
                         </div>
 
                         <hr />
@@ -111,12 +110,11 @@ const FAQ = () => {
                         <div onClick={toggleTrueFalse3} >
                             <div className="faq__right__rectangle__display">
                                 <img className="faq__right__rectangle__inside__person" src={Person} alt="" />
-                                <h2>Nuestra Mision</h2>
+                                <h2>Nuestro Modus Operandi</h2>
                                 <img className="faq__right__rectangle__inside__person" src={isToggled3 ? ArrowDown : ArrowRight} alt="" />
                             </div>
-                            <p className={isToggled3 ? "faq__right__rectangle__text--on" : "faq__right__rectangle__text--off"}>Es apoyar a la escena competitiva de los eSport en el continente de America. Dando mayor énfasis a
-                            Latinoametica, somos un diamante en brutal esperando a ser descubierto. Nuestra misión es convertir
-                a todos ustedes, apasionados jugadores, en los máximos exponentes de los eSport en todo el mundo.</p>
+                            <p className={isToggled3 ? "faq__right__rectangle__text--on" : "faq__right__rectangle__text--off"}>Es un plan de estudio que se basa en el uso de didacticas para acelerar el proceso de aprendizaje
+                            usando a League of Legends como pilar principal. Queremos enseñar terminos complejos mediante la Gamificación y con ello cambiar la educación de este nuevo mundo.</p>
                         </div>
 
                         <hr />
@@ -124,12 +122,11 @@ const FAQ = () => {
                         <div className="faq__right__rectangle__inside__last__text" onClick={toggleTrueFalse4} >
                             <div className="faq__right__rectangle__display">
                                 <img className="faq__right__rectangle__inside__person" src={Person} alt="" />
-                                <h2>Nuestra Mision</h2>
+                                <h2>Nuestra Sueño</h2>
                                 <img className="faq__right__rectangle__inside__person" src={isToggled4 ? ArrowDown : ArrowRight} alt="" />
                             </div>
-                            <p className={isToggled4 ? "faq__right__rectangle__text--on" : "faq__right__rectangle__text--off"}>Es apoyar a la escena competitiva de los eSport en el continente de America. Dando mayor énfasis a
-                            Latinoametica, somos un diamante en brutal esperando a ser descubierto. Nuestra misión es convertir
-                a todos ustedes, apasionados jugadores, en los máximos exponentes de los eSport en todo el mundo.</p>
+                            <p className={isToggled4 ? "faq__right__rectangle__text--on" : "faq__right__rectangle__text--off"}>Es ser los principales promotores del cambio social y educacional del mundo.
+                            Tenemos la creencia que los videojuegos pueden hacer un gran aporte a la evolución del Ser Humano.</p>
                         </div>
 
                     </div>

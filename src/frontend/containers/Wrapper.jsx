@@ -25,13 +25,15 @@ export default WrappedComponent => {
 
     render = () => (
       <Fragment>
-        <Header />
         {this.state.isLoading ? (
           <Spinner />
-        ) : (
+          ) : (
+            <>
+            <Header />
           <WrappedComponent {...this.props} />
+          <Footer/>
+            </>
         )}
-        <Footer/>
       </Fragment>
     );
   }
