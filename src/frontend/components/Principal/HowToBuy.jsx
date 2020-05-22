@@ -40,9 +40,9 @@ const HowToBuy = () => (
                     </figure>
 
 
-                    <p className="paragraph__how-to-buy text__2">
-                    Escoge el Plan que mas te guste, presiona <br/>
-                        el botón de "<span className="blue__lightning">¡Comprar Ahora!</span>" y te llevara <br/>
+                        <p className="paragraph__how-to-buy text__2">
+                        Escoge el Plan que mas te guste, presiona <br/>
+                        el botón de <span className="blue__lightning">Paypal</span> y te llevara <br/>
                         al ultimo paso para comenzar a ¡SUBIR!
                         </p>
 
@@ -57,10 +57,10 @@ const HowToBuy = () => (
                     </figure>
 
                     <p className="paragraph__how-to-buy text__3">
-                    Veras una ventana donde podrás escoger el <br/>
-                        método de pago que mas te guste RECUERDA <br/>
-                        Luego presiona el botón de "Finalizar Compra" <br/>
-                        <span className="blue__lightning">VER EL PRECIO ANTES DE FINALIZAR LA COMPRA.</span>    
+                        Se abrirá una ventana de Paypal <br/>
+                        donde colocaras tu datos,<br/>
+                        recuerda verificar el precio de las clases<br/>
+                        luego preciona<span className="blue__lightning">Pagar</span>    
                     </p>
 
                     <figure>
@@ -74,7 +74,7 @@ const HowToBuy = () => (
                     </figure>
 
                     <p className="paragraph__how-to-buy text__4">
-                    Nos comunicamos via Discord contigo. Esto con <br/>
+                        Nos comunicamos via Discord contigo. Esto con <br/>
                         la finalidad de hacer lo mas personalizado <br/>
                         posible las clases para ti. Recuerda que la <br/>
                         primera clase es <span className="blue__lightning">¡GRATUITA!</span>

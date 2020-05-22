@@ -30,7 +30,14 @@ const Services = () => {
                         lógica simbolica en el Macro y Micro juego. 
                         Ve nuestras clases para 
                         volverte UN JUGADOR PROFESIONAL
-                        </strong> : ""}
+                        </strong> : <strong className="pop__service pop__service__services1 opacity">
+                        Aprenderas a tener un pensamiento estratega, 
+                        dominar tus emociones usando conceptos avanzados 
+                        de psicología moderna. Conceptualización de 
+                        lógica simbolica en el Macro y Micro juego. 
+                        Ve nuestras clases para 
+                        volverte UN JUGADOR PROFESIONAL
+                        </strong> }
                     </figure>
                 </span>
             </div>
@@ -46,7 +53,13 @@ const Services = () => {
                         y en que momento ir por objetivos. Cuando iniciar una 
                         Team Fighter o cuando retirarse. ¡Acepta el reto de  
                         ser mejor de lo que jamas imaginaste Ser!
-                         </strong> : ""}                    
+                        </strong> : <strong className="pop__service pop__service__services2 opacity">
+                        Entenderás lo importante que es la comunicación 
+                        asertiva con tus compañeros. Saber cuando, donde  
+                        y en que momento ir por objetivos. Cuando iniciar una 
+                        Team Fighter o cuando retirarse. ¡Acepta el reto de  
+                        ser mejor de lo que jamas imaginaste Ser!
+                        </strong>}                    
                     </figure>
                 </span>
             </div>
@@ -62,7 +75,14 @@ const Services = () => {
                             Tendrás las herramientas necesarias para enseñar  
                             de manera profesional a el Próximo| equipo que gane 
                             La LCS y sea reconocido por todo el Mundo.
-                            </strong>: ""}
+                            </strong>: <strong className="pop__service pop__service__services3 opacity">
+                            ¿Quieres ser la figura que todos admiran y hace que 
+                            el equipo alcance la victoria? 
+                            Capacitate en Pedagogia enfocada en los eSport. 
+                            Tendrás las herramientas necesarias para enseñar  
+                            de manera profesional a el Próximo| equipo que gane 
+                            La LCS y sea reconocido por todo el Mundo.
+                            </strong>}
                         
                     </figure>
                 </span>
@@ -79,7 +99,14 @@ const Services = () => {
                         Motivación, Liderazgo, Controlar Emocional 
                         No solo sabrás que es ser un jugador  
                         eSport, serás UN PROFESIONAL
-                        </strong>: ""} 
+                        </strong>: <strong className="pop__service pop__service__services4 opacity">
+                        Te enseñaremos "Qué es ser un profesional 
+                        de los eSport y vivir de jugar videojuegos". Dietas,
+                        Dedicación, Compromiso,  
+                        Motivación, Liderazgo, Controlar Emocional 
+                        No solo sabrás que es ser un jugador  
+                        eSport, serás UN PROFESIONAL
+                        </strong>} 
                     </figure>
                 </span>
             </div>

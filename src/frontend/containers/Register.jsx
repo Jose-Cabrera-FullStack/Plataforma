@@ -8,14 +8,21 @@ import information from '../assets/static/images/info.svg'
 
 import '../assets/styles/components/Register.scss';
 
+const EMAIL_REGEX = new RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
+
 const Register = (props) => {
+
   const [form, setValues] = useState({
     email: '',
     name: '',
     password: '',
     birthday: '',
     server: 'LAS',
-    verified: false
+    verified: false,
+    validateName:false,
+    validateEmail:false,
+    validatePassword:false,
+    validateDate:false
   });
 
     const [isShown1, setIsShown1] = useState(false);
@@ -29,16 +36,102 @@ const Register = (props) => {
   const handleClick = () => setChecked(!checked)
 
   const handleInput = (event) => {
+
+    handleValidation(event.target)
+
     setValues({
       ...form,
       [event.target.name]: event.target.value,
     });
   };
 
+  const handleValidation = (target) =>{
+
+    const name = target.name
+
+    const value = target.value
+
+    if(name == 'name'){
+      if(value.length > 5){
+        setValues({
+          ...form,
+        },
+        form.validateName=true
+        )
+      }
+      if(value.length < 5){
+        setValues({
+          ...form,
+        },
+        form.validateName=false
+        )
+      }
+    }
+
+    
+    if(name == 'email'){
+
+      const emailIsValid = EMAIL_REGEX.test(value);
+
+      if(emailIsValid){
+        setValues({
+          ...form,
+        },
+        form.validateEmail=true
+        )
+      }
+      if(!emailIsValid){
+        setValues({
+          ...form,
+        },
+        form.validateEmail=false
+        )
+      }
+    }
+
+    if(name == 'password'){
+      if(value.length > 5){
+        setValues({
+          ...form,
+        },
+        form.validatePassword=true
+        )
+      }
+      if(value.length < 5){
+        setValues({
+          ...form,
+        },
+        form.validatePassword=false
+        )
+      }
+    }
+
+    if(name == 'birthday'){
+      if(value.length < 5 ||value.length >= 4 ){
+        setValues({
+          ...form,
+        },
+        form.validateDate=true
+        )
+      }
+
+      if(value.length > 4 || value.length < 4){
+        setValues({
+          ...form,
+        },
+        form.validateDate=false
+        )
+      }
+      
+    }
+    
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     props.registerUser(form, '/login');
   };
+
 
   // console.log(checked) se necesita estar verificado para realizar las compras
 
@@ -50,7 +143,7 @@ const Register = (props) => {
             <h2 className="register__container__title">Regístrate</h2>
             <hr className="register__input__line register__input__line--fix" />
             <form className="register__container--form" onSubmit={handleSubmit}>
-              <p>INGRESA TU NICKNAME</p>
+              <p className="register__title">INGRESA TU NICKNAME</p>
               <input
                 name="name"
                 className="register__input"
@@ -62,7 +155,9 @@ const Register = (props) => {
               <img src={information} alt="Informacion" onMouseEnter={() => setIsShown1(true)} onMouseLeave={() => setIsShown1(false)}/>
               {isShown1 ? <strong className="pop__service ">Coloca tu nombre de Invocador de League of Legends. Esto nos ayudara a crear las clases mas personalizadas para ti que sea posible.</strong>:""}
               <hr className="register__input__line" />
-              <p>INGRESA TU EMAIL</p>
+              {form.validateName ? <p className="correct__message">¡Esta Excelente así!</p>:<p className="error__message">Debe tener más de 5 caracteres</p>}
+
+              <p className="register__title">INGRESA TU EMAIL</p>
               <input
                 name="email"
                 className="register__input"
@@ -74,7 +169,9 @@ const Register = (props) => {
               <img src={information} alt="Informacion" onMouseEnter={() => setIsShown2(true)} onMouseLeave={() => setIsShown2(false)}/>
               {isShown2 ? <strong className="pop__service pop__info">Con este E-mail vas a ingresar a la plataforma Summoner's Cave. También te enviaremos todos los apuntes de las sesiones a este mismo E-mail.</strong>: ""}
               <hr className="register__input__line" />
-              <p>INGRESA TU CONTRASEÑA</p>
+              {form.validateEmail ? <p className="correct__message">¡Este mail es Correcto!</p>:<p className="error__message">te jodiste</p>}
+
+              <p className="register__title">INGRESA TU CONTRASEÑA</p>
               <input
                 name="password"
                 className="register__input"
@@ -86,8 +183,10 @@ const Register = (props) => {
               <img src={information} alt="Informacion" onMouseEnter={() => setIsShown3(true)} onMouseLeave={() => setIsShown3(false)}/>
               {isShown3 ? <strong className="pop__service ">Escoge la contraseña con la que ingresaras a Summoner's Cave. ¡Debe tener al menos 6 caracteres!</strong>:""}
               <hr className="register__input__line" />
+              {form.validatePassword ? <p className="correct__message">¡Esta bien tu Contraseña!</p>:<p className="error__message">Esta muy corta la contraseña</p>}
+
               {/* Colorcar la verificaciòn de la contraseña */}
-              <p>INGRESA LA FECHA EN QUE NACISTE</p>
+              <p className="register__title">INGRESA LA FECHA EN QUE NACISTE</p>
               <input
                 name="birthday"
                 className="register__input"
@@ -99,7 +198,9 @@ const Register = (props) => {
               <img src={information} alt="Informacion" onMouseEnter={() => setIsShown4(true)} onMouseLeave={() => setIsShown4(false)}/>
               {isShown4 ? <strong className="pop__service ">Coloca el año en el que naciste. ¡Debes ser mayor de 13 años para ingresar!</strong>:""}
               <hr className="register__input__line" />
-              <p>INGRESA EL SERVIDOR DONDE JUEGAS</p>
+              {form.validateDate ? <p className="correct__message">¡Buena fecha para nacer!</p>:<p className="error__message">Deben ser solo el año en el que Naciste.</p>}
+
+              <p className="register__title">INGRESA EL SERVIDOR DONDE JUEGAS</p>
               <select name="server" onChange={handleInput} className="select__agenda" required>
                 <option value="LAS">LAS</option>
                 <option value="LAN">LAN</option>
@@ -124,11 +225,11 @@ const Register = (props) => {
                 </Link>
               </div>
 
-              <div >
+              {/* <div >
                 <Link to="/login">
                   <strong className="links__hover">¿No haz recibido aún el mail de confirmación?</strong>
                 </Link>
-              </div>
+              </div> */}
             </div>
 
           </div>

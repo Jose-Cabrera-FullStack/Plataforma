@@ -2,7 +2,8 @@ import React from 'react';
 import '../assets/styles/components/Reviews.scss';
 import Arrow_left from '../assets/static/images/arrow-left.svg';
 import Arrow_right from '../assets/static/images/arrow-right.svg';
-import Star from '../assets/static/images/star-rating.svg';
+import StarEmpty from '../assets/static/images/star-empty.svg';
+import StarFull from '../assets/static/images/star-full.svg';
 import Avatar from '../assets/static/images/avatar-review.png';
 
 const Reviews = () =>(
@@ -25,27 +26,27 @@ const Reviews = () =>(
                 <div className="stars">
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarEmpty} alt=""/>
                         </figure>
                     </div>
 
@@ -74,27 +75,27 @@ const Reviews = () =>(
                 <div className="stars">
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
 
@@ -121,31 +122,31 @@ const Reviews = () =>(
         </div>
         <div className="user__review">
             <div className="review">
-                <h2 className="rating__review">4.1</h2>
+                <h2 className="rating__review">3.8</h2>
                 <div className="stars">
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarFull} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarEmpty} alt=""/>
                         </figure>
                     </div>
                     <div className="star">
                         <figure>
-                            <img src={Star} alt=""/>
+                            <img src={StarEmpty} alt=""/>
                         </figure>
                     </div>
 

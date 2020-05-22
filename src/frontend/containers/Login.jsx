@@ -70,15 +70,15 @@ const Login = (props) => {
             <div className="links__display">
               <div>
                 <Link to="/register">
-                  ¿Aún no tienes una cuenta? Registrate
+                <strong className="links__hover">¿Aún no tienes una cuenta? Registrate</strong>
                 </Link>
               </div>
 
-              <div>
+              {/* <div>
                 <Link to="/login">
                   ¿Olvidaste tu contraseña?
                 </Link>
-              </div>
+              </div> */}
             </div>
 
           </div>

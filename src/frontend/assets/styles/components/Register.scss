@@ -1,5 +1,5 @@
 .register {
-  height: 970px;
+  height: 1125px;
   background-image:
   linear-gradient(to bottom, #0000003b, #050404),
   url(../Screen/Bardo.jpg);
@@ -29,7 +29,6 @@
 
 .register__container{
   width: 583px;
-  height: 970px;
   background-color: #020202;
 }
 
@@ -47,7 +46,7 @@
   color: #cbcbcd;
 }
 
-.register p {
+.register__title {
   width: 240px;
   font-family: Roboto;
   font-size: 12px;
@@ -107,6 +106,7 @@
 
 .register img{
   margin: 0px 0px 0px 20px;
+  cursor: pointer;
 }
 
 .btn__register{
@@ -153,4 +153,12 @@
 
 .register__container__title--contact{
   margin: 30% 0 1% 0%;
+}
+
+.error__message{
+  color:#e01ac7 ;
+}
+
+.correct__message{
+  color:#56fffb ;
 }

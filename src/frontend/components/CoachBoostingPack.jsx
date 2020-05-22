@@ -17,11 +17,11 @@ const EloBoostingPack = () =>(
                 PAQUETES DE COACHING_
                 </h2>
                 <p className="paragraph__coach__booting__packs">
-                    <strong class="blue__lightning"> Consigue los mejores precios que se adapten a
-                    tus necesidades.</strong> ¿Queres salir de Elo Hell? <strong class="blue__lightning">Te guiaremos.</strong>  <br/>
-                    ¿Queres llegar a hacer plays tan buenas como las de Faker? <strong class="blue__lightning">Te entrenaremos.</strong> ¿Queres ser dueño de tu
+                    <strong className="blue__lightning"> Consigue los mejores precios que se adapten a
+                    tus necesidades.</strong> ¿Queres salir de Elo Hell? <strong className="blue__lightning">Te guiaremos.</strong>  <br/>
+                    ¿Queres llegar a hacer plays tan buenas como las de Faker? <strong className="blue__lightning">Te entrenaremos.</strong> ¿Queres ser dueño de tu
                     propio destino? Estas <br/>
-                    en el <strong class="blue__lightning">Lugar correcto.</strong> Estas cerca de alcanzar tus sueño, solo te hace falta un <strong class="blue__lightning">Coach</strong> para que te de
+                    en el <strong className="blue__lightning">Lugar correcto.</strong> Estas cerca de alcanzar tus sueño, solo te hace falta un <strong className="blue__lightning">Coach</strong> para que te de
                     el empujón que te falta.
                 </p>
             </div>
