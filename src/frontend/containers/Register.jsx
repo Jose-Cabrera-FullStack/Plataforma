@@ -18,12 +18,15 @@ const Register = (props) => {
     password: '',
     birthday: '',
     server: 'LAS',
-    verified: false,
+    verified: false
+  });
+
+  const [validate, setValidate] = useState({
     validateName:false,
     validateEmail:false,
     validatePassword:false,
     validateDate:false
-  });
+  })
 
     const [isShown1, setIsShown1] = useState(false);
     const [isShown2, setIsShown2] = useState(false);
@@ -54,16 +57,16 @@ const Register = (props) => {
     if(name == 'name'){
       if(value.length > 5){
         setValues({
-          ...form,
+          ...validate,
         },
-        form.validateName=true
+        validate.validateName=true
         )
       }
       if(value.length < 5){
         setValues({
-          ...form,
+          ...validate,
         },
-        form.validateName=false
+        validate.validateName=false
         )
       }
     }
@@ -75,16 +78,16 @@ const Register = (props) => {
 
       if(emailIsValid){
         setValues({
-          ...form,
+          ...validate,
         },
-        form.validateEmail=true
+        validate.validateEmail=true
         )
       }
       if(!emailIsValid){
         setValues({
-          ...form,
+          ...validate,
         },
-        form.validateEmail=false
+        validate.validateEmail=false
         )
       }
     }
@@ -92,16 +95,16 @@ const Register = (props) => {
     if(name == 'password'){
       if(value.length > 5){
         setValues({
-          ...form,
+          ...validate,
         },
-        form.validatePassword=true
+        validate.validatePassword=true
         )
       }
       if(value.length < 5){
         setValues({
-          ...form,
+          ...validate,
         },
-        form.validatePassword=false
+        validate.validatePassword=false
         )
       }
     }
@@ -109,17 +112,17 @@ const Register = (props) => {
     if(name == 'birthday'){
       if(value.length < 5 ||value.length >= 4 ){
         setValues({
-          ...form,
+          ...validate,
         },
-        form.validateDate=true
+        validate.validateDate=true
         )
       }
 
       if(value.length > 4 || value.length < 4){
         setValues({
-          ...form,
+          ...validate,
         },
-        form.validateDate=false
+        validate.validateDate=false
         )
       }
       
@@ -155,7 +158,7 @@ const Register = (props) => {
               <img src={information} alt="Informacion" onMouseEnter={() => setIsShown1(true)} onMouseLeave={() => setIsShown1(false)}/>
               {isShown1 ? <strong className="pop__service ">Coloca tu nombre de Invocador de League of Legends. Esto nos ayudara a crear las clases mas personalizadas para ti que sea posible.</strong>:""}
               <hr className="register__input__line" />
-              {form.validateName ? <p className="correct__message">¡Esta Excelente así!</p>:<p className="error__message">Debe tener más de 5 caracteres</p>}
+              {validate.validateName ? <p className="correct__message">¡Esta Excelente así!</p>:<p className="error__message">Debe tener más de 5 caracteres</p>}
 
               <p className="register__title">INGRESA TU EMAIL</p>
               <input
@@ -169,7 +172,7 @@ const Register = (props) => {
               <img src={information} alt="Informacion" onMouseEnter={() => setIsShown2(true)} onMouseLeave={() => setIsShown2(false)}/>
               {isShown2 ? <strong className="pop__service pop__info">Con este E-mail vas a ingresar a la plataforma Summoner's Cave. También te enviaremos todos los apuntes de las sesiones a este mismo E-mail.</strong>: ""}
               <hr className="register__input__line" />
-              {form.validateEmail ? <p className="correct__message">¡Este mail es Correcto!</p>:<p className="error__message">te jodiste</p>}
+              {validate.validateEmail ? <p className="correct__message">¡Este mail es Correcto!</p>:<p className="error__message">te jodiste</p>}
 
               <p className="register__title">INGRESA TU CONTRASEÑA</p>
               <input
@@ -183,7 +186,7 @@ const Register = (props) => {
               <img src={information} alt="Informacion" onMouseEnter={() => setIsShown3(true)} onMouseLeave={() => setIsShown3(false)}/>
               {isShown3 ? <strong className="pop__service ">Escoge la contraseña con la que ingresaras a Summoner's Cave. ¡Debe tener al menos 6 caracteres!</strong>:""}
               <hr className="register__input__line" />
-              {form.validatePassword ? <p className="correct__message">¡Esta bien tu Contraseña!</p>:<p className="error__message">Esta muy corta la contraseña</p>}
+              {validate.validatePassword ? <p className="correct__message">¡Esta bien tu Contraseña!</p>:<p className="error__message">Esta muy corta la contraseña</p>}
 
               {/* Colorcar la verificaciòn de la contraseña */}
               <p className="register__title">INGRESA LA FECHA EN QUE NACISTE</p>
@@ -198,7 +201,7 @@ const Register = (props) => {
               <img src={information} alt="Informacion" onMouseEnter={() => setIsShown4(true)} onMouseLeave={() => setIsShown4(false)}/>
               {isShown4 ? <strong className="pop__service ">Coloca el año en el que naciste. ¡Debes ser mayor de 13 años para ingresar!</strong>:""}
               <hr className="register__input__line" />
-              {form.validateDate ? <p className="correct__message">¡Buena fecha para nacer!</p>:<p className="error__message">Deben ser solo el año en el que Naciste.</p>}
+              {validate.validateDate ? <p className="correct__message">¡Buena fecha para nacer!</p>:<p className="error__message">Deben ser solo el año en el que Naciste.</p>}
 
               <p className="register__title">INGRESA EL SERVIDOR DONDE JUEGAS</p>
               <select name="server" onChange={handleInput} className="select__agenda" required>
