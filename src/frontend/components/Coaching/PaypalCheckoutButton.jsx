@@ -53,18 +53,15 @@ const PaypalCheckoutButton = (props) => {
   const onAuthorize = (data, actions) => {
       return actions.payment.execute()
       .then(response => {
-        // console.log(response);
         props.submitSelectedDate(props.form, '/perfil');
         alert(`El Pago fue procesado correctamente, ID: ${response.id}`)
       })
       .catch(error => {
-        console.log(error);
 	      alert('Ocurrió un error al procesar el pago con Paypal');
       });
   };
 
   const onError = (error) => {
-    console.log('props',props);
     alert ('El pago con PayPal no fue realizado, vuelva a intentarlo.' );
   };
 

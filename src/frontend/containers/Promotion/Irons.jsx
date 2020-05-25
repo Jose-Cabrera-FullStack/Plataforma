@@ -61,9 +61,6 @@ const Irons = (props) =>{
         props.submitSelectedDate(form, '/');
     };
 
-
-    console.log(form.schedule)
-
     const price = {
         total:48
     }

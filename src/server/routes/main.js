@@ -61,7 +61,7 @@ const main = async (req,res, next) => {
                 class:{},
                 // id:{}
             }
-            console.log(error)
+            
         }
 
         const state = (initialState.data);

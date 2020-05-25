@@ -96,8 +96,6 @@ app.post('/auth/sign-up', async (req, res, next) => {
 
 app.post('/api/email', async (req, res, next) => {
 
-  console.log('hola',req)
-
   const info = {
     name: req.body.name,
     email: req.body.email,
@@ -121,7 +119,7 @@ app.post('/api/email', async (req, res, next) => {
 
 app.post('/api/email/confirm', async (req, res, next) => {
 
-  console.log('req.body',req.body)
+  // console.log('req.body',req.body)
   const info = {
     name: req.body.name,
     email: req.body.email,
@@ -137,7 +135,6 @@ app.post('/api/email/confirm', async (req, res, next) => {
       data: info
     });
     
-    console.log(data)
     res.status(201).json({data});
 
   } catch (error) {
