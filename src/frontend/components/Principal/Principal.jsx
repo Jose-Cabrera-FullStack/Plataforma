@@ -82,7 +82,7 @@ const Principal = () => (
         </div>
 
         <p className="version">
-            version: Alpha 1.0
+            version: Alpha 1.0.1
         </p>
 
     </section>
