@@ -172,7 +172,7 @@ const Register = (props) => {
               <img src={information} alt="Informacion" onMouseEnter={() => setIsShown2(true)} onMouseLeave={() => setIsShown2(false)}/>
               {isShown2 ? <strong className="pop__service pop__info">Con este E-mail vas a ingresar a la plataforma Summoner's Cave. También te enviaremos todos los apuntes de las sesiones a este mismo E-mail.</strong>: ""}
               <hr className="register__input__line" />
-              {validate.validateEmail ? <p className="correct__message">¡Este mail es Correcto!</p>:<p className="error__message">te jodiste</p>}
+              {validate.validateEmail ? <p className="correct__message">¡Este mail es Correcto!</p>:<p className="error__message">El mail que estas ingresando es erróneo</p>}
 
               <p className="register__title">INGRESA TU CONTRASEÑA</p>
               <input
