@@ -60,7 +60,7 @@ const HowToBuy = () => (
                         Se abrirá una ventana de Paypal <br/>
                         donde colocaras tu datos,<br/>
                         recuerda verificar el precio de las clases<br/>
-                        luego preciona<span className="blue__lightning">Pagar</span>    
+                        luego presiona <span className="blue__lightning">Pagar</span>    
                     </p>
 
                     <figure>

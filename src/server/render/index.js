@@ -10,6 +10,7 @@ const render = (html, preloadedState) => {
       <head>
         <title>Summoner's Cave</title>
         <link rel="stylesheet" href="${files ? files['main.css'] : 'assets/app.css'}" type="text/css"></link>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
       </head>
       <body>
         <div id="app">${html}</div>

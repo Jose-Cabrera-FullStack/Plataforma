@@ -44,7 +44,7 @@ const Principal = () => (
                             <div className="rectangle__white movement__top__to__bottom rectangle__3"></div>
                             
                             <div className="rectangle__white movement__top__to__bottom rectangle__4"></div>
-            
+                            
                             <div className="rectangle__principal movement__right__to__left rectangle__5"></div>
                             
                             <div className="rectangle__principal movement__left__to__right rectangle__6"></div>

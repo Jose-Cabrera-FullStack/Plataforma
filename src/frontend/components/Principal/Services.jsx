@@ -58,6 +58,7 @@ const Services = () => {
                     </figure>
                 </span>
             </div>
+            
             <div className="service"onMouseEnter={() => setIsShown3(true)} onMouseLeave={() => setIsShown3(false)}>
                 <span>
 
@@ -72,7 +73,7 @@ const Services = () => {
                             el equipo alcance la victoria? 
                             Capacitate en Pedagogia enfocada en los eSport. 
                             Tendrás las herramientas necesarias para enseñar  
-                            de manera profesional a el Próximo| equipo que gane 
+                            de manera profesional a el Próximo equipo que gane 
                             La LCS y sea reconocido por todo el Mundo.
                             </strong>: ""}
                         

@@ -129,6 +129,14 @@ body {
     transform: translate3d(0, 0, 0);
     background-blend-mode: var(--blend-mode-1);
 }
+@media (max-width:400px){
+    .glitchit {
+        background: url(../styles/Screen/Shen-pulso-de-fuego.jpg) no-repeat 50% 0;
+        background-size: cover;
+        background-position: 50%;
+    }
+}
+
 .glitchit:nth-child(n+2) {
     opacity: 0;
 }
@@ -429,3 +437,4 @@ body {
         transform: translate3d(0, 0, 0);
     }
 }
+
