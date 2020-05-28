@@ -244,3 +244,41 @@
 .paragraph__pack__coach__booting__packs__challenger{
     color: #000;
 }
+
+@media (max-width:400px){
+    .title__container__coach__booting__packs {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.53;
+        letter-spacing: 8.89px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .paragraph__coach__booting__packs {
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.7;
+        letter-spacing: 4px;
+        letter-spacing: normal;
+        text-align: center;
+        color: #ffffff;
+        margin-bottom: 60px;
+    }
+
+    .responsive{
+        display: none;
+    }
+
+    .pack__coach__booting__packs {
+        margin-right: 0px;
+
+    }
+        
+}

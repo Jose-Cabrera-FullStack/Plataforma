@@ -20,12 +20,12 @@ const HowToBuy = () => (
                 <div className="information__how-to-buy">
 
                     <figure>
-                        <img className="icon__how-to-buy" src={Hand1} alt="" />
+                        <img className="icon__how-to-buy responsive" src={Hand1} alt="" />
                     </figure>
 
                     <p className="paragraph__how-to-buy text__1">
-                        Presiona el botón de <span className="blue__lightning">Registrarse</span>, créate  <br />
-                        una cuenta solo con tu correo electrónico <br />
+                        Presiona el botón de <span className="blue__lightning">Registrarse</span>, créate
+                        una cuenta solo con tu correo electrónico 
                         y una contraseña. ¡SI ASI DE SIMPLE!
                     </p>
 
@@ -36,13 +36,13 @@ const HowToBuy = () => (
 
                 <div className="information__how-to-buy">
                     <figure>
-                        <img className="icon__how-to-buy" src={Hand2} alt="" />
+                        <img className="icon__how-to-buy responsive" src={Hand2} alt="" />
                     </figure>
 
 
                         <p className="paragraph__how-to-buy text__2">
-                        Escoge el Plan que mas te guste, presiona <br/>
-                        el botón de <span className="blue__lightning">Paypal</span> y te llevara <br/>
+                        Escoge el Plan que mas te guste, presiona 
+                        el botón de <span className="blue__lightning">Paypal</span> y te llevara 
                         al ultimo paso para comenzar a ¡SUBIR!
                         </p>
 
@@ -53,13 +53,13 @@ const HowToBuy = () => (
 
                 <div className="information__how-to-buy">
                     <figure>
-                        <img className="icon__how-to-buy" src={Hand3} alt="" />
+                        <img className="icon__how-to-buy responsive" src={Hand3} alt="" />
                     </figure>
 
                     <p className="paragraph__how-to-buy text__3">
-                        Se abrirá una ventana de Paypal <br/>
-                        donde colocaras tu datos,<br/>
-                        recuerda verificar el precio de las clases<br/>
+                        Se abrirá una ventana de Paypal 
+                        donde colocaras tu datos,
+                        recuerda verificar el precio de las clases
                         luego presiona <span className="blue__lightning">Pagar</span>    
                     </p>
 
@@ -70,13 +70,13 @@ const HowToBuy = () => (
 
                 <div className="information__how-to-buy">
                     <figure>
-                        <img className="icon__how-to-buy" src={Hand4} alt="" />
+                        <img className="icon__how-to-buy responsive" src={Hand4} alt="" />
                     </figure>
 
                     <p className="paragraph__how-to-buy text__4">
-                        Nos comunicamos via Discord contigo. Esto con <br/>
-                        la finalidad de hacer lo mas personalizado <br/>
-                        posible las clases para ti. Recuerda que la <br/>
+                        Nos comunicamos via Discord contigo. Esto con 
+                        la finalidad de hacer lo mas personalizado 
+                        posible las clases para ti. Recuerda que la 
                         primera clase es <span className="blue__lightning">¡GRATUITA!</span>
                     </p>
 

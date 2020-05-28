@@ -24,9 +24,9 @@ const Services = () => {
                 <span>
                     <div className="service__title__flex">
                         <h3 className="title__service">ENTRENAMIENTO <br />MILITAR</h3>
-                        <figure><img src={information} alt="Información" className="service__information"/></figure>
+                        <figure className="service__information"><img src={information} alt="Información" /></figure>
                     </div>
-                    <figure>
+                    <figure className="figure__service">
                         <img className="img__service contentText" src={Ranked} alt="RANKED WINS BOOSTING" />
                         {isShown1 ? <strong className="pop__service pop__service__services1">
                         Aprenderas a tener un pensamiento estratega, 
@@ -43,10 +43,10 @@ const Services = () => {
             <div className="service" onMouseEnter={() => setIsShown2(true)} onMouseLeave={() => setIsShown2(false)}>
                 <span>
                     <div className="service__title__flex">
-                        <h3 className="title__service ">TRABAJAR EN<br />EQUIPO</h3>
-                        <figure><img src={information} alt="Información" className="service__information"/></figure>
+                        <h3 className="title__service ">TRABAJAR EN EQUIPO</h3>
+                        <figure className="service__information"><img src={information} alt="Información" /></figure>
                     </div>
-                    <figure>
+                    <figure className="figure__service">
                         <img className="img__service contentText" src={TFT} alt="TFT BOOTING" />
                         {isShown2 ? <strong className="pop__service pop__service__services2">
                         Entenderás lo importante que es la comunicación 
@@ -64,9 +64,9 @@ const Services = () => {
 
                     <div className="service__title__flex">
                         <h3 className="title__service">COACHING PARA<br />COACH</h3>
-                        <figure><img src={information} alt="Información" className="service__information"/></figure>
+                        <figure  className="service__information"><img src={information} alt="Información"/></figure>
                     </div>
-                    <figure>
+                    <figure className="figure__service">
                         <img className="img__service contentText" src={Duo} alt="DUO QUEUE BOOSTING" />
                         {isShown3 ? <strong className="pop__service pop__service__services3">
                             ¿Quieres ser la figura que todos admiran y hace que 
@@ -85,9 +85,9 @@ const Services = () => {
 
                 <div className="service__title__flex">
                         <h3 className="title__service">ÉTICA<br />PROFESIONAL</h3>
-                        <figure><img src={information} alt="Información" className="service__information service__information__1"/></figure>
+                        <figure className="service__information service__information__1"><img src={information} alt="Información" /></figure>
                     </div>
-                    <figure>
+                    <figure className="figure__service">
                         <img className="img__service contentText" src={Promo} alt="PROMOTION BOOSTING" />
                         {isShown4 ? <strong className="pop__service pop__service__services4">
                         Te enseñaremos "Qué es ser un profesional 

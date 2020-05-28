@@ -104,7 +104,7 @@ margin-bottom: 30px;
 }
 
 .line__footer{
-  border-top:5px solid #1b1f3b;
+  border-top: 0px solid #1b1f3b;
   border-radius: 5px;
   margin-right: 113px;
   margin-left: 113px;
@@ -127,4 +127,49 @@ margin-bottom: 30px;
 
 .copyright__footer a{
   color: #56fffb;
+}
+
+@media (max-width:400px){
+  .input {
+    width: 250px;
+    margin: 4.5% 0% 0% 15%;
+    padding: 0px 0 0 20px;
+  }
+
+  .container__footer {
+    display: block;
+    padding: 3% 0px 0px 0px;
+}
+  .footer__responsive {
+    width: 250px;
+    margin: 20px 0px 0px 18vw;
+  }
+.footer__form {
+  height: 160px;
+
+}
+.parragraph__footer {
+  width: 340px;
+  margin: 30px 0 50px 40px;
+}
+
+.footer__title {
+  margin: 50px 0px 0px 40px;
+}
+
+.icons__footer {
+  margin: 0 0 0 40px;
+}
+
+.line__footer {
+  margin-right: 33px;
+  margin-left: 33px;
+}
+
+.copyright__footer {
+  height: 50px;
+  margin: 20px 0 0px 0px;
+
+}
+
 }

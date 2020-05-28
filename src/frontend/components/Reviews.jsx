@@ -20,7 +20,7 @@ const Reviews = () =>(
             <img className="arrow" src={Arrow_left} alt=""/>
         </figure> */}
 
-        <div className="user__review">
+        <div className="user__review responsive">
             <div className="review">
                 <h2 className="rating__review">4.6</h2>
                 <div className="stars">
@@ -117,10 +117,9 @@ const Reviews = () =>(
                 </div>
             </div>
 
-
-
         </div>
-        <div className="user__review">
+
+        <div className="user__review responsive">
             <div className="review">
                 <h2 className="rating__review">3.8</h2>
                 <div className="stars">

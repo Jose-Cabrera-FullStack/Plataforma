@@ -27,9 +27,9 @@ const OurMethodology = () =>(
                         
                         <h2 className="info-title__our-methodoly">UN GUIA PARA MEJORAR</h2>
                         <p className="paragraph__our-methodology">
-                        Sabemos los difícil que puede llegar a ser mejorar en League of Legend, por <br/>
-                            eso hemos creado un nuevo plan de estudio fácil de entender y mejor aun, con <br/>
-                            RÁPIDOS RESULTADOS! Juega junto a los mejores Players de LAS/LAN codo <br/>
+                        Sabemos los difícil que puede llegar a ser mejorar en League of Legend, por 
+                            eso hemos creado un nuevo plan de estudio fácil de entender y mejor aun, con 
+                            RÁPIDOS RESULTADOS! Juega junto a los mejores Players de LAS/LAN codo 
                             a codo, mientras te explican como y porque hacen lo que hacen.
                             </p>
                             
@@ -45,10 +45,10 @@ const OurMethodology = () =>(
                         
                         <h2 className="info-title__our-methodoly">PLAN DE ESTUDIO PERSONALIZADO</h2>
                         <p className="paragraph__our-methodology">
-                        Antes de comenzar, nos comunicamos contigo para hacer un plan a tu <br/>
-                            medida. Analizamos tus necesidades, gustos y metas para estructurar una <br/>
-                            estrategia donde puedas disfrutar mientras aprendes los conceptos tanto <br/>
-                            básicos, intermedios como avanzados del juego. Tenemos Coaches jugando <br/>
+                        Antes de comenzar, nos comunicamos contigo para hacer un plan a tu 
+                            medida. Analizamos tus necesidades, gustos y metas para estructurar una 
+                            estrategia donde puedas disfrutar mientras aprendes los conceptos tanto 
+                            básicos, intermedios como avanzados del juego. Tenemos Coaches jugando 
                             en ligas profesionales dispuesto a dejarte fácil lo que a ellos les costo tanto!
 
                         </p>
@@ -65,9 +65,9 @@ const OurMethodology = () =>(
                         
                         <h2 className="info-title__our-methodoly">CUIDAMOS DE TI</h2>
                         <p className="paragraph__our-methodology">
-                        Nos encargamos de que nadie se entere (si así lo deseas) de que usaste <br/>
-                            nuestros servicios para ser tan bueno como sabemos que puedes llegar a ser. <br/>
-                            Si deseas usar un VPN, tenemos disponible esa opción para ti. Ahora luce con <br/>
+                        Nos encargamos de que nadie se entere (si así lo deseas) de que usaste 
+                            nuestros servicios para ser tan bueno como sabemos que puedes llegar a ser. 
+                            Si deseas usar un VPN, tenemos disponible esa opción para ti. Ahora luce con 
                             tus amigos las nuevas habilidades que aprendiste solo/a.
                             </p>
                             
@@ -83,9 +83,9 @@ const OurMethodology = () =>(
 
                         <h2 className="info-title__our-methodoly">ORDEN DE PRIORIDAD</h2>
                         <p className="paragraph__our-methodology">
-                        En Summoner's Cave nos gusta ser Organizados, resolvemos por orden de <br/>
-                            llegada las cuentas que recibimos. Si tienes muchas ansias de aprender y <br/>
-                            mejorar, brindamos la opción de "Prioridad VIP" donde nos aseguraremos que <br/>
+                        En Summoner's Cave nos gusta ser Organizados, resolvemos por orden de 
+                            llegada las cuentas que recibimos. Si tienes muchas ansias de aprender y 
+                            mejorar, brindamos la opción de "Prioridad VIP" donde nos aseguraremos que 
                             estes satisfecho lo antes posible. ¡Tu eres nuestra prioridad!
                             </p>
                             

@@ -164,3 +164,24 @@
     right: 25px;
     bottom: 20px;
 }
+
+@media (max-width:400px){
+    .information__review {
+        margin: 0px 0px 0px 20%;
+    }
+
+    .reviews {
+        width: auto;
+        height: 540px;
+        background-color: #ffffff;
+        display: flex;
+    }
+
+    .box__review {
+        margin-top: 190px;
+        display: flex;
+        position: absolute;
+        left: 15vw;
+    }
+
+}

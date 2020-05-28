@@ -21,15 +21,15 @@ const Footer = (props) => {
 
     const handleInput = (event) => {
         setValues({
-          ...form,
-          [event.target.name]: event.target.value,
+        ...form,
+        [event.target.name]: event.target.value,
         });
-      };
+    };
 
-      const handleSubmit = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         props.sendEmail(form, '/');
-      };
+    };
     
     return (
         <footer id="footer" className="footer">
@@ -42,14 +42,14 @@ const Footer = (props) => {
                 onChange={handleInput} 
                 required/>
 
-                <button className="btn__secondary" type="submit">OBTEN TU INFORMACIÓN</button>
+                <button className="btn__secondary footer__responsive" type="submit">OBTEN TU INFORMACIÓN</button>
             </form>
 
             <div className="container__footer">
 
                 <div className="footer__social-network">
 
-                    <ol className="list__footer">
+                    <ol className="list__footer responsive">
                         <li className="menu__footer">
                             <Link to="/coaching">
                                 Coaching
@@ -70,7 +70,7 @@ const Footer = (props) => {
 
                 </div>
                 <figure>
-                    <img className="payment__footer" src={Payment} alt="" />
+                    <img className="payment__footer responsive" src={Payment} alt="" />
                 </figure>
 
                 <div className="footer__information">
@@ -117,6 +117,6 @@ const Footer = (props) => {
 
 const mapDispatchToProps = {
     sendEmail,
-  };
-  
-  export default connect(null, mapDispatchToProps)(Footer);
+};
+
+export default connect(null, mapDispatchToProps)(Footer);

@@ -47,11 +47,11 @@ const Principal = () => (
                             
                             <div className="rectangle__principal movement__right__to__left rectangle__5"></div>
                             
-                            <div className="rectangle__principal movement__left__to__right rectangle__6"></div>
+                            <div className="rectangle__principal movement__left__to__right rectangle__6 responsive"></div>
                             
-                            <div className="rectangle__secundary movement__right__to__left rectangle__7"></div>
+                            <div className="rectangle__secundary movement__right__to__left rectangle__7 "></div>
 
-                            <div className="rectangle__white movement__right__to__left--right rectangle__8"></div>
+                            <div className="rectangle__white movement__right__to__left--right rectangle__8 responsive"></div>
                             
                             <p className="paragraph__principal">BRINDAMOS COACHING A PLAYERS DE LEAGUE OF LEGENDS <br />
                                 DESDE LA TEMPORADA 7.TU MOMENTO DE SER <br />

@@ -102,3 +102,88 @@
     right: 2vh;
     filter: drop-shadow(0px 0px 4px #56fffb);
 }
+
+@media (max-width:400px){
+    .informations__how-to-buy {
+        position: relative;
+        right: 50vw;
+        top: 50px;
+        width: 106vw;
+    }
+    .title__how-to-buy {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        height: 30px;
+        line-height: 1.25;
+        letter-spacing: 8.89px;
+        color: #ffffff;
+        position: relative;
+        left: 35%;
+        top: 5vh;
+    }
+
+    .example__how-to-buy {
+        position: relative;
+        right: -20px;
+        width: 80px;
+    }
+
+    .paragraph__how-to-buy {
+        width: 240px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .text__1 {
+        position: relative;
+        top: 15vh;
+        right: -30vw;
+        text-align: right;
+    }
+
+    .text__2 {
+        position: relative;
+        top: 15vh;
+        right: 0vw;
+    }
+
+    .text__3 {
+        position: relative;
+        top: 15vh;
+        right: -30vw;
+        text-align: right
+    }
+
+    .text__4 {
+        position: relative;
+        top: 15vh;
+        right: 0vw;
+    }
+
+    .example__1 {
+        position: relative;
+        left: -55vw;
+        top: 90px;
+    }
+
+    .example__2 {
+        position: relative;
+        left: 0vw;
+        top: 13vh;
+    }
+
+    .example__3{
+        position: relative;
+        left: -55vw;
+        top: 90px;
+    }
+
+    .example__4{
+        position: relative;
+        left: 0vw;
+        top: 15vh;
+    }
+}

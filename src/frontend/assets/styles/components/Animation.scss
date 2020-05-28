@@ -114,3 +114,15 @@
   width: 120px;
   height: 30px;
 }
+
+@media (max-width:400px){
+  @keyframes movement__right__to__left {
+    0%,
+    100% {
+      right:300px;
+    }
+    50% {
+      right:500px;
+    }
+  }
+}

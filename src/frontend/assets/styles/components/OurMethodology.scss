@@ -70,3 +70,64 @@
     top: 3vh;
     right: 0;
 }
+
+@media (max-width:400px){
+
+    .our-methodology {
+        width: auto;
+        height: 818px;
+        background-color: #ffffff;
+    }
+
+    .icon__our-methodology {
+        position: relative;
+        top: 5vh;
+        right: -15px;
+    }
+    
+    .container__our-methodology {
+        display: block;
+    }
+
+    .title__out-methodology {
+        font-family: Roboto;
+        margin: 75px 0px 0px 75px;
+        font-size: 20px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: 8.89px;
+        color: #1b1f3b;
+        position: relative;
+        top: 0;
+    }
+
+    .paragraph__our-methodology {
+        width: 250px;
+        height: 120px;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: normal;
+        color: #6d6b6b;
+        position: relative;
+        top: -14px;
+    }
+
+    .info-title__our-methodoly {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        color: #1b1f3b;
+        position: relative;
+        margin: 30px 0px 30px 0px;
+    }
+}

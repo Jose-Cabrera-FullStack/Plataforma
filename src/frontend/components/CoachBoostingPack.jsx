@@ -26,9 +26,9 @@ const EloBoostingPack = () =>(
                 </p>
             </div>
 
-            <div className="packs__coach__booting__packs ">
+            <div className="packs__coach__booting__packs">
 
-                <div className="pack__coach__booting__packs">
+                <div className="pack__coach__booting__packs responsive">
                     <h4>COACHING <br/> NOVATO</h4>
                     <div className="promotion__pack__coach__booting__packs">
                         <p className="paragraph__pack__coach__booting__packs">SAVE 10%</p>
@@ -75,7 +75,7 @@ const EloBoostingPack = () =>(
                 </div>
 
 
-                <div className="pack__coach__booting__packs special__avance__coaching__boosting_pack pack__coach__booting__packs__premium">
+                <div className="pack__coach__booting__packs special__avance__coaching__boosting_pack pack__coach__booting__packs__premium responsive">
                     <h4>COACHING <br/>AVANZADO</h4>
                     <div className="promotion__pack__coach__booting__packs paragraph__pack__coach__booting__packs__left">
                         <p className="paragraph__pack__coach__booting__packs ">SAVE 20%</p>
@@ -98,7 +98,7 @@ const EloBoostingPack = () =>(
                 </div>
 
 
-                <div className="pack__coach__booting__packs">
+                <div className="pack__coach__booting__packs responsive">
                     <h4>COACHING <br/>INTERMEDIO</h4>
                     <div className="promotion__pack__coach__booting__packs paragraph__pack__coach__booting__packs__left">
                         <p className="paragraph__pack__coach__booting__packs ">SAVE 15%</p>
