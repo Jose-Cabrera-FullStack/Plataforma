@@ -5,7 +5,7 @@ import { logoutRequest } from '../actions';
 
 import Perfil from '../assets/static/images/perfil-image.png'
 import Arrow from '../assets/static/images/arrow-down.svg'
-import Hamburger from '../assets/static/images/menu-hamburger.svg'
+// import Hamburger from '../assets/static/images/menu-hamburger.svg'
 
 import '../assets/styles/components/Header.scss';
 
@@ -37,9 +37,9 @@ const Header = props => {
       </NavLink>
       <div className="navbar__container">
 
-        <div >
+        {/* <div >
           <figure><img className="navbar__container__hamburger" src={Hamburger} alt=""/></figure>
-        </div>
+        </div> */}
 
         <ol className="navbar__list col-10" >
           <li className="navbar__menu padding__top">

@@ -1,0 +1,45 @@
+.responsive__message{
+    background: black;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #02030ec2, rgba(27, 31, 57, 0.9)), url(/assets/heimerdinger.jpg);
+        background-size: cover;
+        background-position: 525px;
+}
+
+.responsive__message__title{
+    width: 310px;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: 11px;
+    color: #ffffff;
+    padding-top: 40%;
+    text-shadow: 0 0 5px #ffffff;
+    margin: 0px 0 0 70px;
+}
+
+.responsive__message__link{
+    margin: 0;
+    padding: 20%;
+    color:#56fffb;
+}
+
+.responsive__message__link:hover{
+    color:#e01ac7;
+}
+
+.responsive__message__text{
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.83;
+    letter-spacing: 6px;
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
+    margin: 40px 0 0 70px;
+}

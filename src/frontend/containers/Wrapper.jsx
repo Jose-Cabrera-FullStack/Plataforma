@@ -30,8 +30,8 @@ export default WrappedComponent => {
           ) : (
             <>
             <Header />
-          <WrappedComponent {...this.props} />
-          <Footer/>
+              <WrappedComponent {...this.props} />
+            <Footer/>
             </>
         )}
       </Fragment>
