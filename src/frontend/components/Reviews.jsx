@@ -4,7 +4,7 @@ import Arrow_left from '../assets/static/images/arrow-left.svg';
 import Arrow_right from '../assets/static/images/arrow-right.svg';
 import StarEmpty from '../assets/static/images/star-empty.svg';
 import StarFull from '../assets/static/images/star-full.svg';
-import Avatar from '../assets/static/images/avatar-review.png';
+import Avatar from '../assets/static/images/avatar-review.svg';
 
 const Reviews = () =>(
     <section id="reviews" className="reviews">

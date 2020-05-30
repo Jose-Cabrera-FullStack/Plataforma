@@ -111,12 +111,19 @@ body {
 .glitch {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -1vw;
     width: var(--glitch-width);
     height: var(--glitch-height);
     overflow: hidden;
     z-index: -1
 }
+
+@media (max-width:400px){
+    .glitch {
+        left: 0vw;
+    }
+}
+
 .glitchit {
     position: absolute;
     top: calc(-1 * var(--gap-vertical));

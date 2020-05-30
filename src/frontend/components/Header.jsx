@@ -30,7 +30,7 @@ const Header = props => {
   return (
 
     <header id="navbar" className="navbar">
-      <NavLink to="/">
+      <NavLink to="/home">
         <div className="navbar__logo">
           <h3 className="navbar__title">Summoner's Cave</h3>
         </div>
@@ -80,8 +80,8 @@ const Header = props => {
             :
 
             <NavLink to="/register" >
-              <li className="navbar__menu btn__primary">
-                <p className="register__btn">REGISTER</p>
+              <li>
+                <button className="btn__primary">REGISTER</button>
               </li>
             </NavLink>
           }
@@ -90,8 +90,8 @@ const Header = props => {
 
             </NavLink> :
             <NavLink to="/login">
-              <li className="navbar__menu btn__secondary">
-                <p className="navbar__menu__login">LOGIN</p>
+              <li >
+                <button className="btn__secondary btn__secondary--login">LOGIN</button>
               </li>
             </NavLink>
 

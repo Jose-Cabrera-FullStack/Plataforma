@@ -12,6 +12,11 @@
     box-shadow: 0px 0px 5px #56fffb;
 }
 
+.btn__secondary--login{
+    width: 120px;
+    margin: 0 140px 0 0;
+}
+
 .btn__secondary:hover {
     background-color: #56fffb; /* Green */
     text-shadow: 0px 0px 3px black;
@@ -24,10 +29,10 @@
 }
 
 .btn__primary {
-    background-color: #f1f1f1;
     font-family: Roboto;
-    color: black;
+    color: #e01ac7;
     font-size: 16px;
+    width: 120px;
     text-shadow: 0px 0px 3px #e01ac7;
     padding: 13px 25px;
     border: 1px solid #e01ac7;
@@ -36,6 +41,7 @@
     text-align: center;
     background-color: initial;
     box-shadow: 0px 0px 5px #e01ac7;
+    margin: 0 40px 0px 0px;
 }
 
 .btn__primary:hover{
