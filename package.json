@@ -36,7 +36,7 @@
     "helmet": "3.21.2",
     "history": "4.9.0",
     "ignore-styles": "5.0.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "moment": "2.24.0",
     "nodemon": "1.19.1",
     "passport": "0.4.0",
